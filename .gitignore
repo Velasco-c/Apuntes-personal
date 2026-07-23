@@ -1,0 +1,64 @@
+# ==========================================
+# Archivos de Sistema Operativo
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ==========================================
+# Configuración del Editor (VS Code / Obsidian)
+# ==========================================
+# Ignora la configuración local de tu editor para no subir preferencias personales
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Si utilizas Obsidian como cliente secundario o complementos
+.obsidian/
+
+# ==========================================
+# Entornos de Ejecución / Basura de Código
+# ==========================================
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+
+# Node.js / JavaScript
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Java / Compilados
+*.class
+*.jar
+*.war
+
+# ==========================================
+# Logs y Archivos Temporales
+# ==========================================
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+# ==========================================
+# Variables de Entorno y Datos Sensibles
+# ==========================================
+.env
+.env.local
+.env.*.local
+*.pem
