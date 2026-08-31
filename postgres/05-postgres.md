@@ -1028,3 +1028,11 @@ En los ejemplos se utilizaron dos CTEs para calcular las ventas de enero y febre
 Finalmente, se utilizó una CTE para obtener el **número de transacciones** y el **total vendido por vendedor durante enero de 2026**, aplicando posteriormente una condición para mostrar únicamente los vendedores cuyo total de ventas fuera superior a `$2000`.
 
 Estos conceptos permiten pasar de consultas SQL básicas a consultas orientadas al **análisis y transformación de datos**, manteniendo tanto el detalle de los registros como la posibilidad de generar métricas agregadas.
+
+## Ejercicios de reforzamiento
+
+Para reforzar los conceptos trabajados en esta clase:
+
+* [Review DDL 03](https://github.com/Velasco-c/postgres-review/blob/main/database/DDL/03-review.sql)
+* [Review DML 03](https://github.com/Velasco-c/postgres-review/blob/main/database/DML/03-review.sql)
+* [Review DQL 03](https://github.com/Velasco-c/postgres-review/blob/main/database/DQL/03-review.sql)

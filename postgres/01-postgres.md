@@ -886,3 +886,12 @@ Tabla
 | `UPDATE`            | Instrucción SQL utilizada para modificar registros existentes.                                                   |
 | `DELETE`            | Instrucción SQL utilizada para eliminar registros.                                                               |
 | `search_path`       | Configuración que determina los esquemas que PostgreSQL utiliza para resolver nombres de objetos no calificados. |
+
+
+## Ejercicios de reforzamiento
+
+Para reforzar los conceptos trabajados en esta clase:
+
+* [Review DDL 01](https://github.com/Velasco-c/postgres-review/blob/main/database/DDL/01-review.sql)
+* [Review DML 01](https://github.com/Velasco-c/postgres-review/blob/main/database/DML/01-review.sql)
+* [Review DQL 01](https://github.com/Velasco-c/postgres-review/blob/main/database/DQL/01-review.sql)

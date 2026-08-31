@@ -1001,3 +1001,12 @@ En esta etapa se trabajan principalmente los siguientes aspectos de PostgreSQL:
 21. Clasificación de instrucciones DDL, DML y DQL.
 
 La idea principal es aplicar correctamente los conceptos de PostgreSQL dentro de los ejercicios, utilizando tipos de datos, restricciones, relaciones e índices de acuerdo con la información que se necesita almacenar y consultar.
+
+
+## Ejercicios de reforzamiento
+
+Para reforzar los conceptos trabajados en esta clase:
+
+* [Review DDL 02](https://github.com/Velasco-c/postgres-review/blob/main/database/DDL/02-review.sql)
+* [Review DML 02](https://github.com/Velasco-c/postgres-review/blob/main/database/DML/02-review.sql)
+* [Review DQL 02](https://github.com/Velasco-c/postgres-review/blob/main/database/DQL/02-review.sql)
