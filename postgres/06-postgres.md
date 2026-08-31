@@ -1968,69 +1968,61 @@ flowchart TD
 
 La siguiente representación conserva la gráfica original utilizada en los apuntes, expresada como SVG para un entorno Markdown que permita HTML/SVG embebido.
 
-```html
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" style="background: white; border-radius: 8px; padding: 20px; max-width: 800px;">
-  <defs>
-    <clipPath id="intersect-clip">
-      <circle cx="325" cy="140" r="55"/>
-    </clipPath>
-  </defs>
 
-  <style>
-    .label {
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      font-size: 15px;
-      fill: #333;
-      text-anchor: middle;
-      letter-spacing: 0.5px;
-      font-weight: 400;
-    }
+<table>
+<tr>
 
-    .venn-border {
-      stroke: #111;
-      stroke-width: 1.5;
-      fill: none;
-    }
+<td align="center" width="33%">
 
-    .green-fill {
-      fill: #0bd66b;
-    }
+<strong>UNIÓN</strong>
+<br>
+<small>A ∪ B</small>
 
-    .white-fill {
-      fill: #FFFFFF;
-    }
-  </style>
-
-  <!-- 1. UNIÓN -->
-  <text x="150" y="55" class="label">UNIÓN</text>
-  <text x="150" y="75" class="label">UNIÓN TODO</text>
-
-  <circle cx="115" cy="140" r="55" class="green-fill" />
-  <circle cx="185" cy="140" r="55" class="green-fill" />
-
-  <circle cx="115" cy="140" r="55" class="venn-border" />
-  <circle cx="185" cy="140" r="55" class="venn-border" />
-
-  <!-- 2. INTERSECCIÓN -->
-  <text x="360" y="65" class="label">INTERSECCIÓN</text>
-
-  <circle cx="325" cy="140" r="55" class="white-fill" />
-  <circle cx="395" cy="140" r="55" class="white-fill" />
-
-  <circle cx="395" cy="140" r="55" class="green-fill" clip-path="url(#intersect-clip)" />
-
-  <circle cx="325" cy="140" r="55" class="venn-border" />
-  <circle cx="395" cy="140" r="55" class="venn-border" />
-
-  <!-- 3. EXCEPTO -->
-  <text x="570" y="65" class="label">EXCEPTO</text>
-
-  <circle cx="535" cy="140" r="55" class="green-fill" />
-  <circle cx="605" cy="140" r="55" class="white-fill" />
-
-  <circle cx="535" cy="140" r="55" class="venn-border" />
-  <circle cx="605" cy="140" r="55" class="venn-border" />
-</svg>
+<div style="position:relative; width:180px; height:130px; margin:15px auto;">
+  <div style="position:absolute; width:90px; height:90px; left:20px; top:20px; border:2px solid #111; border-radius:50%; background:#0bd66b;"></div>
+  <div style="position:absolute; width:90px; height:90px; left:70px; top:20px; border:2px solid #111; border-radius:50%; background:#0bd66b;"></div>
 </div>
-```
+
+</td>
+
+<td align="center" width="33%">
+
+<strong>INTERSECCIÓN</strong>
+<br>
+<small>A ∩ B</small>
+
+<div style="position:relative; width:180px; height:130px; margin:15px auto;">
+  <!-- Fondos blancos -->
+  <div style="position:absolute; width:90px; height:90px; left:20px; top:20px; border:2px solid #111; border-radius:50%; background:#fff;"></div>
+  <div style="position:absolute; width:90px; height:90px; left:70px; top:20px; border:2px solid #111; border-radius:50%; background:#fff;"></div>
+
+  <!-- Máscara para recortar la intersección exacta -->
+  <div style="position:absolute; width:90px; height:90px; left:70px; top:20px; border-radius:50%; overflow:hidden;">
+    <div style="position:absolute; width:90px; height:90px; left:-50px; top:0px; border-radius:50%; background:#0bd66b;"></div>
+  </div>
+
+  <!-- Bordes transparentes superpuestos para mantener las líneas intactas -->
+  <div style="position:absolute; width:90px; height:90px; left:20px; top:20px; border:2px solid #111; border-radius:50%; background:transparent;"></div>
+  <div style="position:absolute; width:90px; height:90px; left:70px; top:20px; border:2px solid #111; border-radius:50%; background:transparent;"></div>
+</div>
+
+</td>
+
+<td align="center" width="33%">
+
+<strong>EXCEPT</strong>
+<br>
+<small>A − B</small>
+
+<div style="position:relative; width:180px; height:130px; margin:15px auto;">
+  <div style="position:absolute; width:90px; height:90px; left:20px; top:20px; border:2px solid #111; border-radius:50%; background:#0bd66b;"></div>
+  <div style="position:absolute; width:90px; height:90px; left:70px; top:20px; border:2px solid #111; border-radius:50%; background:#fff;"></div>
+</div>
+
+</td>
+
+</tr>
+</table>
+
+</div>
