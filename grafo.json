@@ -1,0 +1,7009 @@
+{
+  "nodos": [
+    {
+      "id": "bases-de-datos/clase-02-base-de-datos.md",
+      "tipo": "leccion",
+      "titulo": "Clase 02: Base de datos",
+      "area": "bases-de-datos",
+      "orden": 2
+    },
+    {
+      "id": "bases-de-datos/clase-03-diseno-conceptual-a-fisico.md",
+      "tipo": "leccion",
+      "titulo": "Clase 03: Del Diseño Conceptual al Modelo Físico",
+      "area": "bases-de-datos",
+      "orden": 3
+    },
+    {
+      "id": "bases-de-datos/clase-04-normalizacion.md",
+      "tipo": "leccion",
+      "titulo": "Clase 04: Normalización de base de datos",
+      "area": "bases-de-datos",
+      "orden": 4
+    },
+    {
+      "id": "bases-de-datos/clase-05-esquemas-de-diseno.md",
+      "tipo": "leccion",
+      "titulo": "Clase 05: Esquemas de diseño de bases de datos relacionales",
+      "area": "bases-de-datos",
+      "orden": 5
+    },
+    {
+      "id": "bases-de-datos/clase-06-fundamentos-de-diseno.md",
+      "tipo": "leccion",
+      "titulo": "Clase 06: Fundamentos del diseño de bases de datos, modelado y representación visual",
+      "area": "bases-de-datos",
+      "orden": 6
+    },
+    {
+      "id": "mysql/01-historia-y-caracteristicas.md",
+      "tipo": "leccion",
+      "titulo": "MySQL — Historia, Evolución, Características y Herramientas",
+      "area": "mysql",
+      "orden": 1
+    },
+    {
+      "id": "mysql/02-fundamentos-de-sql.md",
+      "tipo": "leccion",
+      "titulo": "SQL — Fundamentos, Características, Clasificación, Tipos de Datos y Consultas",
+      "area": "mysql",
+      "orden": 2
+    },
+    {
+      "id": "mysql/03-consultas-basicas.md",
+      "tipo": "leccion",
+      "titulo": "Consultas básicas con SQL",
+      "area": "mysql",
+      "orden": 3
+    },
+    {
+      "id": "mysql/04-alias-funciones-join-y-subconsultas.md",
+      "tipo": "leccion",
+      "titulo": "SQL — Alias, funciones, JOIN, subconsultas y diseño de bases de datos",
+      "area": "mysql",
+      "orden": 4
+    },
+    {
+      "id": "mysql/05-indices-vistas-y-restricciones.md",
+      "tipo": "leccion",
+      "titulo": "Diseño de bases de datos: índices, vistas, claves y restricciones",
+      "area": "mysql",
+      "orden": 5
+    },
+    {
+      "id": "mysql/06-modelo-er-y-consultas-avanzadas.md",
+      "tipo": "leccion",
+      "titulo": "Modelo Entidad-Relación y consultas avanzadas en MySQL",
+      "area": "mysql",
+      "orden": 6
+    },
+    {
+      "id": "mysql/07-procedimientos-almacenados-y-errores.md",
+      "tipo": "leccion",
+      "titulo": "Procedimientos almacenados y manejo de errores en MySQL",
+      "area": "mysql",
+      "orden": 7
+    },
+    {
+      "id": "mysql/08-funciones-seguridad-y-permisos.md",
+      "tipo": "leccion",
+      "titulo": "Funciones definidas por el usuario, seguridad y permisos en MySQL",
+      "area": "mysql",
+      "orden": 8
+    },
+    {
+      "id": "mysql/09-optimizacion-transacciones-y-particionamiento.md",
+      "tipo": "leccion",
+      "titulo": "Optimización de Consultas, Transacciones, Particionamiento y Seguridad en MySQL",
+      "area": "mysql",
+      "orden": 9
+    },
+    {
+      "id": "mysql/10-eventos-y-triggers.md",
+      "tipo": "leccion",
+      "titulo": "Eventos y Triggers en MySQL",
+      "area": "mysql",
+      "orden": 10
+    },
+    {
+      "id": "postgresql/01-introduccion.md",
+      "tipo": "leccion",
+      "titulo": "PostgreSQL",
+      "area": "postgresql",
+      "orden": 1
+    },
+    {
+      "id": "postgresql/02-configuracion-administracion-y-consultas.md",
+      "tipo": "leccion",
+      "titulo": "PostgreSQL — Configuración, administración y consultas",
+      "area": "postgresql",
+      "orden": 2
+    },
+    {
+      "id": "postgresql/03-administracion-e-importacion-de-datasets.md",
+      "tipo": "leccion",
+      "titulo": "Administración e importación de datasets en PostgreSQL",
+      "area": "postgresql",
+      "orden": 3
+    },
+    {
+      "id": "postgresql/04-operadores-y-tipos-de-datos.md",
+      "tipo": "leccion",
+      "titulo": "Operadores y tipos de datos en PostgreSQL",
+      "area": "postgresql",
+      "orden": 4
+    },
+    {
+      "id": "postgresql/05-funciones-de-ventana-y-ctes.md",
+      "tipo": "leccion",
+      "titulo": "Funciones de Ventana y CTEs en PostgreSQL",
+      "area": "postgresql",
+      "orden": 5
+    },
+    {
+      "id": "postgresql/06-conjuntos-vistas-procedimientos-funciones-y-triggers.md",
+      "tipo": "leccion",
+      "titulo": "Operadores de Conjuntos, Vistas, Procedimientos, Funciones y Triggers en PostgreSQL",
+      "area": "postgresql",
+      "orden": 6
+    },
+    {
+      "id": "postgresql/07-datos-semiestructurados-y-binarios.md",
+      "tipo": "leccion",
+      "titulo": "Administración de conjuntos de datos semiestructurados y datos binarios",
+      "area": "postgresql",
+      "orden": 7
+    },
+    {
+      "id": "nodejs/01-entornos-de-ejecucion.md",
+      "tipo": "leccion",
+      "titulo": "Entornos de Ejecución con Node.js",
+      "area": "nodejs",
+      "orden": 1
+    },
+    {
+      "id": "nodejs/02-poo-en-javascript.md",
+      "tipo": "leccion",
+      "titulo": "Introducción a la Programación Orientada a Objetos (POO) en JavaScript",
+      "area": "nodejs",
+      "orden": 2
+    },
+    {
+      "id": "nodejs/03-herencia-y-polimorfismo.md",
+      "tipo": "leccion",
+      "titulo": "Herencia y Polimorfismo en JavaScript",
+      "area": "nodejs",
+      "orden": 3
+    },
+    {
+      "id": "nodejs/04-interfaces-y-relaciones-entre-clases.md",
+      "tipo": "leccion",
+      "titulo": "Interfaces y Relaciones entre Clases en JavaScript",
+      "area": "nodejs",
+      "orden": 4
+    },
+    {
+      "id": "nodejs/05-principios-solid.md",
+      "tipo": "leccion",
+      "titulo": "Principios de diseño — SOLID",
+      "area": "nodejs",
+      "orden": 5
+    },
+    {
+      "id": "nodejs/06-patrones-de-diseno.md",
+      "tipo": "leccion",
+      "titulo": "Patrones de diseño de software",
+      "area": "nodejs",
+      "orden": 6
+    },
+    {
+      "id": "nodejs/07-introduccion-a-persistencia.md",
+      "tipo": "leccion",
+      "titulo": "Introducción a la persistencia de datos",
+      "area": "nodejs",
+      "orden": 7
+    },
+    {
+      "id": "nodejs/08-persistencia-con-mysql.md",
+      "tipo": "leccion",
+      "titulo": "Persistencia de Datos en Bases de Datos Relacionales con MySQL y Node.js",
+      "area": "nodejs",
+      "orden": 8
+    },
+    {
+      "id": "inteligencia-artificial/01-redes-neuronales-y-sistemas-expertos.md",
+      "tipo": "leccion",
+      "titulo": "Redes Neuronales y Sistemas Expertos en Inteligencia Artificial",
+      "area": "inteligencia-artificial",
+      "orden": 1
+    },
+    {
+      "id": "inteligencia-artificial/02-evaluacion-de-modelos-ligeros-y-llm.md",
+      "tipo": "leccion",
+      "titulo": "Evaluación de Modelos Ligeros y Modelos de Lenguaje",
+      "area": "inteligencia-artificial",
+      "orden": 2
+    },
+    {
+      "id": "inteligencia-artificial/03-prompts-responsables-y-verificaciones.md",
+      "tipo": "leccion",
+      "titulo": "Diseño Responsable de Prompts y Verificaciones en Modelos de Inteligencia Artificial",
+      "area": "inteligencia-artificial",
+      "orden": 3
+    },
+    {
+      "id": "inteligencia-artificial/04-etica-y-sesgos-algoritmicos.md",
+      "tipo": "leccion",
+      "titulo": "Ética en Inteligencia Artificial y Gestión de Sesgos Algorítmicos",
+      "area": "inteligencia-artificial",
+      "orden": 4
+    },
+    {
+      "id": "inteligencia-artificial/05-fundamentos-de-ingenieria-de-prompts.md",
+      "tipo": "leccion",
+      "titulo": "Fundamentos Básicos de Ingeniería de Prompts y Evaluación de Prompts",
+      "area": "inteligencia-artificial",
+      "orden": 5
+    },
+    {
+      "id": "inteligencia-artificial/06-mitigacion-de-alucinaciones.md",
+      "tipo": "leccion",
+      "titulo": "Mitigación de Alucinaciones en Modelos de Lenguaje mediante Ajustes de Instrucciones",
+      "area": "inteligencia-artificial",
+      "orden": 6
+    },
+    {
+      "id": "inteligencia-artificial/07-llm-redes-neuronales-y-mcp.md",
+      "tipo": "leccion",
+      "titulo": "Modelos de Lenguaje de Gran Escala (LLM), Redes Neuronales y Model Context Protocol (MCP)",
+      "area": "inteligencia-artificial",
+      "orden": 7
+    },
+    {
+      "id": "inteligencia-artificial/08-refactorizacion-asistida-por-ia.md",
+      "tipo": "leccion",
+      "titulo": "Refactorización Asistida por Inteligencia Artificial y Generación de Funciones mediante LLM",
+      "area": "inteligencia-artificial",
+      "orden": 8
+    },
+    {
+      "id": "inteligencia-artificial/09-testeo-automatizado-con-ia-y-pocketflow.md",
+      "tipo": "leccion",
+      "titulo": "Testeo Automatizado con Sugerencias de IA, PocketFlow y Automatización con n8n",
+      "area": "inteligencia-artificial",
+      "orden": 9
+    },
+    {
+      "id": "conceptos/alucinacion.md",
+      "tipo": "concepto",
+      "titulo": "Alucinación",
+      "alias": [
+        "Alucinación",
+        "alucinación",
+        "alucinaciones",
+        "alucinar"
+      ]
+    },
+    {
+      "id": "conceptos/atomicidad.md",
+      "tipo": "concepto",
+      "titulo": "Atomicidad",
+      "alias": [
+        "Atomicidad",
+        "atomicidad"
+      ]
+    },
+    {
+      "id": "conceptos/atributo-compuesto.md",
+      "tipo": "concepto",
+      "titulo": "Atributo Compuesto",
+      "alias": [
+        "Atributo Compuesto",
+        "atributo compuesto",
+        "atributos compuestos"
+      ]
+    },
+    {
+      "id": "conceptos/atributo-multivaluado.md",
+      "tipo": "concepto",
+      "titulo": "Atributo Multivaluado",
+      "alias": [
+        "Atributo Multivaluado",
+        "atributo multivaluado",
+        "atributos multivaluados",
+        "multivaluado",
+        "multivaluados"
+      ]
+    },
+    {
+      "id": "conceptos/atributo.md",
+      "tipo": "concepto",
+      "titulo": "Atributo",
+      "alias": [
+        "Atributo",
+        "atributo",
+        "atributos"
+      ]
+    },
+    {
+      "id": "conceptos/base-de-conocimiento.md",
+      "tipo": "concepto",
+      "titulo": "Base de conocimiento",
+      "alias": [
+        "Base de conocimiento",
+        "base de conocimiento",
+        "base de conocimientos"
+      ]
+    },
+    {
+      "id": "conceptos/base-de-datos-relacional.md",
+      "tipo": "concepto",
+      "titulo": "Base de Datos Relacional",
+      "alias": [
+        "Base de Datos Relacional",
+        "base de datos relacional",
+        "bases de datos relacionales",
+        "modelo relacional"
+      ]
+    },
+    {
+      "id": "conceptos/base-de-datos.md",
+      "tipo": "concepto",
+      "titulo": "Base de Datos",
+      "alias": [
+        "Base de Datos",
+        "base de datos",
+        "bases de datos"
+      ]
+    },
+    {
+      "id": "conceptos/cardinalidad.md",
+      "tipo": "concepto",
+      "titulo": "Cardinalidad",
+      "alias": [
+        "Cardinalidad",
+        "cardinalidad",
+        "cardinalidades"
+      ]
+    },
+    {
+      "id": "conceptos/crud.md",
+      "tipo": "concepto",
+      "titulo": "CRUD",
+      "alias": [
+        "CRUD"
+      ]
+    },
+    {
+      "id": "conceptos/cte.md",
+      "tipo": "concepto",
+      "titulo": "CTE",
+      "alias": [
+        "CTE",
+        "CTEs",
+        "common table expression",
+        "common table expressions"
+      ]
+    },
+    {
+      "id": "conceptos/dato.md",
+      "tipo": "concepto",
+      "titulo": "Dato",
+      "alias": [
+        "Dato",
+        "dato"
+      ]
+    },
+    {
+      "id": "conceptos/dom.md",
+      "tipo": "concepto",
+      "titulo": "DOM",
+      "alias": [
+        "DOM"
+      ]
+    },
+    {
+      "id": "conceptos/entidad.md",
+      "tipo": "concepto",
+      "titulo": "Entidad",
+      "alias": [
+        "Entidad",
+        "entidad",
+        "entidades"
+      ]
+    },
+    {
+      "id": "conceptos/escalabilidad.md",
+      "tipo": "concepto",
+      "titulo": "Escalabilidad",
+      "alias": [
+        "Escalabilidad",
+        "escalabilidad",
+        "escalable",
+        "escalables"
+      ]
+    },
+    {
+      "id": "conceptos/evento-programado.md",
+      "tipo": "concepto",
+      "titulo": "Evento programado",
+      "alias": [
+        "Evento programado",
+        "evento programado",
+        "eventos programados",
+        "Event Scheduler"
+      ]
+    },
+    {
+      "id": "conceptos/funcion-de-ventana.md",
+      "tipo": "concepto",
+      "titulo": "Función de ventana",
+      "alias": [
+        "Función de ventana",
+        "función de ventana",
+        "funciones de ventana",
+        "window function",
+        "window functions",
+        "OVER"
+      ]
+    },
+    {
+      "id": "conceptos/function-calling.md",
+      "tipo": "concepto",
+      "titulo": "Function calling",
+      "alias": [
+        "Function calling",
+        "function calling",
+        "llamadas a funciones",
+        "llamada a función",
+        "llamadas a función"
+      ]
+    },
+    {
+      "id": "conceptos/herencia.md",
+      "tipo": "concepto",
+      "titulo": "Herencia",
+      "alias": [
+        "Herencia",
+        "herencia"
+      ]
+    },
+    {
+      "id": "conceptos/indice.md",
+      "tipo": "concepto",
+      "titulo": "Índice",
+      "alias": [
+        "Índice",
+        "índice",
+        "índices",
+        "indice",
+        "indices"
+      ]
+    },
+    {
+      "id": "conceptos/informacion.md",
+      "tipo": "concepto",
+      "titulo": "Información",
+      "alias": [
+        "Información",
+        "información",
+        "informacion"
+      ]
+    },
+    {
+      "id": "conceptos/join.md",
+      "tipo": "concepto",
+      "titulo": "JOIN",
+      "alias": [
+        "JOIN",
+        "JOINs",
+        "INNER JOIN",
+        "LEFT JOIN"
+      ]
+    },
+    {
+      "id": "conceptos/json.md",
+      "tipo": "concepto",
+      "titulo": "JSON",
+      "alias": [
+        "JSON",
+        "JSONB"
+      ]
+    },
+    {
+      "id": "conceptos/llave-foranea.md",
+      "tipo": "concepto",
+      "titulo": "Llave Foránea (FK)",
+      "alias": [
+        "Llave Foránea (FK)",
+        "llave foránea",
+        "llaves foráneas",
+        "llave foranea",
+        "clave foránea",
+        "claves foráneas",
+        "FK"
+      ]
+    },
+    {
+      "id": "conceptos/llave-primaria.md",
+      "tipo": "concepto",
+      "titulo": "Llave Primaria (PK)",
+      "alias": [
+        "Llave Primaria (PK)",
+        "llave primaria",
+        "llaves primarias",
+        "clave primaria",
+        "claves primarias",
+        "PK"
+      ]
+    },
+    {
+      "id": "conceptos/llaves.md",
+      "tipo": "concepto",
+      "titulo": "Llaves (Base de Datos)",
+      "alias": [
+        "Llaves (Base de Datos)",
+        "llaves"
+      ]
+    },
+    {
+      "id": "conceptos/llm.md",
+      "tipo": "concepto",
+      "titulo": "Modelo de lenguaje de gran escala (LLM)",
+      "alias": [
+        "Modelo de lenguaje de gran escala (LLM)",
+        "LLM",
+        "LLMs",
+        "modelo de lenguaje",
+        "modelos de lenguaje",
+        "modelo de lenguaje de gran escala",
+        "modelos de lenguaje de gran escala"
+      ]
+    },
+    {
+      "id": "conceptos/mcp.md",
+      "tipo": "concepto",
+      "titulo": "Model Context Protocol (MCP)",
+      "alias": [
+        "Model Context Protocol (MCP)",
+        "MCP",
+        "Model Context Protocol"
+      ]
+    },
+    {
+      "id": "conceptos/mer.md",
+      "tipo": "concepto",
+      "titulo": "Modelo Entidad-Relación (MER)",
+      "alias": [
+        "Modelo Entidad-Relación (MER)",
+        "MER",
+        "modelo entidad-relación",
+        "modelo entidad relación",
+        "diagrama entidad-relación"
+      ]
+    },
+    {
+      "id": "conceptos/modelo-logico-relacional.md",
+      "tipo": "concepto",
+      "titulo": "Modelo Lógico Relacional",
+      "alias": [
+        "Modelo Lógico Relacional",
+        "modelo lógico relacional",
+        "modelo lógico",
+        "modelo logico relacional"
+      ]
+    },
+    {
+      "id": "conceptos/motor-de-inferencia.md",
+      "tipo": "concepto",
+      "titulo": "Motor de inferencia",
+      "alias": [
+        "Motor de inferencia",
+        "motor de inferencia",
+        "motores de inferencia"
+      ]
+    },
+    {
+      "id": "conceptos/mysql.md",
+      "tipo": "concepto",
+      "titulo": "MySQL",
+      "alias": [
+        "MySQL"
+      ]
+    },
+    {
+      "id": "conceptos/nodejs.md",
+      "tipo": "concepto",
+      "titulo": "Node.js",
+      "alias": [
+        "Node.js",
+        "nodejs"
+      ]
+    },
+    {
+      "id": "conceptos/normalizacion.md",
+      "tipo": "concepto",
+      "titulo": "Normalización",
+      "alias": [
+        "Normalización",
+        "normalización",
+        "normalizacion",
+        "normalizar",
+        "normalizado",
+        "normalizada",
+        "normalizaciones"
+      ]
+    },
+    {
+      "id": "conceptos/patron-de-diseno.md",
+      "tipo": "concepto",
+      "titulo": "Patrón de diseño",
+      "alias": [
+        "Patrón de diseño",
+        "patrón de diseño",
+        "patrones de diseño",
+        "patron de diseno",
+        "patrones de diseno"
+      ]
+    },
+    {
+      "id": "conceptos/persistencia.md",
+      "tipo": "concepto",
+      "titulo": "Persistencia de datos",
+      "alias": [
+        "Persistencia de datos",
+        "persistencia",
+        "persistir",
+        "persistencia de datos"
+      ]
+    },
+    {
+      "id": "conceptos/polimorfismo.md",
+      "tipo": "concepto",
+      "titulo": "Polimorfismo",
+      "alias": [
+        "Polimorfismo",
+        "polimorfismo"
+      ]
+    },
+    {
+      "id": "conceptos/poo.md",
+      "tipo": "concepto",
+      "titulo": "Programación orientada a objetos",
+      "alias": [
+        "Programación orientada a objetos",
+        "POO",
+        "programación orientada a objetos"
+      ]
+    },
+    {
+      "id": "conceptos/pool-de-conexiones.md",
+      "tipo": "concepto",
+      "titulo": "Pool de conexiones",
+      "alias": [
+        "Pool de conexiones",
+        "pool de conexiones",
+        "pools de conexiones"
+      ]
+    },
+    {
+      "id": "conceptos/postgresql.md",
+      "tipo": "concepto",
+      "titulo": "PostgreSQL",
+      "alias": [
+        "PostgreSQL",
+        "Postgres"
+      ]
+    },
+    {
+      "id": "conceptos/prepared-statement.md",
+      "tipo": "concepto",
+      "titulo": "Prepared statement",
+      "alias": [
+        "Prepared statement",
+        "prepared statement",
+        "prepared statements",
+        "consulta preparada",
+        "consultas preparadas",
+        "sentencia preparada"
+      ]
+    },
+    {
+      "id": "conceptos/procedimiento-almacenado.md",
+      "tipo": "concepto",
+      "titulo": "Procedimiento almacenado",
+      "alias": [
+        "Procedimiento almacenado",
+        "procedimiento almacenado",
+        "procedimientos almacenados",
+        "stored procedure",
+        "stored procedures"
+      ]
+    },
+    {
+      "id": "conceptos/prompt.md",
+      "tipo": "concepto",
+      "titulo": "Prompt",
+      "alias": [
+        "Prompt",
+        "prompt",
+        "prompts",
+        "ingeniería de prompts"
+      ]
+    },
+    {
+      "id": "conceptos/red-neuronal.md",
+      "tipo": "concepto",
+      "titulo": "Red neuronal",
+      "alias": [
+        "Red neuronal",
+        "red neuronal",
+        "redes neuronales"
+      ]
+    },
+    {
+      "id": "conceptos/relacion.md",
+      "tipo": "concepto",
+      "titulo": "Relación entre entidades",
+      "alias": [
+        "Relación entre entidades",
+        "relación entre entidades",
+        "relaciones entre entidades"
+      ]
+    },
+    {
+      "id": "conceptos/sgbd.md",
+      "tipo": "concepto",
+      "titulo": "Sistema Gestor de Base de Datos (SGBD)",
+      "alias": [
+        "Sistema Gestor de Base de Datos (SGBD)",
+        "SGBD",
+        "sistema gestor de bases de datos",
+        "sistema de gestión de bases de datos"
+      ]
+    },
+    {
+      "id": "conceptos/sistema-experto.md",
+      "tipo": "concepto",
+      "titulo": "Sistema experto",
+      "alias": [
+        "Sistema experto",
+        "sistema experto",
+        "sistemas expertos"
+      ]
+    },
+    {
+      "id": "conceptos/solid.md",
+      "tipo": "concepto",
+      "titulo": "Principios SOLID",
+      "alias": [
+        "Principios SOLID",
+        "SOLID",
+        "principios SOLID"
+      ]
+    },
+    {
+      "id": "conceptos/sql.md",
+      "tipo": "concepto",
+      "titulo": "SQL",
+      "alias": [
+        "SQL"
+      ]
+    },
+    {
+      "id": "conceptos/tabla.md",
+      "tipo": "concepto",
+      "titulo": "Tabla (Base de Datos)",
+      "alias": [
+        "Tabla (Base de Datos)",
+        "tabla",
+        "tablas"
+      ]
+    },
+    {
+      "id": "conceptos/testing.md",
+      "tipo": "concepto",
+      "titulo": "Testing automatizado",
+      "alias": [
+        "Testing automatizado",
+        "testing",
+        "testeo",
+        "testeo automatizado",
+        "pruebas automatizadas",
+        "pruebas unitarias"
+      ]
+    },
+    {
+      "id": "conceptos/transaccion.md",
+      "tipo": "concepto",
+      "titulo": "Transacción",
+      "alias": [
+        "Transacción",
+        "transacción",
+        "transacciones",
+        "transaccion",
+        "ACID"
+      ]
+    },
+    {
+      "id": "conceptos/trigger.md",
+      "tipo": "concepto",
+      "titulo": "Trigger",
+      "alias": [
+        "Trigger",
+        "trigger",
+        "triggers",
+        "disparador",
+        "disparadores"
+      ]
+    },
+    {
+      "id": "conceptos/tupla.md",
+      "tipo": "concepto",
+      "titulo": "Tupla",
+      "alias": [
+        "Tupla",
+        "tupla",
+        "tuplas"
+      ]
+    },
+    {
+      "id": "conceptos/vista.md",
+      "tipo": "concepto",
+      "titulo": "Vista",
+      "alias": [
+        "Vista",
+        "vista",
+        "vistas"
+      ]
+    },
+    {
+      "id": "conceptos/xml.md",
+      "tipo": "concepto",
+      "titulo": "XML",
+      "alias": [
+        "XML"
+      ]
+    }
+  ],
+  "aristas": [
+    {
+      "origen": "bases-de-datos/clase-02-base-de-datos.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 6
+    },
+    {
+      "origen": "bases-de-datos/clase-02-base-de-datos.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "bases-de-datos/clase-02-base-de-datos.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "bases-de-datos/clase-02-base-de-datos.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 8
+    },
+    {
+      "origen": "bases-de-datos/clase-02-base-de-datos.md",
+      "destino": "conceptos/entidad.md",
+      "tipo": "menciona",
+      "peso": 8
+    },
+    {
+      "origen": "bases-de-datos/clase-02-base-de-datos.md",
+      "destino": "conceptos/atributo.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "bases-de-datos/clase-02-base-de-datos.md",
+      "destino": "conceptos/dato.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-02-base-de-datos.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 8
+    },
+    {
+      "origen": "bases-de-datos/clase-02-base-de-datos.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "bases-de-datos/clase-02-base-de-datos.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "bases-de-datos/clase-02-base-de-datos.md",
+      "destino": "conceptos/base-de-datos-relacional.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-02-base-de-datos.md",
+      "destino": "conceptos/tupla.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "bases-de-datos/clase-02-base-de-datos.md",
+      "destino": "conceptos/llaves.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-02-base-de-datos.md",
+      "destino": "conceptos/mer.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-02-base-de-datos.md",
+      "destino": "conceptos/cardinalidad.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-03-diseno-conceptual-a-fisico.md",
+      "destino": "conceptos/mer.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "bases-de-datos/clase-03-diseno-conceptual-a-fisico.md",
+      "destino": "conceptos/entidad.md",
+      "tipo": "menciona",
+      "peso": 7
+    },
+    {
+      "origen": "bases-de-datos/clase-03-diseno-conceptual-a-fisico.md",
+      "destino": "conceptos/atributo.md",
+      "tipo": "menciona",
+      "peso": 11
+    },
+    {
+      "origen": "bases-de-datos/clase-03-diseno-conceptual-a-fisico.md",
+      "destino": "conceptos/cardinalidad.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "bases-de-datos/clase-03-diseno-conceptual-a-fisico.md",
+      "destino": "conceptos/atributo-multivaluado.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "bases-de-datos/clase-03-diseno-conceptual-a-fisico.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 8
+    },
+    {
+      "origen": "bases-de-datos/clase-03-diseno-conceptual-a-fisico.md",
+      "destino": "conceptos/modelo-logico-relacional.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "bases-de-datos/clase-03-diseno-conceptual-a-fisico.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "bases-de-datos/clase-03-diseno-conceptual-a-fisico.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "menciona",
+      "peso": 6
+    },
+    {
+      "origen": "bases-de-datos/clase-03-diseno-conceptual-a-fisico.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "bases-de-datos/clase-03-diseno-conceptual-a-fisico.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "bases-de-datos/clase-03-diseno-conceptual-a-fisico.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-03-diseno-conceptual-a-fisico.md",
+      "destino": "conceptos/escalabilidad.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-03-diseno-conceptual-a-fisico.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-03-diseno-conceptual-a-fisico.md",
+      "destino": "conceptos/atomicidad.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-03-diseno-conceptual-a-fisico.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-04-normalizacion.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "bases-de-datos/clase-04-normalizacion.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-04-normalizacion.md",
+      "destino": "conceptos/base-de-datos-relacional.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-04-normalizacion.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "bases-de-datos/clase-04-normalizacion.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-04-normalizacion.md",
+      "destino": "conceptos/atomicidad.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "bases-de-datos/clase-04-normalizacion.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "menciona",
+      "peso": 5
+    },
+    {
+      "origen": "bases-de-datos/clase-04-normalizacion.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-04-normalizacion.md",
+      "destino": "conceptos/atributo.md",
+      "tipo": "menciona",
+      "peso": 6
+    },
+    {
+      "origen": "bases-de-datos/clase-05-esquemas-de-diseno.md",
+      "destino": "conceptos/base-de-datos-relacional.md",
+      "tipo": "menciona",
+      "peso": 5
+    },
+    {
+      "origen": "bases-de-datos/clase-05-esquemas-de-diseno.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 6
+    },
+    {
+      "origen": "bases-de-datos/clase-05-esquemas-de-diseno.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "bases-de-datos/clase-05-esquemas-de-diseno.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "bases-de-datos/clase-05-esquemas-de-diseno.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "bases-de-datos/clase-05-esquemas-de-diseno.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-05-esquemas-de-diseno.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-05-esquemas-de-diseno.md",
+      "destino": "conceptos/mer.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "bases-de-datos/clase-05-esquemas-de-diseno.md",
+      "destino": "conceptos/entidad.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "bases-de-datos/clase-05-esquemas-de-diseno.md",
+      "destino": "conceptos/atributo.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "bases-de-datos/clase-05-esquemas-de-diseno.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-05-esquemas-de-diseno.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-05-esquemas-de-diseno.md",
+      "destino": "conceptos/cardinalidad.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "bases-de-datos/clase-05-esquemas-de-diseno.md",
+      "destino": "conceptos/relacion.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-06-fundamentos-de-diseno.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "bases-de-datos/clase-06-fundamentos-de-diseno.md",
+      "destino": "conceptos/base-de-datos-relacional.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "bases-de-datos/clase-06-fundamentos-de-diseno.md",
+      "destino": "conceptos/entidad.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-06-fundamentos-de-diseno.md",
+      "destino": "conceptos/atributo.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-06-fundamentos-de-diseno.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "bases-de-datos/clase-06-fundamentos-de-diseno.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "bases-de-datos/clase-06-fundamentos-de-diseno.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-06-fundamentos-de-diseno.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "bases-de-datos/clase-06-fundamentos-de-diseno.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-06-fundamentos-de-diseno.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "bases-de-datos/clase-06-fundamentos-de-diseno.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "bases-de-datos/clase-06-fundamentos-de-diseno.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-06-fundamentos-de-diseno.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "menciona",
+      "peso": 7
+    },
+    {
+      "origen": "bases-de-datos/clase-06-fundamentos-de-diseno.md",
+      "destino": "conceptos/join.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-06-fundamentos-de-diseno.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-06-fundamentos-de-diseno.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "mysql/01-historia-y-caracteristicas.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "menciona",
+      "peso": 81
+    },
+    {
+      "origen": "mysql/01-historia-y-caracteristicas.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "mysql/01-historia-y-caracteristicas.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 34
+    },
+    {
+      "origen": "mysql/01-historia-y-caracteristicas.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "menciona",
+      "peso": 19
+    },
+    {
+      "origen": "mysql/01-historia-y-caracteristicas.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "menciona",
+      "peso": 10
+    },
+    {
+      "origen": "mysql/01-historia-y-caracteristicas.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "menciona",
+      "peso": 12
+    },
+    {
+      "origen": "mysql/01-historia-y-caracteristicas.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "menciona",
+      "peso": 13
+    },
+    {
+      "origen": "mysql/01-historia-y-caracteristicas.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 14
+    },
+    {
+      "origen": "mysql/01-historia-y-caracteristicas.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/01-historia-y-caracteristicas.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/01-historia-y-caracteristicas.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "menciona",
+      "peso": 19
+    },
+    {
+      "origen": "mysql/01-historia-y-caracteristicas.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 12
+    },
+    {
+      "origen": "mysql/01-historia-y-caracteristicas.md",
+      "destino": "conceptos/evento-programado.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "mysql/01-historia-y-caracteristicas.md",
+      "destino": "conceptos/base-de-datos-relacional.md",
+      "tipo": "menciona",
+      "peso": 7
+    },
+    {
+      "origen": "mysql/01-historia-y-caracteristicas.md",
+      "destino": "conceptos/entidad.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/01-historia-y-caracteristicas.md",
+      "destino": "conceptos/atomicidad.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "mysql/01-historia-y-caracteristicas.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/02-fundamentos-de-sql.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "menciona",
+      "peso": 32
+    },
+    {
+      "origen": "mysql/02-fundamentos-de-sql.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 22
+    },
+    {
+      "origen": "mysql/02-fundamentos-de-sql.md",
+      "destino": "conceptos/base-de-datos-relacional.md",
+      "tipo": "menciona",
+      "peso": 7
+    },
+    {
+      "origen": "mysql/02-fundamentos-de-sql.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 10
+    },
+    {
+      "origen": "mysql/02-fundamentos-de-sql.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "menciona",
+      "peso": 12
+    },
+    {
+      "origen": "mysql/02-fundamentos-de-sql.md",
+      "destino": "conceptos/crud.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/02-fundamentos-de-sql.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 31
+    },
+    {
+      "origen": "mysql/02-fundamentos-de-sql.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "mysql/02-fundamentos-de-sql.md",
+      "destino": "conceptos/json.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "mysql/02-fundamentos-de-sql.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "mysql/02-fundamentos-de-sql.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "mysql/02-fundamentos-de-sql.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "mysql/02-fundamentos-de-sql.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "menciona",
+      "peso": 5
+    },
+    {
+      "origen": "mysql/02-fundamentos-de-sql.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "mysql/02-fundamentos-de-sql.md",
+      "destino": "conceptos/dato.md",
+      "tipo": "menciona",
+      "peso": 6
+    },
+    {
+      "origen": "mysql/03-consultas-basicas.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "menciona",
+      "peso": 6
+    },
+    {
+      "origen": "mysql/03-consultas-basicas.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "menciona",
+      "peso": 8
+    },
+    {
+      "origen": "mysql/03-consultas-basicas.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 18
+    },
+    {
+      "origen": "mysql/03-consultas-basicas.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 84
+    },
+    {
+      "origen": "mysql/03-consultas-basicas.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 8
+    },
+    {
+      "origen": "mysql/03-consultas-basicas.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/03-consultas-basicas.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "mysql/03-consultas-basicas.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "mysql/03-consultas-basicas.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "menciona",
+      "peso": 14
+    },
+    {
+      "origen": "mysql/04-alias-funciones-join-y-subconsultas.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "menciona",
+      "peso": 12
+    },
+    {
+      "origen": "mysql/04-alias-funciones-join-y-subconsultas.md",
+      "destino": "conceptos/join.md",
+      "tipo": "menciona",
+      "peso": 11
+    },
+    {
+      "origen": "mysql/04-alias-funciones-join-y-subconsultas.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 24
+    },
+    {
+      "origen": "mysql/04-alias-funciones-join-y-subconsultas.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 83
+    },
+    {
+      "origen": "mysql/04-alias-funciones-join-y-subconsultas.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "menciona",
+      "peso": 15
+    },
+    {
+      "origen": "mysql/04-alias-funciones-join-y-subconsultas.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 11
+    },
+    {
+      "origen": "mysql/04-alias-funciones-join-y-subconsultas.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "mysql/04-alias-funciones-join-y-subconsultas.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/04-alias-funciones-join-y-subconsultas.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/04-alias-funciones-join-y-subconsultas.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "mysql/04-alias-funciones-join-y-subconsultas.md",
+      "destino": "conceptos/dato.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "mysql/05-indices-vistas-y-restricciones.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 20
+    },
+    {
+      "origen": "mysql/05-indices-vistas-y-restricciones.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "menciona",
+      "peso": 83
+    },
+    {
+      "origen": "mysql/05-indices-vistas-y-restricciones.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "menciona",
+      "peso": 30
+    },
+    {
+      "origen": "mysql/05-indices-vistas-y-restricciones.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "menciona",
+      "peso": 6
+    },
+    {
+      "origen": "mysql/05-indices-vistas-y-restricciones.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "menciona",
+      "peso": 12
+    },
+    {
+      "origen": "mysql/05-indices-vistas-y-restricciones.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 67
+    },
+    {
+      "origen": "mysql/05-indices-vistas-y-restricciones.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 10
+    },
+    {
+      "origen": "mysql/05-indices-vistas-y-restricciones.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "menciona",
+      "peso": 8
+    },
+    {
+      "origen": "mysql/05-indices-vistas-y-restricciones.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "menciona",
+      "peso": 8
+    },
+    {
+      "origen": "mysql/05-indices-vistas-y-restricciones.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "mysql/05-indices-vistas-y-restricciones.md",
+      "destino": "conceptos/base-de-datos-relacional.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "mysql/05-indices-vistas-y-restricciones.md",
+      "destino": "conceptos/dato.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "mysql/06-modelo-er-y-consultas-avanzadas.md",
+      "destino": "conceptos/mer.md",
+      "tipo": "menciona",
+      "peso": 15
+    },
+    {
+      "origen": "mysql/06-modelo-er-y-consultas-avanzadas.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "menciona",
+      "peso": 7
+    },
+    {
+      "origen": "mysql/06-modelo-er-y-consultas-avanzadas.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 19
+    },
+    {
+      "origen": "mysql/06-modelo-er-y-consultas-avanzadas.md",
+      "destino": "conceptos/base-de-datos-relacional.md",
+      "tipo": "menciona",
+      "peso": 10
+    },
+    {
+      "origen": "mysql/06-modelo-er-y-consultas-avanzadas.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 25
+    },
+    {
+      "origen": "mysql/06-modelo-er-y-consultas-avanzadas.md",
+      "destino": "conceptos/modelo-logico-relacional.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/06-modelo-er-y-consultas-avanzadas.md",
+      "destino": "conceptos/entidad.md",
+      "tipo": "menciona",
+      "peso": 23
+    },
+    {
+      "origen": "mysql/06-modelo-er-y-consultas-avanzadas.md",
+      "destino": "conceptos/atributo.md",
+      "tipo": "menciona",
+      "peso": 10
+    },
+    {
+      "origen": "mysql/06-modelo-er-y-consultas-avanzadas.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/06-modelo-er-y-consultas-avanzadas.md",
+      "destino": "conceptos/relacion.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/06-modelo-er-y-consultas-avanzadas.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/06-modelo-er-y-consultas-avanzadas.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "mysql/06-modelo-er-y-consultas-avanzadas.md",
+      "destino": "conceptos/cardinalidad.md",
+      "tipo": "menciona",
+      "peso": 10
+    },
+    {
+      "origen": "mysql/06-modelo-er-y-consultas-avanzadas.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "menciona",
+      "peso": 20
+    },
+    {
+      "origen": "mysql/06-modelo-er-y-consultas-avanzadas.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "menciona",
+      "peso": 6
+    },
+    {
+      "origen": "mysql/06-modelo-er-y-consultas-avanzadas.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/07-procedimientos-almacenados-y-errores.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "menciona",
+      "peso": 5
+    },
+    {
+      "origen": "mysql/07-procedimientos-almacenados-y-errores.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "menciona",
+      "peso": 6
+    },
+    {
+      "origen": "mysql/07-procedimientos-almacenados-y-errores.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "menciona",
+      "peso": 6
+    },
+    {
+      "origen": "mysql/07-procedimientos-almacenados-y-errores.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 8
+    },
+    {
+      "origen": "mysql/07-procedimientos-almacenados-y-errores.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "mysql/07-procedimientos-almacenados-y-errores.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "menciona",
+      "peso": 10
+    },
+    {
+      "origen": "mysql/07-procedimientos-almacenados-y-errores.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "mysql/08-funciones-seguridad-y-permisos.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "menciona",
+      "peso": 16
+    },
+    {
+      "origen": "mysql/08-funciones-seguridad-y-permisos.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "menciona",
+      "peso": 15
+    },
+    {
+      "origen": "mysql/08-funciones-seguridad-y-permisos.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "mysql/08-funciones-seguridad-y-permisos.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "mysql/08-funciones-seguridad-y-permisos.md",
+      "destino": "conceptos/dato.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "mysql/08-funciones-seguridad-y-permisos.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 11
+    },
+    {
+      "origen": "mysql/08-funciones-seguridad-y-permisos.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 9
+    },
+    {
+      "origen": "mysql/08-funciones-seguridad-y-permisos.md",
+      "destino": "conceptos/prepared-statement.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/08-funciones-seguridad-y-permisos.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "mysql/09-optimizacion-transacciones-y-particionamiento.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "menciona",
+      "peso": 26
+    },
+    {
+      "origen": "mysql/09-optimizacion-transacciones-y-particionamiento.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "menciona",
+      "peso": 18
+    },
+    {
+      "origen": "mysql/09-optimizacion-transacciones-y-particionamiento.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 22
+    },
+    {
+      "origen": "mysql/09-optimizacion-transacciones-y-particionamiento.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 7
+    },
+    {
+      "origen": "mysql/09-optimizacion-transacciones-y-particionamiento.md",
+      "destino": "conceptos/escalabilidad.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/09-optimizacion-transacciones-y-particionamiento.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "menciona",
+      "peso": 10
+    },
+    {
+      "origen": "mysql/09-optimizacion-transacciones-y-particionamiento.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 28
+    },
+    {
+      "origen": "mysql/09-optimizacion-transacciones-y-particionamiento.md",
+      "destino": "conceptos/atomicidad.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "mysql/09-optimizacion-transacciones-y-particionamiento.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "mysql/09-optimizacion-transacciones-y-particionamiento.md",
+      "destino": "conceptos/prepared-statement.md",
+      "tipo": "menciona",
+      "peso": 5
+    },
+    {
+      "origen": "mysql/09-optimizacion-transacciones-y-particionamiento.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "menciona",
+      "peso": 7
+    },
+    {
+      "origen": "mysql/09-optimizacion-transacciones-y-particionamiento.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "mysql/09-optimizacion-transacciones-y-particionamiento.md",
+      "destino": "conceptos/funcion-de-ventana.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "mysql/10-eventos-y-triggers.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "menciona",
+      "peso": 42
+    },
+    {
+      "origen": "mysql/10-eventos-y-triggers.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "menciona",
+      "peso": 13
+    },
+    {
+      "origen": "mysql/10-eventos-y-triggers.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "menciona",
+      "peso": 5
+    },
+    {
+      "origen": "mysql/10-eventos-y-triggers.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 14
+    },
+    {
+      "origen": "mysql/10-eventos-y-triggers.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 5
+    },
+    {
+      "origen": "mysql/10-eventos-y-triggers.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 5
+    },
+    {
+      "origen": "mysql/10-eventos-y-triggers.md",
+      "destino": "conceptos/escalabilidad.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/10-eventos-y-triggers.md",
+      "destino": "conceptos/evento-programado.md",
+      "tipo": "menciona",
+      "peso": 6
+    },
+    {
+      "origen": "mysql/10-eventos-y-triggers.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "postgresql/01-introduccion.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "menciona",
+      "peso": 71
+    },
+    {
+      "origen": "postgresql/01-introduccion.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "menciona",
+      "peso": 10
+    },
+    {
+      "origen": "postgresql/01-introduccion.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "menciona",
+      "peso": 14
+    },
+    {
+      "origen": "postgresql/01-introduccion.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 20
+    },
+    {
+      "origen": "postgresql/01-introduccion.md",
+      "destino": "conceptos/escalabilidad.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "postgresql/01-introduccion.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "menciona",
+      "peso": 6
+    },
+    {
+      "origen": "postgresql/01-introduccion.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 21
+    },
+    {
+      "origen": "postgresql/01-introduccion.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "menciona",
+      "peso": 14
+    },
+    {
+      "origen": "postgresql/01-introduccion.md",
+      "destino": "conceptos/atomicidad.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "postgresql/01-introduccion.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "postgresql/01-introduccion.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 9
+    },
+    {
+      "origen": "postgresql/01-introduccion.md",
+      "destino": "conceptos/base-de-datos-relacional.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "postgresql/01-introduccion.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "postgresql/01-introduccion.md",
+      "destino": "conceptos/atributo.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "postgresql/01-introduccion.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "postgresql/01-introduccion.md",
+      "destino": "conceptos/json.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "postgresql/01-introduccion.md",
+      "destino": "conceptos/crud.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "postgresql/01-introduccion.md",
+      "destino": "conceptos/dato.md",
+      "tipo": "menciona",
+      "peso": 7
+    },
+    {
+      "origen": "postgresql/02-configuracion-administracion-y-consultas.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "menciona",
+      "peso": 54
+    },
+    {
+      "origen": "postgresql/02-configuracion-administracion-y-consultas.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "menciona",
+      "peso": 26
+    },
+    {
+      "origen": "postgresql/02-configuracion-administracion-y-consultas.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 32
+    },
+    {
+      "origen": "postgresql/02-configuracion-administracion-y-consultas.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "menciona",
+      "peso": 11
+    },
+    {
+      "origen": "postgresql/02-configuracion-administracion-y-consultas.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "menciona",
+      "peso": 6
+    },
+    {
+      "origen": "postgresql/02-configuracion-administracion-y-consultas.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "menciona",
+      "peso": 10
+    },
+    {
+      "origen": "postgresql/02-configuracion-administracion-y-consultas.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 10
+    },
+    {
+      "origen": "postgresql/02-configuracion-administracion-y-consultas.md",
+      "destino": "conceptos/dato.md",
+      "tipo": "menciona",
+      "peso": 12
+    },
+    {
+      "origen": "postgresql/02-configuracion-administracion-y-consultas.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 10
+    },
+    {
+      "origen": "postgresql/02-configuracion-administracion-y-consultas.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "postgresql/02-configuracion-administracion-y-consultas.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "postgresql/02-configuracion-administracion-y-consultas.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "postgresql/02-configuracion-administracion-y-consultas.md",
+      "destino": "conceptos/base-de-datos-relacional.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "postgresql/02-configuracion-administracion-y-consultas.md",
+      "destino": "conceptos/join.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "postgresql/03-administracion-e-importacion-de-datasets.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "menciona",
+      "peso": 25
+    },
+    {
+      "origen": "postgresql/03-administracion-e-importacion-de-datasets.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "menciona",
+      "peso": 12
+    },
+    {
+      "origen": "postgresql/03-administracion-e-importacion-de-datasets.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 9
+    },
+    {
+      "origen": "postgresql/03-administracion-e-importacion-de-datasets.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 29
+    },
+    {
+      "origen": "postgresql/03-administracion-e-importacion-de-datasets.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 9
+    },
+    {
+      "origen": "postgresql/03-administracion-e-importacion-de-datasets.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "postgresql/03-administracion-e-importacion-de-datasets.md",
+      "destino": "conceptos/funcion-de-ventana.md",
+      "tipo": "menciona",
+      "peso": 5
+    },
+    {
+      "origen": "postgresql/03-administracion-e-importacion-de-datasets.md",
+      "destino": "conceptos/cte.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "postgresql/04-operadores-y-tipos-de-datos.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "menciona",
+      "peso": 19
+    },
+    {
+      "origen": "postgresql/04-operadores-y-tipos-de-datos.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 9
+    },
+    {
+      "origen": "postgresql/04-operadores-y-tipos-de-datos.md",
+      "destino": "conceptos/dato.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "postgresql/04-operadores-y-tipos-de-datos.md",
+      "destino": "conceptos/json.md",
+      "tipo": "menciona",
+      "peso": 11
+    },
+    {
+      "origen": "postgresql/04-operadores-y-tipos-de-datos.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 12
+    },
+    {
+      "origen": "postgresql/04-operadores-y-tipos-de-datos.md",
+      "destino": "conceptos/xml.md",
+      "tipo": "menciona",
+      "peso": 9
+    },
+    {
+      "origen": "postgresql/04-operadores-y-tipos-de-datos.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "postgresql/04-operadores-y-tipos-de-datos.md",
+      "destino": "conceptos/base-de-datos-relacional.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "postgresql/04-operadores-y-tipos-de-datos.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "postgresql/05-funciones-de-ventana-y-ctes.md",
+      "destino": "conceptos/funcion-de-ventana.md",
+      "tipo": "menciona",
+      "peso": 32
+    },
+    {
+      "origen": "postgresql/05-funciones-de-ventana-y-ctes.md",
+      "destino": "conceptos/cte.md",
+      "tipo": "menciona",
+      "peso": 43
+    },
+    {
+      "origen": "postgresql/05-funciones-de-ventana-y-ctes.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "postgresql/05-funciones-de-ventana-y-ctes.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "postgresql/05-funciones-de-ventana-y-ctes.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 8
+    },
+    {
+      "origen": "postgresql/05-funciones-de-ventana-y-ctes.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "postgresql/05-funciones-de-ventana-y-ctes.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "menciona",
+      "peso": 5
+    },
+    {
+      "origen": "postgresql/06-conjuntos-vistas-procedimientos-funciones-y-triggers.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "menciona",
+      "peso": 37
+    },
+    {
+      "origen": "postgresql/06-conjuntos-vistas-procedimientos-funciones-y-triggers.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "menciona",
+      "peso": 37
+    },
+    {
+      "origen": "postgresql/06-conjuntos-vistas-procedimientos-funciones-y-triggers.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "menciona",
+      "peso": 18
+    },
+    {
+      "origen": "postgresql/06-conjuntos-vistas-procedimientos-funciones-y-triggers.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "menciona",
+      "peso": 16
+    },
+    {
+      "origen": "postgresql/06-conjuntos-vistas-procedimientos-funciones-y-triggers.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "menciona",
+      "peso": 9
+    },
+    {
+      "origen": "postgresql/06-conjuntos-vistas-procedimientos-funciones-y-triggers.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 28
+    },
+    {
+      "origen": "postgresql/06-conjuntos-vistas-procedimientos-funciones-y-triggers.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 11
+    },
+    {
+      "origen": "postgresql/06-conjuntos-vistas-procedimientos-funciones-y-triggers.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 11
+    },
+    {
+      "origen": "postgresql/06-conjuntos-vistas-procedimientos-funciones-y-triggers.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "postgresql/06-conjuntos-vistas-procedimientos-funciones-y-triggers.md",
+      "destino": "conceptos/dato.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "postgresql/07-datos-semiestructurados-y-binarios.md",
+      "destino": "conceptos/json.md",
+      "tipo": "menciona",
+      "peso": 36
+    },
+    {
+      "origen": "postgresql/07-datos-semiestructurados-y-binarios.md",
+      "destino": "conceptos/xml.md",
+      "tipo": "menciona",
+      "peso": 31
+    },
+    {
+      "origen": "postgresql/07-datos-semiestructurados-y-binarios.md",
+      "destino": "conceptos/join.md",
+      "tipo": "menciona",
+      "peso": 14
+    },
+    {
+      "origen": "postgresql/07-datos-semiestructurados-y-binarios.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "menciona",
+      "peso": 38
+    },
+    {
+      "origen": "postgresql/07-datos-semiestructurados-y-binarios.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "menciona",
+      "peso": 8
+    },
+    {
+      "origen": "postgresql/07-datos-semiestructurados-y-binarios.md",
+      "destino": "conceptos/base-de-datos-relacional.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "postgresql/07-datos-semiestructurados-y-binarios.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 5
+    },
+    {
+      "origen": "postgresql/07-datos-semiestructurados-y-binarios.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 31
+    },
+    {
+      "origen": "postgresql/07-datos-semiestructurados-y-binarios.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "postgresql/07-datos-semiestructurados-y-binarios.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "postgresql/07-datos-semiestructurados-y-binarios.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "postgresql/07-datos-semiestructurados-y-binarios.md",
+      "destino": "conceptos/modelo-logico-relacional.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "postgresql/07-datos-semiestructurados-y-binarios.md",
+      "destino": "conceptos/entidad.md",
+      "tipo": "menciona",
+      "peso": 5
+    },
+    {
+      "origen": "postgresql/07-datos-semiestructurados-y-binarios.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "postgresql/07-datos-semiestructurados-y-binarios.md",
+      "destino": "conceptos/atributo.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "postgresql/07-datos-semiestructurados-y-binarios.md",
+      "destino": "conceptos/dato.md",
+      "tipo": "menciona",
+      "peso": 5
+    },
+    {
+      "origen": "nodejs/01-entornos-de-ejecucion.md",
+      "destino": "conceptos/nodejs.md",
+      "tipo": "menciona",
+      "peso": 74
+    },
+    {
+      "origen": "nodejs/01-entornos-de-ejecucion.md",
+      "destino": "conceptos/dom.md",
+      "tipo": "menciona",
+      "peso": 23
+    },
+    {
+      "origen": "nodejs/01-entornos-de-ejecucion.md",
+      "destino": "conceptos/atributo.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "nodejs/01-entornos-de-ejecucion.md",
+      "destino": "conceptos/escalabilidad.md",
+      "tipo": "menciona",
+      "peso": 13
+    },
+    {
+      "origen": "nodejs/01-entornos-de-ejecucion.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 8
+    },
+    {
+      "origen": "nodejs/02-poo-en-javascript.md",
+      "destino": "conceptos/poo.md",
+      "tipo": "menciona",
+      "peso": 21
+    },
+    {
+      "origen": "nodejs/02-poo-en-javascript.md",
+      "destino": "conceptos/entidad.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "nodejs/02-poo-en-javascript.md",
+      "destino": "conceptos/herencia.md",
+      "tipo": "menciona",
+      "peso": 11
+    },
+    {
+      "origen": "nodejs/02-poo-en-javascript.md",
+      "destino": "conceptos/polimorfismo.md",
+      "tipo": "menciona",
+      "peso": 7
+    },
+    {
+      "origen": "nodejs/02-poo-en-javascript.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "nodejs/02-poo-en-javascript.md",
+      "destino": "conceptos/dato.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "nodejs/03-herencia-y-polimorfismo.md",
+      "destino": "conceptos/herencia.md",
+      "tipo": "menciona",
+      "peso": 30
+    },
+    {
+      "origen": "nodejs/03-herencia-y-polimorfismo.md",
+      "destino": "conceptos/polimorfismo.md",
+      "tipo": "menciona",
+      "peso": 10
+    },
+    {
+      "origen": "nodejs/03-herencia-y-polimorfismo.md",
+      "destino": "conceptos/poo.md",
+      "tipo": "menciona",
+      "peso": 6
+    },
+    {
+      "origen": "nodejs/03-herencia-y-polimorfismo.md",
+      "destino": "conceptos/atributo.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "nodejs/04-interfaces-y-relaciones-entre-clases.md",
+      "destino": "conceptos/herencia.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "nodejs/04-interfaces-y-relaciones-entre-clases.md",
+      "destino": "conceptos/nodejs.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "nodejs/04-interfaces-y-relaciones-entre-clases.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "nodejs/04-interfaces-y-relaciones-entre-clases.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "nodejs/04-interfaces-y-relaciones-entre-clases.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "nodejs/04-interfaces-y-relaciones-entre-clases.md",
+      "destino": "conceptos/atributo.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "nodejs/05-principios-solid.md",
+      "destino": "conceptos/solid.md",
+      "tipo": "menciona",
+      "peso": 22
+    },
+    {
+      "origen": "nodejs/05-principios-solid.md",
+      "destino": "conceptos/poo.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "nodejs/05-principios-solid.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "nodejs/05-principios-solid.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "nodejs/05-principios-solid.md",
+      "destino": "conceptos/entidad.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "nodejs/05-principios-solid.md",
+      "destino": "conceptos/polimorfismo.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "nodejs/05-principios-solid.md",
+      "destino": "conceptos/herencia.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "nodejs/06-patrones-de-diseno.md",
+      "destino": "conceptos/patron-de-diseno.md",
+      "tipo": "menciona",
+      "peso": 14
+    },
+    {
+      "origen": "nodejs/06-patrones-de-diseno.md",
+      "destino": "conceptos/polimorfismo.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "nodejs/06-patrones-de-diseno.md",
+      "destino": "conceptos/herencia.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "nodejs/06-patrones-de-diseno.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "nodejs/06-patrones-de-diseno.md",
+      "destino": "conceptos/solid.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "nodejs/07-introduccion-a-persistencia.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "menciona",
+      "peso": 10
+    },
+    {
+      "origen": "nodejs/07-introduccion-a-persistencia.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 21
+    },
+    {
+      "origen": "nodejs/07-introduccion-a-persistencia.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "nodejs/07-introduccion-a-persistencia.md",
+      "destino": "conceptos/json.md",
+      "tipo": "menciona",
+      "peso": 27
+    },
+    {
+      "origen": "nodejs/07-introduccion-a-persistencia.md",
+      "destino": "conceptos/nodejs.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "nodejs/07-introduccion-a-persistencia.md",
+      "destino": "conceptos/entidad.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "nodejs/08-persistencia-con-mysql.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "menciona",
+      "peso": 8
+    },
+    {
+      "origen": "nodejs/08-persistencia-con-mysql.md",
+      "destino": "conceptos/base-de-datos-relacional.md",
+      "tipo": "menciona",
+      "peso": 5
+    },
+    {
+      "origen": "nodejs/08-persistencia-con-mysql.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "menciona",
+      "peso": 40
+    },
+    {
+      "origen": "nodejs/08-persistencia-con-mysql.md",
+      "destino": "conceptos/nodejs.md",
+      "tipo": "menciona",
+      "peso": 15
+    },
+    {
+      "origen": "nodejs/08-persistencia-con-mysql.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 7
+    },
+    {
+      "origen": "nodejs/08-persistencia-con-mysql.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 11
+    },
+    {
+      "origen": "nodejs/08-persistencia-con-mysql.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "nodejs/08-persistencia-con-mysql.md",
+      "destino": "conceptos/crud.md",
+      "tipo": "menciona",
+      "peso": 15
+    },
+    {
+      "origen": "nodejs/08-persistencia-con-mysql.md",
+      "destino": "conceptos/atributo.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "nodejs/08-persistencia-con-mysql.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "nodejs/08-persistencia-con-mysql.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 9
+    },
+    {
+      "origen": "nodejs/08-persistencia-con-mysql.md",
+      "destino": "conceptos/prepared-statement.md",
+      "tipo": "menciona",
+      "peso": 9
+    },
+    {
+      "origen": "nodejs/08-persistencia-con-mysql.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "menciona",
+      "peso": 18
+    },
+    {
+      "origen": "nodejs/08-persistencia-con-mysql.md",
+      "destino": "conceptos/pool-de-conexiones.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "nodejs/08-persistencia-con-mysql.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "nodejs/08-persistencia-con-mysql.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "nodejs/08-persistencia-con-mysql.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "inteligencia-artificial/01-redes-neuronales-y-sistemas-expertos.md",
+      "destino": "conceptos/red-neuronal.md",
+      "tipo": "menciona",
+      "peso": 13
+    },
+    {
+      "origen": "inteligencia-artificial/01-redes-neuronales-y-sistemas-expertos.md",
+      "destino": "conceptos/sistema-experto.md",
+      "tipo": "menciona",
+      "peso": 22
+    },
+    {
+      "origen": "inteligencia-artificial/01-redes-neuronales-y-sistemas-expertos.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 12
+    },
+    {
+      "origen": "inteligencia-artificial/01-redes-neuronales-y-sistemas-expertos.md",
+      "destino": "conceptos/base-de-conocimiento.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "inteligencia-artificial/01-redes-neuronales-y-sistemas-expertos.md",
+      "destino": "conceptos/motor-de-inferencia.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "inteligencia-artificial/01-redes-neuronales-y-sistemas-expertos.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "inteligencia-artificial/02-evaluacion-de-modelos-ligeros-y-llm.md",
+      "destino": "conceptos/llm.md",
+      "tipo": "menciona",
+      "peso": 15
+    },
+    {
+      "origen": "inteligencia-artificial/02-evaluacion-de-modelos-ligeros-y-llm.md",
+      "destino": "conceptos/red-neuronal.md",
+      "tipo": "menciona",
+      "peso": 10
+    },
+    {
+      "origen": "inteligencia-artificial/02-evaluacion-de-modelos-ligeros-y-llm.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 11
+    },
+    {
+      "origen": "inteligencia-artificial/02-evaluacion-de-modelos-ligeros-y-llm.md",
+      "destino": "conceptos/alucinacion.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "inteligencia-artificial/02-evaluacion-de-modelos-ligeros-y-llm.md",
+      "destino": "conceptos/base-de-conocimiento.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "inteligencia-artificial/03-prompts-responsables-y-verificaciones.md",
+      "destino": "conceptos/prompt.md",
+      "tipo": "menciona",
+      "peso": 43
+    },
+    {
+      "origen": "inteligencia-artificial/03-prompts-responsables-y-verificaciones.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 14
+    },
+    {
+      "origen": "inteligencia-artificial/03-prompts-responsables-y-verificaciones.md",
+      "destino": "conceptos/llm.md",
+      "tipo": "menciona",
+      "peso": 7
+    },
+    {
+      "origen": "inteligencia-artificial/03-prompts-responsables-y-verificaciones.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "inteligencia-artificial/03-prompts-responsables-y-verificaciones.md",
+      "destino": "conceptos/alucinacion.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "inteligencia-artificial/04-etica-y-sesgos-algoritmicos.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 5
+    },
+    {
+      "origen": "inteligencia-artificial/05-fundamentos-de-ingenieria-de-prompts.md",
+      "destino": "conceptos/prompt.md",
+      "tipo": "menciona",
+      "peso": 44
+    },
+    {
+      "origen": "inteligencia-artificial/05-fundamentos-de-ingenieria-de-prompts.md",
+      "destino": "conceptos/llm.md",
+      "tipo": "menciona",
+      "peso": 8
+    },
+    {
+      "origen": "inteligencia-artificial/05-fundamentos-de-ingenieria-de-prompts.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 8
+    },
+    {
+      "origen": "inteligencia-artificial/05-fundamentos-de-ingenieria-de-prompts.md",
+      "destino": "conceptos/testing.md",
+      "tipo": "menciona",
+      "peso": 10
+    },
+    {
+      "origen": "inteligencia-artificial/05-fundamentos-de-ingenieria-de-prompts.md",
+      "destino": "conceptos/json.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "inteligencia-artificial/05-fundamentos-de-ingenieria-de-prompts.md",
+      "destino": "conceptos/dato.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "inteligencia-artificial/06-mitigacion-de-alucinaciones.md",
+      "destino": "conceptos/alucinacion.md",
+      "tipo": "menciona",
+      "peso": 12
+    },
+    {
+      "origen": "inteligencia-artificial/06-mitigacion-de-alucinaciones.md",
+      "destino": "conceptos/llm.md",
+      "tipo": "menciona",
+      "peso": 8
+    },
+    {
+      "origen": "inteligencia-artificial/06-mitigacion-de-alucinaciones.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 21
+    },
+    {
+      "origen": "inteligencia-artificial/06-mitigacion-de-alucinaciones.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "inteligencia-artificial/06-mitigacion-de-alucinaciones.md",
+      "destino": "conceptos/prompt.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "inteligencia-artificial/07-llm-redes-neuronales-y-mcp.md",
+      "destino": "conceptos/llm.md",
+      "tipo": "menciona",
+      "peso": 18
+    },
+    {
+      "origen": "inteligencia-artificial/07-llm-redes-neuronales-y-mcp.md",
+      "destino": "conceptos/red-neuronal.md",
+      "tipo": "menciona",
+      "peso": 9
+    },
+    {
+      "origen": "inteligencia-artificial/07-llm-redes-neuronales-y-mcp.md",
+      "destino": "conceptos/mcp.md",
+      "tipo": "menciona",
+      "peso": 23
+    },
+    {
+      "origen": "inteligencia-artificial/07-llm-redes-neuronales-y-mcp.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 8
+    },
+    {
+      "origen": "inteligencia-artificial/07-llm-redes-neuronales-y-mcp.md",
+      "destino": "conceptos/prompt.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "inteligencia-artificial/07-llm-redes-neuronales-y-mcp.md",
+      "destino": "conceptos/escalabilidad.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "inteligencia-artificial/07-llm-redes-neuronales-y-mcp.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "inteligencia-artificial/07-llm-redes-neuronales-y-mcp.md",
+      "destino": "conceptos/function-calling.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "inteligencia-artificial/08-refactorizacion-asistida-por-ia.md",
+      "destino": "conceptos/llm.md",
+      "tipo": "menciona",
+      "peso": 8
+    },
+    {
+      "origen": "inteligencia-artificial/08-refactorizacion-asistida-por-ia.md",
+      "destino": "conceptos/prompt.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "inteligencia-artificial/08-refactorizacion-asistida-por-ia.md",
+      "destino": "conceptos/function-calling.md",
+      "tipo": "menciona",
+      "peso": 9
+    },
+    {
+      "origen": "inteligencia-artificial/08-refactorizacion-asistida-por-ia.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "inteligencia-artificial/08-refactorizacion-asistida-por-ia.md",
+      "destino": "conceptos/mcp.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "inteligencia-artificial/08-refactorizacion-asistida-por-ia.md",
+      "destino": "conceptos/dato.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "inteligencia-artificial/09-testeo-automatizado-con-ia-y-pocketflow.md",
+      "destino": "conceptos/testing.md",
+      "tipo": "menciona",
+      "peso": 9
+    },
+    {
+      "origen": "inteligencia-artificial/09-testeo-automatizado-con-ia-y-pocketflow.md",
+      "destino": "conceptos/function-calling.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "inteligencia-artificial/09-testeo-automatizado-con-ia-y-pocketflow.md",
+      "destino": "conceptos/llm.md",
+      "tipo": "menciona",
+      "peso": 5
+    },
+    {
+      "origen": "inteligencia-artificial/09-testeo-automatizado-con-ia-y-pocketflow.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "menciona",
+      "peso": 3
+    },
+    {
+      "origen": "inteligencia-artificial/09-testeo-automatizado-con-ia-y-pocketflow.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "menciona",
+      "peso": 2
+    },
+    {
+      "origen": "inteligencia-artificial/09-testeo-automatizado-con-ia-y-pocketflow.md",
+      "destino": "conceptos/nodejs.md",
+      "tipo": "menciona",
+      "peso": 4
+    },
+    {
+      "origen": "bases-de-datos/clase-02-base-de-datos.md",
+      "destino": "bases-de-datos/clase-03-diseno-conceptual-a-fisico.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-03-diseno-conceptual-a-fisico.md",
+      "destino": "bases-de-datos/clase-04-normalizacion.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-04-normalizacion.md",
+      "destino": "bases-de-datos/clase-05-esquemas-de-diseno.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-05-esquemas-de-diseno.md",
+      "destino": "bases-de-datos/clase-06-fundamentos-de-diseno.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/01-historia-y-caracteristicas.md",
+      "destino": "mysql/02-fundamentos-de-sql.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/02-fundamentos-de-sql.md",
+      "destino": "mysql/03-consultas-basicas.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/03-consultas-basicas.md",
+      "destino": "mysql/04-alias-funciones-join-y-subconsultas.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/04-alias-funciones-join-y-subconsultas.md",
+      "destino": "mysql/05-indices-vistas-y-restricciones.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/05-indices-vistas-y-restricciones.md",
+      "destino": "mysql/06-modelo-er-y-consultas-avanzadas.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/06-modelo-er-y-consultas-avanzadas.md",
+      "destino": "mysql/07-procedimientos-almacenados-y-errores.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/07-procedimientos-almacenados-y-errores.md",
+      "destino": "mysql/08-funciones-seguridad-y-permisos.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/08-funciones-seguridad-y-permisos.md",
+      "destino": "mysql/09-optimizacion-transacciones-y-particionamiento.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "mysql/09-optimizacion-transacciones-y-particionamiento.md",
+      "destino": "mysql/10-eventos-y-triggers.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "postgresql/01-introduccion.md",
+      "destino": "postgresql/02-configuracion-administracion-y-consultas.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "postgresql/02-configuracion-administracion-y-consultas.md",
+      "destino": "postgresql/03-administracion-e-importacion-de-datasets.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "postgresql/03-administracion-e-importacion-de-datasets.md",
+      "destino": "postgresql/04-operadores-y-tipos-de-datos.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "postgresql/04-operadores-y-tipos-de-datos.md",
+      "destino": "postgresql/05-funciones-de-ventana-y-ctes.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "postgresql/05-funciones-de-ventana-y-ctes.md",
+      "destino": "postgresql/06-conjuntos-vistas-procedimientos-funciones-y-triggers.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "postgresql/06-conjuntos-vistas-procedimientos-funciones-y-triggers.md",
+      "destino": "postgresql/07-datos-semiestructurados-y-binarios.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "nodejs/01-entornos-de-ejecucion.md",
+      "destino": "nodejs/02-poo-en-javascript.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "nodejs/02-poo-en-javascript.md",
+      "destino": "nodejs/03-herencia-y-polimorfismo.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "nodejs/03-herencia-y-polimorfismo.md",
+      "destino": "nodejs/04-interfaces-y-relaciones-entre-clases.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "nodejs/04-interfaces-y-relaciones-entre-clases.md",
+      "destino": "nodejs/05-principios-solid.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "nodejs/05-principios-solid.md",
+      "destino": "nodejs/06-patrones-de-diseno.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "nodejs/06-patrones-de-diseno.md",
+      "destino": "nodejs/07-introduccion-a-persistencia.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "nodejs/07-introduccion-a-persistencia.md",
+      "destino": "nodejs/08-persistencia-con-mysql.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "inteligencia-artificial/01-redes-neuronales-y-sistemas-expertos.md",
+      "destino": "inteligencia-artificial/02-evaluacion-de-modelos-ligeros-y-llm.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "inteligencia-artificial/02-evaluacion-de-modelos-ligeros-y-llm.md",
+      "destino": "inteligencia-artificial/03-prompts-responsables-y-verificaciones.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "inteligencia-artificial/03-prompts-responsables-y-verificaciones.md",
+      "destino": "inteligencia-artificial/04-etica-y-sesgos-algoritmicos.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "inteligencia-artificial/04-etica-y-sesgos-algoritmicos.md",
+      "destino": "inteligencia-artificial/05-fundamentos-de-ingenieria-de-prompts.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "inteligencia-artificial/05-fundamentos-de-ingenieria-de-prompts.md",
+      "destino": "inteligencia-artificial/06-mitigacion-de-alucinaciones.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "inteligencia-artificial/06-mitigacion-de-alucinaciones.md",
+      "destino": "inteligencia-artificial/07-llm-redes-neuronales-y-mcp.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "inteligencia-artificial/07-llm-redes-neuronales-y-mcp.md",
+      "destino": "inteligencia-artificial/08-refactorizacion-asistida-por-ia.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "inteligencia-artificial/08-refactorizacion-asistida-por-ia.md",
+      "destino": "inteligencia-artificial/09-testeo-automatizado-con-ia-y-pocketflow.md",
+      "tipo": "sigue_a",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 8
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "co_ocurre",
+      "peso": 25
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/entidad.md",
+      "tipo": "co_ocurre",
+      "peso": 7
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/dato.md",
+      "tipo": "co_ocurre",
+      "peso": 11
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 21
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "co_ocurre",
+      "peso": 13
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "co_ocurre",
+      "peso": 11
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/base-de-datos-relacional.md",
+      "tipo": "co_ocurre",
+      "peso": 13
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/tupla.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/llaves.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/mer.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/cardinalidad.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 18
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/relacion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "co_ocurre",
+      "peso": 13
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/join.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "co_ocurre",
+      "peso": 14
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "co_ocurre",
+      "peso": 8
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 9
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 9
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/evento-programado.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/crud.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/json.md",
+      "tipo": "co_ocurre",
+      "peso": 5
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/modelo-logico-relacional.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/prepared-statement.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/escalabilidad.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/funcion-de-ventana.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/cte.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/xml.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/nodejs.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/pool-de-conexiones.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/prompt.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/llm.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/red-neuronal.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/mcp.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/base-de-datos.md",
+      "destino": "conceptos/function-calling.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/sgbd.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 9
+    },
+    {
+      "origen": "conceptos/sgbd.md",
+      "destino": "conceptos/tupla.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/sgbd.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 7
+    },
+    {
+      "origen": "conceptos/sgbd.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/sgbd.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 5
+    },
+    {
+      "origen": "conceptos/sgbd.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/persistencia.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/persistencia.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/persistencia.md",
+      "destino": "conceptos/tupla.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/persistencia.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/persistencia.md",
+      "destino": "conceptos/prepared-statement.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/persistencia.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/persistencia.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/persistencia.md",
+      "destino": "conceptos/solid.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/persistencia.md",
+      "destino": "conceptos/poo.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/persistencia.md",
+      "destino": "conceptos/polimorfismo.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/persistencia.md",
+      "destino": "conceptos/pool-de-conexiones.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 9
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 25
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "co_ocurre",
+      "peso": 14
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "co_ocurre",
+      "peso": 12
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/tupla.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/llaves.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/mer.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/modelo-logico-relacional.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "co_ocurre",
+      "peso": 5
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 19
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/relacion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/join.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "co_ocurre",
+      "peso": 14
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "co_ocurre",
+      "peso": 9
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 10
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 10
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/json.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/prepared-statement.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/xml.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/nodejs.md",
+      "tipo": "co_ocurre",
+      "peso": 5
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/poo.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/polimorfismo.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/solid.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/pool-de-conexiones.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/red-neuronal.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/sistema-experto.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/motor-de-inferencia.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/llm.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/prompt.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/testing.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/informacion.md",
+      "destino": "conceptos/mcp.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 5
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "co_ocurre",
+      "peso": 10
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 7
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "co_ocurre",
+      "peso": 7
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/tupla.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/llaves.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/mer.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/modelo-logico-relacional.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/escalabilidad.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 5
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/relacion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/join.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/evento-programado.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/json.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/xml.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/poo.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/herencia.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/polimorfismo.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/solid.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/entidad.md",
+      "destino": "conceptos/nodejs.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "co_ocurre",
+      "peso": 8
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "co_ocurre",
+      "peso": 11
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/entidad.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/dato.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 9
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "co_ocurre",
+      "peso": 9
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "co_ocurre",
+      "peso": 8
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/base-de-datos-relacional.md",
+      "tipo": "co_ocurre",
+      "peso": 8
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/tupla.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/llaves.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/mer.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/cardinalidad.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/atributo-multivaluado.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/modelo-logico-relacional.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/escalabilidad.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/relacion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/join.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/json.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/crud.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/xml.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/nodejs.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/dom.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/herencia.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/polimorfismo.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/poo.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/prepared-statement.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atributo.md",
+      "destino": "conceptos/pool-de-conexiones.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "co_ocurre",
+      "peso": 12
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/entidad.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 10
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "co_ocurre",
+      "peso": 7
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/tupla.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/llaves.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/mer.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 8
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/json.md",
+      "tipo": "co_ocurre",
+      "peso": 5
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 7
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "co_ocurre",
+      "peso": 7
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/join.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/prepared-statement.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "co_ocurre",
+      "peso": 5
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/escalabilidad.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/xml.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/modelo-logico-relacional.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/poo.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/herencia.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/polimorfismo.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/prompt.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/llm.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/testing.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/function-calling.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/mcp.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/tabla.md",
+      "destino": "conceptos/tupla.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/tabla.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/tabla.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 10
+    },
+    {
+      "origen": "conceptos/tabla.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 9
+    },
+    {
+      "origen": "conceptos/tabla.md",
+      "destino": "conceptos/xml.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/tabla.md",
+      "destino": "conceptos/testing.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/llave-primaria.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 8
+    },
+    {
+      "origen": "conceptos/llave-primaria.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/llave-primaria.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 14
+    },
+    {
+      "origen": "conceptos/llave-primaria.md",
+      "destino": "conceptos/tupla.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/llave-primaria.md",
+      "destino": "conceptos/llaves.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/llave-primaria.md",
+      "destino": "conceptos/mer.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/llave-primaria.md",
+      "destino": "conceptos/modelo-logico-relacional.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/llave-primaria.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "co_ocurre",
+      "peso": 5
+    },
+    {
+      "origen": "conceptos/llave-primaria.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 11
+    },
+    {
+      "origen": "conceptos/llave-primaria.md",
+      "destino": "conceptos/relacion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/llave-primaria.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/llave-primaria.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "co_ocurre",
+      "peso": 9
+    },
+    {
+      "origen": "conceptos/llave-primaria.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/llave-primaria.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/llave-primaria.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/llave-primaria.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/llave-primaria.md",
+      "destino": "conceptos/xml.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/llave-primaria.md",
+      "destino": "conceptos/nodejs.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/llave-primaria.md",
+      "destino": "conceptos/prepared-statement.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/llave-primaria.md",
+      "destino": "conceptos/pool-de-conexiones.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/llave-foranea.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/llave-foranea.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/llave-foranea.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 12
+    },
+    {
+      "origen": "conceptos/llave-foranea.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "co_ocurre",
+      "peso": 11
+    },
+    {
+      "origen": "conceptos/llave-foranea.md",
+      "destino": "conceptos/tupla.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/llave-foranea.md",
+      "destino": "conceptos/llaves.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/llave-foranea.md",
+      "destino": "conceptos/mer.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/llave-foranea.md",
+      "destino": "conceptos/modelo-logico-relacional.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/llave-foranea.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "co_ocurre",
+      "peso": 5
+    },
+    {
+      "origen": "conceptos/llave-foranea.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 9
+    },
+    {
+      "origen": "conceptos/llave-foranea.md",
+      "destino": "conceptos/relacion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/llave-foranea.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/llave-foranea.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "co_ocurre",
+      "peso": 7
+    },
+    {
+      "origen": "conceptos/llave-foranea.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/llave-foranea.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/llave-foranea.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/llave-foranea.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/llave-foranea.md",
+      "destino": "conceptos/xml.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/llave-foranea.md",
+      "destino": "conceptos/nodejs.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/llave-foranea.md",
+      "destino": "conceptos/prepared-statement.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/llave-foranea.md",
+      "destino": "conceptos/pool-de-conexiones.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 8
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "co_ocurre",
+      "peso": 13
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/entidad.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/dato.md",
+      "tipo": "co_ocurre",
+      "peso": 7
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 13
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "co_ocurre",
+      "peso": 11
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "co_ocurre",
+      "peso": 9
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/tupla.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/llaves.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/mer.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/cardinalidad.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 10
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/relacion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "co_ocurre",
+      "peso": 8
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/join.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "co_ocurre",
+      "peso": 8
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 5
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/evento-programado.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/crud.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/json.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/modelo-logico-relacional.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/escalabilidad.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/xml.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/nodejs.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/prepared-statement.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/base-de-datos-relacional.md",
+      "destino": "conceptos/pool-de-conexiones.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/llaves.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/llaves.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/llaves.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/llaves.md",
+      "destino": "conceptos/tupla.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/llaves.md",
+      "destino": "conceptos/mer.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/mer.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/mer.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/mer.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/mer.md",
+      "destino": "conceptos/tupla.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/mer.md",
+      "destino": "conceptos/modelo-logico-relacional.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/mer.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/mer.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/mer.md",
+      "destino": "conceptos/relacion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/mer.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/mer.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/mer.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/cardinalidad.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/cardinalidad.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/cardinalidad.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/cardinalidad.md",
+      "destino": "conceptos/entidad.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/cardinalidad.md",
+      "destino": "conceptos/dato.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/cardinalidad.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/cardinalidad.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/cardinalidad.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/cardinalidad.md",
+      "destino": "conceptos/tupla.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/cardinalidad.md",
+      "destino": "conceptos/llaves.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/cardinalidad.md",
+      "destino": "conceptos/mer.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/cardinalidad.md",
+      "destino": "conceptos/modelo-logico-relacional.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/cardinalidad.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/cardinalidad.md",
+      "destino": "conceptos/escalabilidad.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/cardinalidad.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/cardinalidad.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/cardinalidad.md",
+      "destino": "conceptos/relacion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/cardinalidad.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/cardinalidad.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/cardinalidad.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atributo-multivaluado.md",
+      "destino": "conceptos/mer.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atributo-multivaluado.md",
+      "destino": "conceptos/entidad.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atributo-multivaluado.md",
+      "destino": "conceptos/cardinalidad.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atributo-multivaluado.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atributo-multivaluado.md",
+      "destino": "conceptos/modelo-logico-relacional.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atributo-multivaluado.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atributo-multivaluado.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atributo-multivaluado.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atributo-multivaluado.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atributo-multivaluado.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atributo-multivaluado.md",
+      "destino": "conceptos/escalabilidad.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atributo-multivaluado.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atributo-multivaluado.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/modelo-logico-relacional.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/modelo-logico-relacional.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/modelo-logico-relacional.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/modelo-logico-relacional.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/modelo-logico-relacional.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/modelo-logico-relacional.md",
+      "destino": "conceptos/relacion.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/modelo-logico-relacional.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/modelo-logico-relacional.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/modelo-logico-relacional.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/modelo-logico-relacional.md",
+      "destino": "conceptos/xml.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/modelo-logico-relacional.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/normalizacion.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 5
+    },
+    {
+      "origen": "conceptos/normalizacion.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/normalizacion.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/normalizacion.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/normalizacion.md",
+      "destino": "conceptos/relacion.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/normalizacion.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/normalizacion.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/normalizacion.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/normalizacion.md",
+      "destino": "conceptos/patron-de-diseno.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/normalizacion.md",
+      "destino": "conceptos/polimorfismo.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/normalizacion.md",
+      "destino": "conceptos/solid.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/mer.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/modelo-logico-relacional.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/prepared-statement.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/funcion-de-ventana.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/evento-programado.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/json.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/nodejs.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/llm.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/red-neuronal.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/mcp.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/prompt.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/escalabilidad.md",
+      "destino": "conceptos/function-calling.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/mer.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/entidad.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/atributo.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/cardinalidad.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/atributo-multivaluado.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 5
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/modelo-logico-relacional.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "co_ocurre",
+      "peso": 5
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/escalabilidad.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/base-de-datos-relacional.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/evento-programado.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/prepared-statement.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/funcion-de-ventana.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/json.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/crud.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/atomicidad.md",
+      "destino": "conceptos/dato.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/indice.md",
+      "destino": "conceptos/mer.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/indice.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 14
+    },
+    {
+      "origen": "conceptos/indice.md",
+      "destino": "conceptos/modelo-logico-relacional.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/indice.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 7
+    },
+    {
+      "origen": "conceptos/indice.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "co_ocurre",
+      "peso": 10
+    },
+    {
+      "origen": "conceptos/indice.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "co_ocurre",
+      "peso": 8
+    },
+    {
+      "origen": "conceptos/indice.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/indice.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "co_ocurre",
+      "peso": 15
+    },
+    {
+      "origen": "conceptos/indice.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/indice.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/indice.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 13
+    },
+    {
+      "origen": "conceptos/indice.md",
+      "destino": "conceptos/join.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/indice.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "co_ocurre",
+      "peso": 10
+    },
+    {
+      "origen": "conceptos/indice.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "co_ocurre",
+      "peso": 7
+    },
+    {
+      "origen": "conceptos/indice.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/indice.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/indice.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 9
+    },
+    {
+      "origen": "conceptos/indice.md",
+      "destino": "conceptos/json.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/indice.md",
+      "destino": "conceptos/prepared-statement.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/indice.md",
+      "destino": "conceptos/xml.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/indice.md",
+      "destino": "conceptos/nodejs.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/indice.md",
+      "destino": "conceptos/pool-de-conexiones.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/sql.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 19
+    },
+    {
+      "origen": "conceptos/sql.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/sql.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 10
+    },
+    {
+      "origen": "conceptos/sql.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 8
+    },
+    {
+      "origen": "conceptos/sql.md",
+      "destino": "conceptos/xml.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/relacion.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/relacion.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/relacion.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/relacion.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/trigger.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/join.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/join.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/join.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/join.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/join.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/join.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/join.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/join.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/join.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/join.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/join.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/join.md",
+      "destino": "conceptos/json.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/join.md",
+      "destino": "conceptos/xml.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/join.md",
+      "destino": "conceptos/modelo-logico-relacional.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/mysql.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 14
+    },
+    {
+      "origen": "conceptos/mysql.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/mysql.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/mysql.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 5
+    },
+    {
+      "origen": "conceptos/mysql.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 14
+    },
+    {
+      "origen": "conceptos/mysql.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/mysql.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 9
+    },
+    {
+      "origen": "conceptos/mysql.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "co_ocurre",
+      "peso": 5
+    },
+    {
+      "origen": "conceptos/mysql.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 7
+    },
+    {
+      "origen": "conceptos/mysql.md",
+      "destino": "conceptos/relacion.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/mysql.md",
+      "destino": "conceptos/prepared-statement.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/mysql.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/mysql.md",
+      "destino": "conceptos/nodejs.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/mysql.md",
+      "destino": "conceptos/pool-de-conexiones.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/postgresql.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 9
+    },
+    {
+      "origen": "conceptos/postgresql.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/postgresql.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/postgresql.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 8
+    },
+    {
+      "origen": "conceptos/postgresql.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/postgresql.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/postgresql.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 5
+    },
+    {
+      "origen": "conceptos/postgresql.md",
+      "destino": "conceptos/xml.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/transaccion.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/transaccion.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/procedimiento-almacenado.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/procedimiento-almacenado.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/procedimiento-almacenado.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/procedimiento-almacenado.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/procedimiento-almacenado.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/procedimiento-almacenado.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 6
+    },
+    {
+      "origen": "conceptos/procedimiento-almacenado.md",
+      "destino": "conceptos/relacion.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/vista.md",
+      "destino": "conceptos/xml.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/evento-programado.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/evento-programado.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/evento-programado.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/evento-programado.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/evento-programado.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/evento-programado.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/evento-programado.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/evento-programado.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/evento-programado.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/evento-programado.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/evento-programado.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/evento-programado.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/crud.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/crud.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/crud.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/crud.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/crud.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/crud.md",
+      "destino": "conceptos/json.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/crud.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/crud.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/crud.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/crud.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/crud.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/crud.md",
+      "destino": "conceptos/dato.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/crud.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/crud.md",
+      "destino": "conceptos/escalabilidad.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/crud.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/crud.md",
+      "destino": "conceptos/nodejs.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/crud.md",
+      "destino": "conceptos/prepared-statement.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/crud.md",
+      "destino": "conceptos/pool-de-conexiones.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/crud.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/json.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/json.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/json.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/json.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/json.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/json.md",
+      "destino": "conceptos/trigger.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/json.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/json.md",
+      "destino": "conceptos/llave-primaria.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/json.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/json.md",
+      "destino": "conceptos/xml.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/json.md",
+      "destino": "conceptos/llave-foranea.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/json.md",
+      "destino": "conceptos/modelo-logico-relacional.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/json.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/json.md",
+      "destino": "conceptos/nodejs.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/json.md",
+      "destino": "conceptos/prompt.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/json.md",
+      "destino": "conceptos/llm.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/json.md",
+      "destino": "conceptos/testing.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/prepared-statement.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/prepared-statement.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/prepared-statement.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/prepared-statement.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/prepared-statement.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/funcion-de-ventana.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/funcion-de-ventana.md",
+      "destino": "conceptos/mysql.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/funcion-de-ventana.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/funcion-de-ventana.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/funcion-de-ventana.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/funcion-de-ventana.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/funcion-de-ventana.md",
+      "destino": "conceptos/prepared-statement.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/funcion-de-ventana.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/funcion-de-ventana.md",
+      "destino": "conceptos/procedimiento-almacenado.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/funcion-de-ventana.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/cte.md",
+      "destino": "conceptos/postgresql.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/cte.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/cte.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/cte.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/cte.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/cte.md",
+      "destino": "conceptos/funcion-de-ventana.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/cte.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/nodejs.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/nodejs.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/nodejs.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/nodejs.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/nodejs.md",
+      "destino": "conceptos/prepared-statement.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/nodejs.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/nodejs.md",
+      "destino": "conceptos/pool-de-conexiones.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/nodejs.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/nodejs.md",
+      "destino": "conceptos/testing.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/dom.md",
+      "destino": "conceptos/nodejs.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/dom.md",
+      "destino": "conceptos/escalabilidad.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/dom.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/poo.md",
+      "destino": "conceptos/solid.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/herencia.md",
+      "destino": "conceptos/poo.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/herencia.md",
+      "destino": "conceptos/polimorfismo.md",
+      "tipo": "co_ocurre",
+      "peso": 4
+    },
+    {
+      "origen": "conceptos/herencia.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/herencia.md",
+      "destino": "conceptos/nodejs.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/herencia.md",
+      "destino": "conceptos/indice.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/herencia.md",
+      "destino": "conceptos/vista.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/herencia.md",
+      "destino": "conceptos/solid.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/herencia.md",
+      "destino": "conceptos/persistencia.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/herencia.md",
+      "destino": "conceptos/patron-de-diseno.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/herencia.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/polimorfismo.md",
+      "destino": "conceptos/poo.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/polimorfismo.md",
+      "destino": "conceptos/solid.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/patron-de-diseno.md",
+      "destino": "conceptos/polimorfismo.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/patron-de-diseno.md",
+      "destino": "conceptos/solid.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/pool-de-conexiones.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/pool-de-conexiones.md",
+      "destino": "conceptos/sgbd.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/pool-de-conexiones.md",
+      "destino": "conceptos/prepared-statement.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/pool-de-conexiones.md",
+      "destino": "conceptos/sql.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/pool-de-conexiones.md",
+      "destino": "conceptos/transaccion.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/red-neuronal.md",
+      "destino": "conceptos/sistema-experto.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/red-neuronal.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/sistema-experto.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/base-de-conocimiento.md",
+      "destino": "conceptos/red-neuronal.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/base-de-conocimiento.md",
+      "destino": "conceptos/sistema-experto.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/base-de-conocimiento.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/base-de-conocimiento.md",
+      "destino": "conceptos/motor-de-inferencia.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/base-de-conocimiento.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/base-de-conocimiento.md",
+      "destino": "conceptos/llm.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/motor-de-inferencia.md",
+      "destino": "conceptos/red-neuronal.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/motor-de-inferencia.md",
+      "destino": "conceptos/sistema-experto.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/motor-de-inferencia.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/llm.md",
+      "destino": "conceptos/red-neuronal.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/llm.md",
+      "destino": "conceptos/prompt.md",
+      "tipo": "co_ocurre",
+      "peso": 5
+    },
+    {
+      "origen": "conceptos/llm.md",
+      "destino": "conceptos/testing.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/llm.md",
+      "destino": "conceptos/mcp.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/llm.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/llm.md",
+      "destino": "conceptos/nodejs.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/alucinacion.md",
+      "destino": "conceptos/llm.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/alucinacion.md",
+      "destino": "conceptos/red-neuronal.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/alucinacion.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/alucinacion.md",
+      "destino": "conceptos/base-de-conocimiento.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/alucinacion.md",
+      "destino": "conceptos/prompt.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/alucinacion.md",
+      "destino": "conceptos/base-de-datos.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/prompt.md",
+      "destino": "conceptos/testing.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/prompt.md",
+      "destino": "conceptos/red-neuronal.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/mcp.md",
+      "destino": "conceptos/red-neuronal.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/mcp.md",
+      "destino": "conceptos/prompt.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/function-calling.md",
+      "destino": "conceptos/llm.md",
+      "tipo": "co_ocurre",
+      "peso": 3
+    },
+    {
+      "origen": "conceptos/function-calling.md",
+      "destino": "conceptos/red-neuronal.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/function-calling.md",
+      "destino": "conceptos/mcp.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/function-calling.md",
+      "destino": "conceptos/informacion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/function-calling.md",
+      "destino": "conceptos/prompt.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/function-calling.md",
+      "destino": "conceptos/testing.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/function-calling.md",
+      "destino": "conceptos/tabla.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    },
+    {
+      "origen": "conceptos/function-calling.md",
+      "destino": "conceptos/nodejs.md",
+      "tipo": "co_ocurre",
+      "peso": 1
+    }
+  ]
+}
