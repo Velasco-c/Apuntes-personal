@@ -5,24 +5,19 @@ tags: ["portada"]
 
 # Apuntes de aprendizaje autodidacta
 
-Colección de apuntes de información autodidacta sobre bases de datos, programación e inteligencia artificial. Está ordenada para estudiarla en secuencia y para consultarla cuando hace falta.
+Apuntes de estudio sobre bases de datos (SQL, MySQL y PostgreSQL), JavaScript con Node.js e inteligencia artificial. Están ordenados para estudiarlos en secuencia y para encontrar un tema en segundos.
 
 No es un curso oficial. Es un registro vivo que se corrige y se amplía con el tiempo.
 
-## Acceso rápido
+## Cómo buscar un tema
 
-| Quiero... | Ir a | Resultado |
-| --- | --- | --- |
-| Empezar a estudiar | [Bases de datos](bases-de-datos/indice.md) | Ruta de estudio en orden. |
-| Buscar un concepto o una lección | [Inicio: mapa rápido](cerebro/inicio.md) | Tablas con cada concepto y su sección exacta. |
-| Consultar con Gemini | [Tutorial de Gemini](consultar-con-gemini.md) | Cómo usar un solo archivo con Gemini. |
-| Consultar sin conexión | [Tutorial de Ollama](tutorial-ollama.md) | Modelo local, como último recurso. |
-| Ver el mapa completo | [Mapa de contenidos](MAPA.md) | Todas las lecciones y conceptos. |
-| Añadir o mantener contenido | [Guía de mantenimiento](MANTENIMIENTO.md) | Comandos y convenciones. |
+1. Abre [cerebro/inicio.md](cerebro/inicio.md). Es un índice único con todos los conceptos y todas las secciones de las lecciones.
+2. Pulsa `Ctrl+F` y escribe el tema, en español o en inglés (por ejemplo `trigger`, `foreign key`, `SOLID`, `window function`).
+3. Haz clic en el enlace: te lleva directamente a la sección.
 
-## Por dónde empezar
+Si ya sabes en qué área está, abre su carpeta, o usa la búsqueda global de tu editor (`Ctrl+Shift+F`).
 
-Estudia las áreas en este orden. Cada una tiene su índice con las lecciones.
+## Estructura
 
 <!-- auto:areas -->
 1. [Bases de datos](bases-de-datos/indice.md): 5 lecciones
@@ -32,19 +27,28 @@ Estudia las áreas en este orden. Cada una tiene su índice con las lecciones.
 5. [Inteligencia artificial](inteligencia-artificial/indice.md): 9 lecciones
 <!-- /auto:areas -->
 
+- `conceptos/`: una nota corta por concepto, con enlaces a las lecciones donde aparece.
+- `cerebro/`: el índice para buscar (`inicio.md`).
+
 ## Cómo está conectado
 
-Los temas se enlazan a través de `conceptos/`, una nota por concepto. Cada concepto muestra en qué lecciones aparece y qué conceptos le acompañan. Cada lección termina con su navegación y sus conceptos.
+Cada concepto tiene su nota en `conceptos/`, y cada lección termina con sus enlaces de navegación. Los enlaces son Markdown normal: funcionan en GitHub, en Obsidian y en cualquier editor.
 
-Abre la carpeta como bóveda de Obsidian para ver el grafo. Los enlaces son Markdown estándar, así que también funcionan en GitHub.
+## Consultar con IA (opcional)
 
-## Consultar con IA
+No hace falta para usar los apuntes. Si quieres consultarlos con un asistente de IA, hay guías en:
 
-Hay dos tutoriales, según tengas o no conexión. [Gemini](consultar-con-gemini.md) es la opción principal. [Ollama](tutorial-ollama.md) queda como último recurso sin conexión. Los dos usan el mismo archivo: [cerebro/inicio.md](cerebro/inicio.md), que contiene las tablas de conceptos y lecciones.
+- [consultar-con-gemini.md](consultar-con-gemini.md): con Gemini, usando `cerebro/inicio.md`.
+- [tutorial-ollama.md](tutorial-ollama.md): con un modelo local, sin conexión.
+- [obsidian-plugins.md](obsidian-plugins.md): plugins de Obsidian que se usaron para esto.
 
-## Mantener y ampliar
+## Ejemplos y datos
 
-Lee [MANTENIMIENTO.md](MANTENIMIENTO.md). Después de cualquier cambio, ejecuta `python3 herramientas/mantenimiento.py actualizar`.
+Los ejemplos de código y de bases de datos son de práctica. Algunos contienen datos ficticios que pueden parecerse a datos reales. No los uses tal cual en un entorno de producción.
+
+## Mantener
+
+Lee [MANTENIMIENTO.md](MANTENIMIENTO.md). Después de editar, ejecuta `python3 herramientas/mantenimiento.py actualizar`.
 
 ## Licencia
 

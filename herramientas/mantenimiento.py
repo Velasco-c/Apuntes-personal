@@ -493,7 +493,7 @@ def generar_cerebro(raiz, AREAS, conceptos, docs, grupos, menciones):
 
     L = [
         "# Inicio: mapa rápido de los apuntes", "",
-        "Punto de partida para consultar. Cada tabla indica dónde está cada cosa, y los enlaces llevan a la sección exacta. "
+        "Índice para buscar con Ctrl+F: escribe el concepto o la sección, en español o en inglés, y sigue el enlace. "
         "Se genera solo con `actualizar`; no lo edites a mano.", "",
         "## Acceso rápido", "",
         "| Quiero... | Ir a | Resultado |", "| --- | --- | --- |",
@@ -505,7 +505,7 @@ def generar_cerebro(raiz, AREAS, conceptos, docs, grupos, menciones):
         f"| Añadir o mantener contenido | [Guía de mantenimiento]({rel_a(origen, 'MANTENIMIENTO.md')}) | Comandos y convenciones. |",
         "",
         "## Conceptos", "",
-        "| Concepto | Qué es | Dónde se enseña |", "| --- | --- | --- |",
+        "| Concepto | Qué es | También se busca como | Dónde se enseña |", "| --- | --- | --- | --- |",
     ]
     for c in sorted(conceptos, key=lambda c: conceptos[c]["titulo"].lower()):
         datos = conceptos[c]
@@ -516,19 +516,20 @@ def generar_cerebro(raiz, AREAS, conceptos, docs, grupos, menciones):
             f"({rel_a(origen, l)}#{sec['ancla']})"
             for _, l, _, sec in donde[c]
         )
-        L.append(f"| [{_celda(datos['titulo'])}]({rel_a(origen, datos['ruta'])}) | {qué} | {enlaces or '—'} |")
+        sinonimos = ", ".join(_celda(x) for x in datos["aliases"] if x != datos["titulo"]) or "—"
+        L.append(f"| [{_celda(datos['titulo'])}]({rel_a(origen, datos['ruta'])}) | {qué} | {sinonimos} | {enlaces or '—'} |")
 
     L += ["", "## Lecciones", ""]
     for area, datos in AREAS.items():
         if not grupos[area]:
             continue
         L += [f"### {datos['nombre']}", "",
-              f"Índice: [{datos['nombre']}]({rel_a(origen, datos['indice'])})", "",
-              "| # | Lección | Secciones |", "| --- | --- | --- |"]
+              f"Índice: [{datos['nombre']}]({rel_a(origen, datos['indice'])})", ""]
         for i, l in enumerate(grupos[area], 1):
-            enlaces = " · ".join(f"[{_celda(sec['titulo'])}]({rel_a(origen, l)}#{sec['ancla']})" for sec in secciones[l][:6])
-            L.append(f"| {i} | [{_celda(docs[l]['fm']['titulo'])}]({rel_a(origen, l)}) | {enlaces or '—'} |")
-        L.append("")
+            L.append(f"#### {i:02d} · [{docs[l]['fm']['titulo']}]({rel_a(origen, l)})")
+            for sec in secciones[l]:
+                L.append(f"- [{sec['titulo']}]({rel_a(origen, l)}#{sec['ancla']})")
+            L.append("")
 
     cabecera = '---\ntitulo: "Inicio: mapa rápido de los apuntes"\ntags: ["cerebro"]\n---\n\n'
     (carpeta / "inicio.md").write_text(cabecera + "\n".join(L).rstrip() + "\n", encoding="utf-8")
