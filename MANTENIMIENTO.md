@@ -9,7 +9,7 @@ Cómo añadir contenido y mantener los apuntes ordenados. Sirve para una persona
 
 ## El script
 
-`herramientas/mantenimiento.py` es un programa en Python 3 que se ejecuta en la terminal, desde la raíz del repositorio. No es una nota: Obsidian no lo muestra, y no lo necesitas para leer los apuntes. Hace cuatro cosas: crear archivos nuevos, enlazar conceptos, regenerar los bloques automáticos y validar el repositorio.
+`herramientas/mantenimiento.py` es un programa en Python 3 que se ejecuta en la terminal, desde la raíz del repositorio. No es una nota: Obsidian no lo muestra, y no lo necesitas para leer los apuntes. Hace cuatro cosas: crear archivos nuevos, enlazar conceptos, regenerar los bloques automáticos (incluido `cerebro/inicio.md`) y validar el repositorio. `validar` revisa enlaces y anclas, encabezados, nombres de archivo, frontmatter, líneas `PENDIENTE:` y el tamaño del contexto.
 
 Después de cualquier cambio, ejecuta:
 
@@ -57,10 +57,10 @@ Cada archivo nuevo tiene una línea que empieza con `PENDIENTE:`. Reemplázala p
 No edites nada que esté entre `<!-- auto:... -->`. Se regenera en cada `actualizar`:
 
 - El pie de cada lección, el apartado "Dónde aparece" de cada concepto, los índices, el mapa y la lista de áreas del README.
-- `cerebro/`: un `glosario.md` (un concepto por línea) y un `mapa-<área>.md` por área. Es el contexto compacto para la IA local. No hay que escribirlo a mano.
+- `cerebro/inicio.md`: un único archivo con tablas de acceso rápido, los conceptos (con su definición y dónde se enseñan) y las lecciones (con sus secciones). Es el archivo que se sube a Gemini. No hay que escribirlo a mano.
 - `grafo.json`: la red completa en formato de datos. Obsidian no lo usa; sirve para herramientas que necesiten leer la estructura.
 
 ## Límites
 
 - Una lección de más de unos 6000 tokens es grande para un chat local. Consúltala con *Current selection*.
-- Si `cerebro/glosario.md` supera unos 3500 tokens, el validador avisa. Entonces conviene dividirlo por área.
+- Si `cerebro/inicio.md` supera unos 8000 tokens, el validador avisa. Para un modelo local es grande; para Gemini no supone problema.

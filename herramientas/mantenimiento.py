@@ -19,6 +19,7 @@ import json
 import posixpath
 import re
 import sys
+import unicodedata
 from collections import Counter, defaultdict
 from pathlib import Path
 from urllib.parse import unquote
@@ -411,36 +412,126 @@ def regenerar(raiz=RAIZ):
     )
 
 
+def _texto_plano(t):
+    """Título sin enlaces ni formato, como lo muestra GitHub."""
+    t = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", t)
+    return re.sub(r"[`*_]", "", t).strip()
+
+
+def _norm(t):
+    """Minúsculas y sin tildes, para comparar términos."""
+    return "".join(ch for ch in unicodedata.normalize("NFD", str(t)) if unicodedata.category(ch) != "Mn").lower()
+
+
+def anclas_de(texto):
+    """Anclas de todos los encabezados, como GitHub: el repetido recibe -1, -2, ..."""
+    usados, salida = Counter(), set()
+    for m in re.finditer(r"^#{1,6}\s+(.+)$", sin_bloques(texto), re.M):
+        base = slug_ancla(_texto_plano(m.group(1)))
+        salida.add(base if usados[base] == 0 else f"{base}-{usados[base]}")
+        usados[base] += 1
+    return salida
+
+
+def _secciones(texto):
+    """Secciones H2 de una lección con su ancla y su texto normalizado (sin código ni bloques automáticos)."""
+    cuerpo = prosa(texto)
+    usados, cabeceras, salida = Counter(), list(re.finditer(r"^(#{1,6})\s+(.+)$", cuerpo, re.M)), []
+    for i, m in enumerate(cabeceras):
+        titulo = _texto_plano(m.group(2))
+        base = slug_ancla(titulo)
+        ancla = base if usados[base] == 0 else f"{base}-{usados[base]}"
+        usados[base] += 1
+        if len(m.group(1)) != 2:
+            continue
+        fin = cabeceras[i + 1].start() if i + 1 < len(cabeceras) else len(cuerpo)
+        bloque = re.sub(r"```.*?```", "", cuerpo[m.start():fin], flags=re.S)
+        salida.append({"titulo": titulo, "ancla": ancla, "texto": _norm(_texto_plano(bloque))})
+    return salida
+
+
+def _puntos(texto_norm, aliases):
+    total = 0
+    for a in aliases:
+        alias = _norm(a).strip()
+        if len(alias) >= 2:
+            total += len(re.findall(rf"(?<![a-z0-9]){re.escape(alias)}(?![a-z0-9])", texto_norm))
+    return total
+
+
+def _celda(t):
+    return str(t).replace("|", "/").strip()
+
+
 def generar_cerebro(raiz, AREAS, conceptos, docs, grupos, menciones):
-    """Contexto compacto para un modelo local: un glosario y un mapa por área."""
+    """Escribe cerebro/inicio.md: un solo archivo con tablas de acceso rápido, conceptos y lecciones.
+    Sustituye al glosario y a los mapas por área, que se borran."""
     carpeta = raiz / "cerebro"
     carpeta.mkdir(exist_ok=True)
     for viejo in carpeta.glob("*.md"):
         viejo.unlink()
-    cabecera = '---\ntitulo: "{t}"\ntags: ["cerebro"]\n---\n\n'
+    origen = "cerebro/inicio.md"
 
-    glosario = ["# Glosario de conceptos", "",
-                "Contexto compacto para la IA: un concepto por línea, con su definición. Generado automáticamente.", ""]
-    for c in sorted(conceptos.values(), key=lambda c: c["titulo"].lower()):
-        glosario.append(f"- **{c['titulo']}**: {resumen_de(docs[c['ruta']]['texto'])}")
-    (carpeta / "glosario.md").write_text(
-        cabecera.format(t="Glosario de conceptos") + "\n".join(glosario) + "\n", encoding="utf-8")
+    secciones = {}
+    for area in AREAS:
+        for l in grupos[area]:
+            secciones[l] = _secciones(docs[l]["texto"])
 
+    # Por cada concepto, las tres secciones de lección donde más aparece.
+    donde = {}
+    for c, datos in conceptos.items():
+        candidatos = []
+        for l, lista in secciones.items():
+            for orden_sec, sec in enumerate(lista):
+                if re.match(r"(glosario|resumen|referencias|conclusi)", _norm(sec["titulo"])):
+                    continue  # los resúmenes repiten definiciones: no sirven para ubicar la explicación
+                p = _puntos(sec["texto"], datos["aliases"])
+                if p:
+                    candidatos.append((-p, l, orden_sec, sec))
+        candidatos.sort(key=lambda x: (x[0], x[1], x[2]))
+        donde[c] = candidatos[:2]
+
+    L = [
+        "# Inicio: mapa rápido de los apuntes", "",
+        "Punto de partida para consultar. Cada tabla indica dónde está cada cosa, y los enlaces llevan a la sección exacta. "
+        "Se genera solo con `actualizar`; no lo edites a mano.", "",
+        "## Acceso rápido", "",
+        "| Quiero... | Ir a | Resultado |", "| --- | --- | --- |",
+        f"| Empezar a estudiar | [Bases de datos]({rel_a(origen, 'bases-de-datos/indice.md')}) | Ruta en orden. |",
+        "| Buscar un concepto | [Conceptos](#conceptos) | Definición y dónde se enseña. |",
+        "| Ver las secciones de una lección | [Lecciones](#lecciones) | Índice de cada lección con sus secciones. |",
+        f"| Consultar con Gemini | [Tutorial de Gemini]({rel_a(origen, 'consultar-con-gemini.md')}) | Cómo usar este archivo con Gemini. |",
+        f"| Consultar sin conexión | [Tutorial de Ollama]({rel_a(origen, 'tutorial-ollama.md')}) | Modelo local, como último recurso. |",
+        f"| Añadir o mantener contenido | [Guía de mantenimiento]({rel_a(origen, 'MANTENIMIENTO.md')}) | Comandos y convenciones. |",
+        "",
+        "## Conceptos", "",
+        "| Concepto | Qué es | Dónde se enseña |", "| --- | --- | --- |",
+    ]
+    for c in sorted(conceptos, key=lambda c: conceptos[c]["titulo"].lower()):
+        datos = conceptos[c]
+        resumen = resumen_de(docs[datos["ruta"]]["texto"], max_chars=160)
+        qué = _celda(resumen)
+        enlaces = " · ".join(
+            f"[{AREAS[docs[l]['fm']['area']]['nombre']} {int(docs[l]['fm']['orden']):02d} · {_celda(sec['titulo'])}]"
+            f"({rel_a(origen, l)}#{sec['ancla']})"
+            for _, l, _, sec in donde[c]
+        )
+        L.append(f"| [{_celda(datos['titulo'])}]({rel_a(origen, datos['ruta'])}) | {qué} | {enlaces or '—'} |")
+
+    L += ["", "## Lecciones", ""]
     for area, datos in AREAS.items():
         if not grupos[area]:
             continue
-        mapa = [f"# Mapa de {datos['nombre']}", "",
-                "Contexto compacto para la IA: secciones y conceptos clave de cada lección. Generado automáticamente.", ""]
-        for l in grupos[area]:
-            secciones = re.findall(r"^## (.+)$", prosa(docs[l]["texto"]), re.M)
-            secciones = [re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", x).strip() for x in secciones][:10]
-            claves = [conceptos[c]["titulo"] for c, _ in menciones[l].most_common(8)]
-            mapa.append(f"## {docs[l]['fm']['titulo']}")
-            mapa.append(f"Secciones: {'; '.join(secciones) or 'sin secciones'}.")
-            mapa.append(f"Conceptos: {', '.join(claves) or 'ninguno'}.")
-            mapa.append("")
-        (carpeta / f"mapa-{area}.md").write_text(
-            cabecera.format(t=f"Mapa de {datos['nombre']}") + "\n".join(mapa) + "\n", encoding="utf-8")
+        L += [f"### {datos['nombre']}", "",
+              f"Índice: [{datos['nombre']}]({rel_a(origen, datos['indice'])})", "",
+              "| # | Lección | Secciones |", "| --- | --- | --- |"]
+        for i, l in enumerate(grupos[area], 1):
+            enlaces = " · ".join(f"[{_celda(sec['titulo'])}]({rel_a(origen, l)}#{sec['ancla']})" for sec in secciones[l][:6])
+            L.append(f"| {i} | [{_celda(docs[l]['fm']['titulo'])}]({rel_a(origen, l)}) | {enlaces or '—'} |")
+        L.append("")
+
+    cabecera = '---\ntitulo: "Inicio: mapa rápido de los apuntes"\ntags: ["cerebro"]\n---\n\n'
+    (carpeta / "inicio.md").write_text(cabecera + "\n".join(L).rstrip() + "\n", encoding="utf-8")
 
 
 # ------------------------------------------------------------------ validar
@@ -453,7 +544,7 @@ def validar(raiz=RAIZ):
     rels = documentos(raiz)
     existentes = {p.relative_to(raiz).as_posix() for p in raiz.rglob("*") if p.is_file()}
     textos = {r: (raiz / r).read_text(encoding="utf-8") for r in rels}
-    anclas = {r: {slug_ancla(t) for t in re.findall(r"^#{1,6}\s+(.+)$", sin_bloques(textos[r]), re.M)} for r in rels}
+    anclas = {r: anclas_de(textos[r]) for r in rels}
     menciones_doc = {r: contar_menciones(cuerpo_visible(textos[r]), patron, buscar) for r in rels}
     enlazados = Counter()
 
@@ -520,8 +611,8 @@ def validar(raiz=RAIZ):
     for r in rels:
         tokens = len(textos[r]) // 4
         fm_r, _ = leer_frontmatter(textos[r])
-        if r.startswith("cerebro/") and tokens > 3500:
-            avisos.append(f"{r}: ~{tokens} tokens; es grande para un chat local, divídelo por área")
+        if r.startswith("cerebro/") and tokens > 8000:
+            avisos.append(f"{r}: ~{tokens} tokens; es grande para un modelo local, pero sirve para Gemini")
         if "orden" in fm_r and tokens > 6000:
             grandes.append(r)
     if grandes:

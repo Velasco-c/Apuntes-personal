@@ -1,4 +1,0 @@
-
-"embedding_models:transformers#1791675281639": {"provider_key":"transformers","model_key":"TaylorAI/bge-micro-v2","dims":384,"max_tokens":512,"class_name":"EmbeddingModel","created_at":1791675281639,"key":"transformers#1791675281639"},
-"embedding_models:transformers#1791679323157": {"provider_key":"transformers","model_key":"TaylorAI/bge-micro-v2","dims":384,"max_tokens":512,"class_name":"EmbeddingModel","created_at":1791679323157,"key":"transformers#1791679323157","batch_size":1,"meta":{"name":"ollama"}},
-"embedding_models:transformers#1791679323157": null,

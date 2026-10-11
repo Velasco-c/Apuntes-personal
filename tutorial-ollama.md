@@ -63,7 +63,7 @@ En el menú **Context** de la vista de chat:
 - **Current selection:** para preguntar sobre una sección de una lección larga. Selecciónala antes de preguntar.
 - **No context:** para preguntas generales.
 
-Para preguntas sobre todo el repositorio, usa `cerebro/glosario.md` como nota actual, o el mapa de un área (`cerebro/mapa-mysql.md`, por ejemplo) para saber dónde está un tema.
+Para preguntas sobre todo el repositorio, usa `cerebro/inicio.md` como nota actual. Es grande para un modelo de 1.5B, así que úsalo para ubicar un tema y luego consulta la sección concreta con *Current selection*.
 
 ## Problemas frecuentes
 

@@ -9,6 +9,17 @@ Colección de apuntes de información autodidacta sobre bases de datos, programa
 
 No es un curso oficial. Es un registro vivo que se corrige y se amplía con el tiempo.
 
+## Acceso rápido
+
+| Quiero... | Ir a | Resultado |
+| --- | --- | --- |
+| Empezar a estudiar | [Bases de datos](bases-de-datos/indice.md) | Ruta de estudio en orden. |
+| Buscar un concepto o una lección | [Inicio: mapa rápido](cerebro/inicio.md) | Tablas con cada concepto y su sección exacta. |
+| Consultar con Gemini | [Tutorial de Gemini](consultar-con-gemini.md) | Cómo usar un solo archivo con Gemini. |
+| Consultar sin conexión | [Tutorial de Ollama](tutorial-ollama.md) | Modelo local, como último recurso. |
+| Ver el mapa completo | [Mapa de contenidos](MAPA.md) | Todas las lecciones y conceptos. |
+| Añadir o mantener contenido | [Guía de mantenimiento](MANTENIMIENTO.md) | Comandos y convenciones. |
+
 ## Por dónde empezar
 
 Estudia las áreas en este orden. Cada una tiene su índice con las lecciones.
@@ -27,9 +38,9 @@ Los temas se enlazan a través de `conceptos/`, una nota por concepto. Cada conc
 
 Abre la carpeta como bóveda de Obsidian para ver el grafo. Los enlaces son Markdown estándar, así que también funcionan en GitHub.
 
-## Asistente local con IA
+## Consultar con IA
 
-[Tutorial de Ollama](tutorial-ollama.md): instala un modelo pequeño (`qwen2.5:1.5b`) y conéctalo con Obsidian. Para preguntas generales, usa como nota actual [cerebro/glosario.md](cerebro/glosario.md) o el mapa de un área: son resúmenes compactos que gastan pocos tokens.
+Hay dos tutoriales, según tengas o no conexión. [Gemini](consultar-con-gemini.md) es la opción principal. [Ollama](tutorial-ollama.md) queda como último recurso sin conexión. Los dos usan el mismo archivo: [cerebro/inicio.md](cerebro/inicio.md), que contiene las tablas de conceptos y lecciones.
 
 ## Mantener y ampliar
 
