@@ -62,3 +62,7 @@ yarn-error.log*
 .env.local
 .env.*.local
 *.pem
+
+
+gemini-scribe/
+Agent-Sessions/

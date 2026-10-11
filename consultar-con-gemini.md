@@ -1,51 +1,66 @@
 ---
-titulo: "Consultar mis apuntes con Gemini"
-tags: ["tutorial", "ia"]
+titulo: "Apuntes de aprendizaje autodidacta"
+tags: ["portada"]
 ---
 
-# Consultar mis apuntes con Gemini
+# Apuntes de aprendizaje autodidacta
 
-Gemini puede responder con tus apuntes si le das un solo archivo: `cerebro/inicio.md`. Ese archivo tiene las tablas de conceptos y lecciones, con enlaces a cada sección. No necesitas plugins ni instalar nada.
+Colección de apuntes de información autodidacta sobre bases de datos, programación e inteligencia artificial. Está ordenada para estudiarla en secuencia y para consultarla cuando hace falta.
 
-## Qué necesitas
+No es un curso oficial. Es un registro vivo que se corrige y se amplía con el tiempo.
 
-- Una cuenta de Google.
-- El archivo `cerebro/inicio.md`. Si cambiaste tus apuntes, ejecuta antes `python3 herramientas/mantenimiento.py actualizar` para regenerarlo.
+## Acceso rápido
 
-## Opción 1: un Gem con tus apuntes (recomendada)
+| Quiero... | Ir a | Resultado |
+| --- | --- | --- |
+| Empezar a estudiar | [Bases de datos](bases-de-datos/indice.md) | Ruta de estudio en orden. |
+| Buscar un concepto o una lección | [Inicio: mapa rápido](cerebro/inicio.md) | Tablas con cada concepto y su sección exacta. |
+| Consultar con Gemini | [Tutorial de Gemini](consultar-con-gemini.md) | Cómo usar un solo archivo con Gemini. |
+| Consultar sin conexión | [Tutorial de Ollama](tutorial-ollama.md) | Modelo local, como último recurso. |
+| Ver el mapa completo | [Mapa de contenidos](MAPA.md) | Todas las lecciones y conceptos. |
+| Añadir o mantener contenido | [Guía de mantenimiento](MANTENIMIENTO.md) | Comandos y convenciones. |
 
-Un Gem es un asistente guardado con sus instrucciones y sus archivos. Si tu cuenta no tiene Gems, usa la opción 2.
+## Por dónde empezar
 
-1. En [gemini.google.com](https://gemini.google.com), abre **Gems** y pulsa **Nuevo Gem**.
-2. Ponle el nombre `Apuntes`.
-3. En las instrucciones, pega esto:
+Estudia las áreas en este orden. Cada una tiene su índice con las lecciones.
 
-> Responde solo con la información del archivo que te subí, que es el índice de mis apuntes de estudio. Usa sus tablas para ubicar el concepto y dime la lección y la sección donde se explica. Si el tema no está en el archivo, dilo. Responde en español y sé breve.
+<!-- auto:areas -->
+1. [Bases de datos](bases-de-datos/indice.md): 5 lecciones
+2. [MySQL](mysql/indice.md): 10 lecciones
+3. [PostgreSQL](postgresql/indice.md): 7 lecciones
+4. [Node.js](nodejs/indice.md): 8 lecciones
+5. [Inteligencia artificial](inteligencia-artificial/indice.md): 9 lecciones
+<!-- /auto:areas -->
 
-4. En los archivos de conocimiento, sube `cerebro/inicio.md`. Si Gemini no acepta la extensión `.md`, copia el archivo y cámbiale el nombre a `inicio.txt`.
-5. Guarda el Gem y ábrelo para preguntar.
+## Cómo está conectado
 
-Para respuestas con más detalle, sube también la lección que te interese, por ejemplo `mysql/09-optimizacion-transacciones-y-particionamiento.md`.
+Los temas se enlazan a través de `conceptos/`, una nota por concepto. Cada concepto muestra en qué lecciones aparece y qué conceptos le acompañan. Cada lección termina con su navegación y sus conceptos.
 
-## Opción 2: un chat normal
+Abre la carpeta como bóveda de Obsidian para ver el grafo. Los enlaces son Markdown estándar, así que también funcionan en GitHub.
 
-Abre un chat nuevo, adjunta `cerebro/inicio.md` y escribe la pregunta. Hay que volver a adjuntarlo en cada chat nuevo, porque no se guarda.
+## Consultar con IA
 
-## Cómo preguntar
+Hay dos tutoriales, según tengas o no conexión. [Gemini](consultar-con-gemini.md) es la opción principal. [Ollama](tutorial-ollama.md) queda como último recurso sin conexión. Los dos usan el mismo archivo: [cerebro/inicio.md](cerebro/inicio.md), que contiene las tablas de conceptos y lecciones. Los plugins de Obsidian que usamos, con su configuración, están en [obsidian-plugins.md](obsidian-plugins.md).
 
-- ¿Qué es ACID y en qué lección se explica?
-- ¿Qué diferencia hay entre SOLID y los patrones de diseño?
-- Dame un ejemplo rápido de trigger.
+## Mantener y ampliar
 
-Pide siempre la lección y la sección. Así puedes abrirla y comprobar la respuesta.
+Lee [MANTENIMIENTO.md](MANTENIMIENTO.md). Después de cualquier cambio, ejecuta `python3 herramientas/mantenimiento.py actualizar`.
 
-## Cosas que debes saber
+## Opciones de `.gitignore` para tu bóveda
 
-- **Privacidad.** Google procesa lo que subes. En el plan gratuito, Google puede usar tus envíos para mejorar sus productos, según sus condiciones vigentes. Revísalas antes de subir notas privadas.
-- **Actualizar.** Cada vez que cambies tus apuntes, vuelve a ejecutar `actualizar` y sube el archivo de nuevo. Si subes una versión vieja, Gemini responderá con datos viejos.
-- **Límites.** El plan gratuito tiene límites de uso diario que cambian con el tiempo.
+La carpeta `.obsidian/` ya está ignorada: guarda tu configuración personal. Algunos plugins, en cambio, crean carpetas de datos en la raíz de la bóveda, y esas sí conviene ignorarlas para no subirlas a GitHub. Agrega a tu `.gitignore` solo las que uses:
 
-## Problemas frecuentes
+- **Gemini Scribe** (ver [obsidian-plugins.md](obsidian-plugins.md)):
 
-- **No acepta el archivo.** Cámbiale la extensión a `.txt`, o pega el contenido en el chat.
-- **Responde algo que no está en tus apuntes.** Pide la lección y la sección. Si el tema no aparece en el índice, la respuesta viene del modelo y no de tus notas.
+```
+  gemini-scribe/
+  Agent-Sessions/
+```
+
+  `Agent-Sessions/` solo aparece si activas el historial de sesiones.
+
+- **Otros plugins:** si un plugin crea una carpeta nueva en la raíz, búscala en el explorador de archivos y agrégala con el mismo formato.
+
+## Licencia
+
+MIT. Ver [LICENSE](LICENSE).
