@@ -15,5 +15,8 @@ Solución probada y reutilizable para un problema recurrente de diseño de softw
 
 ## Conceptos cercanos
 
-[Polimorfismo](polimorfismo.md), [Herencia](herencia.md), [Normalización](normalizacion.md), [Principios SOLID](solid.md)
+- [Polimorfismo](polimorfismo.md): Capacidad de tratar objetos de distinto tipo mediante una misma interfaz, de modo que cada uno responde a su manera al mismo mensaje.
+- [Herencia](herencia.md): Mecanismo por el que una clase hereda atributos y métodos de otra, la clase padre, y puede extenderlos o modificarlos.
+- [Normalización](normalizacion.md): Proceso de diseño que organiza las tablas para reducir la redundancia y evitar anomalías al insertar, actualizar o borrar datos.
+- [Principios SOLID](solid.md): Cinco principios de diseño orientado a objetos: responsabilidad única, abierto/cerrado, sustitución de Liskov, segregación de interfaces e inversión de dependencias.
 <!-- /auto:backlinks -->

@@ -30,5 +30,10 @@ Un **SGBD** es una capa de software compleja que actúa como intermediario entre
 
 ## Conceptos cercanos
 
-[Información](informacion.md), [Tabla (Base de Datos)](tabla.md), [Base de Datos](base-de-datos.md), [Llave Primaria (PK)](llave-primaria.md), [Base de Datos Relacional](base-de-datos-relacional.md), [Índice](indice.md), [SQL](sql.md), [Atributo](atributo.md)
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [Tabla (Base de Datos)](tabla.md): Estructura fundamental para organizar información en filas y columnas.
+- [Base de Datos](base-de-datos.md): Colección estructurada de datos lógicamente coherentes que representan entidades del mundo real.
+- [Llave Primaria (PK)](llave-primaria.md): Un Atributo o conjunto de atributos que identifica de manera única e inequívoca a cada Tupla dentro de una Tabla.
+- [Base de Datos Relacional](base-de-datos-relacional.md): Modelo que organiza la información en tablas interconectadas.
+- [Índice](indice.md): Estructura auxiliar que permite localizar filas por el valor de una o más columnas sin recorrer toda la tabla.
 <!-- /auto:backlinks -->

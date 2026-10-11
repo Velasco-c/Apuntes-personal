@@ -973,7 +973,7 @@
       "origen": "bases-de-datos/clase-03-diseno-conceptual-a-fisico.md",
       "destino": "conceptos/atributo.md",
       "tipo": "menciona",
-      "peso": 11
+      "peso": 13
     },
     {
       "origen": "bases-de-datos/clase-03-diseno-conceptual-a-fisico.md",
@@ -1181,9 +1181,15 @@
     },
     {
       "origen": "bases-de-datos/clase-05-esquemas-de-diseno.md",
+      "destino": "conceptos/dato.md",
+      "tipo": "menciona",
+      "peso": 1
+    },
+    {
+      "origen": "bases-de-datos/clase-05-esquemas-de-diseno.md",
       "destino": "conceptos/cardinalidad.md",
       "tipo": "menciona",
-      "peso": 3
+      "peso": 4
     },
     {
       "origen": "bases-de-datos/clase-05-esquemas-de-diseno.md",
@@ -3343,7 +3349,7 @@
       "origen": "conceptos/base-de-datos.md",
       "destino": "conceptos/dato.md",
       "tipo": "co_ocurre",
-      "peso": 11
+      "peso": 12
     },
     {
       "origen": "conceptos/base-de-datos.md",
@@ -4075,7 +4081,7 @@
       "origen": "conceptos/atributo.md",
       "destino": "conceptos/dato.md",
       "tipo": "co_ocurre",
-      "peso": 3
+      "peso": 4
     },
     {
       "origen": "conceptos/atributo.md",
@@ -4273,7 +4279,7 @@
       "origen": "conceptos/dato.md",
       "destino": "conceptos/sgbd.md",
       "tipo": "co_ocurre",
-      "peso": 4
+      "peso": 5
     },
     {
       "origen": "conceptos/dato.md",
@@ -4285,31 +4291,31 @@
       "origen": "conceptos/dato.md",
       "destino": "conceptos/informacion.md",
       "tipo": "co_ocurre",
-      "peso": 12
+      "peso": 13
     },
     {
       "origen": "conceptos/dato.md",
       "destino": "conceptos/entidad.md",
       "tipo": "co_ocurre",
-      "peso": 3
+      "peso": 4
     },
     {
       "origen": "conceptos/dato.md",
       "destino": "conceptos/tabla.md",
       "tipo": "co_ocurre",
-      "peso": 10
+      "peso": 11
     },
     {
       "origen": "conceptos/dato.md",
       "destino": "conceptos/llave-primaria.md",
       "tipo": "co_ocurre",
-      "peso": 7
+      "peso": 8
     },
     {
       "origen": "conceptos/dato.md",
       "destino": "conceptos/llave-foranea.md",
       "tipo": "co_ocurre",
-      "peso": 4
+      "peso": 5
     },
     {
       "origen": "conceptos/dato.md",
@@ -4327,13 +4333,25 @@
       "origen": "conceptos/dato.md",
       "destino": "conceptos/mer.md",
       "tipo": "co_ocurre",
-      "peso": 1
+      "peso": 2
     },
     {
       "origen": "conceptos/dato.md",
       "destino": "conceptos/sql.md",
       "tipo": "co_ocurre",
-      "peso": 8
+      "peso": 9
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/normalizacion.md",
+      "tipo": "co_ocurre",
+      "peso": 2
+    },
+    {
+      "origen": "conceptos/dato.md",
+      "destino": "conceptos/relacion.md",
+      "tipo": "co_ocurre",
+      "peso": 1
     },
     {
       "origen": "conceptos/dato.md",
@@ -4376,12 +4394,6 @@
       "destino": "conceptos/join.md",
       "tipo": "co_ocurre",
       "peso": 3
-    },
-    {
-      "origen": "conceptos/dato.md",
-      "destino": "conceptos/normalizacion.md",
-      "tipo": "co_ocurre",
-      "peso": 1
     },
     {
       "origen": "conceptos/dato.md",
@@ -4777,7 +4789,7 @@
       "origen": "conceptos/base-de-datos-relacional.md",
       "destino": "conceptos/dato.md",
       "tipo": "co_ocurre",
-      "peso": 7
+      "peso": 8
     },
     {
       "origen": "conceptos/base-de-datos-relacional.md",
@@ -5065,7 +5077,7 @@
       "origen": "conceptos/cardinalidad.md",
       "destino": "conceptos/dato.md",
       "tipo": "co_ocurre",
-      "peso": 1
+      "peso": 2
     },
     {
       "origen": "conceptos/cardinalidad.md",

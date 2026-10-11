@@ -26,5 +26,10 @@ Principio fundamental del [Modelo Relacional](modelo-logico-relacional.md) que e
 
 ## Conceptos cercanos
 
-[Tabla (Base de Datos)](tabla.md), [Información](informacion.md), [Índice](indice.md), [Base de Datos](base-de-datos.md), [Atributo](atributo.md), [Sistema Gestor de Base de Datos (SGBD)](sgbd.md), [Llave Primaria (PK)](llave-primaria.md), [Llave Foránea (FK)](llave-foranea.md)
+- [Tabla (Base de Datos)](tabla.md): Estructura fundamental para organizar información en filas y columnas.
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [Índice](indice.md): Estructura auxiliar que permite localizar filas por el valor de una o más columnas sin recorrer toda la tabla.
+- [Base de Datos](base-de-datos.md): Colección estructurada de datos lógicamente coherentes que representan entidades del mundo real.
+- [Atributo](atributo.md): Propiedad o característica que describe a una Entidad en el modelo de datos.
+- [Sistema Gestor de Base de Datos (SGBD)](sgbd.md): Un SGBD es una capa de software compleja que actúa como intermediario entre los usuarios finales y los datos almacenados físicamente.
 <!-- /auto:backlinks -->

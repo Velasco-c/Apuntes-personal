@@ -2,6 +2,8 @@
 titulo: "Índice de Bases de datos"
 area: "bases-de-datos"
 tags: ["bases-de-datos"]
+nombre: "Bases de datos"
+area_orden: 1
 ---
 
 # Índice de Bases de datos

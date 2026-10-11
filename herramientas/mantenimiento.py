@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
-"""Mantenimiento de la colección de apuntes.
+"""Mantenimiento de los apuntes. Ejecútalo desde la raíz del repositorio (Python 3.8 o superior).
 
-Uso, desde la raíz del repositorio:
+  python3 herramientas/mantenimiento.py actualizar
+      Enlaza conceptos, regenera índices, mapas, cerebro y grafo, y valida.
+      Es el comando que hay que ejecutar después de cualquier cambio.
 
-  python3 herramientas/mantenimiento.py regenerar
-      Actualiza los bloques automáticos (navegación, conceptos de cada lección,
-      dónde aparece cada concepto, índices y mapa) y escribe grafo.json.
+  python3 herramientas/mantenimiento.py nueva-area SLUG "Nombre" ORDEN
+  python3 herramientas/mantenimiento.py nueva-leccion AREA ORDEN SLUG "Título"
+  python3 herramientas/mantenimiento.py nuevo-concepto SLUG "Título" "alias1|alias2"
+      Crean archivos con su estructura. Cada uno trae una línea PENDIENTE: que hay que reemplazar.
 
-  python3 herramientas/mantenimiento.py validar
-      Revisa enlaces, encabezados, frontmatter, nombres de archivo y conceptos
-      sin uso. Devuelve código de salida 1 si encuentra errores.
+  python3 herramientas/mantenimiento.py enlazar | regenerar | validar
+      Pasos sueltos de "actualizar".
 
-Los bloques delimitados por <!-- auto:nombre --> se generan solos: no los edites a mano.
+Los bloques entre <!-- auto:nombre --> y <!-- /auto:nombre --> se generan solos. No los edites.
 """
 import json
 import posixpath
@@ -22,22 +24,18 @@ from pathlib import Path
 from urllib.parse import unquote
 
 RAIZ = Path(__file__).resolve().parent.parent
-
-AREAS = {
-    "bases-de-datos": "Bases de datos",
-    "mysql": "MySQL",
-    "postgresql": "PostgreSQL",
-    "nodejs": "Node.js",
-    "inteligencia-artificial": "Inteligencia artificial",
-}
-ARCHIVOS_RAIZ = {"README.md", "MAPA.md", "MANTENIMIENTO.md"}
+RAIZ_MAYUSCULAS = {"README.md", "MAPA.md", "MANTENIMIENTO.md"}
+CARPETAS_ESPECIALES = {"conceptos", "cerebro", "herramientas"}
+PENDIENTE = "PENDIENTE:"
+SLUG_RE = re.compile(r"[a-z0-9]+(-[a-z0-9]+)*")
 
 FM_RE = re.compile(r"\A---\n(.*?)\n---\n", re.S)
 BLOQUE_AUTO_RE = re.compile(r"\n*<!-- auto:(\w+) -->.*?<!-- /auto:\1 -->\n*", re.S)
 ENLACE_RE = re.compile(r"(!?)\[([^\]\n]*)\]\(((?:[^()\s]|\([^()\s]*\))+)\)")
+PROT_RE = re.compile(r"(`[^`\n]*`|!?\[[^\]\n]*\]\([^)\n]*\)|<[^>\n]+>)")
 
 
-# ---------------------------------------------------------------- utilidades
+# ------------------------------------------------------------------ lectura y formato
 
 def leer_frontmatter(texto):
     """Devuelve (datos, cuerpo). Soporta valores simples y listas [a, b]."""
@@ -57,61 +55,109 @@ def leer_frontmatter(texto):
     return datos, texto[m.end():]
 
 
+def fm_texto(datos):
+    lineas = ["---"]
+    for k, v in datos.items():
+        if isinstance(v, list):
+            lineas.append(f"{k}: [" + ", ".join(f'"{x}"' for x in v) + "]")
+        elif isinstance(v, int):
+            lineas.append(f"{k}: {v}")
+        else:
+            lineas.append(f'{k}: "{v}"')
+    lineas.append("---")
+    return "\n".join(lineas) + "\n\n"
+
+
 def documentos(raiz):
-    """Rutas relativas (posix) de todos los .md, excluyendo herramientas y ocultos."""
+    """Rutas (posix) de todos los .md del repositorio, sin herramientas ni archivos ocultos."""
     salida = []
     for p in sorted(raiz.rglob("*.md")):
         rel = p.relative_to(raiz).as_posix()
-        if rel.startswith("herramientas/") or "/." in rel or rel.startswith("."):
+        if rel.startswith(("herramientas/", ".")) or "/." in rel:
             continue
         salida.append(rel)
     return salida
 
 
+def areas(raiz):
+    """Áreas = carpetas con indice.md que declara 'area' y 'area_orden'. Ordenadas por 'area_orden'."""
+    encontradas = {}
+    for idx in raiz.glob("*/indice.md"):
+        fm, _ = leer_frontmatter(idx.read_text(encoding="utf-8"))
+        if "area" in fm and "area_orden" in fm:
+            encontradas[fm["area"]] = {
+                "nombre": fm.get("nombre", fm["area"]),
+                "orden": int(fm["area_orden"]),
+                "indice": f"{fm['area']}/indice.md",
+            }
+    return dict(sorted(encontradas.items(), key=lambda kv: kv[1]["orden"]))
+
+
+def prosa(texto):
+    """Cuerpo sin frontmatter ni bloques automáticos."""
+    _, cuerpo = leer_frontmatter(texto)
+    return BLOQUE_AUTO_RE.sub("\n", cuerpo)
+
+
 def sin_bloques(texto):
-    """Cuerpo sin frontmatter ni bloques de código delimitados (conserva el código en línea, útil para encabezados)."""
+    """Cuerpo sin frontmatter ni bloques de código delimitados."""
     _, cuerpo = leer_frontmatter(texto)
     return re.sub(r"```.*?```", "", cuerpo, flags=re.S)
 
 
 def sin_codigo(texto):
-    """Cuerpo sin frontmatter, bloques de código ni código en línea."""
-    _, cuerpo = leer_frontmatter(texto)
-    cuerpo = re.sub(r"```.*?```", "", cuerpo, flags=re.S)
-    return re.sub(r"`[^`\n]*`", "", cuerpo)
+    """Como sin_bloques, y además sin código en línea."""
+    return re.sub(r"`[^`\n]*`", "", sin_bloques(texto))
 
 
 def cuerpo_visible(texto):
-    """Solo prosa: sin frontmatter, bloques automáticos, código, comentarios ni destinos de enlaces."""
-    _, cuerpo = leer_frontmatter(texto)
-    cuerpo = BLOQUE_AUTO_RE.sub("\n", cuerpo)
-    cuerpo = re.sub(r"<!--.*?-->", "", cuerpo, flags=re.S)
+    """Solo prosa, sin código, comentarios ni destinos de enlaces. Se usa para contar menciones."""
+    cuerpo = re.sub(r"<!--.*?-->", "", prosa(texto), flags=re.S)
     cuerpo = re.sub(r"```.*?```", "", cuerpo, flags=re.S)
     cuerpo = re.sub(r"`[^`\n]*`", "", cuerpo)
-    cuerpo = re.sub(r"\]\([^)\n]*\)", "]", cuerpo)
-    return cuerpo
+    return re.sub(r"\]\([^)\n]*\)", "]", cuerpo)
 
 
 def rel_a(desde, hacia):
-    """Ruta relativa de 'hacia' vista desde el archivo 'desde' (ambas relativas a la raíz)."""
     return posixpath.relpath(hacia, posixpath.dirname(desde) or ".")
 
 
 def poner_bloque(texto, nombre, contenido):
-    """Reemplaza (o añade al final) el bloque automático con ese nombre."""
-    patron = re.compile(rf"\n*<!-- auto:{nombre} -->.*?<!-- /auto:{nombre} -->\n*", re.S)
-    base = patron.sub("\n", texto).rstrip() + "\n"
-    return base + f"\n<!-- auto:{nombre} -->\n{contenido.strip()}\n<!-- /auto:{nombre} -->\n"
+    """Reemplaza el bloque automático en su sitio. Si no existe, lo añade al final."""
+    bloque = f"<!-- auto:{nombre} -->\n{contenido.strip()}\n<!-- /auto:{nombre} -->"
+    patron = re.compile(rf"<!-- auto:{nombre} -->.*?<!-- /auto:{nombre} -->", re.S)
+    if patron.search(texto):
+        return patron.sub(lambda m: bloque, texto, count=1)
+    return texto.rstrip() + "\n\n" + bloque + "\n"
 
 
 def slug_ancla(texto):
-    """Convierte un encabezado en ancla, con la misma lógica básica que GitHub."""
+    """Ancla de un encabezado, con la misma lógica básica que GitHub."""
     texto = re.sub(r"[`*_]", "", texto.strip().lower())
     texto = re.sub(r"[^\w\- ]", "", texto)
     return texto.replace(" ", "-")
 
 
-# ---------------------------------------------------------------- conceptos y términos
+def resumen_de(texto, max_chars=180):
+    """Primera frase de prosa de una nota. Sirve para glosarios y listas compactas."""
+    cuerpo = re.sub(r"```.*?```", "", prosa(texto), flags=re.S)
+    for linea in cuerpo.split("\n"):
+        linea = linea.strip()
+        if not linea or linea.startswith(("#", "- ", "* ", "|", "<", ">", "!", "---")) or re.match(r"\d+\.\s", linea):
+            continue
+        if PENDIENTE in linea:
+            continue
+        linea = re.sub(r"\]\([^)]*\)", "]", linea)
+        linea = re.sub(r"\[([^\]]*)\]", r"\1", linea)
+        linea = re.sub(r"[*_`]", "", linea).strip()
+        if not linea:
+            continue
+        frase = re.split(r"(?<=[.!?])\s", linea, maxsplit=1)[0]
+        return frase[:max_chars].rstrip() + ("…" if len(frase) > max_chars else "")
+    return ""
+
+
+# ------------------------------------------------------------------ conceptos y términos
 
 def cargar_conceptos(raiz):
     conceptos = {}
@@ -127,8 +173,8 @@ def cargar_conceptos(raiz):
 
 
 def compilar_terminos(conceptos):
-    """Patrón único para todos los términos. Los alias más largos ganan (p. ej. 'llaves foráneas' sobre 'llaves').
-    Las siglas (todo en mayúsculas) se buscan sensibles a mayúsculas; el resto, sin distinguir."""
+    """Un solo patrón para todos los términos. Gana el alias más largo (así 'llaves foráneas' no se confunde con 'llaves').
+    Las siglas (todo en mayúsculas) distinguen mayúsculas; el resto no."""
     pares = sorted(
         ((alias, slug) for slug, c in conceptos.items() for alias in c["aliases"]),
         key=lambda p: -len(p[0]),
@@ -158,9 +204,94 @@ def contar_menciones(texto, patron, buscar):
     return cuenta
 
 
-# ---------------------------------------------------------------- regenerar
+def _es_contenido_enlazable(rel, fm):
+    """Lecciones y conceptos reciben enlaces automáticos. Índices, cerebro y raíz no."""
+    return rel.startswith("conceptos/") or "orden" in fm
+
+
+# ------------------------------------------------------------------ enlazar
+
+def _conceptos_ya_enlazados(cuerpo, rel):
+    """Slugs de concepto que el documento ya enlaza, sin importar cómo esté escrita la ruta."""
+    base = posixpath.dirname(rel) or "."
+    slugs = set()
+    for m in ENLACE_RE.finditer(BLOQUE_AUTO_RE.sub("\n", cuerpo)):
+        destino = m.group(3).split("#")[0]
+        if not destino or destino.startswith(("http://", "https://", "mailto:")):
+            continue
+        objetivo = posixpath.normpath(posixpath.join(base, unquote(destino)))
+        if objetivo.startswith("conceptos/") and objetivo.endswith(".md"):
+            slugs.add(Path(objetivo).stem)
+    return slugs
+
+
+def _enlazar_cuerpo(cuerpo, rel, propio, patron, buscar):
+    """Enlaza la primera mención de cada concepto. Respeta código, enlaces, encabezados y bloques automáticos."""
+    hechos = _conceptos_ya_enlazados(cuerpo, rel)
+    if propio:
+        hechos.add(propio)
+    base = posixpath.dirname(rel) or "."
+    salida, en_codigo, en_auto, n = [], False, False, 0
+    for linea in cuerpo.split("\n"):
+        s = linea.lstrip()
+        if s.startswith("<!-- auto:"):
+            en_auto = True
+        if en_auto:
+            salida.append(linea)
+            if s.startswith("<!-- /auto:"):
+                en_auto = False
+            continue
+        if s.startswith("```"):
+            en_codigo = not en_codigo
+            salida.append(linea)
+            continue
+        if en_codigo or s.startswith(("#", "<!--")):
+            salida.append(linea)
+            continue
+        partes = PROT_RE.split(linea)
+        nuevas = []
+        for i, parte in enumerate(partes):
+            if i % 2 == 1:
+                nuevas.append(parte)
+                continue
+            pos, out = 0, []
+            for m in patron.finditer(parte):
+                slug = slug_de(m.group(0), buscar)
+                if not slug or slug in hechos:
+                    continue
+                hechos.add(slug)
+                out.append(parte[pos:m.start()])
+                out.append(f"[{m.group(0)}]({posixpath.relpath(f'conceptos/{slug}.md', base)})")
+                pos = m.end()
+                n += 1
+            out.append(parte[pos:])
+            nuevas.append("".join(out))
+        salida.append("".join(nuevas))
+    return "\n".join(salida), n
+
+
+def enlazar(raiz=RAIZ):
+    conceptos = cargar_conceptos(raiz)
+    patron, buscar = compilar_terminos(conceptos)
+    total = 0
+    for rel in documentos(raiz):
+        p = raiz / rel
+        texto = p.read_text(encoding="utf-8")
+        fm, cuerpo = leer_frontmatter(texto)
+        if not _es_contenido_enlazable(rel, fm):
+            continue
+        propio = Path(rel).stem if rel.startswith("conceptos/") else None
+        nuevo, n = _enlazar_cuerpo(cuerpo, rel, propio, patron, buscar)
+        if n:
+            total += n
+            p.write_text(texto[: len(texto) - len(cuerpo)] + nuevo, encoding="utf-8")
+    return total
+
+
+# ------------------------------------------------------------------ regenerar
 
 def regenerar(raiz=RAIZ):
+    AREAS = areas(raiz)
     conceptos = cargar_conceptos(raiz)
     patron, buscar = compilar_terminos(conceptos)
 
@@ -172,17 +303,16 @@ def regenerar(raiz=RAIZ):
     def titulo(r):
         return docs[r]["fm"]["titulo"]
 
-    # Lecciones: tienen 'orden'. Se ordenan por área (orden de AREAS) y luego por 'orden'.
     lecciones = sorted(
-        (r for r in docs if "orden" in docs[r]["fm"]),
-        key=lambda r: (list(AREAS).index(docs[r]["fm"]["area"]), int(docs[r]["fm"]["orden"])),
+        (r for r in docs if "orden" in docs[r]["fm"] and docs[r]["fm"].get("area") in AREAS),
+        key=lambda r: (AREAS[docs[r]["fm"]["area"]]["orden"], int(docs[r]["fm"]["orden"])),
     )
     grupos = defaultdict(list)
     for r in lecciones:
         grupos[docs[r]["fm"]["area"]].append(r)
     menciones = {r: contar_menciones(cuerpo_visible(docs[r]["texto"]), patron, buscar) for r in lecciones}
 
-    # 1. Pie de cada lección: navegación y conceptos.
+    # Pie de cada lección: navegación y conceptos.
     for r in lecciones:
         area = docs[r]["fm"]["area"]
         g = grupos[area]
@@ -190,55 +320,64 @@ def regenerar(raiz=RAIZ):
         nav = []
         if k > 0:
             nav.append(f"[← Anterior: {titulo(g[k - 1])}]({rel_a(r, g[k - 1])})")
-        nav.append(f"[Índice de {AREAS[area]}]({rel_a(r, area + '/indice.md')})")
+        nav.append(f"[Índice de {AREAS[area]['nombre']}]({rel_a(r, AREAS[area]['indice'])})")
         if k < len(g) - 1:
             nav.append(f"[Siguiente: {titulo(g[k + 1])} →]({rel_a(r, g[k + 1])})")
-        top = [s for s, _ in menciones[r].most_common(15)]
-        conc = ", ".join(f"[{conceptos[s]['titulo']}]({rel_a(r, conceptos[s]['ruta'])})" for s in top)
-        contenido = (
-            "---\n\n**Navegación:** " + " · ".join(nav)
-            + "\n\n**Conceptos de esta lección:** " + (conc or "ninguno")
-        )
+        top = [c for c, _ in menciones[r].most_common(15)]
+        conc = ", ".join(f"[{conceptos[c]['titulo']}]({rel_a(r, conceptos[c]['ruta'])})" for c in top)
+        contenido = "---\n\n**Navegación:** " + " · ".join(nav) + "\n\n**Conceptos de esta lección:** " + (conc or "ninguno")
         docs[r]["texto"] = poner_bloque(docs[r]["texto"], "pie", contenido)
 
-    # 2. Cada concepto: dónde aparece y qué conceptos le acompañan.
+    # Cada concepto: dónde aparece y qué conceptos le acompañan (con su resumen).
     donde = defaultdict(list)
     junto = defaultdict(Counter)
     for r in lecciones:
         m = menciones[r]
-        for s, n in m.items():
-            donde[s].append((r, n))
-            junto[s].update(t for t in m if t != s)
-    for s, c in conceptos.items():
-        r = c["ruta"]
-        items = sorted(donde[s], key=lambda x: (-x[1], titulo(x[0])))
-        if items:
-            lista = "\n".join(
-                f"- [{titulo(l)}]({rel_a(r, l)}) · {AREAS[docs[l]['fm']['area']]} · "
-                f"{n} {'mención' if n == 1 else 'menciones'}"
-                for l, n in items
-            )
-        else:
-            lista = "Todavía no aparece en ninguna lección."
-        vecinos = [t for t, _ in junto[s].most_common(8)]
-        cerca = ", ".join(f"[{conceptos[t]['titulo']}]({rel_a(r, conceptos[t]['ruta'])})" for t in vecinos)
+        for c, n in m.items():
+            donde[c].append((r, n))
+            junto[c].update(t for t in m if t != c)
+    for c, datos in conceptos.items():
+        r = datos["ruta"]
+        if r not in docs:
+            continue
+        items = sorted(donde[c], key=lambda x: (-x[1], titulo(x[0])))
+        lista = "\n".join(
+            f"- [{titulo(l)}]({rel_a(r, l)}) · {AREAS[docs[l]['fm']['area']]['nombre']} · "
+            f"{n} {'mención' if n == 1 else 'menciones'}"
+            for l, n in items
+        ) or "Todavía no aparece en ninguna lección."
+        vecinos = [t for t, _ in junto[c].most_common(6)]
+        cerca = "\n".join(
+            f"- [{conceptos[t]['titulo']}]({rel_a(r, conceptos[t]['ruta'])}): {resumen_de(docs[conceptos[t]['ruta']]['texto'])}"
+            for t in vecinos
+        )
         contenido = f"## Dónde aparece\n\n{lista}\n\n## Conceptos cercanos\n\n{cerca or 'Ninguno todavía.'}"
         docs[r]["texto"] = poner_bloque(docs[r]["texto"], "backlinks", contenido)
 
-    # 3. Índices de área.
-    for area in AREAS:
-        ruta = f"{area}/indice.md"
+    # Índices de área.
+    for area, datos in AREAS.items():
+        ruta = datos["indice"]
         if ruta in docs:
             lista = "\n".join(f"{i}. [{titulo(l)}]({rel_a(ruta, l)})" for i, l in enumerate(grupos[area], 1))
-            docs[ruta]["texto"] = poner_bloque(docs[ruta]["texto"], "lecciones", "## Lecciones\n\n" + lista)
+            docs[ruta]["texto"] = poner_bloque(
+                docs[ruta]["texto"], "lecciones", "## Lecciones\n\n" + (lista or "Todavía no hay lecciones.")
+            )
 
-    # 4. Mapa de contenidos.
+    # Lista de áreas en el README.
+    if "README.md" in docs:
+        lista = "\n".join(
+            f"{i}. [{d['nombre']}]({rel_a('README.md', d['indice'])}): {len(grupos[a])} lecciones"
+            for i, (a, d) in enumerate(AREAS.items(), 1)
+        )
+        docs["README.md"]["texto"] = poner_bloque(docs["README.md"]["texto"], "areas", lista)
+
+    # Mapa de contenidos.
     if "MAPA.md" in docs:
         partes = []
-        for area, nombre in AREAS.items():
+        for area, datos in AREAS.items():
             if grupos[area]:
                 items = "\n".join(f"{i}. [{titulo(l)}]({rel_a('MAPA.md', l)})" for i, l in enumerate(grupos[area], 1))
-                partes.append(f"## {nombre}\n\n{items}")
+                partes.append(f"## {datos['nombre']}\n\n{items}")
         conc = "\n".join(
             f"- [{c['titulo']}]({rel_a('MAPA.md', c['ruta'])})"
             for c in sorted(conceptos.values(), key=lambda c: c["titulo"].lower())
@@ -246,53 +385,97 @@ def regenerar(raiz=RAIZ):
         partes.append(f"## Conceptos\n\n{conc}")
         docs["MAPA.md"]["texto"] = poner_bloque(docs["MAPA.md"]["texto"], "mapa", "\n\n".join(partes))
 
-    # 5. Grafo para máquinas (y para exploradores de la red).
+    for rel, d in docs.items():
+        (raiz / rel).write_text(d["texto"], encoding="utf-8")
+
+    generar_cerebro(raiz, AREAS, conceptos, docs, grupos, menciones)
+
+    # Grafo de la red en formato de datos (para herramientas, no para Obsidian).
     nodos, aristas = [], []
     for r in lecciones:
         fm = docs[r]["fm"]
         nodos.append({"id": r, "tipo": "leccion", "titulo": fm["titulo"], "area": fm["area"], "orden": int(fm["orden"])})
-        for s, n in menciones[r].items():
-            aristas.append({"origen": r, "destino": conceptos[s]["ruta"], "tipo": "menciona", "peso": n})
+        for c, n in menciones[r].items():
+            aristas.append({"origen": r, "destino": conceptos[c]["ruta"], "tipo": "menciona", "peso": n})
     for a, b in zip(lecciones, lecciones[1:]):
         if docs[a]["fm"]["area"] == docs[b]["fm"]["area"]:
             aristas.append({"origen": a, "destino": b, "tipo": "sigue_a", "peso": 1})
-    for s, c in conceptos.items():
-        nodos.append({"id": c["ruta"], "tipo": "concepto", "titulo": c["titulo"], "alias": c["aliases"]})
-    for s, otros in junto.items():
+    for c, datos in conceptos.items():
+        nodos.append({"id": datos["ruta"], "tipo": "concepto", "titulo": datos["titulo"], "alias": datos["aliases"]})
+    for c, otros in junto.items():
         for t, n in otros.items():
-            if s < t:
-                aristas.append({"origen": conceptos[s]["ruta"], "destino": conceptos[t]["ruta"], "tipo": "co_ocurre", "peso": n})
+            if c < t:
+                aristas.append({"origen": conceptos[c]["ruta"], "destino": conceptos[t]["ruta"], "tipo": "co_ocurre", "peso": n})
     (raiz / "grafo.json").write_text(
-        json.dumps({"nodos": nodos, "aristas": aristas}, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
+        json.dumps({"nodos": nodos, "aristas": aristas}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
 
-    for rel, d in docs.items():
-        (raiz / rel).write_text(d["texto"], encoding="utf-8")
+
+def generar_cerebro(raiz, AREAS, conceptos, docs, grupos, menciones):
+    """Contexto compacto para un modelo local: un glosario y un mapa por área."""
+    carpeta = raiz / "cerebro"
+    carpeta.mkdir(exist_ok=True)
+    for viejo in carpeta.glob("*.md"):
+        viejo.unlink()
+    cabecera = '---\ntitulo: "{t}"\ntags: ["cerebro"]\n---\n\n'
+
+    glosario = ["# Glosario de conceptos", "",
+                "Contexto compacto para la IA: un concepto por línea, con su definición. Generado automáticamente.", ""]
+    for c in sorted(conceptos.values(), key=lambda c: c["titulo"].lower()):
+        glosario.append(f"- **{c['titulo']}**: {resumen_de(docs[c['ruta']]['texto'])}")
+    (carpeta / "glosario.md").write_text(
+        cabecera.format(t="Glosario de conceptos") + "\n".join(glosario) + "\n", encoding="utf-8")
+
+    for area, datos in AREAS.items():
+        if not grupos[area]:
+            continue
+        mapa = [f"# Mapa de {datos['nombre']}", "",
+                "Contexto compacto para la IA: secciones y conceptos clave de cada lección. Generado automáticamente.", ""]
+        for l in grupos[area]:
+            secciones = re.findall(r"^## (.+)$", prosa(docs[l]["texto"]), re.M)
+            secciones = [re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", x).strip() for x in secciones][:10]
+            claves = [conceptos[c]["titulo"] for c, _ in menciones[l].most_common(8)]
+            mapa.append(f"## {docs[l]['fm']['titulo']}")
+            mapa.append(f"Secciones: {'; '.join(secciones) or 'sin secciones'}.")
+            mapa.append(f"Conceptos: {', '.join(claves) or 'ninguno'}.")
+            mapa.append("")
+        (carpeta / f"mapa-{area}.md").write_text(
+            cabecera.format(t=f"Mapa de {datos['nombre']}") + "\n".join(mapa) + "\n", encoding="utf-8")
 
 
-# ---------------------------------------------------------------- validar
+# ------------------------------------------------------------------ validar
 
 def validar(raiz=RAIZ):
     errores, avisos = [], []
+    AREAS = areas(raiz)
     conceptos = cargar_conceptos(raiz)
     patron, buscar = compilar_terminos(conceptos)
     rels = documentos(raiz)
     existentes = {p.relative_to(raiz).as_posix() for p in raiz.rglob("*") if p.is_file()}
     textos = {r: (raiz / r).read_text(encoding="utf-8") for r in rels}
     anclas = {r: {slug_ancla(t) for t in re.findall(r"^#{1,6}\s+(.+)$", sin_bloques(textos[r]), re.M)} for r in rels}
-    menciones_por_doc = {r: contar_menciones(cuerpo_visible(textos[r]), patron, buscar) for r in rels}
+    menciones_doc = {r: contar_menciones(cuerpo_visible(textos[r]), patron, buscar) for r in rels}
     enlazados = Counter()
+
+    # Toda carpeta de contenido debe ser un área declarada.
+    for carpeta in {p.parent.name for p in raiz.glob("*/*.md")} - CARPETAS_ESPECIALES:
+        if carpeta not in AREAS:
+            errores.append(f"{carpeta}/: carpeta de contenido sin indice.md válido (necesita 'area' y 'area_orden')")
 
     for r in rels:
         texto = textos[r]
         fm, _ = leer_frontmatter(texto)
-        cuerpo = sin_codigo(texto)
+        cuerpo = sin_bloques(texto)
 
         if "titulo" not in fm:
             errores.append(f"{r}: falta 'titulo' en el frontmatter")
-        if "orden" in fm and not r.startswith(fm.get("area", "?") + "/"):
-            errores.append(f"{r}: la lección no está en la carpeta de su área '{fm.get('area')}'")
+        if "orden" in fm:
+            if fm.get("area") not in AREAS:
+                errores.append(f"{r}: área '{fm.get('area')}' no declarada")
+            elif not r.startswith(fm["area"] + "/"):
+                errores.append(f"{r}: la lección debe estar en la carpeta '{fm['area']}/'")
+        if PENDIENTE in sin_codigo(texto):
+            errores.append(f"{r}: queda una línea '{PENDIENTE}' por completar")
 
         niveles = [len(m.group(1)) for m in re.finditer(r"^(#{1,6})\s", cuerpo, re.M)]
         if niveles.count(1) != 1:
@@ -305,12 +488,12 @@ def validar(raiz=RAIZ):
             previo = n
 
         nombre = Path(r).name
-        if nombre not in ARCHIVOS_RAIZ and not re.fullmatch(r"(\d{2}-)?[a-z0-9]+(-[a-z0-9]+)*\.md", nombre):
-            errores.append(f"{r}: nombre de archivo no válido (usa minúsculas, guiones y sin espacios)")
-        if "[[" in cuerpo:
+        if nombre not in RAIZ_MAYUSCULAS and not re.fullmatch(r"(\d{2}-)?" + SLUG_RE.pattern + r"\.md", nombre):
+            errores.append(f"{r}: nombre de archivo no válido (minúsculas, guiones, sin espacios)")
+        if "[[" in sin_codigo(texto):
             errores.append(f"{r}: contiene wikilinks [[...]]; usa enlaces Markdown")
 
-        for m in ENLACE_RE.finditer(cuerpo):
+        for m in ENLACE_RE.finditer(sin_codigo(texto)):
             destino = m.group(3)
             if destino.startswith(("http://", "https://", "mailto:")):
                 continue
@@ -329,29 +512,115 @@ def validar(raiz=RAIZ):
                 enlazados[Path(objetivo).stem] += 1
 
     for slug, c in conceptos.items():
-        otros = sum(1 for r in rels if r != c["ruta"] and slug in menciones_por_doc[r])
+        otros = sum(1 for r in rels if r != c["ruta"] and slug in menciones_doc[r])
         if otros == 0 and enlazados[slug] == 0:
             avisos.append(f"concepto sin uso en otras notas: {c['ruta']}")
+
+    grandes = []
+    for r in rels:
+        tokens = len(textos[r]) // 4
+        fm_r, _ = leer_frontmatter(textos[r])
+        if r.startswith("cerebro/") and tokens > 3500:
+            avisos.append(f"{r}: ~{tokens} tokens; es grande para un chat local, divídelo por área")
+        if "orden" in fm_r and tokens > 6000:
+            grandes.append(r)
+    if grandes:
+        avisos.append(f"{len(grandes)} lecciones superan ~6000 tokens. En el chat usa 'Current selection' "
+                      f"sobre la sección que necesites, no la nota completa.")
 
     for a in avisos:
         print("AVISO   ", a)
     for e in errores:
         print("ERROR   ", e)
-    print(f"\n{len(rels)} documentos, {len(conceptos)} conceptos. Errores: {len(errores)}. Avisos: {len(avisos)}.")
+    print(f"\n{len(rels)} documentos, {len(conceptos)} conceptos, {len(AREAS)} áreas. "
+          f"Errores: {len(errores)}. Avisos: {len(avisos)}.")
     return 1 if errores else 0
 
 
-# ---------------------------------------------------------------- CLI
+# ------------------------------------------------------------------ crear archivos
+
+def _slug_valido(slug):
+    if not SLUG_RE.fullmatch(slug):
+        raise ValueError(f"'{slug}' no es válido: usa minúsculas, números y guiones (ej. 'mi-tema').")
+
+
+def crear_area(raiz, slug, nombre, orden):
+    _slug_valido(slug)
+    carpeta = raiz / slug
+    if carpeta.exists():
+        raise ValueError(f"ya existe la carpeta '{slug}/'.")
+    carpeta.mkdir()
+    datos = {"titulo": f"Índice de {nombre}", "nombre": nombre, "area": slug, "area_orden": int(orden), "tags": [slug]}
+    (carpeta / "indice.md").write_text(
+        fm_texto(datos) + f"# Índice de {nombre}\n\n{PENDIENTE} describe el área en una o dos frases.\n", encoding="utf-8")
+    return carpeta / "indice.md"
+
+
+def crear_leccion(raiz, area, orden, slug, titulo):
+    AREAS = areas(raiz)
+    if area not in AREAS:
+        raise ValueError(f"el área '{area}' no existe. Áreas: {', '.join(AREAS)}.")
+    _slug_valido(slug)
+    ruta = raiz / area / f"{int(orden):02d}-{slug}.md"
+    if ruta.exists():
+        raise ValueError(f"ya existe {ruta.relative_to(raiz).as_posix()}.")
+    datos = {"titulo": titulo, "area": area, "orden": int(orden), "tags": [area]}
+    ruta.write_text(fm_texto(datos) + f"# {titulo}\n\n{PENDIENTE} escribe aquí el contenido de la lección.\n", encoding="utf-8")
+    return ruta
+
+
+def crear_concepto(raiz, slug, titulo, aliases):
+    _slug_valido(slug)
+    ruta = raiz / "conceptos" / f"{slug}.md"
+    if ruta.exists():
+        raise ValueError(f"ya existe conceptos/{slug}.md.")
+    lista = list(dict.fromkeys([titulo] + [a.strip() for a in aliases if a.strip()]))
+    datos = {"titulo": titulo, "aliases": lista, "tags": ["concepto"]}
+    ruta.write_text(fm_texto(datos) + f"# {titulo}\n\n{PENDIENTE} escribe la definición en una o dos frases.\n", encoding="utf-8")
+    return ruta
+
+
+# ------------------------------------------------------------------ CLI
 
 def main(argv):
-    if len(argv) != 2 or argv[1] not in ("regenerar", "validar"):
+    if len(argv) < 2:
         print(__doc__)
         return 2
-    if argv[1] == "regenerar":
-        regenerar()
-        print("Bloques automáticos, índices, mapa y grafo.json regenerados.")
-        return 0
-    return validar()
+    cmd, args = argv[1], argv[2:]
+    try:
+        if cmd == "actualizar":
+            n = enlazar()
+            print(f"Enlaces de concepto añadidos: {n}")
+            regenerar()
+            print("Índices, mapas, cerebro y grafo.json regenerados.")
+            return validar()
+        if cmd == "enlazar":
+            print(f"Enlaces de concepto añadidos: {enlazar()}")
+            return 0
+        if cmd == "regenerar":
+            regenerar()
+            print("Índices, mapas, cerebro y grafo.json regenerados.")
+            return 0
+        if cmd == "validar":
+            return validar()
+        if cmd == "nueva-area" and len(args) == 3:
+            print("Creado:", crear_area(RAIZ, args[0], args[1], args[2]).relative_to(RAIZ).as_posix())
+            print("Siguiente paso: escribe el índice, luego ejecuta 'actualizar'.")
+            return 0
+        if cmd == "nueva-leccion" and len(args) == 4:
+            print("Creado:", crear_leccion(RAIZ, args[0], args[1], args[2], args[3]).relative_to(RAIZ).as_posix())
+            print("Siguiente paso: escribe la lección, luego ejecuta 'actualizar'.")
+            return 0
+        if cmd == "nuevo-concepto" and len(args) in (2, 3):
+            aliases = args[2].split("|") if len(args) == 3 else []
+            print("Creado:", crear_concepto(RAIZ, args[0], args[1], aliases).relative_to(RAIZ).as_posix())
+            print("Siguiente paso: escribe la definición, luego ejecuta 'actualizar'.")
+            return 0
+    except ValueError as e:
+        print("ERROR   ", e)
+        return 2
+    print(__doc__)
+    return 2
 
 
 if __name__ == "__main__":

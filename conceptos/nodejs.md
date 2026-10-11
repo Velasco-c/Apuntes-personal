@@ -19,5 +19,10 @@ Entorno de ejecución que permite ejecutar JavaScript fuera del navegador. Está
 
 ## Conceptos cercanos
 
-[Información](informacion.md), [Atributo](atributo.md), [Índice](indice.md), [Persistencia de datos](persistencia.md), [Base de Datos](base-de-datos.md), [Tabla (Base de Datos)](tabla.md), [DOM](dom.md), [Escalabilidad](escalabilidad.md)
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [Atributo](atributo.md): Propiedad o característica que describe a una Entidad en el modelo de datos.
+- [Índice](indice.md): Estructura auxiliar que permite localizar filas por el valor de una o más columnas sin recorrer toda la tabla.
+- [Persistencia de datos](persistencia.md): Capacidad de conservar los datos más allá de la ejecución del programa, por ejemplo en archivos o en una base de datos.
+- [Base de Datos](base-de-datos.md): Colección estructurada de datos lógicamente coherentes que representan entidades del mundo real.
+- [Tabla (Base de Datos)](tabla.md): Estructura fundamental para organizar información en filas y columnas.
 <!-- /auto:backlinks -->

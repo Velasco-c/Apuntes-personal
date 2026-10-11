@@ -20,5 +20,10 @@ Capacidad de un sistema para atender más carga. Puede lograrse de forma vertica
 
 ## Conceptos cercanos
 
-[Información](informacion.md), [Tabla (Base de Datos)](tabla.md), [Base de Datos](base-de-datos.md), [Atributo](atributo.md), [Atomicidad](atomicidad.md), [Índice](indice.md), [Transacción](transaccion.md), [MySQL](mysql.md)
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [Tabla (Base de Datos)](tabla.md): Estructura fundamental para organizar información en filas y columnas.
+- [Base de Datos](base-de-datos.md): Colección estructurada de datos lógicamente coherentes que representan entidades del mundo real.
+- [Atributo](atributo.md): Propiedad o característica que describe a una Entidad en el modelo de datos.
+- [Atomicidad](atomicidad.md): Principio fundamental del Modelo Relacional que establece que el valor de cada Atributo debe ser indivisible.
+- [Índice](indice.md): Estructura auxiliar que permite localizar filas por el valor de una o más columnas sin recorrer toda la tabla.
 <!-- /auto:backlinks -->

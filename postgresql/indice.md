@@ -2,6 +2,8 @@
 titulo: "Índice de PostgreSQL"
 area: "postgresql"
 tags: ["postgresql"]
+nombre: "PostgreSQL"
+area_orden: 3
 ---
 
 # Índice de PostgreSQL

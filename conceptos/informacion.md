@@ -54,5 +54,10 @@ Conjunto organizado de [datos](dato.md) procesados que poseen un significado, co
 
 ## Conceptos cercanos
 
-[Base de Datos](base-de-datos.md), [Tabla (Base de Datos)](tabla.md), [SQL](sql.md), [Índice](indice.md), [Llave Primaria (PK)](llave-primaria.md), [MySQL](mysql.md), [Base de Datos Relacional](base-de-datos-relacional.md), [Dato](dato.md)
+- [Base de Datos](base-de-datos.md): Colección estructurada de datos lógicamente coherentes que representan entidades del mundo real.
+- [Tabla (Base de Datos)](tabla.md): Estructura fundamental para organizar información en filas y columnas.
+- [SQL](sql.md): Lenguaje estándar para definir, consultar y manipular datos en bases de datos relacionales.
+- [Índice](indice.md): Estructura auxiliar que permite localizar filas por el valor de una o más columnas sin recorrer toda la tabla.
+- [Llave Primaria (PK)](llave-primaria.md): Un Atributo o conjunto de atributos que identifica de manera única e inequívoca a cada Tupla dentro de una Tabla.
+- [MySQL](mysql.md): Sistema de gestión de bases de datos relacionales de código abierto.
 <!-- /auto:backlinks -->

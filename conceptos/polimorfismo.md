@@ -18,5 +18,10 @@ Capacidad de tratar objetos de distinto tipo mediante una misma interfaz, de mod
 
 ## Conceptos cercanos
 
-[Herencia](herencia.md), [Programación orientada a objetos](poo.md), [Entidad](entidad.md), [Información](informacion.md), [Principios SOLID](solid.md), [Dato](dato.md), [Atributo](atributo.md), [Persistencia de datos](persistencia.md)
+- [Herencia](herencia.md): Mecanismo por el que una clase hereda atributos y métodos de otra, la clase padre, y puede extenderlos o modificarlos.
+- [Programación orientada a objetos](poo.md): Paradigma que organiza el código en objetos, que combinan datos y comportamiento, normalmente definidos a partir de clases.
+- [Entidad](entidad.md): Representación abstracta de un objeto, persona, concepto o evento del mundo real que es relevante para el sistema de información.
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [Principios SOLID](solid.md): Cinco principios de diseño orientado a objetos: responsabilidad única, abierto/cerrado, sustitución de Liskov, segregación de interfaces e inversión de dependencias.
+- [Dato](dato.md): Unidad mínima de información, desprovista de contexto o interpretación por sí misma.
 <!-- /auto:backlinks -->

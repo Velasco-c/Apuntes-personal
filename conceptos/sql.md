@@ -33,5 +33,10 @@ Lenguaje estándar para definir, consultar y manipular datos en [bases de datos 
 
 ## Conceptos cercanos
 
-[Información](informacion.md), [Tabla (Base de Datos)](tabla.md), [Base de Datos](base-de-datos.md), [MySQL](mysql.md), [Índice](indice.md), [Llave Primaria (PK)](llave-primaria.md), [Base de Datos Relacional](base-de-datos-relacional.md), [Transacción](transaccion.md)
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [Tabla (Base de Datos)](tabla.md): Estructura fundamental para organizar información en filas y columnas.
+- [Base de Datos](base-de-datos.md): Colección estructurada de datos lógicamente coherentes que representan entidades del mundo real.
+- [MySQL](mysql.md): Sistema de gestión de bases de datos relacionales de código abierto.
+- [Índice](indice.md): Estructura auxiliar que permite localizar filas por el valor de una o más columnas sin recorrer toda la tabla.
+- [Llave Primaria (PK)](llave-primaria.md): Un Atributo o conjunto de atributos que identifica de manera única e inequívoca a cada Tupla dentro de una Tabla.
 <!-- /auto:backlinks -->

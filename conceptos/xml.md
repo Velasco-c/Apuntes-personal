@@ -16,5 +16,10 @@ Lenguaje de marcas que organiza la [información](informacion.md) en etiquetas a
 
 ## Conceptos cercanos
 
-[PostgreSQL](postgresql.md), [Tabla (Base de Datos)](tabla.md), [Dato](dato.md), [JSON](json.md), [Información](informacion.md), [Base de Datos](base-de-datos.md), [Base de Datos Relacional](base-de-datos-relacional.md), [Vista](vista.md)
+- [PostgreSQL](postgresql.md): Sistema de gestión de bases de datos relacionales de código abierto, conocido por su extensibilidad y su soporte para tipos como JSON y XML.
+- [Tabla (Base de Datos)](tabla.md): Estructura fundamental para organizar información en filas y columnas.
+- [Dato](dato.md): Unidad mínima de información, desprovista de contexto o interpretación por sí misma.
+- [JSON](json.md): Formato de texto ligero para representar datos semiestructurados con pares clave-valor y arreglos.
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [Base de Datos](base-de-datos.md): Colección estructurada de datos lógicamente coherentes que representan entidades del mundo real.
 <!-- /auto:backlinks -->

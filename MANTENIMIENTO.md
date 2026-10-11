@@ -5,49 +5,62 @@ tags: ["mantenimiento"]
 
 # Guía de mantenimiento
 
-Convenciones para mantener la colección ordenada y conectada. Sirven tanto para una persona como para una IA que ayude a editar el repositorio.
+Cómo añadir contenido y mantener los apuntes ordenados. Sirve para una persona y para una IA que ayude a editar el repositorio.
 
-## Estructura de carpetas
+## El script
 
-- Un tema es una carpeta. Cada carpeta de área tiene su `indice.md`.
-- Las lecciones empiezan con dos dígitos de orden: `01-nombre.md`.
-- `conceptos/` es plana: todas las notas de concepto van ahí, sin subcarpetas.
-- Los nombres de archivo van en minúsculas, con guiones, sin acentos ni espacios.
+`herramientas/mantenimiento.py` es un programa en Python 3 que se ejecuta en la terminal, desde la raíz del repositorio. No es una nota: Obsidian no lo muestra, y no lo necesitas para leer los apuntes. Hace cuatro cosas: crear archivos nuevos, enlazar conceptos, regenerar los bloques automáticos y validar el repositorio.
 
-## Frontmatter
+Después de cualquier cambio, ejecuta:
 
-Toda nota empieza con un bloque YAML:
-
-- Lecciones: `titulo`, `area`, `orden` y `tags`.
-- Conceptos: `titulo`, `aliases` (las formas en que el concepto aparece en el texto: singular, plural, siglas) y `tags: ["concepto"]`.
-- Índices y mapa: `titulo` y `area` o `tags`.
-
-## Encabezados
-
-Un solo `#` por archivo, que es el título. Las secciones usan `##` y las subsecciones `###`. No saltes niveles.
-
-## Enlaces
-
-Usa rutas relativas en Markdown, por ejemplo `[Transacción](../conceptos/transaccion.md)`. No uses `[[wikilinks]]`, porque GitHub no los muestra. Enlaza un concepto la primera vez que aparece en una lección, como ya se hace en las clases de bases de datos.
-
-## Agregar un concepto
-
-1. Crea `conceptos/nombre.md` con su frontmatter y una definición breve.
-2. Escribe en `aliases` las formas en que aparece en el texto.
-3. Ejecuta `python3 herramientas/mantenimiento.py regenerar`.
-
-## Bloques automáticos
-
-Todo lo que está entre `<!-- auto:... -->` se genera solo: la navegación y los conceptos de cada lección, el apartado "Dónde aparece" de cada concepto, los índices y el mapa. No lo edites a mano, porque se sobrescribe.
-
-## Contenido aprobado
-
-Los ejercicios de las lecciones se consideran contenido aprobado. Al revisar, corrige enlaces y encabezados, pero no reescribas su enunciado ni su solución sin que el autor lo pida.
-
-## Comprobar el repositorio
-
-```
-python3 herramientas/mantenimiento.py validar
+```bash
+python3 herramientas/mantenimiento.py actualizar
 ```
 
-Revisa enlaces rotos, saltos de encabezado, frontmatter, nombres de archivo y conceptos sin uso. Devuelve error si algo falla, así que puede usarse antes de cada cambio.
+Ese único comando enlaza, regenera y valida. Si la validación falla, el mensaje indica el archivo y el problema.
+
+## Añadir contenido
+
+Un área nueva. El número define su lugar en el README, el mapa y el cerebro:
+
+```bash
+python3 herramientas/mantenimiento.py nueva-area express "Express" 6
+```
+
+Una lección dentro de un área. El número define el orden:
+
+```bash
+python3 herramientas/mantenimiento.py nueva-leccion express 1 introduccion "Introducción a Express"
+```
+
+Un concepto. Los alias son las formas en que aparece en el texto, separadas por `|`:
+
+```bash
+python3 herramientas/mantenimiento.py nuevo-concepto middleware "Middleware" "middleware|middlewares"
+```
+
+Cada archivo nuevo tiene una línea que empieza con `PENDIENTE:`. Reemplázala por el contenido real y ejecuta `actualizar`. Mientras quede alguna, la validación falla, para no publicar contenido incompleto.
+
+## Convenciones
+
+- Una carpeta por tema, en minúsculas y con guiones. `conceptos/` es plana: todos los conceptos van ahí.
+- Lecciones: `NN-nombre.md`, con frontmatter `titulo`, `area`, `orden` y `tags`.
+- Índices: `indice.md` con `nombre` y `area_orden`. Así el script reconoce el área.
+- Conceptos: `titulo` y `aliases`, y una definición breve al principio.
+- Encabezados: un solo `#` por archivo. Las secciones son `##` y las subsecciones `###`, sin saltar niveles.
+- Enlaces: Markdown relativo, como `[Texto](../conceptos/x.md)`. No uses `[[wikilinks]]`.
+- Diagramas: bloques `mermaid`, no imágenes.
+- Ejercicios: son contenido aprobado. Corrige enlaces y encabezados, pero no reescribas su texto.
+
+## Lo que se genera solo
+
+No edites nada que esté entre `<!-- auto:... -->`. Se regenera en cada `actualizar`:
+
+- El pie de cada lección, el apartado "Dónde aparece" de cada concepto, los índices, el mapa y la lista de áreas del README.
+- `cerebro/`: un `glosario.md` (un concepto por línea) y un `mapa-<área>.md` por área. Es el contexto compacto para la IA local. No hay que escribirlo a mano.
+- `grafo.json`: la red completa en formato de datos. Obsidian no lo usa; sirve para herramientas que necesiten leer la estructura.
+
+## Límites
+
+- Una lección de más de unos 6000 tokens es grande para un chat local. Consúltala con *Current selection*.
+- Si `cerebro/glosario.md` supera unos 3500 tokens, el validador avisa. Entonces conviene dividirlo por área.

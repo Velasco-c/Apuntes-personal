@@ -2,6 +2,8 @@
 titulo: "Índice de Node.js"
 area: "nodejs"
 tags: ["nodejs"]
+nombre: "Node.js"
+area_orden: 4
 ---
 
 # Índice de Node.js

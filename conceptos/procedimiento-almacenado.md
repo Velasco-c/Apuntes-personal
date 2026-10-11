@@ -20,5 +20,10 @@ Bloque de sentencias [SQL](sql.md) guardado en el servidor, que se invoca por no
 
 ## Conceptos cercanos
 
-[Base de Datos](base-de-datos.md), [Información](informacion.md), [SQL](sql.md), [Tabla (Base de Datos)](tabla.md), [MySQL](mysql.md), [Transacción](transaccion.md), [Trigger](trigger.md), [Índice](indice.md)
+- [Base de Datos](base-de-datos.md): Colección estructurada de datos lógicamente coherentes que representan entidades del mundo real.
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [SQL](sql.md): Lenguaje estándar para definir, consultar y manipular datos en bases de datos relacionales.
+- [Tabla (Base de Datos)](tabla.md): Estructura fundamental para organizar información en filas y columnas.
+- [MySQL](mysql.md): Sistema de gestión de bases de datos relacionales de código abierto.
+- [Transacción](transaccion.md): Conjunto de operaciones que se ejecutan como una sola unidad: o se completan todas o no se aplica ninguna.
 <!-- /auto:backlinks -->

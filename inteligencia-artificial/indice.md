@@ -2,6 +2,8 @@
 titulo: "Índice de Inteligencia artificial"
 area: "inteligencia-artificial"
 tags: ["inteligencia-artificial"]
+nombre: "Inteligencia artificial"
+area_orden: 5
 ---
 
 # Índice de Inteligencia artificial

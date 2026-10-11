@@ -24,5 +24,10 @@ Consulta guardada con nombre que se usa como si fuera una [tabla](tabla.md). Nor
 
 ## Conceptos cercanos
 
-[Información](informacion.md), [Base de Datos](base-de-datos.md), [Índice](indice.md), [Tabla (Base de Datos)](tabla.md), [SQL](sql.md), [MySQL](mysql.md), [Dato](dato.md), [Base de Datos Relacional](base-de-datos-relacional.md)
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [Base de Datos](base-de-datos.md): Colección estructurada de datos lógicamente coherentes que representan entidades del mundo real.
+- [Índice](indice.md): Estructura auxiliar que permite localizar filas por el valor de una o más columnas sin recorrer toda la tabla.
+- [Tabla (Base de Datos)](tabla.md): Estructura fundamental para organizar información en filas y columnas.
+- [SQL](sql.md): Lenguaje estándar para definir, consultar y manipular datos en bases de datos relacionales.
+- [MySQL](mysql.md): Sistema de gestión de bases de datos relacionales de código abierto.
 <!-- /auto:backlinks -->

@@ -20,5 +20,10 @@ Capacidad de conservar los datos más allá de la ejecución del programa, por e
 
 ## Conceptos cercanos
 
-[Información](informacion.md), [Base de Datos](base-de-datos.md), [Entidad](entidad.md), [Tabla (Base de Datos)](tabla.md), [Sistema Gestor de Base de Datos (SGBD)](sgbd.md), [Atributo](atributo.md), [Llave Primaria (PK)](llave-primaria.md), [Llave Foránea (FK)](llave-foranea.md)
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [Base de Datos](base-de-datos.md): Colección estructurada de datos lógicamente coherentes que representan entidades del mundo real.
+- [Entidad](entidad.md): Representación abstracta de un objeto, persona, concepto o evento del mundo real que es relevante para el sistema de información.
+- [Tabla (Base de Datos)](tabla.md): Estructura fundamental para organizar información en filas y columnas.
+- [Sistema Gestor de Base de Datos (SGBD)](sgbd.md): Un SGBD es una capa de software compleja que actúa como intermediario entre los usuarios finales y los datos almacenados físicamente.
+- [Atributo](atributo.md): Propiedad o característica que describe a una Entidad en el modelo de datos.
 <!-- /auto:backlinks -->

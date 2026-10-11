@@ -23,5 +23,10 @@ Mecanismos de integridad que permiten identificar, relacionar y restringir los r
 
 ## Conceptos cercanos
 
-[Base de Datos](base-de-datos.md), [Sistema Gestor de Base de Datos (SGBD)](sgbd.md), [Persistencia de datos](persistencia.md), [Información](informacion.md), [Entidad](entidad.md), [Atributo](atributo.md), [Dato](dato.md), [Tabla (Base de Datos)](tabla.md)
+- [Base de Datos](base-de-datos.md): Colección estructurada de datos lógicamente coherentes que representan entidades del mundo real.
+- [Sistema Gestor de Base de Datos (SGBD)](sgbd.md): Un SGBD es una capa de software compleja que actúa como intermediario entre los usuarios finales y los datos almacenados físicamente.
+- [Persistencia de datos](persistencia.md): Capacidad de conservar los datos más allá de la ejecución del programa, por ejemplo en archivos o en una base de datos.
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [Entidad](entidad.md): Representación abstracta de un objeto, persona, concepto o evento del mundo real que es relevante para el sistema de información.
+- [Atributo](atributo.md): Propiedad o característica que describe a una Entidad en el modelo de datos.
 <!-- /auto:backlinks -->

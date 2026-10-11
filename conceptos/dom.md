@@ -15,5 +15,8 @@ Document Object Model: representación en forma de árbol de un documento HTML, 
 
 ## Conceptos cercanos
 
-[Node.js](nodejs.md), [Atributo](atributo.md), [Escalabilidad](escalabilidad.md), [Información](informacion.md)
+- [Node.js](nodejs.md): Entorno de ejecución que permite ejecutar JavaScript fuera del navegador.
+- [Atributo](atributo.md): Propiedad o característica que describe a una Entidad en el modelo de datos.
+- [Escalabilidad](escalabilidad.md): Capacidad de un sistema para atender más carga.
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
 <!-- /auto:backlinks -->

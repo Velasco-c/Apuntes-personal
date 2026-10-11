@@ -21,5 +21,10 @@ tags: ["concepto"]
 
 ## Conceptos cercanos
 
-[Información](informacion.md), [Prompt](prompt.md), [Base de Datos](base-de-datos.md), [Alucinación](alucinacion.md), [Function calling](function-calling.md), [Red neuronal](red-neuronal.md), [Testing automatizado](testing.md), [Dato](dato.md)
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [Prompt](prompt.md): Instrucción o contexto que se le da a un modelo para obtener una respuesta.
+- [Base de Datos](base-de-datos.md): Colección estructurada de datos lógicamente coherentes que representan entidades del mundo real.
+- [Alucinación](alucinacion.md): Respuesta de un modelo de lenguaje que suena plausible pero es falsa o no está respaldada por fuentes.
+- [Function calling](function-calling.md): Mecanismo por el que un modelo solicita ejecutar una función definida por la aplicación, con argumentos estructurados, y luego usa el resultado en su respuesta.
+- [Red neuronal](red-neuronal.md): Modelo computacional inspirado en las neuronas biológicas: capas de nodos conectados por pesos que se ajustan durante el entrenamiento para aprender patrones a partir de datos.
 <!-- /auto:backlinks -->

@@ -18,7 +18,7 @@ Propiedad o característica que describe a una [Entidad](entidad.md) en el model
 <!-- auto:backlinks -->
 ## Dónde aparece
 
-- [Clase 03: Del Diseño Conceptual al Modelo Físico](../bases-de-datos/clase-03-diseno-conceptual-a-fisico.md) · Bases de datos · 11 menciones
+- [Clase 03: Del Diseño Conceptual al Modelo Físico](../bases-de-datos/clase-03-diseno-conceptual-a-fisico.md) · Bases de datos · 13 menciones
 - [Modelo Entidad-Relación y consultas avanzadas en MySQL](../mysql/06-modelo-er-y-consultas-avanzadas.md) · MySQL · 10 menciones
 - [Clase 04: Normalización de base de datos](../bases-de-datos/clase-04-normalizacion.md) · Bases de datos · 6 menciones
 - [Clase 02: Base de datos](../bases-de-datos/clase-02-base-de-datos.md) · Bases de datos · 4 menciones
@@ -33,5 +33,10 @@ Propiedad o característica que describe a una [Entidad](entidad.md) en el model
 
 ## Conceptos cercanos
 
-[Información](informacion.md), [Tabla (Base de Datos)](tabla.md), [Llave Primaria (PK)](llave-primaria.md), [Base de Datos](base-de-datos.md), [Llave Foránea (FK)](llave-foranea.md), [Base de Datos Relacional](base-de-datos-relacional.md), [Sistema Gestor de Base de Datos (SGBD)](sgbd.md), [Entidad](entidad.md)
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [Tabla (Base de Datos)](tabla.md): Estructura fundamental para organizar información en filas y columnas.
+- [Llave Primaria (PK)](llave-primaria.md): Un Atributo o conjunto de atributos que identifica de manera única e inequívoca a cada Tupla dentro de una Tabla.
+- [Base de Datos](base-de-datos.md): Colección estructurada de datos lógicamente coherentes que representan entidades del mundo real.
+- [Llave Foránea (FK)](llave-foranea.md): Un campo en una tabla que establece un vínculo lógico con la Llave Primaria de otra tabla (o la misma).
+- [Base de Datos Relacional](base-de-datos-relacional.md): Modelo que organiza la información en tablas interconectadas.
 <!-- /auto:backlinks -->

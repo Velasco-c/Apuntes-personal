@@ -17,5 +17,10 @@ Modelo computacional inspirado en las neuronas biológicas: capas de nodos conec
 
 ## Conceptos cercanos
 
-[Información](informacion.md), [Base de conocimiento](base-de-conocimiento.md), [Modelo de lenguaje de gran escala (LLM)](llm.md), [Sistema experto](sistema-experto.md), [Motor de inferencia](motor-de-inferencia.md), [Tabla (Base de Datos)](tabla.md), [Alucinación](alucinacion.md), [Model Context Protocol (MCP)](mcp.md)
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [Base de conocimiento](base-de-conocimiento.md): Conjunto de hechos y reglas que un sistema experto usa para razonar.
+- [Modelo de lenguaje de gran escala (LLM)](llm.md): Red neuronal entrenada con enormes volúmenes de texto para predecir el siguiente fragmento de texto.
+- [Sistema experto](sistema-experto.md): Programa que resuelve problemas en un dominio especializado aplicando una base de conocimiento y reglas de inferencia, y que puede explicar sus razonamientos.
+- [Motor de inferencia](motor-de-inferencia.md): Componente de un sistema experto que aplica las reglas de la base de conocimiento a los hechos para deducir nuevas conclusiones.
+- [Tabla (Base de Datos)](tabla.md): Estructura fundamental para organizar información en filas y columnas.
 <!-- /auto:backlinks -->

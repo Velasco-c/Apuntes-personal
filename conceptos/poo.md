@@ -17,5 +17,10 @@ Paradigma que organiza el código en objetos, que combinan datos y comportamient
 
 ## Conceptos cercanos
 
-[Herencia](herencia.md), [Polimorfismo](polimorfismo.md), [Entidad](entidad.md), [Información](informacion.md), [Dato](dato.md), [Atributo](atributo.md), [Principios SOLID](solid.md), [Persistencia de datos](persistencia.md)
+- [Herencia](herencia.md): Mecanismo por el que una clase hereda atributos y métodos de otra, la clase padre, y puede extenderlos o modificarlos.
+- [Polimorfismo](polimorfismo.md): Capacidad de tratar objetos de distinto tipo mediante una misma interfaz, de modo que cada uno responde a su manera al mismo mensaje.
+- [Entidad](entidad.md): Representación abstracta de un objeto, persona, concepto o evento del mundo real que es relevante para el sistema de información.
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [Dato](dato.md): Unidad mínima de información, desprovista de contexto o interpretación por sí misma.
+- [Atributo](atributo.md): Propiedad o característica que describe a una Entidad en el modelo de datos.
 <!-- /auto:backlinks -->

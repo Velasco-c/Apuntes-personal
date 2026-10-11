@@ -20,5 +20,10 @@ Formato de texto ligero para representar datos semiestructurados con pares clave
 
 ## Conceptos cercanos
 
-[Información](informacion.md), [Base de Datos](base-de-datos.md), [Dato](dato.md), [Base de Datos Relacional](base-de-datos-relacional.md), [Tabla (Base de Datos)](tabla.md), [SQL](sql.md), [Vista](vista.md), [Índice](indice.md)
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [Base de Datos](base-de-datos.md): Colección estructurada de datos lógicamente coherentes que representan entidades del mundo real.
+- [Dato](dato.md): Unidad mínima de información, desprovista de contexto o interpretación por sí misma.
+- [Base de Datos Relacional](base-de-datos-relacional.md): Modelo que organiza la información en tablas interconectadas.
+- [Tabla (Base de Datos)](tabla.md): Estructura fundamental para organizar información en filas y columnas.
+- [SQL](sql.md): Lenguaje estándar para definir, consultar y manipular datos en bases de datos relacionales.
 <!-- /auto:backlinks -->

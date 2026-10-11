@@ -5,36 +5,35 @@ tags: ["portada"]
 
 # Apuntes de aprendizaje autodidacta
 
-Este repositorio es una **colección de apuntes de información autodidacta**: lo que voy aprendiendo por mi cuenta sobre bases de datos, programación con JavaScript e inteligencia artificial, organizado para consultarlo cuando lo necesito y para que cada tema esté conectado con los demás.
+Colección de apuntes de información autodidacta sobre bases de datos, programación e inteligencia artificial. Está ordenada para estudiarla en secuencia y para consultarla cuando hace falta.
 
-No es un curso oficial ni un libro terminado. Es un registro vivo: se corrige, se amplía y se reorganiza conforme avanzo.
+No es un curso oficial. Es un registro vivo que se corrige y se amplía con el tiempo.
 
 ## Por dónde empezar
 
-Los temas siguen un orden de estudio. Cada área tiene su índice, y el [mapa de contenidos](MAPA.md) reúne todo en una sola página.
+Estudia las áreas en este orden. Cada una tiene su índice con las lecciones.
 
-1. [Bases de datos](bases-de-datos/indice.md): modelo relacional, diseño conceptual, normalización y modelado. Es la base del resto.
-2. [MySQL](mysql/indice.md): SQL desde cero, hasta procedimientos, vistas, triggers y eventos.
-3. [PostgreSQL](postgresql/indice.md): consultas avanzadas, funciones de ventana, datos JSON y XML.
-4. [Node.js](nodejs/indice.md): programación orientada a objetos, principios de diseño y persistencia con MySQL.
-5. [Inteligencia artificial](inteligencia-artificial/indice.md): redes neuronales, prompts, alucinaciones, MCP y testing automatizado con IA.
+<!-- auto:areas -->
+1. [Bases de datos](bases-de-datos/indice.md): 5 lecciones
+2. [MySQL](mysql/indice.md): 10 lecciones
+3. [PostgreSQL](postgresql/indice.md): 7 lecciones
+4. [Node.js](nodejs/indice.md): 8 lecciones
+5. [Inteligencia artificial](inteligencia-artificial/indice.md): 9 lecciones
+<!-- /auto:areas -->
 
 ## Cómo está conectado
 
-Los apuntes se enlazan a través de la carpeta `conceptos/`. Cada concepto, por ejemplo [Transacción](conceptos/transaccion.md) o [Trigger](conceptos/trigger.md), es una nota propia que aparece en varias lecciones y que muestra en cuáles se usa. Cada lección termina con enlaces de navegación y la lista de conceptos que contiene.
+Los temas se enlazan a través de `conceptos/`, una nota por concepto. Cada concepto muestra en qué lecciones aparece y qué conceptos le acompañan. Cada lección termina con su navegación y sus conceptos.
 
-Los ejercicios y prácticas están dentro de cada lección, junto a la teoría.
+Abre la carpeta como bóveda de Obsidian para ver el grafo. Los enlaces son Markdown estándar, así que también funcionan en GitHub.
 
-## Cómo usarlo en Obsidian
+## Asistente local con IA
 
-Abre la carpeta como una bóveda de Obsidian. Los enlaces están escritos en Markdown estándar, así que funcionan en Obsidian, en GitHub y en cualquier editor. El grafo de Obsidian muestra la red de temas. El archivo `grafo.json` describe la misma red en un formato que pueden leer programas y modelos de IA.
+[Tutorial de Ollama](tutorial-ollama.md): instala un modelo pequeño (`qwen2.5:1.5b`) y conéctalo con Obsidian. Para preguntas generales, usa como nota actual [cerebro/glosario.md](cerebro/glosario.md) o el mapa de un área: son resúmenes compactos que gastan pocos tokens.
 
-## Estructura
+## Mantener y ampliar
 
-- `bases-de-datos/`, `mysql/`, `postgresql/`, `nodejs/` e `inteligencia-artificial/`: lecciones por área.
-- `conceptos/`: notas de concepto compartidas por todas las áreas.
-- `herramientas/`: script para regenerar los índices y validar los enlaces.
-- [MAPA.md](MAPA.md): índice maestro. [MANTENIMIENTO.md](MANTENIMIENTO.md): convenciones del repositorio.
+Lee [MANTENIMIENTO.md](MANTENIMIENTO.md). Después de cualquier cambio, ejecuta `python3 herramientas/mantenimiento.py actualizar`.
 
 ## Licencia
 

@@ -26,5 +26,10 @@ Proceso de diseño que organiza las [tablas](tabla.md) para reducir la redundanc
 
 ## Conceptos cercanos
 
-[Tabla (Base de Datos)](tabla.md), [Llave Primaria (PK)](llave-primaria.md), [Llave Foránea (FK)](llave-foranea.md), [Información](informacion.md), [Atributo](atributo.md), [Base de Datos](base-de-datos.md), [Base de Datos Relacional](base-de-datos-relacional.md), [Entidad](entidad.md)
+- [Tabla (Base de Datos)](tabla.md): Estructura fundamental para organizar información en filas y columnas.
+- [Llave Primaria (PK)](llave-primaria.md): Un Atributo o conjunto de atributos que identifica de manera única e inequívoca a cada Tupla dentro de una Tabla.
+- [Llave Foránea (FK)](llave-foranea.md): Un campo en una tabla que establece un vínculo lógico con la Llave Primaria de otra tabla (o la misma).
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [Atributo](atributo.md): Propiedad o característica que describe a una Entidad en el modelo de datos.
+- [Base de Datos](base-de-datos.md): Colección estructurada de datos lógicamente coherentes que representan entidades del mundo real.
 <!-- /auto:backlinks -->

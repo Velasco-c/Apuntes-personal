@@ -36,7 +36,54 @@ Aunque ambos conceptos están intrínsecamente ligados, sirven a etapas distinta
 
 ### Ejemplo diagrama entidad-relación
 
-![Esquema.png](imagenes/esquema.png)
+_Versión en Mermaid del esquema original. Las multiplicidades se transcribieron de la imagen: `1..*` → `}|`, `0..*` → `}o`, `1..1` → `||`, `0..1` → `|o`. La línea punteada (clase de asociación) no tiene equivalente directo en Mermaid. Los tipos de [dato](../conceptos/dato.md) son orientativos._
+
+```mermaid
+erDiagram
+    PROVEEDOR {
+        string IDDeEntrega
+        date FechaDeEntrega
+        string IDDeProveedor
+    }
+    PEDIDO {
+        string IDDePedido
+        date FechaDelPedido
+        string IDDeSedeCentral
+    }
+    DETALLESDELPEDIDO {
+        string IDDeDetallesDelPedido
+        string ID_del_producto
+        string IDDePedido
+        int CantidadDeProducto
+    }
+    PRODUCTO {
+        string IDDeProveedor
+        string ID_del_producto
+    }
+    ENTREGADEDETALLESDELPEDIDO {
+        string IDDeEntrega
+        string IDDePedido
+        string IDDeDetallesDelPedido
+    }
+    SEDECENTRAL {
+        string IDDeSedeCentral
+        string IDDeRama
+    }
+    RAMA {
+        string IDDeRama
+    }
+    ENTREGA {
+        string IDDeEntrega
+        date FechaDeEntrega
+        string IDDeProveedor
+    }
+    PROVEEDOR }|--o{ PRODUCTO : relación
+    PEDIDO ||--o| DETALLESDELPEDIDO : relación
+    PEDIDO }o--|| SEDECENTRAL : relación
+    PRODUCTO }o--|{ DETALLESDELPEDIDO : relación
+    DETALLESDELPEDIDO }|--|{ ENTREGA : relación
+    SEDECENTRAL ||--o{ RAMA : relación
+```
 
 ### Modelado mediante Lenguaje Unificado de Modelado (UML)
 
@@ -52,7 +99,20 @@ La [cardinalidad](../conceptos/cardinalidad.md) define la restricción numérica
     
 ## simbología
 
-![Cardanalidad](imagenes/cardinalidad.png)
+Mermaid expresa la cardinalidad con estos símbolos, que equivalen a los de la leyenda original:
+
+- `|o` cero o uno
+- `||` uno y solo uno (Mermaid no distingue entre «uno» y «uno y solo uno»)
+- `}o` cero o muchos
+- `}|` uno o muchos
+
+```mermaid
+erDiagram
+    A |o--|| B : "cero o uno"
+    C }o--|| D : "cero o muchos"
+    E }|--|| F : "uno o muchos"
+    G ||--|| H : "uno"
+```
 
 > **Nota técnica:** Mientras que el modelo E-R original utiliza símbolos específicos para la cardinalidad (como diamantes y líneas con etiquetas), el enfoque UML integra estas relaciones dentro de los diagramas de clases, permitiendo una transición más fluida hacia el diseño orientado a objetos y la implementación en bases de datos relacionales.
 
@@ -61,5 +121,5 @@ La [cardinalidad](../conceptos/cardinalidad.md) define la restricción numérica
 
 **Navegación:** [← Anterior: Clase 04: Normalización de base de datos](clase-04-normalizacion.md) · [Índice de Bases de datos](indice.md) · [Siguiente: Clase 06: Fundamentos del diseño de bases de datos, modelado y representación visual →](clase-06-fundamentos-de-diseno.md)
 
-**Conceptos de esta lección:** [Base de Datos](../conceptos/base-de-datos.md), [Base de Datos Relacional](../conceptos/base-de-datos-relacional.md), [Tabla (Base de Datos)](../conceptos/tabla.md), [Modelo Entidad-Relación (MER)](../conceptos/mer.md), [Cardinalidad](../conceptos/cardinalidad.md), [Información](../conceptos/informacion.md), [Llave Primaria (PK)](../conceptos/llave-primaria.md), [Entidad](../conceptos/entidad.md), [Atributo](../conceptos/atributo.md), [SQL](../conceptos/sql.md), [Normalización](../conceptos/normalizacion.md), [Llave Foránea (FK)](../conceptos/llave-foranea.md), [Sistema Gestor de Base de Datos (SGBD)](../conceptos/sgbd.md), [Relación entre entidades](../conceptos/relacion.md)
+**Conceptos de esta lección:** [Base de Datos](../conceptos/base-de-datos.md), [Base de Datos Relacional](../conceptos/base-de-datos-relacional.md), [Cardinalidad](../conceptos/cardinalidad.md), [Tabla (Base de Datos)](../conceptos/tabla.md), [Modelo Entidad-Relación (MER)](../conceptos/mer.md), [Información](../conceptos/informacion.md), [Llave Primaria (PK)](../conceptos/llave-primaria.md), [Entidad](../conceptos/entidad.md), [Atributo](../conceptos/atributo.md), [SQL](../conceptos/sql.md), [Normalización](../conceptos/normalizacion.md), [Llave Foránea (FK)](../conceptos/llave-foranea.md), [Sistema Gestor de Base de Datos (SGBD)](../conceptos/sgbd.md), [Dato](../conceptos/dato.md), [Relación entre entidades](../conceptos/relacion.md)
 <!-- /auto:pie -->

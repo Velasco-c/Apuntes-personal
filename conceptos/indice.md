@@ -29,5 +29,10 @@ Estructura auxiliar que permite localizar filas por el valor de una o más colum
 
 ## Conceptos cercanos
 
-[Información](informacion.md), [Tabla (Base de Datos)](tabla.md), [Base de Datos](base-de-datos.md), [SQL](sql.md), [Llave Primaria (PK)](llave-primaria.md), [MySQL](mysql.md), [Vista](vista.md), [Llave Foránea (FK)](llave-foranea.md)
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [Tabla (Base de Datos)](tabla.md): Estructura fundamental para organizar información en filas y columnas.
+- [Base de Datos](base-de-datos.md): Colección estructurada de datos lógicamente coherentes que representan entidades del mundo real.
+- [SQL](sql.md): Lenguaje estándar para definir, consultar y manipular datos en bases de datos relacionales.
+- [Llave Primaria (PK)](llave-primaria.md): Un Atributo o conjunto de atributos que identifica de manera única e inequívoca a cada Tupla dentro de una Tabla.
+- [MySQL](mysql.md): Sistema de gestión de bases de datos relacionales de código abierto.
 <!-- /auto:backlinks -->

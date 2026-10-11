@@ -17,5 +17,10 @@ Función que calcula un valor para cada fila usando un conjunto de filas relacio
 
 ## Conceptos cercanos
 
-[Información](informacion.md), [Tabla (Base de Datos)](tabla.md), [SQL](sql.md), [Transacción](transaccion.md), [Base de Datos](base-de-datos.md), [Índice](indice.md), [PostgreSQL](postgresql.md), [CTE](cte.md)
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [Tabla (Base de Datos)](tabla.md): Estructura fundamental para organizar información en filas y columnas.
+- [SQL](sql.md): Lenguaje estándar para definir, consultar y manipular datos en bases de datos relacionales.
+- [Transacción](transaccion.md): Conjunto de operaciones que se ejecutan como una sola unidad: o se completan todas o no se aplica ninguna.
+- [Base de Datos](base-de-datos.md): Colección estructurada de datos lógicamente coherentes que representan entidades del mundo real.
+- [Índice](indice.md): Estructura auxiliar que permite localizar filas por el valor de una o más columnas sin recorrer toda la tabla.
 <!-- /auto:backlinks -->

@@ -2,6 +2,8 @@
 titulo: "Índice de MySQL"
 area: "mysql"
 tags: ["mysql"]
+nombre: "MySQL"
+area_orden: 2
 ---
 
 # Índice de MySQL

@@ -23,5 +23,10 @@ tags: ["concepto"]
 
 ## Conceptos cercanos
 
-[Tabla (Base de Datos)](tabla.md), [Información](informacion.md), [Base de Datos](base-de-datos.md), [SQL](sql.md), [Índice](indice.md), [Base de Datos Relacional](base-de-datos-relacional.md), [Vista](vista.md), [Dato](dato.md)
+- [Tabla (Base de Datos)](tabla.md): Estructura fundamental para organizar información en filas y columnas.
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [Base de Datos](base-de-datos.md): Colección estructurada de datos lógicamente coherentes que representan entidades del mundo real.
+- [SQL](sql.md): Lenguaje estándar para definir, consultar y manipular datos en bases de datos relacionales.
+- [Índice](indice.md): Estructura auxiliar que permite localizar filas por el valor de una o más columnas sin recorrer toda la tabla.
+- [Base de Datos Relacional](base-de-datos-relacional.md): Modelo que organiza la información en tablas interconectadas.
 <!-- /auto:backlinks -->

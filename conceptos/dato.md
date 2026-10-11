@@ -27,6 +27,7 @@ Unidad mínima de [información](informacion.md), desprovista de contexto o inte
 - [Funciones definidas por el usuario, seguridad y permisos en MySQL](../mysql/08-funciones-seguridad-y-permisos.md) · MySQL · 2 menciones
 - [SQL — Alias, funciones, JOIN, subconsultas y diseño de bases de datos](../mysql/04-alias-funciones-join-y-subconsultas.md) · MySQL · 2 menciones
 - [Clase 02: Base de datos](../bases-de-datos/clase-02-base-de-datos.md) · Bases de datos · 1 mención
+- [Clase 05: Esquemas de diseño de bases de datos relacionales](../bases-de-datos/clase-05-esquemas-de-diseno.md) · Bases de datos · 1 mención
 - [Fundamentos Básicos de Ingeniería de Prompts y Evaluación de Prompts](../inteligencia-artificial/05-fundamentos-de-ingenieria-de-prompts.md) · Inteligencia artificial · 1 mención
 - [Introducción a la Programación Orientada a Objetos (POO) en JavaScript](../nodejs/02-poo-en-javascript.md) · Node.js · 1 mención
 - [Operadores de Conjuntos, Vistas, Procedimientos, Funciones y Triggers en PostgreSQL](../postgresql/06-conjuntos-vistas-procedimientos-funciones-y-triggers.md) · PostgreSQL · 1 mención
@@ -34,5 +35,10 @@ Unidad mínima de [información](informacion.md), desprovista de contexto o inte
 
 ## Conceptos cercanos
 
-[Información](informacion.md), [Base de Datos](base-de-datos.md), [Tabla (Base de Datos)](tabla.md), [SQL](sql.md), [Llave Primaria (PK)](llave-primaria.md), [Base de Datos Relacional](base-de-datos-relacional.md), [Vista](vista.md), [Índice](indice.md)
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [Base de Datos](base-de-datos.md): Colección estructurada de datos lógicamente coherentes que representan entidades del mundo real.
+- [Tabla (Base de Datos)](tabla.md): Estructura fundamental para organizar información en filas y columnas.
+- [SQL](sql.md): Lenguaje estándar para definir, consultar y manipular datos en bases de datos relacionales.
+- [Llave Primaria (PK)](llave-primaria.md): Un Atributo o conjunto de atributos que identifica de manera única e inequívoca a cada Tupla dentro de una Tabla.
+- [Base de Datos Relacional](base-de-datos-relacional.md): Modelo que organiza la información en tablas interconectadas.
 <!-- /auto:backlinks -->

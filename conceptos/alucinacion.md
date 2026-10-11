@@ -17,5 +17,10 @@ Respuesta de un [modelo de lenguaje](llm.md) que suena plausible pero es falsa o
 
 ## Conceptos cercanos
 
-[Modelo de lenguaje de gran escala (LLM)](llm.md), [Información](informacion.md), [Prompt](prompt.md), [Base de Datos](base-de-datos.md), [Red neuronal](red-neuronal.md), [Base de conocimiento](base-de-conocimiento.md)
+- [Modelo de lenguaje de gran escala (LLM)](llm.md): Red neuronal entrenada con enormes volúmenes de texto para predecir el siguiente fragmento de texto.
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [Prompt](prompt.md): Instrucción o contexto que se le da a un modelo para obtener una respuesta.
+- [Base de Datos](base-de-datos.md): Colección estructurada de datos lógicamente coherentes que representan entidades del mundo real.
+- [Red neuronal](red-neuronal.md): Modelo computacional inspirado en las neuronas biológicas: capas de nodos conectados por pesos que se ajustan durante el entrenamiento para aprender patrones a partir de datos.
+- [Base de conocimiento](base-de-conocimiento.md): Conjunto de hechos y reglas que un sistema experto usa para razonar.
 <!-- /auto:backlinks -->

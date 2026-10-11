@@ -42,5 +42,10 @@ CREATE TABLE TABLA_productos (
 
 ## Conceptos cercanos
 
-[Entidad](entidad.md), [Atributo](atributo.md), [Tabla (Base de Datos)](tabla.md), [Llave Primaria (PK)](llave-primaria.md), [Llave Foránea (FK)](llave-foranea.md), [Información](informacion.md), [Modelo Entidad-Relación (MER)](mer.md), [Cardinalidad](cardinalidad.md)
+- [Entidad](entidad.md): Representación abstracta de un objeto, persona, concepto o evento del mundo real que es relevante para el sistema de información.
+- [Atributo](atributo.md): Propiedad o característica que describe a una Entidad en el modelo de datos.
+- [Tabla (Base de Datos)](tabla.md): Estructura fundamental para organizar información en filas y columnas.
+- [Llave Primaria (PK)](llave-primaria.md): Un Atributo o conjunto de atributos que identifica de manera única e inequívoca a cada Tupla dentro de una Tabla.
+- [Llave Foránea (FK)](llave-foranea.md): Un campo en una tabla que establece un vínculo lógico con la Llave Primaria de otra tabla (o la misma).
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
 <!-- /auto:backlinks -->

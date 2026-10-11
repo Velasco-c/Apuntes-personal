@@ -16,5 +16,10 @@ Cinco principios de diseño orientado a objetos: responsabilidad única, abierto
 
 ## Conceptos cercanos
 
-[Polimorfismo](polimorfismo.md), [Herencia](herencia.md), [Programación orientada a objetos](poo.md), [Información](informacion.md), [Persistencia de datos](persistencia.md), [Entidad](entidad.md), [Patrón de diseño](patron-de-diseno.md), [Normalización](normalizacion.md)
+- [Polimorfismo](polimorfismo.md): Capacidad de tratar objetos de distinto tipo mediante una misma interfaz, de modo que cada uno responde a su manera al mismo mensaje.
+- [Herencia](herencia.md): Mecanismo por el que una clase hereda atributos y métodos de otra, la clase padre, y puede extenderlos o modificarlos.
+- [Programación orientada a objetos](poo.md): Paradigma que organiza el código en objetos, que combinan datos y comportamiento, normalmente definidos a partir de clases.
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [Persistencia de datos](persistencia.md): Capacidad de conservar los datos más allá de la ejecución del programa, por ejemplo en archivos o en una base de datos.
+- [Entidad](entidad.md): Representación abstracta de un objeto, persona, concepto o evento del mundo real que es relevante para el sistema de información.
 <!-- /auto:backlinks -->

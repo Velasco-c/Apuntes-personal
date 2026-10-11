@@ -16,5 +16,10 @@ Tarea que el servidor ejecuta según un calendario o una sola vez. En [MySQL](my
 
 ## Conceptos cercanos
 
-[MySQL](mysql.md), [Base de Datos](base-de-datos.md), [Transacción](transaccion.md), [Trigger](trigger.md), [Información](informacion.md), [SQL](sql.md), [Tabla (Base de Datos)](tabla.md), [Sistema Gestor de Base de Datos (SGBD)](sgbd.md)
+- [MySQL](mysql.md): Sistema de gestión de bases de datos relacionales de código abierto.
+- [Base de Datos](base-de-datos.md): Colección estructurada de datos lógicamente coherentes que representan entidades del mundo real.
+- [Transacción](transaccion.md): Conjunto de operaciones que se ejecutan como una sola unidad: o se completan todas o no se aplica ninguna.
+- [Trigger](trigger.md): Bloque de código que se ejecuta automáticamente cuando ocurre un INSERT, UPDATE o DELETE sobre una tabla, antes (BEFORE) o después (AFTER) de la operación.
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [SQL](sql.md): Lenguaje estándar para definir, consultar y manipular datos en bases de datos relacionales.
 <!-- /auto:backlinks -->

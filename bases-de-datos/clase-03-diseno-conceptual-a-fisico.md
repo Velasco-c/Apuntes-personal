@@ -109,7 +109,37 @@ La transición del diseño conceptual al lógico requiere un enfoque sistemátic
 4. **Normalización Temprana:** Identificar y separar [atributos multivaluados](../conceptos/atributo-multivaluado.md) en tablas auxiliares.
 5. **Estandarización:** Utilizar notación técnica estándar (como UML o Notación de Crow's Foot) para garantizar la interoperabilidad.
 
-![Entidad-Relacion](imagenes/entidad-relacion.png)
+_Versión en Mermaid del ejemplo original. La imagen usaba notación Chen (óvalos y rombos). Mermaid dibuja solo Crow's Foot, así que los atributos van dentro de cada entidad y los atributos de la relación «solicitan» (fecha y cantidad) no pueden mostrarse._
+
+```mermaid
+erDiagram
+    MATERIA_PRIMA {
+        string id_materia_prima PK
+        string nombre
+        string codigo_unico
+    }
+    FABRICA {
+        string id_fabrica PK
+        string nombre
+        string NIT
+        string direccion
+    }
+    CLIENTE {
+        string id_cliente PK
+        string nombre
+        string celular
+        string cedula
+    }
+    PRODUCTO {
+        string id_producto PK
+        string nombre
+        float precio
+        int cantidad
+    }
+    MATERIA_PRIMA }o--|| FABRICA : llegan
+    FABRICA ||--o{ PRODUCTO : realiza
+    CLIENTE }o--o{ PRODUCTO : solicitan
+```
 
 ## Modelo Físico
 Es la etapa final del diseño, donde el [Modelo Lógico Relacional](../conceptos/modelo-logico-relacional.md) se materializa en un [SGBD](../conceptos/sgbd.md) específico.

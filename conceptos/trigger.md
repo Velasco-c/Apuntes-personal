@@ -20,5 +20,10 @@ Bloque de código que se ejecuta automáticamente cuando ocurre un INSERT, UPDAT
 
 ## Conceptos cercanos
 
-[Base de Datos](base-de-datos.md), [Tabla (Base de Datos)](tabla.md), [Información](informacion.md), [SQL](sql.md), [MySQL](mysql.md), [Base de Datos Relacional](base-de-datos-relacional.md), [Índice](indice.md), [Entidad](entidad.md)
+- [Base de Datos](base-de-datos.md): Colección estructurada de datos lógicamente coherentes que representan entidades del mundo real.
+- [Tabla (Base de Datos)](tabla.md): Estructura fundamental para organizar información en filas y columnas.
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [SQL](sql.md): Lenguaje estándar para definir, consultar y manipular datos en bases de datos relacionales.
+- [MySQL](mysql.md): Sistema de gestión de bases de datos relacionales de código abierto.
+- [Base de Datos Relacional](base-de-datos-relacional.md): Modelo que organiza la información en tablas interconectadas.
 <!-- /auto:backlinks -->

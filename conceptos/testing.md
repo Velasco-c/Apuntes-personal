@@ -16,5 +16,10 @@ Verificación del comportamiento del software mediante pruebas que se ejecutan a
 
 ## Conceptos cercanos
 
-[Modelo de lenguaje de gran escala (LLM)](llm.md), [Información](informacion.md), [Prompt](prompt.md), [JSON](json.md), [Dato](dato.md), [Function calling](function-calling.md), [Tabla (Base de Datos)](tabla.md), [Node.js](nodejs.md)
+- [Modelo de lenguaje de gran escala (LLM)](llm.md): Red neuronal entrenada con enormes volúmenes de texto para predecir el siguiente fragmento de texto.
+- [Información](informacion.md): Conjunto organizado de datos procesados que poseen un significado, contexto y propósito dentro de un sistema.
+- [Prompt](prompt.md): Instrucción o contexto que se le da a un modelo para obtener una respuesta.
+- [JSON](json.md): Formato de texto ligero para representar datos semiestructurados con pares clave-valor y arreglos.
+- [Dato](dato.md): Unidad mínima de información, desprovista de contexto o interpretación por sí misma.
+- [Function calling](function-calling.md): Mecanismo por el que un modelo solicita ejecutar una función definida por la aplicación, con argumentos estructurados, y luego usa el resultado en su respuesta.
 <!-- /auto:backlinks -->
