@@ -9,11 +9,11 @@ tags: ["mysql"]
 
 ## 1. Optimización de consultas
 
-La **optimización de consultas** es un proceso fundamental en la administración de [bases de datos](../conceptos/base-de-datos.md). Su objetivo es conseguir que las consultas se ejecuten de la manera más eficiente posible, reduciendo el tiempo de respuesta y el consumo de recursos.
+La **optimización de consultas** es un proceso fundamental en la administración de [bases de datos](../conceptos/bases-de-datos/base-de-datos.md). Su objetivo es conseguir que las consultas se ejecuten de la manera más eficiente posible, reduciendo el tiempo de respuesta y el consumo de recursos.
 
 En términos generales, **optimizar** significa realizar una tarea de la manera más eficiente y efectiva posible.
 
-En el contexto de las bases de datos, optimizar una consulta significa ajustar su estructura para que el motor de base de datos pueda obtener la [información](../conceptos/informacion.md) solicitada utilizando la menor cantidad posible de recursos, como:
+En el contexto de las bases de datos, optimizar una consulta significa ajustar su estructura para que el motor de base de datos pueda obtener la [información](../conceptos/fundamentos/dato.md) solicitada utilizando la menor cantidad posible de recursos, como:
 
 - CPU.
 - Memoria.
@@ -51,12 +51,12 @@ Una base de datos con consultas correctamente optimizadas puede manejar un mayor
 Existen diferentes técnicas para mejorar el rendimiento de las consultas. Entre ellas se encuentran:
 
 - Evitar subconsultas innecesarias.
-- Utilizar [índices](../conceptos/indice.md) apropiadamente.
+- Utilizar [índices](../conceptos/bases-de-datos/estructura/indice-bd.md) apropiadamente.
 - Utilizar `EXPLAIN` para analizar consultas.
 - Reducir la cantidad de datos procesados.
 - Utilizar correctamente `JOIN`.
 - Utilizar caché cuando sea apropiado.
-- Particionar [tablas](../conceptos/tabla.md) grandes cuando el caso de uso lo justifique.
+- Particionar [tablas](../conceptos/bases-de-datos/estructura/tabla.md) grandes cuando el caso de uso lo justifique.
 
 ---
 
@@ -103,7 +103,7 @@ establece la relación entre ambas tablas.
 Se utiliza `DISTINCT` porque un mismo cliente puede tener varias ventas. Sin `DISTINCT`, el nombre del cliente podría aparecer varias veces.
 
 > [!NOTE]
-> Reemplazar una subconsulta por un `JOIN` no garantiza automáticamente un mejor rendimiento en todos los casos. El optimizador de [MySQL](../conceptos/mysql.md) puede elegir diferentes planes de ejecución dependiendo de las tablas, índices, estadísticas y cantidad de datos.
+> Reemplazar una subconsulta por un `JOIN` no garantiza automáticamente un mejor rendimiento en todos los casos. El optimizador de [MySQL](../conceptos/motores/mysql.md) puede elegir diferentes planes de ejecución dependiendo de las tablas, índices, estadísticas y cantidad de datos.
 
 ---
 
@@ -392,7 +392,7 @@ Esto resulta especialmente útil para consultas que trabajan con determinados pe
 
 ## 10. Gestión de transacciones
 
-MySQL proporciona mecanismos para trabajar con **[transacciones](../conceptos/transaccion.md)**, permitiendo mantener un equilibrio entre rendimiento y confiabilidad en aplicaciones que realizan operaciones concurrentes de lectura y escritura.
+MySQL proporciona mecanismos para trabajar con **[transacciones](../conceptos/bases-de-datos/transaccion.md)**, permitiendo mantener un equilibrio entre rendimiento y confiabilidad en aplicaciones que realizan operaciones concurrentes de lectura y escritura.
 
 ### 10.1 ¿Qué es una transacción?
 
@@ -444,18 +444,18 @@ Las transacciones relacionales se estudian normalmente mediante las propiedades 
 
 | Propiedad        | Significado                                                                                                                          |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| **[Atomicidad](../conceptos/atomicidad.md)**   | La transacción se considera una unidad de trabajo: sus operaciones se confirman o se revierten según el resultado de la transacción. |
+| **[Atomicidad](../conceptos/bases-de-datos/transaccion.md)**   | La transacción se considera una unidad de trabajo: sus operaciones se confirman o se revierten según el resultado de la transacción. |
 | **Consistencia** | Una transacción debe llevar la base de datos de un estado válido a otro estado válido.                                               |
 | **Aislamiento**  | Las transacciones concurrentes deben comportarse de acuerdo con las reglas de aislamiento configuradas.                              |
-| **Durabilidad**  | Una vez confirmados los cambios mediante `COMMIT`, estos deben [persistir](../conceptos/persistencia.md) según las garantías del sistema de almacenamiento.          |
+| **Durabilidad**  | Una vez confirmados los cambios mediante `COMMIT`, estos deben [persistir](../conceptos/fundamentos/persistencia.md) según las garantías del sistema de almacenamiento.          |
 
 ---
 
 ## 13. Consultas preparadas con `PREPARE` y `EXECUTE`
 
-MySQL permite preparar sentencias [SQL](../conceptos/sql.md) mediante `PREPARE`.
+MySQL permite preparar sentencias [SQL](../conceptos/sql/sql.md) mediante `PREPARE`.
 
-Una [sentencia preparada](../conceptos/prepared-statement.md) contiene marcadores de posición, como `?`, que posteriormente reciben valores durante su ejecución.
+Una [sentencia preparada](../conceptos/acceso-a-datos/prepared-statement.md) contiene marcadores de posición, como `?`, que posteriormente reciben valores durante su ejecución.
 
 El proceso básico consiste en:
 
@@ -822,7 +822,7 @@ INSERT INTO Ventas (producto_id, cantidad, fecha_venta) VALUES
 
 ## 17. Ranking de productos por mes
 
-La [función de ventana](../conceptos/funcion-de-ventana.md) `RANK()` permite asignar una posición a cada producto según la cantidad vendida.
+La [función de ventana](../conceptos/sql/funcion-de-ventana.md) `RANK()` permite asignar una posición a cada producto según la cantidad vendida.
 
 ```sql
 SELECT
@@ -1182,7 +1182,7 @@ Los principales conceptos estudiados son:
 * **ACID:** describe propiedades fundamentales de las transacciones.
 * **Bloqueos:** controlan el acceso concurrente a los recursos.
 * **`PREPARE` y `EXECUTE`:** permiten trabajar con sentencias preparadas y marcadores de posición.
-* **`CURSOR`:** permite recorrer resultados dentro de [procedimientos almacenados](../conceptos/procedimiento-almacenado.md).
+* **`CURSOR`:** permite recorrer resultados dentro de [procedimientos almacenados](../conceptos/sql/procedimiento-almacenado.md).
 * **`HANDLER`:** permite controlar determinadas condiciones durante la ejecución de procedimientos.
 * **`GRANT`:** concede privilegios.
 * **`REVOKE`:** revoca privilegios.
@@ -1229,6 +1229,4 @@ Los principales conceptos estudiados son:
 ---
 
 **Navegación:** [← Anterior: Funciones definidas por el usuario, seguridad y permisos en MySQL](08-funciones-seguridad-y-permisos.md) · [Índice de MySQL](indice.md) · [Siguiente: Eventos y Triggers en MySQL →](10-eventos-y-triggers.md)
-
-**Conceptos de esta lección:** [Tabla (Base de Datos)](../conceptos/tabla.md), [Transacción](../conceptos/transaccion.md), [Base de Datos](../conceptos/base-de-datos.md), [MySQL](../conceptos/mysql.md), [Índice](../conceptos/indice.md), [Información](../conceptos/informacion.md), [SQL](../conceptos/sql.md), [Prepared statement](../conceptos/prepared-statement.md), [Atomicidad](../conceptos/atomicidad.md), [Persistencia de datos](../conceptos/persistencia.md), [Procedimiento almacenado](../conceptos/procedimiento-almacenado.md), [Función de ventana](../conceptos/funcion-de-ventana.md), [Escalabilidad](../conceptos/escalabilidad.md)
 <!-- /auto:pie -->

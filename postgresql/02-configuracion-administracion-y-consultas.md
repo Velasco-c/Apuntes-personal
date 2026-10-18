@@ -7,7 +7,7 @@ tags: ["postgresql"]
 
 # PostgreSQL — Configuración, administración y consultas
 
-Repositorio de ejercicios y prácticas relacionadas con **[PostgreSQL](../conceptos/postgresql.md)**, enfocado en configuración básica del motor, tipos de datos, restricciones, [índices](../conceptos/indice.md), relaciones entre [tablas](../conceptos/tabla.md) y consultas [SQL](../conceptos/sql.md).
+Repositorio de ejercicios y prácticas relacionadas con **[PostgreSQL](../conceptos/motores/postgresql.md)**, enfocado en configuración básica del motor, tipos de datos, restricciones, [índices](../conceptos/bases-de-datos/estructura/indice-bd.md), relaciones entre [tablas](../conceptos/bases-de-datos/estructura/tabla.md) y consultas [SQL](../conceptos/sql/sql.md).
 
 > [!NOTE]
 > Este repositorio está orientado principalmente a la práctica. La documentación reúne los conceptos y comandos necesarios para comprender y reproducir los ejercicios sin convertir cada fragmento de código en una explicación teórica extensa.
@@ -204,7 +204,7 @@ Algunas aplicaciones pueden depender de características específicas de una ver
 
 ## Uso correcto de tipos de datos numéricos
 
-Los tipos de datos deben representar correctamente la naturaleza de la [información](../conceptos/informacion.md) almacenada.
+Los tipos de datos deben representar correctamente la naturaleza de la [información](../conceptos/fundamentos/dato.md) almacenada.
 
 Por ejemplo, utilizar `VARCHAR` para almacenar cantidades numéricas puede generar problemas cuando posteriormente se realizan operaciones matemáticas.
 
@@ -243,7 +243,7 @@ realiza una conversión explícita del valor hacia `INT`.
 * Permite almacenar valores que no representan números.
 * Puede provocar errores durante cálculos.
 * Las comparaciones pueden comportarse como texto en lugar de números.
-* El tipo de [dato](../conceptos/dato.md) no representa correctamente la naturaleza del campo.
+* El tipo de [dato](../conceptos/fundamentos/dato.md) no representa correctamente la naturaleza del campo.
 
 #### Corrección
 
@@ -353,7 +353,7 @@ CREATE TABLE usuarios (
 );
 ```
 
-Una [clave primaria](../conceptos/llave-primaria.md):
+Una [clave primaria](../conceptos/bases-de-datos/estructura/llave-primaria.md):
 
 * Identifica de forma única cada fila.
 * No permite valores `NULL`.
@@ -503,7 +503,7 @@ Para consultar la estructura de una tabla desde `psql`:
 \d ventas
 ```
 
-En [MySQL](../conceptos/mysql.md) es común utilizar:
+En [MySQL](../conceptos/motores/mysql.md) es común utilizar:
 
 ```sql
 DESC ventas;
@@ -804,13 +804,13 @@ erDiagram
 
 | Comando           | Función                                   |
 | ----------------- | ----------------------------------------- |
-| `\l`              | Lista las [bases de datos](../conceptos/base-de-datos.md).                 |
+| `\l`              | Lista las [bases de datos](../conceptos/bases-de-datos/base-de-datos.md).                 |
 | `\c nombre_bd`    | Cambia la conexión a una base de datos.   |
 | `\d nombre_tabla` | Describe la estructura de una tabla.      |
 | `\dt`             | Lista las tablas.                         |
 | `\ds`             | Lista las secuencias.                     |
 | `\di`             | Lista los índices.                        |
-| `\dv`             | Lista las [vistas](../conceptos/vista.md).                         |
+| `\dv`             | Lista las [vistas](../conceptos/bases-de-datos/estructura/vista.md).                         |
 | `\dp` / `\z`      | Muestra privilegios de las tablas.        |
 | `\da`             | Lista funciones de agregación.            |
 | `\df`             | Lista funciones.                          |
@@ -908,7 +908,7 @@ Durante la configuración y trabajo con PostgreSQL aparecen varios conceptos imp
 * **Tabla:** estructura formada por filas y columnas utilizada para almacenar registros.
 * **Índice:** estructura que puede mejorar el rendimiento de determinadas consultas.
 * **Esquema:** espacio lógico utilizado para organizar objetos dentro de una base de datos.
-* **[Transacción](../conceptos/transaccion.md):** conjunto de operaciones que PostgreSQL puede tratar como una unidad de trabajo.
+* **[Transacción](../conceptos/bases-de-datos/transaccion.md):** conjunto de operaciones que PostgreSQL puede tratar como una unidad de trabajo.
 * **Consulta SQL:** instrucción utilizada para consultar o manipular información mediante SQL.
 * **DDL:** conjunto de instrucciones utilizadas para definir o modificar estructuras de la base de datos, como `CREATE`, `ALTER` y `DROP`.
 * **DML:** conjunto de instrucciones utilizadas para manipular los datos, como `INSERT`, `UPDATE` y `DELETE`.
@@ -936,11 +936,11 @@ Durante la configuración y trabajo con PostgreSQL aparecen varios conceptos imp
 
 | Término            | Descripción                                                                                                 |
 | ------------------ | ----------------------------------------------------------------------------------------------------------- |
-| **PostgreSQL**     | [Sistema de gestión de bases de datos](../conceptos/sgbd.md) relacional y objeto-relacional de código abierto.                      |
+| **PostgreSQL**     | [Sistema de gestión de bases de datos](../conceptos/bases-de-datos/sgbd.md) relacional y objeto-relacional de código abierto.                      |
 | **POSTGRES**       | Proyecto de base de datos desarrollado en Berkeley que dio origen a PostgreSQL.                             |
 | **INGRES**         | Sistema de gestión de bases de datos desarrollado en Berkeley y antecedente directo de POSTGRES.            |
 | **SGBD**           | Sistema de Gestión de Bases de Datos. Software encargado de almacenar, administrar y consultar datos.       |
-| **SQL**            | Lenguaje utilizado para definir, consultar y manipular información en [bases de datos relacionales](../conceptos/base-de-datos-relacional.md).          |
+| **SQL**            | Lenguaje utilizado para definir, consultar y manipular información en [bases de datos relacionales](../conceptos/bases-de-datos/base-de-datos-relacional.md).          |
 | `psql`             | Cliente de línea de comandos utilizado para conectarse y trabajar con PostgreSQL.                           |
 | **Base de datos**  | Espacio lógico donde se organizan y almacenan datos.                                                        |
 | **Tabla**          | Estructura formada por filas y columnas utilizada para almacenar registros.                                 |
@@ -963,7 +963,7 @@ Durante la configuración y trabajo con PostgreSQL aparecen varios conceptos imp
 | `INTERVAL`         | Tipo de dato utilizado para representar una duración o intervalo de tiempo.                                 |
 | **Índice**         | Estructura que puede mejorar el rendimiento de determinadas consultas.                                      |
 | **Selectividad**   | Capacidad de una columna para distinguir registros mediante sus valores.                                    |
-| **[JOIN](../conceptos/join.md)**           | Operación utilizada para combinar información proveniente de varias tablas.                                 |
+| **[JOIN](../conceptos/sql/join.md)**           | Operación utilizada para combinar información proveniente de varias tablas.                                 |
 | **INNER JOIN**     | Combinación que devuelve únicamente registros que tienen coincidencias en ambas tablas.                     |
 | **Alias**          | Nombre temporal utilizado para referirse a una tabla o columna dentro de una consulta.                      |
 | **Esquema**        | Espacio lógico utilizado para organizar objetos dentro de una base de datos.                                |
@@ -1022,6 +1022,4 @@ Para reforzar los conceptos trabajados en esta clase:
 ---
 
 **Navegación:** [← Anterior: PostgreSQL](01-introduccion.md) · [Índice de PostgreSQL](indice.md) · [Siguiente: Administración e importación de datasets en PostgreSQL →](03-administracion-e-importacion-de-datasets.md)
-
-**Conceptos de esta lección:** [PostgreSQL](../conceptos/postgresql.md), [Tabla (Base de Datos)](../conceptos/tabla.md), [Índice](../conceptos/indice.md), [Dato](../conceptos/dato.md), [SQL](../conceptos/sql.md), [MySQL](../conceptos/mysql.md), [Información](../conceptos/informacion.md), [Base de Datos](../conceptos/base-de-datos.md), [Llave Primaria (PK)](../conceptos/llave-primaria.md), [Sistema Gestor de Base de Datos (SGBD)](../conceptos/sgbd.md), [Transacción](../conceptos/transaccion.md), [JOIN](../conceptos/join.md), [Vista](../conceptos/vista.md), [Base de Datos Relacional](../conceptos/base-de-datos-relacional.md)
 <!-- /auto:pie -->

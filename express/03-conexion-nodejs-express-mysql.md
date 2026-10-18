@@ -7,7 +7,7 @@ tags: ["express"]
 
 # Conexión de Node.js y Express con MySQL
 
-Esta lección muestra cómo conectar una aplicación de [Node.js](../conceptos/nodejs.md) con [Express](../conceptos/express.md) a una [base de datos](../conceptos/base-de-datos.md) [MySQL](../conceptos/mysql.md). Se explica la configuración de la conexión, cómo verificarla y cómo usarla desde una ruta. Para la comunicación se usa el controlador [mysql2](../conceptos/mysql2.md).
+Esta lección muestra cómo conectar una aplicación de [Node.js](../conceptos/nodejs/nodejs.md) con [Express](../conceptos/web/express.md) a una [base de datos](../conceptos/bases-de-datos/base-de-datos.md) [MySQL](../conceptos/motores/mysql.md). Se explica la configuración de la conexión, cómo verificarla y cómo usarla desde una ruta. Para la comunicación se usa el controlador [mysql2](../conceptos/acceso-a-datos/controlador-de-base-de-datos.md).
 
 ---
 
@@ -15,8 +15,8 @@ Esta lección muestra cómo conectar una aplicación de [Node.js](../conceptos/n
 
 Al terminar esta lección, la aplicación podrá:
 
-* Leer las credenciales de la base de datos desde un archivo `.env`, usando [variables de entorno](../conceptos/variable-de-entorno.md).
-* Crear un [pool de conexiones](../conceptos/pool-de-conexiones.md) reutilizable.
+* Leer las credenciales de la base de datos desde un archivo `.env`, usando [variables de entorno](../conceptos/fundamentos/variable-de-entorno.md).
+* Crear un [pool de conexiones](../conceptos/acceso-a-datos/pool-de-conexiones.md) reutilizable.
 * Verificar la conexión antes de iniciar el servidor.
 * Ejecutar consultas SQL desde una ruta de Express de forma segura.
 
@@ -98,7 +98,7 @@ Sin `"type": "module"`, aparece el error `SyntaxError: Cannot use import stateme
 
 ## 5. Preparar la base de datos
 
-Antes de conectar, la base de datos y la [tabla](../conceptos/tabla.md) deben existir. Ejecuta este script en MySQL:
+Antes de conectar, la base de datos y la [tabla](../conceptos/bases-de-datos/estructura/tabla.md) deben existir. Ejecuta este script en MySQL:
 
 ```sql
 CREATE DATABASE IF NOT EXISTS ejercicios_clase
@@ -179,7 +179,7 @@ export default pool;
 
 ### ¿Qué es un pool de conexiones?
 
-Abrir una conexión a MySQL es un proceso costoso. El [pool](../conceptos/pool-de-conexiones.md) mantiene varias conexiones abiertas y las reutiliza:
+Abrir una conexión a MySQL es un proceso costoso. El [pool](../conceptos/acceso-a-datos/pool-de-conexiones.md) mantiene varias conexiones abiertas y las reutiliza:
 
 1. Llega una petición y el pool entrega una conexión libre.
 2. La consulta termina y la conexión regresa al pool.
@@ -330,9 +330,9 @@ Cada consulta devuelve un arreglo de dos elementos. Con `const [rows] = ...` se 
 ### `query` frente a `execute`
 
 * `pool.query(sql)` ejecuta el texto tal cual. Úsalo solo cuando la consulta no recibe datos del usuario.
-* `pool.execute(sql, valores)` usa [consultas preparadas](../conceptos/prepared-statement.md). Los `?` se reemplazan de forma segura. Úsalo siempre que haya datos variables.
+* `pool.execute(sql, valores)` usa [consultas preparadas](../conceptos/acceso-a-datos/prepared-statement.md). Los `?` se reemplazan de forma segura. Úsalo siempre que haya datos variables.
 
-Nunca construyas una consulta concatenando datos del usuario, porque abre la puerta a una [inyección SQL](../conceptos/inyeccion-sql.md):
+Nunca construyas una consulta concatenando datos del usuario, porque abre la puerta a una [inyección SQL](../conceptos/acceso-a-datos/inyeccion-sql.md):
 
 ```javascript
 // INCORRECTO: vulnerable a inyección SQL
@@ -461,7 +461,7 @@ Cliente recibe JSON
 > Verifica la conexión con el mismo usuario y contraseña del `.env` antes de culpar al código. Si `mysql -u ... -p` falla, el problema está en MySQL.
 
 > [!NOTE]
-> La lección [Persistencia de datos con MySQL y Node.js](../nodejs/08-persistencia-con-mysql.md) usa `createConnection`, que abre una sola conexión. Esta lección usa `createPool`, que es la opción adecuada cuando una [API](../conceptos/api.md) atiende varias peticiones a la vez.
+> La lección [Persistencia de datos con MySQL y Node.js](../nodejs/08-persistencia-con-mysql.md) usa `createConnection`, que abre una sola conexión. Esta lección usa `createPool`, que es la opción adecuada cuando una [API](../conceptos/web/api.md) atiende varias peticiones a la vez.
 
 > [!WARNING]
 > No subas el archivo `.env` al repositorio. Si una contraseña se publica, cámbiala en MySQL, aunque hayas borrado el archivo después.
@@ -477,10 +477,10 @@ Cliente recibe JSON
 ## Conexiones
 
 * [Introducción a Node.js con Express.js](01-introduccion-nodejs-expressjs.md): instalación, `package.json` y `dotenv`.
-* [API, estados HTTP, parámetros, middlewares y routers en Express.js](02-api-http-middlewares-routers.md): cómo organizar las rutas en [routers](../conceptos/router.md) y leer `req.body` y `req.params`.
-* [Persistencia de datos con MySQL y Node.js](../nodejs/08-persistencia-con-mysql.md): la versión con una conexión individual y un [CRUD](../conceptos/crud.md) en consola.
-* [SQL](../conceptos/sql.md) y [Base de datos relacional](../conceptos/base-de-datos-relacional.md): el lenguaje y el modelo que usan las consultas de esta lección.
-* [JSON](../conceptos/json.md): formato de los datos que se reciben y se devuelven en la API.
+* [API, estados HTTP, parámetros, middlewares y routers en Express.js](02-api-http-middlewares-routers.md): cómo organizar las rutas en [routers](../conceptos/web/router.md) y leer `req.body` y `req.params`.
+* [Persistencia de datos con MySQL y Node.js](../nodejs/08-persistencia-con-mysql.md): la versión con una conexión individual y un [CRUD](../conceptos/sql/crud.md) en consola.
+* [SQL](../conceptos/sql/sql.md) y [Base de datos relacional](../conceptos/bases-de-datos/base-de-datos-relacional.md): el lenguaje y el modelo que usan las consultas de esta lección.
+* [JSON](../conceptos/formatos/json.md): formato de los datos que se reciben y se devuelven en la API.
 
 ---
 
@@ -495,7 +495,5 @@ Cliente recibe JSON
 <!-- auto:pie -->
 ---
 
-**Navegación:** [← Anterior: API, estados HTTP, parámetros, middlewares y routers en Express.js](02-api-http-middlewares-routers.md) · [Índice de Express](indice.md)
-
-**Conceptos de esta lección:** [MySQL](../conceptos/mysql.md), [Base de Datos](../conceptos/base-de-datos.md), [Node.js](../conceptos/nodejs.md), [Express.js](../conceptos/express.md), [Pool de conexiones](../conceptos/pool-de-conexiones.md), [Tabla (Base de Datos)](../conceptos/tabla.md), [API (Interfaz de programación de aplicaciones)](../conceptos/api.md), [mysql2](../conceptos/mysql2.md), [Variable de entorno](../conceptos/variable-de-entorno.md), [SQL](../conceptos/sql.md), [Inyección SQL](../conceptos/inyeccion-sql.md), [Persistencia de datos](../conceptos/persistencia.md), [Router](../conceptos/router.md), [Prepared statement](../conceptos/prepared-statement.md), [HTTP](../conceptos/http.md)
+**Navegación:** [← Anterior: API, estados HTTP, parámetros, middlewares y routers en Express.js](02-api-http-middlewares-routers.md) · [Índice de Express](indice.md) · [Siguiente: DTO y validación de datos en Node.js con Express →](04-dto-y-validacion-express.md)
 <!-- /auto:pie -->

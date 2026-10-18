@@ -9,15 +9,15 @@ tags: ["postgresql"]
 
 ## Introducción
 
-En [PostgreSQL](../conceptos/postgresql.md) existen diferentes mecanismos para combinar resultados, abstraer consultas, encapsular lógica de negocio y automatizar operaciones sobre los datos.
+En [PostgreSQL](../conceptos/motores/postgresql.md) existen diferentes mecanismos para combinar resultados, abstraer consultas, encapsular lógica de negocio y automatizar operaciones sobre los datos.
 
 En estos apuntes se trabajan los siguientes conceptos:
 
 - **Operadores de conjuntos:** `UNION`, `INTERSECT` y `EXCEPT`.
-- **[Vistas](../conceptos/vista.md) (`VIEW`):** estructuras virtuales basadas en consultas [SQL](../conceptos/sql.md).
-- **[Procedimientos almacenados](../conceptos/procedimiento-almacenado.md) (`PROCEDURE`):** bloques de instrucciones que pueden ejecutarse mediante una llamada.
+- **[Vistas](../conceptos/bases-de-datos/estructura/vista.md) (`VIEW`):** estructuras virtuales basadas en consultas [SQL](../conceptos/sql/sql.md).
+- **[Procedimientos almacenados](../conceptos/sql/procedimiento-almacenado.md) (`PROCEDURE`):** bloques de instrucciones que pueden ejecutarse mediante una llamada.
 - **Funciones (`FUNCTION`):** bloques de lógica que pueden recibir parámetros y devolver valores.
-- **[Triggers](../conceptos/trigger.md):** mecanismos que ejecutan automáticamente una función en respuesta a determinados eventos sobre [tablas](../conceptos/tabla.md) o vistas.
+- **[Triggers](../conceptos/sql/trigger.md):** mecanismos que ejecutan automáticamente una función en respuesta a determinados eventos sobre [tablas](../conceptos/bases-de-datos/estructura/tabla.md) o vistas.
 - **Auditoría:** registro de cambios realizados sobre los datos.
 
 Los ejemplos utilizan PostgreSQL y, para los procedimientos y triggers, el lenguaje procedural **PL/pgSQL**.
@@ -404,7 +404,7 @@ Una **vista (`VIEW`)** es una estructura virtual basada en el resultado de una c
 
 Una vista no almacena, por sí misma, una copia independiente de los datos de la consulta. En términos generales, almacena la **definición de la consulta** y permite acceder a su resultado mediante un nombre.
 
-Esto permite presentar [información](../conceptos/informacion.md) proveniente de una o varias tablas mediante una estructura reutilizable.
+Esto permite presentar [información](../conceptos/fundamentos/dato.md) proveniente de una o varias tablas mediante una estructura reutilizable.
 
 Por ejemplo, una vista puede construirse a partir de:
 
@@ -449,7 +449,7 @@ Una vista puede utilizarse para exponer únicamente determinados datos y restrin
 Por ejemplo, una vista podría mostrar información pública sin exponer directamente columnas sensibles.
 
 > [!NOTE]
-> Una vista puede contribuir al control de acceso, pero la seguridad real depende también de permisos, roles y de la configuración de la [base de datos](../conceptos/base-de-datos.md).
+> Una vista puede contribuir al control de acceso, pero la seguridad real depende también de permisos, roles y de la configuración de la [base de datos](../conceptos/bases-de-datos/base-de-datos.md).
 
 ### 9.2. Simplicidad
 
@@ -706,7 +706,7 @@ Pueden utilizarse como parte de una estrategia para controlar las operaciones qu
 La lógica se ejecuta dentro del servidor de base de datos, lo que puede resultar útil cuando la operación involucra directamente los datos almacenados.
 
 > [!NOTE]
-> La existencia de un procedimiento o función no significa automáticamente que una operación sea más rápida. El rendimiento depende de la consulta, el volumen de datos, los [índices](../conceptos/indice.md), el diseño de la base de datos y otros factores.
+> La existencia de un procedimiento o función no significa automáticamente que una operación sea más rápida. El rendimiento depende de la consulta, el volumen de datos, los [índices](../conceptos/bases-de-datos/estructura/indice-bd.md), el diseño de la base de datos y otros factores.
 
 ---
 
@@ -1959,7 +1959,7 @@ flowchart TD
 | `RETURNS TRIGGER` | Indica que una función está diseñada para utilizarse como función de trigger. |
 | `PRIMARY KEY` | Restricción que identifica de manera única cada fila de una tabla. |
 | `SERIAL` | Mecanismo tradicional de PostgreSQL para generar valores enteros secuenciales mediante una secuencia asociada. |
-| `NUMERIC` | Tipo de [dato](../conceptos/dato.md) utilizado para almacenar valores numéricos con precisión definida. |
+| `NUMERIC` | Tipo de [dato](../conceptos/fundamentos/dato.md) utilizado para almacenar valores numéricos con precisión definida. |
 | `GROUP BY` | Cláusula que agrupa filas según una o varias expresiones. |
 | `AGGREGATION` | Operación que resume varias filas mediante funciones como `SUM()`, `COUNT()` o `AVG()`. |
 | `ALIAS` | Nombre alternativo asignado a una columna o expresión mediante `AS`. |
@@ -2038,6 +2038,4 @@ La siguiente representación conserva la gráfica original utilizada en los apun
 ---
 
 **Navegación:** [← Anterior: Funciones de Ventana y CTEs en PostgreSQL](05-funciones-de-ventana-y-ctes.md) · [Índice de PostgreSQL](indice.md) · [Siguiente: Administración de conjuntos de datos semiestructurados y datos binarios →](07-datos-semiestructurados-y-binarios.md)
-
-**Conceptos de esta lección:** [Vista](../conceptos/vista.md), [Trigger](../conceptos/trigger.md), [Tabla (Base de Datos)](../conceptos/tabla.md), [PostgreSQL](../conceptos/postgresql.md), [SQL](../conceptos/sql.md), [Información](../conceptos/informacion.md), [Base de Datos](../conceptos/base-de-datos.md), [Procedimiento almacenado](../conceptos/procedimiento-almacenado.md), [Índice](../conceptos/indice.md), [Dato](../conceptos/dato.md)
 <!-- /auto:pie -->

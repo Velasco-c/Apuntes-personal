@@ -11,9 +11,9 @@ tags: ["inteligencia-artificial"]
 
 ### Visión para Principiantes
 
-Las **[redes neuronales](../conceptos/red-neuronal.md) artificiales** son modelos de inteligencia artificial inspirados en el funcionamiento básico del cerebro humano. Su objetivo principal es **aprender patrones a partir de datos**.
+Las **[redes neuronales](../conceptos/inteligencia-artificial/red-neuronal.md) artificiales** son modelos de inteligencia artificial inspirados en el funcionamiento básico del cerebro humano. Su objetivo principal es **aprender patrones a partir de datos**.
 
-En lugar de recibir reglas creadas manualmente por una persona, una red neuronal analiza muchos ejemplos y encuentra relaciones ocultas dentro de la [información](../conceptos/informacion.md).
+En lugar de recibir reglas creadas manualmente por una persona, una red neuronal analiza muchos ejemplos y encuentra relaciones ocultas dentro de la [información](../conceptos/fundamentos/dato.md).
 
 Por ejemplo:
 
@@ -85,7 +85,7 @@ Salida:
 
 ### Visión para Principiantes
 
-Un **[sistema experto](../conceptos/sistema-experto.md)** es un programa diseñado para imitar la forma en que un especialista humano toma decisiones dentro de un área específica.
+Un **[sistema experto](../conceptos/inteligencia-artificial/sistema-experto.md)** es un programa diseñado para imitar la forma en que un especialista humano toma decisiones dentro de un área específica.
 
 No intenta ser inteligente en todos los campos, sino resolver problemas concretos de un dominio limitado.
 
@@ -225,7 +225,7 @@ Nueva regla:
 SI fiebre alta → medicamento B
 ```
 
-Era necesario modificar manualmente la [base de conocimiento](../conceptos/base-de-conocimiento.md).
+Era necesario modificar manualmente la [base de conocimiento](../conceptos/inteligencia-artificial/base-de-conocimiento.md).
 
 ---
 
@@ -324,7 +324,7 @@ Existe fiebre.
 
 La base de conocimiento separa la información del mecanismo de razonamiento.
 
-Esta separación permite modificar reglas sin cambiar el [motor de inferencia](../conceptos/motor-de-inferencia.md).
+Esta separación permite modificar reglas sin cambiar el [motor de inferencia](../conceptos/inteligencia-artificial/motor-de-inferencia.md).
 
 Ejemplo:
 
@@ -547,7 +547,7 @@ ENTONCES:
 Posible gripe
 ```
 
-[Tabla](../conceptos/tabla.md):
+[Tabla](../conceptos/bases-de-datos/estructura/tabla.md):
 
 | A         | B         | Resultado |
 | --------- | --------- | --------- |
@@ -774,6 +774,4 @@ Los sistemas expertos fueron fundamentales en la historia de la IA porque demost
 ---
 
 **Navegación:** [Índice de Inteligencia artificial](indice.md) · [Siguiente: Evaluación de Modelos Ligeros y Modelos de Lenguaje →](02-evaluacion-de-modelos-ligeros-y-llm.md)
-
-**Conceptos de esta lección:** [Sistema experto](../conceptos/sistema-experto.md), [Red neuronal](../conceptos/red-neuronal.md), [Información](../conceptos/informacion.md), [Base de conocimiento](../conceptos/base-de-conocimiento.md), [Motor de inferencia](../conceptos/motor-de-inferencia.md), [Tabla (Base de Datos)](../conceptos/tabla.md)
 <!-- /auto:pie -->

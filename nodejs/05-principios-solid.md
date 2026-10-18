@@ -9,7 +9,7 @@ tags: ["nodejs"]
 
 ## Introducción
 
-Los **[principios SOLID](../conceptos/solid.md)** son un conjunto de cinco principios de diseño orientados principalmente a la [programación orientada a objetos](../conceptos/poo.md). Su objetivo es ayudar a construir software que sea más fácil de **entender, mantener, modificar, extender y probar**.
+Los **[principios SOLID](../conceptos/ingenieria/solid.md)** son un conjunto de cinco principios de diseño orientados principalmente a la [programación orientada a objetos](../conceptos/programacion/poo.md). Su objetivo es ayudar a construir software que sea más fácil de **entender, mantener, modificar, extender y probar**.
 
 SOLID no representa un conjunto de reglas obligatorias del lenguaje. Son **principios de diseño y heurísticas** que ayudan a controlar la complejidad de los sistemas de software.
 
@@ -221,7 +221,7 @@ La idea de **razón para cambiar** ayuda a identificar responsabilidades diferen
 Por ejemplo, si una clase cambia cuando:
 
 * cambian las reglas de negocio;
-* cambia la forma de guardar [información](../conceptos/informacion.md);
+* cambia la forma de guardar [información](../conceptos/fundamentos/dato.md);
 * cambia el formato HTML;
 
 entonces posiblemente contiene responsabilidades diferentes.
@@ -381,7 +381,7 @@ guardarDatosEnBD() {
 
 Esta responsabilidad está relacionada con el almacenamiento.
 
-El reporte ahora conoce una preocupación que pertenece a la [persistencia](../conceptos/persistencia.md).
+El reporte ahora conoce una preocupación que pertenece a la [persistencia](../conceptos/fundamentos/persistencia.md).
 
 ---
 
@@ -441,7 +441,7 @@ Cada componente tiene una responsabilidad más específica.
 
 ### Principio abierto/cerrado
 
-El **Open/Closed Principle (OCP)** establece que las [entidades](../conceptos/entidad.md) de software deben estar:
+El **Open/Closed Principle (OCP)** establece que las [entidades](../conceptos/bases-de-datos/modelado/entidad.md) de software deben estar:
 
 > **Abiertas para extensión, pero cerradas para modificación.**
 
@@ -450,13 +450,13 @@ Esto significa que debemos poder agregar nuevo comportamiento sin tener que modi
 Una forma frecuente de conseguirlo es utilizar:
 
 * Abstracciones.
-* [Polimorfismo](../conceptos/polimorfismo.md).
+* [Polimorfismo](../conceptos/programacion/polimorfismo.md).
 * Composición.
 * Inyección de dependencias.
 * Estrategias.
 * Interfaces cuando el lenguaje las soporte.
 
-La [herencia](../conceptos/herencia.md) es una posibilidad, pero **no es la única forma de aplicar OCP**.
+La [herencia](../conceptos/programacion/herencia.md) es una posibilidad, pero **no es la única forma de aplicar OCP**.
 
 ---
 
@@ -1514,6 +1514,4 @@ La abstracción debe responder a una necesidad real.
 ---
 
 **Navegación:** [← Anterior: Interfaces y Relaciones entre Clases en JavaScript](04-interfaces-y-relaciones-entre-clases.md) · [Índice de Node.js](indice.md) · [Siguiente: Patrones de diseño de software →](06-patrones-de-diseno.md)
-
-**Conceptos de esta lección:** [Principios SOLID](../conceptos/solid.md), [Herencia](../conceptos/herencia.md), [Información](../conceptos/informacion.md), [Persistencia de datos](../conceptos/persistencia.md), [Polimorfismo](../conceptos/polimorfismo.md), [Programación orientada a objetos](../conceptos/poo.md), [Entidad](../conceptos/entidad.md)
 <!-- /auto:pie -->

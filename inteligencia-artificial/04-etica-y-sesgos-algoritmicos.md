@@ -130,7 +130,7 @@ Un banco rechaza una solicitud de crédito.
 La persona debería conocer:
 
 * Qué factores influyeron.
-* Qué [información](../conceptos/informacion.md) fue utilizada.
+* Qué [información](../conceptos/fundamentos/dato.md) fue utilizada.
 * Por qué obtuvo ese resultado.
 
 ---
@@ -752,6 +752,4 @@ Un sistema de IA profesional no solamente debe funcionar correctamente; también
 ---
 
 **Navegación:** [← Anterior: Diseño Responsable de Prompts y Verificaciones en Modelos de Inteligencia Artificial](03-prompts-responsables-y-verificaciones.md) · [Índice de Inteligencia artificial](indice.md) · [Siguiente: Fundamentos Básicos de Ingeniería de Prompts y Evaluación de Prompts →](05-fundamentos-de-ingenieria-de-prompts.md)
-
-**Conceptos de esta lección:** [Información](../conceptos/informacion.md)
 <!-- /auto:pie -->

@@ -5,19 +5,19 @@ tags: ["portada"]
 
 # Apuntes de aprendizaje autodidacta
 
-Apuntes de estudio sobre bases de datos (SQL, MySQL y PostgreSQL), JavaScript con Node.js e inteligencia artificial. Están ordenados para estudiarlos en secuencia y para encontrar un tema en segundos.
+Apuntes de estudio sobre bases de datos (SQL, MySQL y PostgreSQL), JavaScript con Node.js, Express e inteligencia artificial. Están ordenados para estudiarlos en secuencia y para encontrar un tema en segundos.
 
 No es un curso oficial. Es un registro vivo que se corrige y se amplía con el tiempo.
 
 ## Cómo buscar un tema
 
-1. Abre [cerebro/inicio.md](cerebro/inicio.md). Es un índice único con todos los conceptos y todas las secciones de las lecciones.
-2. Pulsa `Ctrl+F` y escribe el tema, en español o en inglés (por ejemplo `trigger`, `foreign key`, `SOLID`, `window function`).
-3. Haz clic en el enlace: te lleva directamente a la sección.
+1. Abre [cerebro/inicio.md](cerebro/inicio.md). Tiene todos los conceptos agrupados por categoría, cada uno con una definición breve.
+2. Si buscas una sección concreta de una lección, abre [cerebro/lecciones.md](cerebro/lecciones.md).
+3. Pulsa `Ctrl+F` y escribe el tema, en español o en inglés (por ejemplo `trigger`, `foreign key`, `SOLID` o `middleware`).
 
-Si ya sabes en qué área está, abre su carpeta, o usa la búsqueda global de tu editor (`Ctrl+Shift+F`).
+## Lecciones
 
-## Estructura
+Cada área es una carpeta con sus lecciones numeradas. Estudia las áreas en este orden.
 
 <!-- auto:areas -->
 1. [Bases de datos](bases-de-datos/indice.md): 5 lecciones
@@ -25,22 +25,47 @@ Si ya sabes en qué área está, abre su carpeta, o usa la búsqueda global de t
 3. [PostgreSQL](postgresql/indice.md): 7 lecciones
 4. [Node.js](nodejs/indice.md): 8 lecciones
 5. [Inteligencia artificial](inteligencia-artificial/indice.md): 9 lecciones
+6. [Express](express/indice.md): 4 lecciones
 <!-- /auto:areas -->
 
-- `conceptos/`: una nota corta por concepto, con enlaces a las lecciones donde aparece.
-- `cerebro/`: el índice para buscar (`inicio.md`).
+## Conceptos
 
-## Cómo está conectado
+Los conceptos están agrupados por categoría. Un concepto general, como [dato](conceptos/fundamentos/dato.md), [base de datos](conceptos/bases-de-datos/base-de-datos.md) o [DTO](conceptos/ingenieria/dto.md), sirve para cualquier tecnología. Las tecnologías concretas, como [MySQL](conceptos/motores/mysql.md) o [Express](conceptos/web/express.md), tienen su propia categoría y se apoyan en los conceptos generales.
 
-Cada concepto tiene su nota en `conceptos/`, y cada lección termina con sus enlaces de navegación. Los enlaces son Markdown normal: funcionan en GitHub, en Obsidian y en cualquier editor.
+<!-- auto:categorias -->
+1. [Fundamentos](conceptos/fundamentos/categoria.md): 3 conceptos
+2. [Bases de datos](conceptos/bases-de-datos/categoria.md): 18 conceptos
+3. [SQL](conceptos/sql/categoria.md): 8 conceptos
+4. [Motores de base de datos](conceptos/motores/categoria.md): 2 conceptos
+5. [Acceso a datos desde una aplicación](conceptos/acceso-a-datos/categoria.md): 4 conceptos
+6. [Programación orientada a objetos](conceptos/programacion/categoria.md): 3 conceptos
+7. [Ingeniería de software](conceptos/ingenieria/categoria.md): 8 conceptos
+8. [Node.js y herramientas](conceptos/nodejs/categoria.md): 5 conceptos
+9. [Web y APIs](conceptos/web/categoria.md): 12 conceptos
+10. [Formatos de datos](conceptos/formatos/categoria.md): 2 conceptos
+11. [Inteligencia artificial](conceptos/inteligencia-artificial/categoria.md): 9 conceptos
+<!-- /auto:categorias -->
+
+## Cerebro
+
+La carpeta `cerebro/` contiene los índices para buscar y para consultar con IA:
+
+* `inicio.md`: los conceptos por categoría, con su definición.
+* `lecciones.md`: cada lección con sus secciones.
+
+## Cómo está organizado
+
+* Cada lección es un archivo `NN-nombre.md` dentro de la carpeta de su área.
+* Cada concepto es un archivo dentro de una carpeta de `conceptos/`. Cada carpeta tiene un `categoria.md` que describe su tema.
+* Los enlaces son Markdown normal: funcionan en GitHub, en Obsidian y en cualquier editor.
 
 ## Consultar con IA (opcional)
 
 No hace falta para usar los apuntes. Si quieres consultarlos con un asistente de IA, hay guías en:
 
-- [consultar-con-gemini.md](consultar-con-gemini.md): con Gemini, usando `cerebro/inicio.md`.
-- [tutorial-ollama.md](tutorial-ollama.md): con un modelo local, sin conexión.
-- [obsidian-plugins.md](obsidian-plugins.md): plugins de Obsidian que se usaron para esto.
+* [consultar-con-gemini.md](consultar-con-gemini.md): con Gemini, usando los archivos de `cerebro/`.
+* [tutorial-ollama.md](tutorial-ollama.md): con un modelo local, sin conexión.
+* [obsidian-plugins.md](obsidian-plugins.md): plugins de Obsidian que se usaron para esto.
 
 ## Ejemplos y datos
 

@@ -493,7 +493,7 @@ IA tradicional:
 No tengo acceso a esa información.
 ```
 
-Con [Function Calling](../conceptos/function-calling.md):
+Con [Function Calling](../conceptos/inteligencia-artificial/function-calling.md):
 
 ```text
 Usuario
@@ -515,7 +515,7 @@ Respuesta real
 
 ## Profundidad Técnica
 
-**Function Calling** permite que un [modelo de lenguaje](../conceptos/llm.md) invoque funciones externas.
+**Function Calling** permite que un [modelo de lenguaje](../conceptos/inteligencia-artificial/llm.md) invoque funciones externas.
 
 La IA no ejecuta directamente código arbitrario.
 
@@ -629,7 +629,7 @@ No contienen todos los datos.
 Utilizan herramientas externas:
 
 * APIs.
-* [Bases de datos](../conceptos/base-de-datos.md).
+* [Bases de datos](../conceptos/bases-de-datos/base-de-datos.md).
 * Servicios internos.
 * Sistemas empresariales.
 
@@ -723,7 +723,7 @@ Hay 25 unidades disponibles.
 
 ## 10. MCP y Function Calling
 
-Function Calling es uno de los fundamentos utilizados por arquitecturas modernas como [MCP](../conceptos/mcp.md).
+Function Calling es uno de los fundamentos utilizados por arquitecturas modernas como [MCP](../conceptos/inteligencia-artificial/mcp.md).
 
 Relación:
 
@@ -761,7 +761,7 @@ E --> F[Datos reales]
 | API                   | Interfaz que permite comunicación entre sistemas.          |
 | Herramienta externa   | Servicio conectado que proporciona datos o acciones.       |
 | LLM                   | Modelo de lenguaje de gran escala.                         |
-| Parámetro             | [Dato](../conceptos/dato.md) enviado a una función para ejecutar una operación.    |
+| Parámetro             | [Dato](../conceptos/fundamentos/dato.md) enviado a una función para ejecutar una operación.    |
 
 ---
 
@@ -784,6 +784,4 @@ La IA deja de ser únicamente un generador de texto y se convierte en un compone
 ---
 
 **Navegación:** [← Anterior: Modelos de Lenguaje de Gran Escala (LLM), Redes Neuronales y Model Context Protocol (MCP)](07-llm-redes-neuronales-y-mcp.md) · [Índice de Inteligencia artificial](indice.md) · [Siguiente: Testeo Automatizado con Sugerencias de IA, PocketFlow y Automatización con n8n →](09-testeo-automatizado-con-ia-y-pocketflow.md)
-
-**Conceptos de esta lección:** [Function calling](../conceptos/function-calling.md), [Modelo de lenguaje de gran escala (LLM)](../conceptos/llm.md), [Model Context Protocol (MCP)](../conceptos/mcp.md), [Prompt](../conceptos/prompt.md), [Base de Datos](../conceptos/base-de-datos.md), [Dato](../conceptos/dato.md)
 <!-- /auto:pie -->

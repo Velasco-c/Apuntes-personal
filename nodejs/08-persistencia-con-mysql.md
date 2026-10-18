@@ -9,18 +9,18 @@ tags: ["nodejs"]
 
 ## Introducción
 
-La **[persistencia de datos](../conceptos/persistencia.md)** consiste en almacenar [información](../conceptos/informacion.md) de manera que permanezca disponible después de que una aplicación termine su ejecución.
+La **[persistencia de datos](../conceptos/fundamentos/persistencia.md)** consiste en almacenar [información](../conceptos/fundamentos/dato.md) de manera que permanezca disponible después de que una aplicación termine su ejecución.
 
-En una aplicación [Node.js](../conceptos/nodejs.md), una [base de datos relacional](../conceptos/base-de-datos-relacional.md) permite almacenar información estructurada en [tablas](../conceptos/tabla.md) y realizar operaciones como:
+En una aplicación [Node.js](../conceptos/nodejs/nodejs.md), una [base de datos relacional](../conceptos/bases-de-datos/base-de-datos-relacional.md) permite almacenar información estructurada en [tablas](../conceptos/bases-de-datos/estructura/tabla.md) y realizar operaciones como:
 
 * Crear registros.
 * Consultar registros.
 * Actualizar registros.
 * Eliminar registros.
 
-En este ejemplo se utiliza [MySQL](../conceptos/mysql.md) como [sistema gestor de bases de datos](../conceptos/sgbd.md) y Node.js como entorno de ejecución. La comunicación entre Node.js y MySQL se realiza mediante `mysql2`.
+En este ejemplo se utiliza [MySQL](../conceptos/motores/mysql.md) como [sistema gestor de bases de datos](../conceptos/bases-de-datos/sgbd.md) y Node.js como entorno de ejecución. La comunicación entre Node.js y MySQL se realiza mediante `mysql2`.
 
-La aplicación implementa un [CRUD](../conceptos/crud.md) de usuarios mediante una interfaz de consola.
+La aplicación implementa un [CRUD](../conceptos/sql/crud.md) de usuarios mediante una interfaz de consola.
 
 ---
 
@@ -56,9 +56,9 @@ Una **base de datos relacional** organiza la información principalmente mediant
 
 Una tabla está formada por:
 
-* **Columnas:** representan [atributos](../conceptos/atributo.md).
+* **Columnas:** representan [atributos](../conceptos/bases-de-datos/modelado/atributo.md).
 * **Filas:** representan registros.
-* **[Clave primaria](../conceptos/llave-primaria.md):** identifica de forma única un registro.
+* **[Clave primaria](../conceptos/bases-de-datos/estructura/llave-primaria.md):** identifica de forma única un registro.
 * **Restricciones:** ayudan a garantizar la integridad de los datos.
 
 En este proyecto existe una tabla:
@@ -75,7 +75,7 @@ users
 
 ## 2. `mysql2` para Node.js
 
-`mysql2` es un **controlador de Node.js para comunicarse con servidores MySQL**. No es una [base de datos](../conceptos/base-de-datos.md) ni una librería que almacene los datos por sí misma.
+`mysql2` es un **controlador de Node.js para comunicarse con servidores MySQL**. No es una [base de datos](../conceptos/bases-de-datos/base-de-datos.md) ni una librería que almacene los datos por sí misma.
 
 Su función es actuar como intermediario:
 
@@ -89,7 +89,7 @@ MySQL Server
 Base de datos
 ```
 
-La documentación oficial de `mysql2` lo describe como un reemplazo compatible con la API de `mysql` en muchos casos y señala características adicionales como [prepared statements](../conceptos/prepared-statement.md), Promise API, pooling, SSL y soporte de tipos de MariaDB. ([Sidorares][1])
+La documentación oficial de `mysql2` lo describe como un reemplazo compatible con la API de `mysql` en muchos casos y señala características adicionales como [prepared statements](../conceptos/acceso-a-datos/prepared-statement.md), Promise API, pooling, SSL y soporte de tipos de MariaDB. ([Sidorares][1])
 
 ### Corrección terminológica
 
@@ -138,7 +138,7 @@ La API oficial de `mysql2` proporciona `createConnection()` mediante la interfaz
 
 ### 3.2 Prepared Statements
 
-Los **prepared statements** permiten separar la estructura de una consulta [SQL](../conceptos/sql.md) de los valores que se proporcionan.
+Los **prepared statements** permiten separar la estructura de una consulta [SQL](../conceptos/sql/sql.md) de los valores que se proporcionan.
 
 Ejemplo:
 
@@ -1358,7 +1358,7 @@ options.forEach((option, i) => {
 });
 ```
 
-El [índice](../conceptos/indice.md):
+El [índice](../conceptos/bases-de-datos/estructura/indice-bd.md):
 
 ```javascript
 i
@@ -1674,7 +1674,7 @@ Es apropiado cuando una aplicación Node.js necesita:
 * Utilizar Promises.
 * Utilizar `async/await`.
 * Trabajar con prepared statements.
-* Administrar [pools de conexiones](../conceptos/pool-de-conexiones.md).
+* Administrar [pools de conexiones](../conceptos/acceso-a-datos/pool-de-conexiones.md).
 * Comunicarse con servidores MySQL.
 
 ### Usar una conexión individual
@@ -1820,7 +1820,7 @@ const [results] = await dbConnection.execute(
 * No almacenar credenciales directamente en el código de producción.
 * Definir restricciones en la base de datos para proteger la integridad de los datos.
 * Mantener coherencia entre el esquema SQL y las consultas de la aplicación.
-* Utilizar `InnoDB` cuando se necesiten características transaccionales y [claves foráneas](../conceptos/llave-foranea.md).
+* Utilizar `InnoDB` cuando se necesiten características transaccionales y [claves foráneas](../conceptos/bases-de-datos/estructura/llave-foranea.md).
 * Validar los datos recibidos antes de almacenarlos cuando la aplicación lo requiera.
 
 ---
@@ -1881,7 +1881,7 @@ deleteUser() → DELETE
 | **`DEFAULT`**                | Define el valor utilizado cuando no se proporciona uno explícitamente.                                          |
 | **`CHECK`**                  | Restricción que valida una condición sobre los valores de una fila.                                             |
 | **`TINYINT`**                | Tipo numérico entero pequeño de MySQL; en este proyecto se utiliza para representar `0`/`1`.                    |
-| **InnoDB**                   | Motor de almacenamiento de MySQL que proporciona, entre otras características, [transacciones](../conceptos/transaccion.md) y claves foráneas. |
+| **InnoDB**                   | Motor de almacenamiento de MySQL que proporciona, entre otras características, [transacciones](../conceptos/bases-de-datos/transaccion.md) y claves foráneas. |
 | **Connection**               | Conexión individual entre Node.js y el servidor MySQL.                                                          |
 | **Connection pool**          | Conjunto administrado de conexiones reutilizables.                                                              |
 | **`async`**                  | Palabra clave de JavaScript utilizada para declarar una función asíncrona.                                      |
@@ -1915,6 +1915,4 @@ deleteUser() → DELETE
 ---
 
 **Navegación:** [← Anterior: Introducción a la persistencia de datos](07-introduccion-a-persistencia.md) · [Índice de Node.js](indice.md)
-
-**Conceptos de esta lección:** [MySQL](../conceptos/mysql.md), [SQL](../conceptos/sql.md), [Node.js](../conceptos/nodejs.md), [CRUD](../conceptos/crud.md), [Tabla (Base de Datos)](../conceptos/tabla.md), [Base de Datos](../conceptos/base-de-datos.md), [Prepared statement](../conceptos/prepared-statement.md), [Persistencia de datos](../conceptos/persistencia.md), [Información](../conceptos/informacion.md), [Base de Datos Relacional](../conceptos/base-de-datos-relacional.md), [Sistema Gestor de Base de Datos (SGBD)](../conceptos/sgbd.md), [Llave Primaria (PK)](../conceptos/llave-primaria.md), [Atributo](../conceptos/atributo.md), [Pool de conexiones](../conceptos/pool-de-conexiones.md), [Llave Foránea (FK)](../conceptos/llave-foranea.md)
 <!-- /auto:pie -->

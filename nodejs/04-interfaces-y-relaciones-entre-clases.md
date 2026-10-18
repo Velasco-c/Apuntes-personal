@@ -73,7 +73,7 @@ Entre las relaciones más comunes se encuentran:
 1. **Asociación**
 2. **Agregación**
 3. **Composición**
-4. **[Herencia](../conceptos/herencia.md)**
+4. **[Herencia](../conceptos/programacion/herencia.md)**
 
 Estas relaciones son conceptos de modelado orientado a objetos y pueden representarse mediante diagramas de clases.
 
@@ -1138,7 +1138,7 @@ rl.close();
 import * as readline from "readline/promises";
 ```
 
-Se importa el módulo `readline/promises` de [Node.js](../conceptos/nodejs.md).
+Se importa el módulo `readline/promises` de [Node.js](../conceptos/nodejs/nodejs.md).
 
 La versión basada en promesas permite utilizar:
 
@@ -1148,7 +1148,7 @@ await rl.question(...)
 
 en lugar de trabajar con callbacks.
 
-Esto facilita la lectura secuencial de [información](../conceptos/informacion.md) desde la terminal.
+Esto facilita la lectura secuencial de [información](../conceptos/fundamentos/dato.md) desde la terminal.
 
 ---
 
@@ -1691,7 +1691,7 @@ const index = cursos.findIndex(
 );
 ```
 
-`findIndex()` busca el [índice](../conceptos/indice.md) del primer elemento que cumple la condición.
+`findIndex()` busca el [índice](../conceptos/bases-de-datos/estructura/indice-bd.md) del primer elemento que cumple la condición.
 
 Si encuentra:
 
@@ -1977,7 +1977,7 @@ y mantiene sus referencias en:
 #estudiantes
 ```
 
-Esto representa una relación **todo-parte** con características de composición desde el punto de [vista](../conceptos/vista.md) del diseño del ejemplo.
+Esto representa una relación **todo-parte** con características de composición desde el punto de [vista](../conceptos/bases-de-datos/estructura/vista.md) del diseño del ejemplo.
 
 ---
 
@@ -2115,7 +2115,7 @@ Por eso el diseño representa una relación de composición.
 | **Referencia**                | Valor que permite acceder a un objeto desde otro objeto.                                                                                        |
 | **Todo-parte**                | Relación en la que un objeto representa un conjunto que contiene otras partes.                                                                  |
 | **UML**                       | Lenguaje de modelado utilizado para representar visualmente sistemas y relaciones.                                                              |
-| **Diagrama de clases**        | Representación visual de clases, [atributos](../conceptos/atributo.md), métodos y relaciones.                                                                               |
+| **Diagrama de clases**        | Representación visual de clases, [atributos](../conceptos/bases-de-datos/modelado/atributo.md), métodos y relaciones.                                                                               |
 | **`extends`**                 | Palabra reservada utilizada para establecer herencia entre clases.                                                                              |
 | **`this`**                    | Referencia cuyo valor depende del contexto de ejecución; en métodos de instancia permite acceder al objeto correspondiente.                     |
 | **Getter**                    | Método accesor que permite obtener un valor utilizando sintaxis de propiedad.                                                                   |
@@ -2150,6 +2150,4 @@ Por eso el diseño representa una relación de composición.
 ---
 
 **Navegación:** [← Anterior: Herencia y Polimorfismo en JavaScript](03-herencia-y-polimorfismo.md) · [Índice de Node.js](indice.md) · [Siguiente: Principios de diseño — SOLID →](05-principios-solid.md)
-
-**Conceptos de esta lección:** [Herencia](../conceptos/herencia.md), [Node.js](../conceptos/nodejs.md), [Información](../conceptos/informacion.md), [Índice](../conceptos/indice.md), [Vista](../conceptos/vista.md), [Atributo](../conceptos/atributo.md)
 <!-- /auto:pie -->

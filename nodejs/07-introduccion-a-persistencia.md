@@ -9,12 +9,12 @@ tags: ["nodejs"]
 
 ## 1. Persistencia de datos
 
-La **[persistencia de datos](../conceptos/persistencia.md)** es la capacidad de conservar la [información](../conceptos/informacion.md) de un programa para utilizarla posteriormente, incluso después de que el programa finalice su ejecución.
+La **[persistencia de datos](../conceptos/fundamentos/persistencia.md)** es la capacidad de conservar la [información](../conceptos/fundamentos/dato.md) de un programa para utilizarla posteriormente, incluso después de que el programa finalice su ejecución.
 
 Para un usuario, la persistencia puede consistir en guardar y abrir archivos. Para un programador, el concepto es más amplio e incluye:
 
 * Guardar información en archivos.
-* Guardar información en [bases de datos](../conceptos/base-de-datos.md).
+* Guardar información en [bases de datos](../conceptos/bases-de-datos/base-de-datos.md).
 * Serializar objetos y estructuras de datos.
 * Recuperar información almacenada.
 * Deserializar datos.
@@ -51,7 +51,7 @@ const juego = {
 
 Si el objeto solamente existe en la memoria RAM, se perderá cuando el programa termine.
 
-Si se guarda en un archivo [JSON](../conceptos/json.md), podrá recuperarse posteriormente. En ese caso, la información se ha convertido en datos persistentes.
+Si se guarda en un archivo [JSON](../conceptos/formatos/json.md), podrá recuperarse posteriormente. En ese caso, la información se ha convertido en datos persistentes.
 
 ---
 
@@ -648,7 +648,7 @@ export class JsonFileHandler {
 import { readFileSync, writeFileSync, existsSync } from 'fs';
 ```
 
-Se importan tres funciones del módulo nativo `fs` de [Node.js](../conceptos/nodejs.md):
+Se importan tres funciones del módulo nativo `fs` de [Node.js](../conceptos/nodejs/nodejs.md):
 
 | Función           | Descripción                                         |
 | ----------------- | --------------------------------------------------- |
@@ -1764,7 +1764,7 @@ En una aplicación más robusta sería recomendable:
 | `JSON.stringify()`  | Convierte un valor de JavaScript en texto JSON                           |
 | `Buffer`            | Estructura utilizada para representar datos binarios                     |
 | Repositorio         | Clase o componente encargado de gestionar el acceso a los datos          |
-| Modelo              | Estructura que representa los datos de una [entidad](../conceptos/entidad.md)                       |
+| Modelo              | Estructura que representa los datos de una [entidad](../conceptos/bases-de-datos/modelado/entidad.md)                       |
 | Getter              | Método especial utilizado para leer una propiedad                        |
 | Setter              | Método especial utilizado para asignar una propiedad                     |
 | `readFileSync()`    | Función síncrona para leer archivos                                      |
@@ -1802,6 +1802,4 @@ El flujo principal consiste en recibir datos, crear un objeto, leer los datos ex
 ---
 
 **Navegación:** [← Anterior: Patrones de diseño de software](06-patrones-de-diseno.md) · [Índice de Node.js](indice.md) · [Siguiente: Persistencia de Datos en Bases de Datos Relacionales con MySQL y Node.js →](08-persistencia-con-mysql.md)
-
-**Conceptos de esta lección:** [JSON](../conceptos/json.md), [Información](../conceptos/informacion.md), [Persistencia de datos](../conceptos/persistencia.md), [Base de Datos](../conceptos/base-de-datos.md), [Node.js](../conceptos/nodejs.md), [Entidad](../conceptos/entidad.md)
 <!-- /auto:pie -->

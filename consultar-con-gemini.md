@@ -14,7 +14,8 @@ No es un curso oficial. Es un registro vivo que se corrige y se amplía con el t
 | Quiero... | Ir a | Resultado |
 | --- | --- | --- |
 | Empezar a estudiar | [Bases de datos](bases-de-datos/indice.md) | Ruta de estudio en orden. |
-| Buscar un concepto o una lección | [Inicio: mapa rápido](cerebro/inicio.md) | Tablas con cada concepto y su sección exacta. |
+| Buscar un concepto | [Inicio: mapa rápido](cerebro/inicio.md) | Conceptos agrupados por categoría, con su definición. |
+| Buscar una sección de una lección | [Lecciones por secciones](cerebro/lecciones.md) | Cada lección con sus secciones. |
 | Consultar con Gemini | [Tutorial de Gemini](consultar-con-gemini.md) | Cómo usar un solo archivo con Gemini. |
 | Consultar sin conexión | [Tutorial de Ollama](tutorial-ollama.md) | Modelo local, como último recurso. |
 | Ver el mapa completo | [Mapa de contenidos](MAPA.md) | Todas las lecciones y conceptos. |
@@ -34,13 +35,13 @@ Estudia las áreas en este orden. Cada una tiene su índice con las lecciones.
 
 ## Cómo está conectado
 
-Los temas se enlazan a través de `conceptos/`, una nota por concepto. Cada concepto muestra en qué lecciones aparece y qué conceptos le acompañan. Cada lección termina con su navegación y sus conceptos.
+Los conceptos están en `conceptos/`, una nota por concepto, agrupados en carpetas por categoría. Cada carpeta tiene un `categoria.md` que describe su tema. Cada lección termina con su navegación entre lecciones.
 
 Abre la carpeta como bóveda de Obsidian para ver el grafo. Los enlaces son Markdown estándar, así que también funcionan en GitHub.
 
 ## Consultar con IA
 
-Hay dos tutoriales, según tengas o no conexión. [Gemini](consultar-con-gemini.md) es la opción principal. [Ollama](tutorial-ollama.md) queda como último recurso sin conexión. Los dos usan el mismo archivo: [cerebro/inicio.md](cerebro/inicio.md), que contiene las tablas de conceptos y lecciones. Los plugins de Obsidian que usamos, con su configuración, están en [obsidian-plugins.md](obsidian-plugins.md).
+Hay dos tutoriales, según tengas o no conexión. [Gemini](consultar-con-gemini.md) es la opción principal. [Ollama](tutorial-ollama.md) queda como último recurso sin conexión. Los dos usan los archivos de `cerebro/`: [inicio.md](cerebro/inicio.md), con los conceptos por categoría, y [lecciones.md](cerebro/lecciones.md), con las secciones de cada lección. Los plugins de Obsidian que usamos, con su configuración, están en [obsidian-plugins.md](obsidian-plugins.md).
 
 ## Mantener y ampliar
 

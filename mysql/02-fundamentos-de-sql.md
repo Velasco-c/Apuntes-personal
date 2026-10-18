@@ -9,9 +9,9 @@ tags: ["mysql"]
 
 ## ¿Qué es SQL?
 
-**[SQL](../conceptos/sql.md) (Structured Query Language)** es un lenguaje utilizado para trabajar con [bases de datos](../conceptos/base-de-datos.md), especialmente con **[bases de datos relacionales](../conceptos/base-de-datos-relacional.md)**.
+**[SQL](../conceptos/sql/sql.md) (Structured Query Language)** es un lenguaje utilizado para trabajar con [bases de datos](../conceptos/bases-de-datos/base-de-datos.md), especialmente con **[bases de datos relacionales](../conceptos/bases-de-datos/base-de-datos-relacional.md)**.
 
-Permite realizar diferentes operaciones sobre la [información](../conceptos/informacion.md) almacenada, como consultar, insertar, modificar y eliminar datos, además de definir estructuras, administrar permisos y controlar [transacciones](../conceptos/transaccion.md).
+Permite realizar diferentes operaciones sobre la [información](../conceptos/fundamentos/dato.md) almacenada, como consultar, insertar, modificar y eliminar datos, además de definir estructuras, administrar permisos y controlar [transacciones](../conceptos/bases-de-datos/transaccion.md).
 
 SQL es uno de los lenguajes fundamentales dentro del desarrollo de aplicaciones que utilizan bases de datos relacionales.
 
@@ -22,8 +22,8 @@ SQL es uno de los lenguajes fundamentales dentro del desarrollo de aplicaciones 
 Entre las principales características de SQL se encuentran:
 
 * **Lenguaje de consulta:** permite consultar información almacenada en una base de datos.
-* **Operaciones [CRUD](../conceptos/crud.md):** permite realizar las operaciones fundamentales de creación, lectura, actualización y eliminación de datos.
-* **Gestión de bases de datos relacionales:** permite trabajar con [tablas](../conceptos/tabla.md), relaciones, claves y restricciones.
+* **Operaciones [CRUD](../conceptos/sql/crud.md):** permite realizar las operaciones fundamentales de creación, lectura, actualización y eliminación de datos.
+* **Gestión de bases de datos relacionales:** permite trabajar con [tablas](../conceptos/bases-de-datos/estructura/tabla.md), relaciones, claves y restricciones.
 * **Consultas y filtrado de datos:** permite seleccionar información específica mediante condiciones.
 * **Funciones y operaciones avanzadas:** proporciona funciones para realizar cálculos, transformaciones y operaciones sobre los datos.
 * **Seguridad y control de acceso:** permite administrar permisos sobre los objetos de la base de datos.
@@ -33,7 +33,7 @@ Entre las principales características de SQL se encuentran:
 
 ## Control de concurrencia
 
-El **control de concurrencia** se refiere a la capacidad de un [sistema gestor de bases de datos](../conceptos/sgbd.md) para controlar el acceso simultáneo de múltiples usuarios a los mismos datos.
+El **control de concurrencia** se refiere a la capacidad de un [sistema gestor de bases de datos](../conceptos/bases-de-datos/sgbd.md) para controlar el acceso simultáneo de múltiples usuarios a los mismos datos.
 
 Por ejemplo, una base de datos puede recibir solicitudes de cientos o miles de usuarios al mismo tiempo.
 
@@ -95,7 +95,7 @@ A pesar de su antigüedad, SQL continúa evolucionando.
 
 Entre las capacidades mencionadas en los apuntes se encuentran:
 
-* Integración con datos [JSON](../conceptos/json.md).
+* Integración con datos [JSON](../conceptos/formatos/json.md).
 * Soporte para análisis de grandes volúmenes de datos.
 * Procesamiento de datos en tiempo real.
 
@@ -428,15 +428,15 @@ Además de las consultas y operaciones básicas, SQL permite trabajar con difere
 
 ### Vistas
 
-Una **[vista](../conceptos/vista.md) (VIEW)** representa el resultado de una consulta como una estructura virtual que puede ser consultada posteriormente.
+Una **[vista](../conceptos/bases-de-datos/estructura/vista.md) (VIEW)** representa el resultado de una consulta como una estructura virtual que puede ser consultada posteriormente.
 
 ### Índices
 
-Un **[índice](../conceptos/indice.md) (INDEX)** permite crear una estructura auxiliar para facilitar determinadas búsquedas sobre una tabla.
+Un **[índice](../conceptos/bases-de-datos/estructura/indice-bd.md) (INDEX)** permite crear una estructura auxiliar para facilitar determinadas búsquedas sobre una tabla.
 
 ### Triggers
 
-Un **[trigger](../conceptos/trigger.md)** es una acción automática asociada a determinados eventos sobre una tabla, como:
+Un **[trigger](../conceptos/sql/trigger.md)** es una acción automática asociada a determinados eventos sobre una tabla, como:
 
 * `INSERT`
 * `UPDATE`
@@ -623,7 +623,7 @@ YYYY-MM-DD HH:MM:SS
 
 Representa un valor booleano.
 
-En [MySQL](../conceptos/mysql.md), los valores booleanos se manejan mediante valores numéricos equivalentes a:
+En [MySQL](../conceptos/motores/mysql.md), los valores booleanos se manejan mediante valores numéricos equivalentes a:
 
 ```text
 0 → FALSE
@@ -757,7 +757,7 @@ La tabla contiene:
 | `name_product` | `VARCHAR(60)`        |
 | `unit_price`   | `FLOAT`              |
 
-Después se agrega `id_product` como [clave primaria](../conceptos/llave-primaria.md).
+Después se agrega `id_product` como [clave primaria](../conceptos/bases-de-datos/estructura/llave-primaria.md).
 
 ---
 
@@ -1151,7 +1151,7 @@ LIMIT
 | `WHERE`          | Cláusula utilizada para establecer condiciones que determinan qué registros serán afectados o devueltos.               |
 | `ORDER BY`       | Cláusula utilizada para ordenar los resultados de una consulta.                                                        |
 | `LIMIT`          | Cláusula utilizada para limitar la cantidad de registros devueltos o afectados según el contexto.                      |
-| `VARCHAR`        | Tipo de [dato](../conceptos/dato.md) utilizado para almacenar cadenas de texto de longitud variable.                                           |
+| `VARCHAR`        | Tipo de [dato](../conceptos/fundamentos/dato.md) utilizado para almacenar cadenas de texto de longitud variable.                                           |
 | `CHAR`           | Tipo de dato utilizado para almacenar cadenas de longitud fija.                                                        |
 | `TEXT`           | Tipo de dato utilizado para almacenar texto de mayor longitud.                                                         |
 | `DECIMAL`        | Tipo numérico utilizado para representar valores decimales con precisión y escala definidas.                           |
@@ -1168,6 +1168,4 @@ LIMIT
 ---
 
 **Navegación:** [← Anterior: MySQL — Historia, Evolución, Características y Herramientas](01-historia-y-caracteristicas.md) · [Índice de MySQL](indice.md) · [Siguiente: Consultas básicas con SQL →](03-consultas-basicas.md)
-
-**Conceptos de esta lección:** [SQL](../conceptos/sql.md), [Tabla (Base de Datos)](../conceptos/tabla.md), [Base de Datos](../conceptos/base-de-datos.md), [Transacción](../conceptos/transaccion.md), [Información](../conceptos/informacion.md), [Base de Datos Relacional](../conceptos/base-de-datos-relacional.md), [Dato](../conceptos/dato.md), [MySQL](../conceptos/mysql.md), [JSON](../conceptos/json.md), [Vista](../conceptos/vista.md), [Índice](../conceptos/indice.md), [Trigger](../conceptos/trigger.md), [Sistema Gestor de Base de Datos (SGBD)](../conceptos/sgbd.md), [Llave Primaria (PK)](../conceptos/llave-primaria.md), [CRUD](../conceptos/crud.md)
 <!-- /auto:pie -->

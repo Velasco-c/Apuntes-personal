@@ -9,15 +9,15 @@ tags: ["mysql"]
 
 ## 1. Funciones definidas por el usuario
 
-Las **funciones definidas por el usuario (UDF, User-Defined Functions)** en [MySQL](../conceptos/mysql.md) son funciones creadas por los desarrolladores para encapsular una operación específica y reutilizarla dentro de consultas [SQL](../conceptos/sql.md).
+Las **funciones definidas por el usuario (UDF, User-Defined Functions)** en [MySQL](../conceptos/motores/mysql.md) son funciones creadas por los desarrolladores para encapsular una operación específica y reutilizarla dentro de consultas [SQL](../conceptos/sql/sql.md).
 
-A diferencia de un [procedimiento almacenado](../conceptos/procedimiento-almacenado.md), una función debe devolver un valor mediante `RETURN`.
+A diferencia de un [procedimiento almacenado](../conceptos/sql/procedimiento-almacenado.md), una función debe devolver un valor mediante `RETURN`.
 
 Las funciones pueden utilizarse, por ejemplo, para:
 
 * Realizar cálculos.
 * Transformar datos.
-* Clasificar [información](../conceptos/informacion.md).
+* Clasificar [información](../conceptos/fundamentos/dato.md).
 * Obtener valores derivados.
 * Reutilizar lógica dentro de consultas SQL.
 
@@ -27,7 +27,7 @@ Las funciones pueden utilizarse, por ejemplo, para:
 
 #### Tipo de retorno
 
-Toda función debe definir el tipo de [dato](../conceptos/dato.md) que devolverá mediante `RETURNS`.
+Toda función debe definir el tipo de [dato](../conceptos/fundamentos/dato.md) que devolverá mediante `RETURNS`.
 
 Por ejemplo:
 
@@ -96,7 +96,7 @@ Una función puede contener:
 
 ## 4. Funciones almacenadas en `acme_store`
 
-Los siguientes ejemplos utilizan la [base de datos](../conceptos/base-de-datos.md) `acme_store`.
+Los siguientes ejemplos utilizan la [base de datos](../conceptos/bases-de-datos/base-de-datos.md) `acme_store`.
 
 ```sql
 USE acme_store;
@@ -789,7 +789,7 @@ Este comando concede:
 * `INSERT`
 * `UPDATE`
 
-sobre todas las [tablas](../conceptos/tabla.md) de la base de datos `acme_store`.
+sobre todas las [tablas](../conceptos/bases-de-datos/estructura/tabla.md) de la base de datos `acme_store`.
 
 ### Estructura
 
@@ -1001,7 +1001,7 @@ MySQL permite preparar sentencias SQL para ejecutarlas posteriormente.
 
 ### `PREPARE`
 
-`PREPARE` crea una [sentencia preparada](../conceptos/prepared-statement.md) a partir de una cadena SQL.
+`PREPARE` crea una [sentencia preparada](../conceptos/acceso-a-datos/prepared-statement.md) a partir de una cadena SQL.
 
 La sentencia puede contener marcadores de posición:
 
@@ -1132,7 +1132,7 @@ Se abandona el bloque
 
 ## 32. Revertir cambios ante errores
 
-Cuando una operación utiliza una [transacción](../conceptos/transaccion.md), un error puede provocar la necesidad de revertir los cambios realizados.
+Cuando una operación utiliza una [transacción](../conceptos/bases-de-datos/transaccion.md), un error puede provocar la necesidad de revertir los cambios realizados.
 
 El flujo habitual es:
 
@@ -1259,6 +1259,4 @@ Los procedimientos pueden controlar errores y condiciones mediante:
 ---
 
 **Navegación:** [← Anterior: Procedimientos almacenados y manejo de errores en MySQL](07-procedimientos-almacenados-y-errores.md) · [Índice de MySQL](indice.md) · [Siguiente: Optimización de Consultas, Transacciones, Particionamiento y Seguridad en MySQL →](09-optimizacion-transacciones-y-particionamiento.md)
-
-**Conceptos de esta lección:** [MySQL](../conceptos/mysql.md), [SQL](../conceptos/sql.md), [Base de Datos](../conceptos/base-de-datos.md), [Tabla (Base de Datos)](../conceptos/tabla.md), [Información](../conceptos/informacion.md), [Transacción](../conceptos/transaccion.md), [Procedimiento almacenado](../conceptos/procedimiento-almacenado.md), [Dato](../conceptos/dato.md), [Prepared statement](../conceptos/prepared-statement.md)
 <!-- /auto:pie -->

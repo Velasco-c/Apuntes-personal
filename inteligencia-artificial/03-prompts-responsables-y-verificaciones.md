@@ -11,7 +11,7 @@ tags: ["inteligencia-artificial"]
 
 ### Visión para Principiantes
 
-Diseñar un **[prompt](../conceptos/prompt.md) responsable** significa crear instrucciones claras y cuidadosas para una inteligencia artificial con el objetivo de obtener respuestas:
+Diseñar un **[prompt](../conceptos/inteligencia-artificial/prompt.md) responsable** significa crear instrucciones claras y cuidadosas para una inteligencia artificial con el objetivo de obtener respuestas:
 
 * Útiles.
 * Correctas.
@@ -19,7 +19,7 @@ Diseñar un **[prompt](../conceptos/prompt.md) responsable** significa crear ins
 * Seguras.
 * Adecuadas para el propósito.
 
-Un prompt es la [información](../conceptos/informacion.md) que una persona proporciona a un modelo de IA para indicarle qué tarea debe realizar.
+Un prompt es la [información](../conceptos/fundamentos/dato.md) que una persona proporciona a un modelo de IA para indicarle qué tarea debe realizar.
 
 Ejemplo:
 
@@ -59,7 +59,7 @@ Un prompt bien diseñado reduce:
 * Respuestas irrelevantes.
 * Sesgos no deseados.
 
-Un [modelo de lenguaje](../conceptos/llm.md) genera respuestas basándose en probabilidades:
+Un [modelo de lenguaje](../conceptos/inteligencia-artificial/llm.md) genera respuestas basándose en probabilidades:
 
 [
 P(respuesta | prompt, contexto)
@@ -166,7 +166,7 @@ Dame el código para hacer un sistema de login en Python.
 No indica:
 
 * Framework.
-* [Base de datos](../conceptos/base-de-datos.md).
+* [Base de datos](../conceptos/bases-de-datos/base-de-datos.md).
 * Tipo de autenticación.
 * Nivel de seguridad.
 * Arquitectura.
@@ -721,7 +721,7 @@ Formato de respuesta:
 | Token                 | Unidad de texto utilizada internamente por un modelo de lenguaje.                          |
 | Modelo probabilístico | Sistema que calcula probabilidades para generar resultados.                                |
 | Fecha de corte        | Fecha límite de información utilizada durante el entrenamiento del modelo.                 |
-| [Alucinación](../conceptos/alucinacion.md)           | Generación de información falsa presentada como verdadera.                                 |
+| [Alucinación](../conceptos/inteligencia-artificial/alucinacion.md)           | Generación de información falsa presentada como verdadera.                                 |
 | Restricción           | Regla que limita el comportamiento esperado del modelo.                                    |
 
 ---
@@ -744,6 +744,4 @@ La calidad de la respuesta depende directamente de la calidad de la información
 ---
 
 **Navegación:** [← Anterior: Evaluación de Modelos Ligeros y Modelos de Lenguaje](02-evaluacion-de-modelos-ligeros-y-llm.md) · [Índice de Inteligencia artificial](indice.md) · [Siguiente: Ética en Inteligencia Artificial y Gestión de Sesgos Algorítmicos →](04-etica-y-sesgos-algoritmicos.md)
-
-**Conceptos de esta lección:** [Prompt](../conceptos/prompt.md), [Información](../conceptos/informacion.md), [Modelo de lenguaje de gran escala (LLM)](../conceptos/llm.md), [Base de Datos](../conceptos/base-de-datos.md), [Alucinación](../conceptos/alucinacion.md)
 <!-- /auto:pie -->

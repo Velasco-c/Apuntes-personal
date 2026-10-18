@@ -9,10 +9,10 @@ tags: ["postgresql"]
 
 ## Introducción
 
-**[PostgreSQL](../conceptos/postgresql.md)** es un [sistema de gestión de bases de datos](../conceptos/sgbd.md) relacional y objeto-relacional de código abierto. Es reconocido por su robustez, extensibilidad, cumplimiento de estándares [SQL](../conceptos/sql.md) y capacidad para trabajar con aplicaciones que requieren integridad de datos y operaciones complejas.
+**[PostgreSQL](../conceptos/motores/postgresql.md)** es un [sistema de gestión de bases de datos](../conceptos/bases-de-datos/sgbd.md) relacional y objeto-relacional de código abierto. Es reconocido por su robustez, extensibilidad, cumplimiento de estándares [SQL](../conceptos/sql/sql.md) y capacidad para trabajar con aplicaciones que requieren integridad de datos y operaciones complejas.
 
 > [!NOTE]
-> El nombre correcto es **PostgreSQL**. No corresponde interpretarlo como "Postgres Structured Query Language". El nombre proviene originalmente del proyecto **POSTGRES**, sucesor del sistema de [bases de datos](../conceptos/base-de-datos.md) **INGRES**.
+> El nombre correcto es **PostgreSQL**. No corresponde interpretarlo como "Postgres Structured Query Language". El nombre proviene originalmente del proyecto **POSTGRES**, sucesor del sistema de [bases de datos](../conceptos/bases-de-datos/base-de-datos.md) **INGRES**.
 
 ---
 
@@ -43,7 +43,7 @@ El proyecto adoptó el nombre **PostgreSQL**, reflejando su incorporación del l
 En 2017 se lanzó PostgreSQL 10, incorporando mejoras importantes relacionadas con:
 
 - Rendimiento.
-- [Escalabilidad](../conceptos/escalabilidad.md).
+- [Escalabilidad](../conceptos/ingenieria/escalabilidad.md).
 - Replicación.
 - Administración de grandes volúmenes de datos.
 
@@ -73,9 +73,9 @@ PostgreSQL 12 incorporó mejoras relacionadas con:
 PostgreSQL 13 incorporó mejoras relacionadas con:
 
 - Rendimiento de consultas.
-- [Índices](../conceptos/indice.md).
+- [Índices](../conceptos/bases-de-datos/estructura/indice-bd.md).
 - Gestión de datos.
-- Mantenimiento de [tablas](../conceptos/tabla.md).
+- Mantenimiento de [tablas](../conceptos/bases-de-datos/estructura/tabla.md).
 
 #### PostgreSQL 14 — 2021
 
@@ -119,9 +119,9 @@ Esta arquitectura permite adaptar el sistema a diferentes necesidades.
 
 ### Soporte para transacciones complejas
 
-PostgreSQL proporciona soporte para [transacciones](../conceptos/transaccion.md) que cumplen las propiedades **ACID**:
+PostgreSQL proporciona soporte para [transacciones](../conceptos/bases-de-datos/transaccion.md) que cumplen las propiedades **ACID**:
 
-- **[Atomicidad](../conceptos/atomicidad.md):** una transacción se ejecuta completamente o no se aplica.
+- **[Atomicidad](../conceptos/bases-de-datos/transaccion.md):** una transacción se ejecuta completamente o no se aplica.
 - **Consistencia:** los datos deben permanecer en un estado válido.
 - **Aislamiento:** las transacciones concurrentes se gestionan de forma controlada.
 - **Durabilidad:** una vez confirmados los cambios, estos deben permanecer almacenados.
@@ -142,7 +142,7 @@ Esto permite implementar sistemas de búsqueda más complejos que una simple com
 
 ## PostgreSQL frente a MySQL
 
-Tanto PostgreSQL como [MySQL](../conceptos/mysql.md) son sistemas de gestión de bases de datos ampliamente utilizados.
+Tanto PostgreSQL como [MySQL](../conceptos/motores/mysql.md) son sistemas de gestión de bases de datos ampliamente utilizados.
 
 La elección entre ambos depende principalmente de los requisitos del sistema, las características de la aplicación y el tipo de operaciones que se realizarán.
 
@@ -219,20 +219,20 @@ Los **Shared Buffers** son una región de memoria compartida utilizada por Postg
 
 ### Storage Manager
 
-El sistema de almacenamiento se encarga de gestionar la lectura y escritura de [información](../conceptos/informacion.md) persistente en los archivos de datos.
+El sistema de almacenamiento se encarga de gestionar la lectura y escritura de [información](../conceptos/fundamentos/dato.md) persistente en los archivos de datos.
 
 ---
 
 ## Glosario inicial
 
-Estos conceptos forman parte de los elementos fundamentales para trabajar con [bases de datos relacionales](../conceptos/base-de-datos-relacional.md).
+Estos conceptos forman parte de los elementos fundamentales para trabajar con [bases de datos relacionales](../conceptos/bases-de-datos/base-de-datos-relacional.md).
 
 | Término       | Descripción                                                                                               |
 | ------------- | --------------------------------------------------------------------------------------------------------- |
 | `PRIMARY KEY` | Restricción que identifica de forma única cada registro de una tabla.                                     |
 | `SQL Query`   | Consulta escrita utilizando SQL para solicitar o manipular información.                                   |
 | `Transaction` | Conjunto de operaciones que se ejecutan como una unidad lógica.                                           |
-| `Schema`      | Espacio lógico dentro de una base de datos que permite organizar objetos como tablas, [vistas](../conceptos/vista.md) y funciones. |
+| `Schema`      | Espacio lógico dentro de una base de datos que permite organizar objetos como tablas, [vistas](../conceptos/bases-de-datos/estructura/vista.md) y funciones. |
 | `DDL`         | Lenguaje utilizado para definir o modificar estructuras de la base de datos.                              |
 | `DML`         | Lenguaje utilizado para insertar, modificar y eliminar datos.                                             |
 | `DQL`         | Lenguaje utilizado principalmente para consultar datos mediante `SELECT`.                                 |
@@ -318,7 +318,7 @@ Una **tabla** es una estructura utilizada para almacenar datos organizados en fi
 
 #### Columnas
 
-Las columnas representan los [atributos](../conceptos/atributo.md) o campos que describen la información almacenada.
+Las columnas representan los [atributos](../conceptos/bases-de-datos/modelado/atributo.md) o campos que describen la información almacenada.
 
 Ejemplo:
 
@@ -462,7 +462,7 @@ PostgreSQL también proporciona tipos especializados para representar:
 * Datos geométricos.
 * Direcciones de red.
 * Rangos.
-* Datos [JSON](../conceptos/json.md).
+* Datos [JSON](../conceptos/formatos/json.md).
 * Arreglos.
 * Otros tipos especializados.
 
@@ -542,7 +542,7 @@ PostgreSQL proporciona comandos internos para consultar información y administr
 
 ## CRUD en PostgreSQL
 
-[CRUD](../conceptos/crud.md) representa las cuatro operaciones básicas que se realizan sobre los datos:
+[CRUD](../conceptos/sql/crud.md) representa las cuatro operaciones básicas que se realizan sobre los datos:
 
 | Operación | SQL      | Propósito            |
 | --------- | -------- | -------------------- |
@@ -868,7 +868,7 @@ Tabla
 | `PRIMARY KEY`       | Restricción que identifica de manera única cada registro de una tabla.                                           |
 | `SERIAL`            | Pseudotipo tradicional de PostgreSQL utilizado para generar valores numéricos mediante una secuencia.            |
 | `IDENTITY`          | Mecanismo de PostgreSQL para generar automáticamente valores de una columna.                                     |
-| `VARCHAR`           | Tipo de [dato](../conceptos/dato.md) utilizado para almacenar cadenas de caracteres de longitud variable.                                |
+| `VARCHAR`           | Tipo de [dato](../conceptos/fundamentos/dato.md) utilizado para almacenar cadenas de caracteres de longitud variable.                                |
 | `TEXT`              | Tipo de dato utilizado para almacenar texto de longitud variable.                                                |
 | `NUMERIC`           | Tipo numérico de precisión exacta, útil para valores donde se requiere precisión decimal.                        |
 | `BOOLEAN`           | Tipo de dato que representa valores lógicos como `TRUE` y `FALSE`.                                               |
@@ -907,6 +907,4 @@ Para reforzar los conceptos trabajados en esta clase:
 ---
 
 **Navegación:** [Índice de PostgreSQL](indice.md) · [Siguiente: PostgreSQL — Configuración, administración y consultas →](02-configuracion-administracion-y-consultas.md)
-
-**Conceptos de esta lección:** [PostgreSQL](../conceptos/postgresql.md), [Tabla (Base de Datos)](../conceptos/tabla.md), [Base de Datos](../conceptos/base-de-datos.md), [SQL](../conceptos/sql.md), [Transacción](../conceptos/transaccion.md), [Sistema Gestor de Base de Datos (SGBD)](../conceptos/sgbd.md), [Información](../conceptos/informacion.md), [Dato](../conceptos/dato.md), [Índice](../conceptos/indice.md), [MySQL](../conceptos/mysql.md), [Vista](../conceptos/vista.md), [CRUD](../conceptos/crud.md), [Escalabilidad](../conceptos/escalabilidad.md), [Atomicidad](../conceptos/atomicidad.md), [Base de Datos Relacional](../conceptos/base-de-datos-relacional.md)
 <!-- /auto:pie -->

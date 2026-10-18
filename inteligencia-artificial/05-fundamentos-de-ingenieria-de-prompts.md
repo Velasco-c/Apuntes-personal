@@ -11,7 +11,7 @@ tags: ["inteligencia-artificial"]
 
 ### Visión para Principiantes
 
-La **[ingeniería de prompts](../conceptos/prompt.md)** es la disciplina encargada de diseñar instrucciones claras y estratégicas para comunicarse con modelos de inteligencia artificial, especialmente [modelos de lenguaje](../conceptos/llm.md) (LLM).
+La **[ingeniería de prompts](../conceptos/inteligencia-artificial/prompt.md)** es la disciplina encargada de diseñar instrucciones claras y estratégicas para comunicarse con modelos de inteligencia artificial, especialmente [modelos de lenguaje](../conceptos/inteligencia-artificial/llm.md) (LLM).
 
 Un prompt es la forma en que una persona le explica a una IA qué necesita realizar.
 
@@ -92,7 +92,7 @@ Incluye introducción, análisis, conclusiones y referencias.
 
 ### Mejora la precisión
 
-Entrega [información](../conceptos/informacion.md) relevante para que el modelo pueda responder correctamente.
+Entrega [información](../conceptos/fundamentos/dato.md) relevante para que el modelo pueda responder correctamente.
 
 ---
 
@@ -484,7 +484,7 @@ F --> G[Optimizar prompt]
 
 ### Visión para Principiantes
 
-En programación tradicional, las [pruebas unitarias](../conceptos/testing.md) verifican que una parte del código funcione correctamente.
+En programación tradicional, las [pruebas unitarias](../conceptos/ingenieria/testing.md) verifican que una parte del código funcione correctamente.
 
 Ejemplo:
 
@@ -619,7 +619,7 @@ Pregunta:
 
 Ejemplo:
 
-Se pidió [JSON](../conceptos/json.md):
+Se pidió [JSON](../conceptos/formatos/json.md):
 
 ```json
 {
@@ -767,7 +767,7 @@ D --> E[Evaluar respuestas]
 | Ingeniería de prompts | Disciplina que diseña instrucciones optimizadas para IA.                   |
 | LLM                   | Modelo de lenguaje capaz de generar texto mediante aprendizaje automático. |
 | Contexto              | Información adicional proporcionada al modelo.                             |
-| [Dato](../conceptos/dato.md) de entrada       | Información específica utilizada por la IA para procesar una tarea.        |
+| [Dato](../conceptos/fundamentos/dato.md) de entrada       | Información específica utilizada por la IA para procesar una tarea.        |
 | Human in the Loop     | Modelo donde una persona supervisa decisiones de IA.                       |
 | Prompt Testing        | Evaluación sistemática de prompts.                                         |
 | Unit Testing          | Pruebas automatizadas para verificar comportamiento esperado.              |
@@ -797,6 +797,4 @@ Sin embargo, los modelos de IA siempre requieren evaluación y supervisión huma
 ---
 
 **Navegación:** [← Anterior: Ética en Inteligencia Artificial y Gestión de Sesgos Algorítmicos](04-etica-y-sesgos-algoritmicos.md) · [Índice de Inteligencia artificial](indice.md) · [Siguiente: Mitigación de Alucinaciones en Modelos de Lenguaje mediante Ajustes de Instrucciones →](06-mitigacion-de-alucinaciones.md)
-
-**Conceptos de esta lección:** [Prompt](../conceptos/prompt.md), [Testing automatizado](../conceptos/testing.md), [Modelo de lenguaje de gran escala (LLM)](../conceptos/llm.md), [Información](../conceptos/informacion.md), [JSON](../conceptos/json.md), [Dato](../conceptos/dato.md)
 <!-- /auto:pie -->

@@ -9,7 +9,7 @@ tags: ["mysql"]
 
 ## Agregación y agrupación de datos
 
-Una de las capacidades más potentes de **[MySQL](../conceptos/mysql.md)** es realizar cálculos sobre un conjunto de filas para obtener [información](../conceptos/informacion.md) resumida.
+Una de las capacidades más potentes de **[MySQL](../conceptos/motores/mysql.md)** es realizar cálculos sobre un conjunto de filas para obtener [información](../conceptos/fundamentos/dato.md) resumida.
 
 Esto se logra principalmente mediante:
 
@@ -148,7 +148,7 @@ Aquí:
 
 Entre los principales propósitos de `GROUP BY` se encuentran:
 
-- Agrupar valores idénticos de una [tabla](../conceptos/tabla.md).
+- Agrupar valores idénticos de una [tabla](../conceptos/bases-de-datos/estructura/tabla.md).
 - Obtener una fila resumida por cada grupo de elementos únicos.
 - Aplicar funciones de agregación sobre cada grupo.
 - Obtener información resumida a partir de múltiples registros.
@@ -301,7 +301,7 @@ LIMIT
 
 ## Base de datos para practicar agregaciones
 
-Los siguientes comandos crean una tabla llamada `tickets_soporte` dentro de la [base de datos](../conceptos/base-de-datos.md) `campuslands_mysql`.
+Los siguientes comandos crean una tabla llamada `tickets_soporte` dentro de la [base de datos](../conceptos/bases-de-datos/base-de-datos.md) `campuslands_mysql`.
 
 ```sql
 -- CREATE DATABASE IF NOT EXISTS campus;
@@ -680,7 +680,7 @@ La consulta:
 
 ### Creación de tablas a partir de consultas
 
-[SQL](../conceptos/sql.md) permite crear una nueva tabla utilizando como fuente el resultado de una consulta.
+[SQL](../conceptos/sql/sql.md) permite crear una nueva tabla utilizando como fuente el resultado de una consulta.
 
 Esta técnica puede ser útil para diferentes situaciones.
 
@@ -817,8 +817,8 @@ Esta técnica permite crear rápidamente nuevas tablas a partir de datos existen
 
 La tabla creada mediante `CREATE TABLE ... AS SELECT` no hereda necesariamente todas las características estructurales de la tabla original, como:
 
-- [Llaves primarias](../conceptos/llave-primaria.md).
-- [Índices](../conceptos/indice.md).
+- [Llaves primarias](../conceptos/bases-de-datos/estructura/llave-primaria.md).
+- [Índices](../conceptos/bases-de-datos/estructura/indice-bd.md).
 - Restricciones.
 
 Por lo tanto, crear una tabla a partir de un `SELECT` no equivale necesariamente a realizar una copia estructural completa de la tabla original.
@@ -942,7 +942,7 @@ WHERE TABLE_NAME = '<table_name>';
 ```
 
 > [!WARNING]
-> **Posible inconsistencia técnica:** en MySQL, la [vista](../conceptos/vista.md) utilizada habitualmente para obtener información sobre las tablas es `INFORMATION_SCHEMA.TABLES`, en plural. El apunte original utiliza `INFORMATION_SCHEMA.TABLE`, por lo que debe revisarse antes de ejecutarlo.
+> **Posible inconsistencia técnica:** en MySQL, la [vista](../conceptos/bases-de-datos/estructura/vista.md) utilizada habitualmente para obtener información sobre las tablas es `INFORMATION_SCHEMA.TABLES`, en plural. El apunte original utiliza `INFORMATION_SCHEMA.TABLE`, por lo que debe revisarse antes de ejecutarlo.
 
 Una consulta más específica sobre las columnas puede incluir también el esquema:
 
@@ -1068,7 +1068,7 @@ WHERE TABLE_NAME = 'products'
 
 ## Creación de llaves foráneas
 
-Una **[llave foránea](../conceptos/llave-foranea.md) (`FOREIGN KEY`)** es una restricción que permite establecer una relación entre una columna de una tabla y una clave de otra tabla.
+Una **[llave foránea](../conceptos/bases-de-datos/estructura/llave-foranea.md) (`FOREIGN KEY`)** es una restricción que permite establecer una relación entre una columna de una tabla y una clave de otra tabla.
 
 Las claves foráneas son fundamentales para mantener la **integridad referencial**.
 
@@ -1727,6 +1727,4 @@ HAVING → filtra grupos
 ---
 
 **Navegación:** [← Anterior: SQL — Fundamentos, Características, Clasificación, Tipos de Datos y Consultas](02-fundamentos-de-sql.md) · [Índice de MySQL](indice.md) · [Siguiente: SQL — Alias, funciones, JOIN, subconsultas y diseño de bases de datos →](04-alias-funciones-join-y-subconsultas.md)
-
-**Conceptos de esta lección:** [Tabla (Base de Datos)](../conceptos/tabla.md), [Información](../conceptos/informacion.md), [Llave Foránea (FK)](../conceptos/llave-foranea.md), [MySQL](../conceptos/mysql.md), [Base de Datos](../conceptos/base-de-datos.md), [SQL](../conceptos/sql.md), [Vista](../conceptos/vista.md), [Índice](../conceptos/indice.md), [Llave Primaria (PK)](../conceptos/llave-primaria.md)
 <!-- /auto:pie -->

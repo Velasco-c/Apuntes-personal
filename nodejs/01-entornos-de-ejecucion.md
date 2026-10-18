@@ -33,7 +33,7 @@ Programa ejecutándose
 ```
 
 > [!IMPORTANT]
-> Un **lenguaje de programación** y un **entorno de ejecución** no son exactamente lo mismo. JavaScript es un lenguaje; [Node.js](../conceptos/nodejs.md) es un entorno de ejecución que permite ejecutar JavaScript fuera del navegador.
+> Un **lenguaje de programación** y un **entorno de ejecución** no son exactamente lo mismo. JavaScript es un lenguaje; [Node.js](../conceptos/nodejs/nodejs.md) es un entorno de ejecución que permite ejecutar JavaScript fuera del navegador.
 
 ---
 
@@ -149,7 +149,7 @@ Por ejemplo:
 document.querySelector("h1");
 ```
 
-`document` pertenece al entorno web y al modelo [DOM](../conceptos/dom.md) proporcionado por el navegador.
+`document` pertenece al entorno web y al modelo [DOM](../conceptos/web/dom.md) proporcionado por el navegador.
 
 En Node.js, una aplicación no dispone automáticamente del DOM de una página HTML.
 
@@ -198,7 +198,7 @@ flowchart TD
 | Texto      | Nodo que contiene contenido textual     |
 
 > [!IMPORTANT]
-> Técnicamente, **no todos los nodos del DOM son elementos**. Existen nodos de elemento, texto, [atributos](../conceptos/atributo.md) y otros tipos. MDN distingue explícitamente entre `Node` y `Element`. ([MDN Web Docs][2])
+> Técnicamente, **no todos los nodos del DOM son elementos**. Existen nodos de elemento, texto, [atributos](../conceptos/bases-de-datos/modelado/atributo.md) y otros tipos. MDN distingue explícitamente entre `Node` y `Element`. ([MDN Web Docs][2])
 
 ---
 
@@ -326,7 +326,7 @@ Esto permite que Node.js ejecute código JavaScript sin necesitar una página we
 
 ### ¿Qué es un programa escalable?
 
-Un **programa [escalable](../conceptos/escalabilidad.md)** es aquel que puede aumentar su capacidad para atender más usuarios, solicitudes, datos o trabajo sin que sea necesario rediseñar completamente el sistema.
+Un **programa [escalable](../conceptos/ingenieria/escalabilidad.md)** es aquel que puede aumentar su capacidad para atender más usuarios, solicitudes, datos o trabajo sin que sea necesario rediseñar completamente el sistema.
 
 La escalabilidad puede abordarse de diferentes maneras.
 
@@ -671,7 +671,7 @@ npm permite:
 * Ejecutar scripts.
 * Administrar dependencias.
 * Publicar paquetes.
-* Consultar [información](../conceptos/informacion.md) de paquetes.
+* Consultar [información](../conceptos/fundamentos/dato.md) de paquetes.
 * Trabajar con diferentes versiones de dependencias.
 
 Por ejemplo:
@@ -1618,6 +1618,4 @@ DOM        → Modelo de documentos del entorno web
 ---
 
 **Navegación:** [Índice de Node.js](indice.md) · [Siguiente: Introducción a la Programación Orientada a Objetos (POO) en JavaScript →](02-poo-en-javascript.md)
-
-**Conceptos de esta lección:** [Node.js](../conceptos/nodejs.md), [DOM](../conceptos/dom.md), [Escalabilidad](../conceptos/escalabilidad.md), [Información](../conceptos/informacion.md), [Atributo](../conceptos/atributo.md)
 <!-- /auto:pie -->

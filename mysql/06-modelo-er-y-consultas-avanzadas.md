@@ -9,21 +9,21 @@ tags: ["mysql"]
 
 ## Modelo Entidad-Relación
 
-El **[modelo Entidad-Relación](../conceptos/mer.md) (E-R)** se utiliza para diseñar y representar la **estructura conceptual de una [base de datos](../conceptos/base-de-datos.md)**.
+El **[modelo Entidad-Relación](../conceptos/bases-de-datos/modelado/mer.md) (E-R)** se utiliza para diseñar y representar la **estructura conceptual de una [base de datos](../conceptos/bases-de-datos/base-de-datos.md)**.
 
-Por otro lado, el **[modelo relacional](../conceptos/base-de-datos-relacional.md)** se utiliza para implementar y organizar los datos en forma de **[tablas](../conceptos/tabla.md) relacionales**.
+Por otro lado, el **[modelo relacional](../conceptos/bases-de-datos/base-de-datos-relacional.md)** se utiliza para implementar y organizar los datos en forma de **[tablas](../conceptos/bases-de-datos/estructura/tabla.md) relacionales**.
 
-El proceso de transformar un modelo Entidad-Relación a un modelo relacional se conoce como **mapeo** o **traducción del modelo conceptual al [modelo lógico](../conceptos/modelo-logico-relacional.md)**.
+El proceso de transformar un modelo Entidad-Relación a un modelo relacional se conoce como **mapeo** o **traducción del modelo conceptual al [modelo lógico](../conceptos/bases-de-datos/modelado/modelo-logico-relacional.md)**.
 
 Durante este proceso se establece una correspondencia entre los elementos del modelo Entidad-Relación y los elementos del modelo relacional:
 
 | Modelo Entidad-Relación | Modelo relacional |
 | --- | --- |
-| [Entidad](../conceptos/entidad.md) | Tabla |
-| [Atributo](../conceptos/atributo.md) | Columna |
+| [Entidad](../conceptos/bases-de-datos/modelado/entidad.md) | Tabla |
+| [Atributo](../conceptos/bases-de-datos/modelado/atributo.md) | Columna |
 | Relación | Relación entre tablas mediante claves |
-| Clave de una entidad | [Clave primaria](../conceptos/llave-primaria.md) |
-| [Relación entre entidades](../conceptos/relacion.md) | [Clave foránea](../conceptos/llave-foranea.md) y restricciones correspondientes |
+| Clave de una entidad | [Clave primaria](../conceptos/bases-de-datos/estructura/llave-primaria.md) |
+| [Relación entre entidades](../conceptos/bases-de-datos/modelado/relacion.md) | [Clave foránea](../conceptos/bases-de-datos/estructura/llave-foranea.md) y restricciones correspondientes |
 
 > [!IMPORTANT]
 > El modelo Entidad-Relación permite representar la estructura conceptual antes de implementar físicamente la base de datos mediante tablas.
@@ -34,7 +34,7 @@ Durante este proceso se establece una correspondencia entre los elementos del mo
 
 ### Entidades
 
-Las entidades representan objetos o elementos sobre los cuales se desea almacenar [información](../conceptos/informacion.md) dentro de un sistema.
+Las entidades representan objetos o elementos sobre los cuales se desea almacenar [información](../conceptos/fundamentos/dato.md) dentro de un sistema.
 
 En el proceso de transformación al modelo relacional, una entidad normalmente se representa mediante una tabla.
 
@@ -66,7 +66,7 @@ En un diagrama E-R, las relaciones se representan mediante elementos que conecta
 
 ### Cardinalidad
 
-La **[cardinalidad](../conceptos/cardinalidad.md)** indica cuántas instancias de una entidad pueden estar relacionadas con las instancias de otra entidad mediante una relación.
+La **[cardinalidad](../conceptos/bases-de-datos/modelado/cardinalidad.md)** indica cuántas instancias de una entidad pueden estar relacionadas con las instancias de otra entidad mediante una relación.
 
 Los apuntes mencionan que la cardinalidad se expresa mediante una notación relacionada con cantidades, como:
 
@@ -119,7 +119,7 @@ El diagrama sirve como representación conceptual de la estructura que posterior
 
 Las consultas avanzadas permiten trabajar con operaciones más complejas dentro de una base de datos.
 
-Entre los temas estudiados se encuentran los **[procedimientos almacenados](../conceptos/procedimiento-almacenado.md)** y las **estructuras de control**.
+Entre los temas estudiados se encuentran los **[procedimientos almacenados](../conceptos/sql/procedimiento-almacenado.md)** y las **estructuras de control**.
 
 ---
 
@@ -127,12 +127,12 @@ Entre los temas estudiados se encuentran los **[procedimientos almacenados](../c
 
 ### ¿Qué es un procedimiento almacenado?
 
-Un **procedimiento almacenado (Stored Procedure)** consiste en un conjunto de instrucciones [SQL](../conceptos/sql.md) junto con lógica de programación opcional.
+Un **procedimiento almacenado (Stored Procedure)** consiste en un conjunto de instrucciones [SQL](../conceptos/sql/sql.md) junto con lógica de programación opcional.
 
 Estos procedimientos son ejecutados por el **motor de la base de datos** y pueden ser invocados por:
 
 - Aplicaciones.
-- [Disparadores](../conceptos/trigger.md).
+- [Disparadores](../conceptos/sql/trigger.md).
 - Otros procedimientos almacenados.
 
 La idea principal de los apuntes es que un procedimiento almacenado permite definir previamente un conjunto de instrucciones y posteriormente ejecutarlo mediante una llamada.
@@ -203,7 +203,7 @@ DELIMITER ;
 ```
 
 > [!IMPORTANT]
-> `DELIMITER` es una instrucción utilizada por clientes de [MySQL](../conceptos/mysql.md) para indicar cómo debe interpretarse el final de una instrucción. No forma parte de la lógica interna que ejecuta el servidor como una instrucción SQL del procedimiento.
+> `DELIMITER` es una instrucción utilizada por clientes de [MySQL](../conceptos/motores/mysql.md) para indicar cómo debe interpretarse el final de una instrucción. No forma parte de la lógica interna que ejecuta el servidor como una instrucción SQL del procedimiento.
 
 ---
 
@@ -1928,6 +1928,4 @@ Estas correcciones se mantienen separadas del código original para conservar el
 ---
 
 **Navegación:** [← Anterior: Diseño de bases de datos: índices, vistas, claves y restricciones](05-indices-vistas-y-restricciones.md) · [Índice de MySQL](indice.md) · [Siguiente: Procedimientos almacenados y manejo de errores en MySQL →](07-procedimientos-almacenados-y-errores.md)
-
-**Conceptos de esta lección:** [Tabla (Base de Datos)](../conceptos/tabla.md), [Entidad](../conceptos/entidad.md), [Procedimiento almacenado](../conceptos/procedimiento-almacenado.md), [Base de Datos](../conceptos/base-de-datos.md), [Modelo Entidad-Relación (MER)](../conceptos/mer.md), [Base de Datos Relacional](../conceptos/base-de-datos-relacional.md), [Atributo](../conceptos/atributo.md), [Cardinalidad](../conceptos/cardinalidad.md), [MySQL](../conceptos/mysql.md), [SQL](../conceptos/sql.md), [Información](../conceptos/informacion.md), [Modelo Lógico Relacional](../conceptos/modelo-logico-relacional.md), [Llave Primaria (PK)](../conceptos/llave-primaria.md), [Relación entre entidades](../conceptos/relacion.md), [Llave Foránea (FK)](../conceptos/llave-foranea.md)
 <!-- /auto:pie -->

@@ -9,10 +9,10 @@ tags: ["postgresql"]
 
 ## Introducción
 
-se trabajara con dos herramientas importantes para construir consultas [SQL](../conceptos/sql.md) más avanzadas en [PostgreSQL](../conceptos/postgresql.md):
+se trabajara con dos herramientas importantes para construir consultas [SQL](../conceptos/sql/sql.md) más avanzadas en [PostgreSQL](../conceptos/motores/postgresql.md):
 
-* **[Funciones de ventana](../conceptos/funcion-de-ventana.md) (Window Functions)**.
-* **Expresiones comunes de [tabla](../conceptos/tabla.md) ([CTEs](../conceptos/cte.md), Common Table Expressions)**.
+* **[Funciones de ventana](../conceptos/sql/funcion-de-ventana.md) (Window Functions)**.
+* **Expresiones comunes de [tabla](../conceptos/bases-de-datos/estructura/tabla.md) ([CTEs](../conceptos/sql/cte.md), Common Table Expressions)**.
 
 Ambas permiten realizar análisis sobre los datos sin limitarse a consultas simples.
 
@@ -107,7 +107,7 @@ INSERT INTO ventas_vendedores (fecha, vendedor, monto) VALUES
 
 Las **funciones de ventana** permiten realizar cálculos sobre un conjunto de filas relacionadas con la fila que se está procesando, sin convertir todo el conjunto en una única fila.
 
-Esto permite obtener [información](../conceptos/informacion.md) como:
+Esto permite obtener [información](../conceptos/fundamentos/dato.md) como:
 
 * Valor anterior o siguiente.
 * Sumas acumuladas.
@@ -147,7 +147,7 @@ SELECT
 FROM ventas_vendedores;
 ```
 
-En este caso se mantiene cada [transacción](../conceptos/transaccion.md) individual.
+En este caso se mantiene cada [transacción](../conceptos/bases-de-datos/transaccion.md) individual.
 
 > [!IMPORTANT]
 > La diferencia clave es que `GROUP BY` agrupa filas para producir resultados agregados, mientras que una función de ventana realiza el cálculo sobre una ventana de filas **sin eliminar las filas individuales del resultado**.
@@ -1048,6 +1048,4 @@ Para reforzar los conceptos trabajados en esta clase:
 ---
 
 **Navegación:** [← Anterior: Operadores y tipos de datos en PostgreSQL](04-operadores-y-tipos-de-datos.md) · [Índice de PostgreSQL](indice.md) · [Siguiente: Operadores de Conjuntos, Vistas, Procedimientos, Funciones y Triggers en PostgreSQL →](06-conjuntos-vistas-procedimientos-funciones-y-triggers.md)
-
-**Conceptos de esta lección:** [CTE](../conceptos/cte.md), [Función de ventana](../conceptos/funcion-de-ventana.md), [Tabla (Base de Datos)](../conceptos/tabla.md), [Transacción](../conceptos/transaccion.md), [PostgreSQL](../conceptos/postgresql.md), [SQL](../conceptos/sql.md), [Información](../conceptos/informacion.md)
 <!-- /auto:pie -->

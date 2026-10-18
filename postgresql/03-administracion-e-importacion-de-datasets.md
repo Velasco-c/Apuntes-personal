@@ -8,13 +8,13 @@ tags: ["postgresql"]
 # Administración e importación de datasets en PostgreSQL
 ## Introducción a datasets
 
-[PostgreSQL](../conceptos/postgresql.md) ofrece diferentes mecanismos para importar y restaurar datos desde archivos.
+[PostgreSQL](../conceptos/motores/postgresql.md) ofrece diferentes mecanismos para importar y restaurar datos desde archivos.
 
 Entre las alternativas utilizadas en esta clase se encuentran:
 
 * `COPY` y `\COPY` para importar datos desde archivos.
 * `pg_dump` para crear copias de seguridad.
-* `psql` para restaurar copias en formato [SQL](../conceptos/sql.md).
+* `psql` para restaurar copias en formato [SQL](../conceptos/sql/sql.md).
 * `pg_restore` para restaurar copias en formatos como `tar`.
 * Consultas `UPDATE`, `DELETE` e `INSERT` para modificar y administrar los datos.
 
@@ -53,7 +53,7 @@ Dentro de `psql`:
 \l
 ```
 
-permite listar las [bases de datos](../conceptos/base-de-datos.md).
+permite listar las [bases de datos](../conceptos/bases-de-datos/base-de-datos.md).
 
 Para conectarse a `campus`:
 
@@ -61,7 +61,7 @@ Para conectarse a `campus`:
 \c campus
 ```
 
-Para describir una [tabla](../conceptos/tabla.md):
+Para describir una [tabla](../conceptos/bases-de-datos/estructura/tabla.md):
 
 ```text
 \d
@@ -229,7 +229,7 @@ pg_restore -U postgres \
 
 En este caso:
 
-* `-d campus_temp`: base de datos donde se restaurará la [información](../conceptos/informacion.md).
+* `-d campus_temp`: base de datos donde se restaurará la [información](../conceptos/fundamentos/dato.md).
 * `-t customers`: limita la restauración a la tabla indicada.
 * `customers.tar`: archivo de respaldo.
 
@@ -369,7 +369,7 @@ ADD CONSTRAINT U_email UNIQUE (email);
 La restricción garantiza que no existan dos registros con el mismo correo electrónico.
 
 > [!IMPORTANT]
-> `ON CONFLICT(email)` necesita una restricción o [índice](../conceptos/indice.md) de unicidad compatible con la columna utilizada para detectar el conflicto.
+> `ON CONFLICT(email)` necesita una restricción o [índice](../conceptos/bases-de-datos/estructura/indice-bd.md) de unicidad compatible con la columna utilizada para detectar el conflicto.
 
 ---
 
@@ -638,7 +638,7 @@ La condición elimina productos que:
 
 ## Limpieza de datos duplicados
 
-Los datasets reales pueden contener registros repetidos. PostgreSQL permite utilizar [funciones de ventana](../conceptos/funcion-de-ventana.md) para identificar duplicados.
+Los datasets reales pueden contener registros repetidos. PostgreSQL permite utilizar [funciones de ventana](../conceptos/sql/funcion-de-ventana.md) para identificar duplicados.
 
 Primero se crea una tabla para trabajar con datos sintéticos:
 
@@ -767,7 +767,7 @@ son considerados duplicados y pueden eliminarse.
 | **`RAISE NOTICE`**             | Instrucción de PL/pgSQL utilizada para mostrar mensajes informativos.                                                           |
 | **`DELETE`**                   | Instrucción SQL utilizada para eliminar registros de una tabla.                                                                 |
 | **Subconsulta**                | Consulta SQL utilizada dentro de otra consulta.                                                                                 |
-| **`WITH`**                     | Cláusula utilizada para definir expresiones de tabla comunes o [CTE](../conceptos/cte.md).                                                             |
+| **`WITH`**                     | Cláusula utilizada para definir expresiones de tabla comunes o [CTE](../conceptos/sql/cte.md).                                                             |
 | **CTE**                        | Expresión de tabla común definida mediante `WITH`, utilizada para organizar consultas complejas.                                |
 | **`ROW_NUMBER()`**             | Función de ventana que asigna un número consecutivo a cada fila dentro de un conjunto.                                          |
 | **`PARTITION BY`**             | Divide los registros en grupos para que una función de ventana se aplique independientemente en cada grupo.                     |
@@ -810,6 +810,4 @@ La idea principal de esta clase es que trabajar con una base de datos no consist
 ---
 
 **Navegación:** [← Anterior: PostgreSQL — Configuración, administración y consultas](02-configuracion-administracion-y-consultas.md) · [Índice de PostgreSQL](indice.md) · [Siguiente: Operadores y tipos de datos en PostgreSQL →](04-operadores-y-tipos-de-datos.md)
-
-**Conceptos de esta lección:** [Tabla (Base de Datos)](../conceptos/tabla.md), [PostgreSQL](../conceptos/postgresql.md), [SQL](../conceptos/sql.md), [Base de Datos](../conceptos/base-de-datos.md), [Información](../conceptos/informacion.md), [Función de ventana](../conceptos/funcion-de-ventana.md), [CTE](../conceptos/cte.md), [Índice](../conceptos/indice.md)
 <!-- /auto:pie -->

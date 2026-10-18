@@ -9,7 +9,7 @@ tags: ["postgresql"]
 
 ## 1. Operadores aritméticos
 
-[PostgreSQL](../conceptos/postgresql.md) proporciona los operadores aritméticos tradicionales y algunos operadores adicionales para realizar cálculos.
+[PostgreSQL](../conceptos/motores/postgresql.md) proporciona los operadores aritméticos tradicionales y algunos operadores adicionales para realizar cálculos.
 
 | Operador | Significado    |
 | -------- | -------------- |
@@ -206,7 +206,7 @@ CREATE TABLE redes (
 
 Los `ARRAY` permiten almacenar múltiples valores del mismo tipo dentro de una columna.
 
-Pueden ser útiles cuando un registro necesita almacenar una colección de valores relacionados y no resulta necesario crear una [tabla](../conceptos/tabla.md) independiente para ellos.
+Pueden ser útiles cuando un registro necesita almacenar una colección de valores relacionados y no resulta necesario crear una [tabla](../conceptos/bases-de-datos/estructura/tabla.md) independiente para ellos.
 
 Por ejemplo, una tabla de estudiantes podría almacenar varios teléfonos:
 
@@ -260,7 +260,7 @@ CREATE TABLE personas (
 Esto permite almacenar un conjunto de datos relacionados como una unidad.
 
 > [!IMPORTANT]
-> Un tipo compuesto no funciona como una tabla independiente. Es un tipo de [dato](../conceptos/dato.md) definido por el usuario que puede utilizarse dentro de otras estructuras.
+> Un tipo compuesto no funciona como una tabla independiente. Es un tipo de [dato](../conceptos/fundamentos/dato.md) definido por el usuario que puede utilizarse dentro de otras estructuras.
 
 ---
 
@@ -268,7 +268,7 @@ Esto permite almacenar un conjunto de datos relacionados como una unidad.
 
 PostgreSQL soporta los tipos `JSON` y `JSONB`.
 
-Estos tipos permiten almacenar [información](../conceptos/informacion.md) estructurada en formato [JSON](../conceptos/json.md).
+Estos tipos permiten almacenar [información](../conceptos/fundamentos/dato.md) estructurada en formato [JSON](../conceptos/formatos/json.md).
 
 Son útiles cuando los datos poseen una estructura flexible, por ejemplo:
 
@@ -302,7 +302,7 @@ JSONB
 
 ## 9. Tipo de datos XML
 
-PostgreSQL también proporciona el tipo `XML`, utilizado para almacenar documentos [XML](../conceptos/xml.md).
+PostgreSQL también proporciona el tipo `XML`, utilizado para almacenar documentos [XML](../conceptos/formatos/xml.md).
 
 XML puede ser útil cuando se trabaja con:
 
@@ -343,13 +343,13 @@ El rendimiento depende de cómo se almacenen, consulten e indexen los datos.
 Si una información tiene una estructura estable y se consulta frecuentemente, normalmente resulta más apropiado utilizar columnas y tablas relacionales.
 
 > [!IMPORTANT]
-> La flexibilidad de JSON o XML no significa que deban utilizarse para reemplazar el [modelo relacional](../conceptos/base-de-datos-relacional.md). Su utilidad depende del tipo de información y de las consultas que necesita realizar la aplicación.
+> La flexibilidad de JSON o XML no significa que deban utilizarse para reemplazar el [modelo relacional](../conceptos/bases-de-datos/base-de-datos-relacional.md). Su utilidad depende del tipo de información y de las consultas que necesita realizar la aplicación.
 
 ---
 
 ## 11. Administración de usuarios y permisos
 
-PostgreSQL permite crear usuarios y controlar las operaciones que pueden realizar sobre los objetos de la [base de datos](../conceptos/base-de-datos.md).
+PostgreSQL permite crear usuarios y controlar las operaciones que pueden realizar sobre los objetos de la [base de datos](../conceptos/bases-de-datos/base-de-datos.md).
 
 ### Crear un usuario
 
@@ -481,12 +481,10 @@ Los principales puntos fueron:
 14. Revocar permisos mediante `REVOKE`.
 15. Eliminar usuarios mediante `DROP USER`.
 
-La idea principal de esta clase es ampliar el uso de PostgreSQL más allá de las operaciones relacionales básicas, aprovechando sus operadores, funciones y tipos de datos especializados sin perder de [vista](../conceptos/vista.md) el diseño adecuado de la base de datos.
+La idea principal de esta clase es ampliar el uso de PostgreSQL más allá de las operaciones relacionales básicas, aprovechando sus operadores, funciones y tipos de datos especializados sin perder de [vista](../conceptos/bases-de-datos/estructura/vista.md) el diseño adecuado de la base de datos.
 
 <!-- auto:pie -->
 ---
 
 **Navegación:** [← Anterior: Administración e importación de datasets en PostgreSQL](03-administracion-e-importacion-de-datasets.md) · [Índice de PostgreSQL](indice.md) · [Siguiente: Funciones de Ventana y CTEs en PostgreSQL →](05-funciones-de-ventana-y-ctes.md)
-
-**Conceptos de esta lección:** [PostgreSQL](../conceptos/postgresql.md), [Información](../conceptos/informacion.md), [JSON](../conceptos/json.md), [Tabla (Base de Datos)](../conceptos/tabla.md), [XML](../conceptos/xml.md), [Base de Datos](../conceptos/base-de-datos.md), [Dato](../conceptos/dato.md), [Base de Datos Relacional](../conceptos/base-de-datos-relacional.md), [Vista](../conceptos/vista.md)
 <!-- /auto:pie -->

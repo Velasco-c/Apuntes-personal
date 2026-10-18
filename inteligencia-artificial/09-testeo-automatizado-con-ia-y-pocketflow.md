@@ -11,7 +11,7 @@ tags: ["inteligencia-artificial"]
 
 ### Visión para Principiantes
 
-Los modelos de inteligencia artificial no solamente pueden generar texto o código. Mediante **[Function Calling](../conceptos/function-calling.md)**, una IA puede conectarse con herramientas externas para realizar tareas reales.
+Los modelos de inteligencia artificial no solamente pueden generar texto o código. Mediante **[Function Calling](../conceptos/inteligencia-artificial/function-calling.md)**, una IA puede conectarse con herramientas externas para realizar tareas reales.
 
 Ejemplo:
 
@@ -39,7 +39,7 @@ En desarrollo de software esto permite crear sistemas donde la IA puede:
 
 ## Profundidad Técnica
 
-Function Calling transforma un [LLM](../conceptos/llm.md) tradicional en un componente capaz de interactuar con sistemas externos.
+Function Calling transforma un [LLM](../conceptos/inteligencia-artificial/llm.md) tradicional en un componente capaz de interactuar con sistemas externos.
 
 Arquitectura:
 
@@ -86,8 +86,8 @@ El flujo real es:
 
 Permite:
 
-* Leer [información](../conceptos/informacion.md).
-* Organizar [tablas](../conceptos/tabla.md).
+* Leer [información](../conceptos/fundamentos/dato.md).
+* Organizar [tablas](../conceptos/bases-de-datos/estructura/tabla.md).
 * Analizar datos.
 * Preparar información para modelos de IA.
 
@@ -173,7 +173,7 @@ C --> D[Respuesta generada]
 
 ### Visión para Principiantes
 
-El **[testing](../conceptos/testing.md)** es el proceso de comprobar que un programa funciona correctamente antes de entregarlo.
+El **[testing](../conceptos/ingenieria/testing.md)** es el proceso de comprobar que un programa funciona correctamente antes de entregarlo.
 
 Una prueba verifica:
 
@@ -625,7 +625,7 @@ Ventajas:
 
 Puede ejecutarse mediante:
 
-* [Node.js](../conceptos/nodejs.md).
+* [Node.js](../conceptos/nodejs/nodejs.md).
 * Docker.
 * Servidores privados.
 
@@ -764,6 +764,4 @@ El resultado es un ecosistema donde la IA deja de ser únicamente un asistente d
 ---
 
 **Navegación:** [← Anterior: Refactorización Asistida por Inteligencia Artificial y Generación de Funciones mediante LLM](08-refactorizacion-asistida-por-ia.md) · [Índice de Inteligencia artificial](indice.md)
-
-**Conceptos de esta lección:** [Testing automatizado](../conceptos/testing.md), [Modelo de lenguaje de gran escala (LLM)](../conceptos/llm.md), [Node.js](../conceptos/nodejs.md), [Function calling](../conceptos/function-calling.md), [Información](../conceptos/informacion.md), [Tabla (Base de Datos)](../conceptos/tabla.md)
 <!-- /auto:pie -->

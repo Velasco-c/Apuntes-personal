@@ -9,10 +9,10 @@ tags: ["mysql"]
 
 ## 1. Procedimientos almacenados con estructuras de control
 
-Los [procedimientos almacenados](../conceptos/procedimiento-almacenado.md) permiten encapsular un conjunto de instrucciones [SQL](../conceptos/sql.md) para reutilizarlas mediante una llamada. Dentro de ellos se pueden utilizar variables, ciclos, condiciones, cursores y manejadores de errores.
+Los [procedimientos almacenados](../conceptos/sql/procedimiento-almacenado.md) permiten encapsular un conjunto de instrucciones [SQL](../conceptos/sql/sql.md) para reutilizarlas mediante una llamada. Dentro de ellos se pueden utilizar variables, ciclos, condiciones, cursores y manejadores de errores.
 
 > [!IMPORTANT]
-> En [MySQL](../conceptos/mysql.md), las declaraciones `DECLARE` deben colocarse al inicio del bloque `BEGIN ... END`, antes de las instrucciones ejecutables.
+> En [MySQL](../conceptos/motores/mysql.md), las declaraciones `DECLARE` deben colocarse al inicio del bloque `BEGIN ... END`, antes de las instrucciones ejecutables.
 
 ---
 
@@ -293,7 +293,7 @@ DECLARE cursor1 CURSOR FOR
     FROM empleados;
 ```
 
-Esto indica que el cursor recorrerá los valores `id` y `salario` de la [tabla](../conceptos/tabla.md) `empleados`.
+Esto indica que el cursor recorrerá los valores `id` y `salario` de la [tabla](../conceptos/bases-de-datos/estructura/tabla.md) `empleados`.
 
 El `HANDLER` detecta cuándo ya no existen más registros:
 
@@ -367,7 +367,7 @@ flowchart TD
 
 ## Manejo de errores
 
-El **manejo de errores** es un aspecto importante para garantizar la integridad y confiabilidad de las aplicaciones de [bases de datos](../conceptos/base-de-datos.md).
+El **manejo de errores** es un aspecto importante para garantizar la integridad y confiabilidad de las aplicaciones de [bases de datos](../conceptos/bases-de-datos/base-de-datos.md).
 
 Los errores pueden ocurrir por diferentes razones, entre ellas:
 
@@ -590,7 +590,7 @@ WHERE id = 4;
 
 ### Procedimiento para actualizar el correo
 
-El procedimiento utiliza una [transacción](../conceptos/transaccion.md) para controlar la operación y registrar [información](../conceptos/informacion.md) cuando ocurre un error.
+El procedimiento utiliza una [transacción](../conceptos/bases-de-datos/transaccion.md) para controlar la operación y registrar [información](../conceptos/fundamentos/dato.md) cuando ocurre un error.
 
 ```sql
 DELIMITER //
@@ -841,6 +841,4 @@ Los principales conceptos trabajados son:
 ---
 
 **Navegación:** [← Anterior: Modelo Entidad-Relación y consultas avanzadas en MySQL](06-modelo-er-y-consultas-avanzadas.md) · [Índice de MySQL](indice.md) · [Siguiente: Funciones definidas por el usuario, seguridad y permisos en MySQL →](08-funciones-seguridad-y-permisos.md)
-
-**Conceptos de esta lección:** [Transacción](../conceptos/transaccion.md), [Tabla (Base de Datos)](../conceptos/tabla.md), [MySQL](../conceptos/mysql.md), [SQL](../conceptos/sql.md), [Procedimiento almacenado](../conceptos/procedimiento-almacenado.md), [Base de Datos](../conceptos/base-de-datos.md), [Información](../conceptos/informacion.md)
 <!-- /auto:pie -->

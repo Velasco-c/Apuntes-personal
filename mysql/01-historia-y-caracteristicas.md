@@ -9,9 +9,9 @@ tags: ["mysql"]
 
 ## Introducción
 
-**[MySQL](../conceptos/mysql.md)** nació en **1995** como un [sistema gestor de bases de datos](../conceptos/sgbd.md) relacionales. Con el paso del tiempo se convirtió en una de las soluciones de gestión de [bases de datos](../conceptos/base-de-datos.md) más reconocidas y utilizadas en el mundo del desarrollo de software.
+**[MySQL](../conceptos/motores/mysql.md)** nació en **1995** como un [sistema gestor de bases de datos](../conceptos/bases-de-datos/sgbd.md) relacionales. Con el paso del tiempo se convirtió en una de las soluciones de gestión de [bases de datos](../conceptos/bases-de-datos/base-de-datos.md) más reconocidas y utilizadas en el mundo del desarrollo de software.
 
-Su adopción creció rápidamente debido a que numerosos desarrolladores comenzaron a utilizarlo en sus aplicaciones. A lo largo de sus diferentes versiones, MySQL incorporó nuevas capacidades relacionadas con rendimiento, replicación, [transacciones](../conceptos/transaccion.md), [procedimientos almacenados](../conceptos/procedimiento-almacenado.md), [vistas](../conceptos/vista.md), [triggers](../conceptos/trigger.md) y administración de grandes volúmenes de [información](../conceptos/informacion.md).
+Su adopción creció rápidamente debido a que numerosos desarrolladores comenzaron a utilizarlo en sus aplicaciones. A lo largo de sus diferentes versiones, MySQL incorporó nuevas capacidades relacionadas con rendimiento, replicación, [transacciones](../conceptos/bases-de-datos/transaccion.md), [procedimientos almacenados](../conceptos/sql/procedimiento-almacenado.md), [vistas](../conceptos/bases-de-datos/estructura/vista.md), [triggers](../conceptos/sql/trigger.md) y administración de grandes volúmenes de [información](../conceptos/fundamentos/dato.md).
 
 ---
 
@@ -94,7 +94,7 @@ La versión **MySQL 3.23** fue una de las versiones más importantes de la serie
 
 #### MyISAM
 
-Se introdujo **MyISAM**, que reemplazó al antiguo motor ISAM y mejoró considerablemente el rendimiento relacionado con los [índices](../conceptos/indice.md).
+Se introdujo **MyISAM**, que reemplazó al antiguo motor ISAM y mejoró considerablemente el rendimiento relacionado con los [índices](../conceptos/bases-de-datos/estructura/indice-bd.md).
 
 #### Replicación
 
@@ -112,7 +112,7 @@ Su incorporación permitió trabajar con capacidades fundamentales como:
 
 * Transacciones.
 * Integridad referencial.
-* [Claves foráneas](../conceptos/llave-foranea.md).
+* [Claves foráneas](../conceptos/bases-de-datos/estructura/llave-foranea.md).
 
 La incorporación de estas capacidades mejoró considerablemente las posibilidades de MySQL como gestor de bases de datos.
 
@@ -133,7 +133,7 @@ MySQL 5.0 representó un cambio importante al incorporar características fundam
 
 Se incorporó el soporte para **procedimientos almacenados (Stored Procedures)**.
 
-Un procedimiento almacenado permite guardar un conjunto de instrucciones [SQL](../conceptos/sql.md) dentro del servidor de base de datos para posteriormente ejecutarlas mediante una llamada.
+Un procedimiento almacenado permite guardar un conjunto de instrucciones [SQL](../conceptos/sql/sql.md) dentro del servidor de base de datos para posteriormente ejecutarlas mediante una llamada.
 
 Esto permite incorporar parte de la lógica de negocio directamente en la base de datos.
 
@@ -157,7 +157,7 @@ Las vistas permiten:
 
 Se incorporaron los **disparadores (Triggers)**.
 
-Un trigger permite ejecutar automáticamente determinadas acciones cuando ocurre un evento sobre una [tabla](../conceptos/tabla.md), como:
+Un trigger permite ejecutar automáticamente determinadas acciones cuando ocurre un evento sobre una [tabla](../conceptos/bases-de-datos/estructura/tabla.md), como:
 
 * `INSERT`
 * `UPDATE`
@@ -213,7 +213,7 @@ Se introdujo el **particionamiento de tablas**, permitiendo organizar grandes vo
 
 #### Event Scheduler
 
-Se incorporó el **[Event Scheduler](../conceptos/evento-programado.md)**, utilizado para programar la ejecución automática de determinadas tareas dentro del servidor.
+Se incorporó el **[Event Scheduler](../conceptos/sql/evento-programado.md)**, utilizado para programar la ejecución automática de determinadas tareas dentro del servidor.
 
 #### Replicación basada en filas
 
@@ -248,7 +248,7 @@ Desde entonces, MySQL continuó evolucionando y mantuvo una modalidad de distrib
 
 ### Modelo relacional
 
-MySQL utiliza un **[modelo relacional](../conceptos/base-de-datos-relacional.md)** para organizar la información.
+MySQL utiliza un **[modelo relacional](../conceptos/bases-de-datos/base-de-datos-relacional.md)** para organizar la información.
 
 Los datos se almacenan principalmente en **tablas**, y estas pueden relacionarse mediante claves y relaciones.
 
@@ -262,7 +262,7 @@ CLIENTES
 PEDIDOS
 ```
 
-El modelo relacional permite organizar la información y establecer relaciones entre diferentes [entidades](../conceptos/entidad.md).
+El modelo relacional permite organizar la información y establecer relaciones entre diferentes [entidades](../conceptos/bases-de-datos/modelado/entidad.md).
 
 Entre sus objetivos se encuentran:
 
@@ -495,7 +495,7 @@ Según los apuntes, permite trabajar con:
 
 * MySQL.
 * SQL Server.
-* [PostgreSQL](../conceptos/postgresql.md).
+* [PostgreSQL](../conceptos/motores/postgresql.md).
 * SQLite.
 
 Proporciona una interfaz gráfica para administrar bases de datos y realizar diferentes tareas de gestión.
@@ -750,7 +750,7 @@ MySQL Workbench destaca especialmente por integrar funcionalidades de:
 | `Function`               | Rutina almacenada que permite encapsular una operación y devolver un resultado.                                                                                          |
 | `Trigger`                | Rutina que se ejecuta automáticamente como respuesta a determinados eventos sobre una tabla.                                                                             |
 | `Transaction`            | Unidad lógica de trabajo que agrupa una o varias operaciones de base de datos.                                                                                           |
-| `ACID`                   | Conjunto de propiedades que describen características fundamentales de las transacciones: [Atomicidad](../conceptos/atomicidad.md), Consistencia, Aislamiento y Durabilidad.                           |
+| `ACID`                   | Conjunto de propiedades que describen características fundamentales de las transacciones: [Atomicidad](../conceptos/bases-de-datos/transaccion.md), Consistencia, Aislamiento y Durabilidad.                           |
 | `Event Scheduler`        | Componente que permite programar la ejecución automática de eventos en MySQL.                                                                                            |
 | `Row-Based Replication`  | Modalidad de replicación que registra los cambios realizados sobre las filas.                                                                                            |
 | `Table Partitioning`     | Técnica que divide una tabla en diferentes particiones para gestionar grandes volúmenes de información.                                                                  |
@@ -781,6 +781,4 @@ Actualmente continúa siendo una tecnología fundamental dentro del desarrollo b
 ---
 
 **Navegación:** [Índice de MySQL](indice.md) · [Siguiente: SQL — Fundamentos, Características, Clasificación, Tipos de Datos y Consultas →](02-fundamentos-de-sql.md)
-
-**Conceptos de esta lección:** [MySQL](../conceptos/mysql.md), [Base de Datos](../conceptos/base-de-datos.md), [Transacción](../conceptos/transaccion.md), [SQL](../conceptos/sql.md), [Información](../conceptos/informacion.md), [Trigger](../conceptos/trigger.md), [Vista](../conceptos/vista.md), [Tabla (Base de Datos)](../conceptos/tabla.md), [Procedimiento almacenado](../conceptos/procedimiento-almacenado.md), [Base de Datos Relacional](../conceptos/base-de-datos-relacional.md), [Evento programado](../conceptos/evento-programado.md), [Sistema Gestor de Base de Datos (SGBD)](../conceptos/sgbd.md), [Atomicidad](../conceptos/atomicidad.md), [Índice](../conceptos/indice.md), [Llave Foránea (FK)](../conceptos/llave-foranea.md)
 <!-- /auto:pie -->

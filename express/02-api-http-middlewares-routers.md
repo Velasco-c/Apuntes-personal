@@ -9,13 +9,13 @@ tags: ["express"]
 
 ## Introducción
 
-En la lección anterior se creó una aplicación básica con [Express](../conceptos/express.md). Esta lección explica cómo un servidor distingue entre peticiones distintas: qué es una [API](../conceptos/api.md), cómo se comunican el cliente y el servidor mediante [HTTP](../conceptos/http.md), cómo leer la [información](../conceptos/informacion.md) de cada petición con [parámetros de ruta](../conceptos/parametro-de-ruta.md), [encabezados](../conceptos/encabezado-http.md) y el cuerpo, y cómo organizar las rutas con [routers](../conceptos/router.md).
+En la lección anterior se creó una aplicación básica con [Express](../conceptos/web/express.md). Esta lección explica cómo un servidor distingue entre peticiones distintas: qué es una [API](../conceptos/web/api.md), cómo se comunican el cliente y el servidor mediante [HTTP](../conceptos/web/http.md), cómo leer la [información](../conceptos/fundamentos/dato.md) de cada petición con [parámetros de ruta](../conceptos/web/parametro-de-ruta.md), [encabezados](../conceptos/web/encabezado-http.md) y el cuerpo, y cómo organizar las rutas con [routers](../conceptos/web/router.md).
 
 ---
 
 ## 1. ¿Qué es una API?
 
-Una **[API](../conceptos/api.md)** (*Application Programming Interface*, interfaz de programación de aplicaciones) es un conjunto de definiciones y protocolos que permiten la comunicación entre componentes de software. Su propósito es facilitar la integración entre sistemas, al especificar rutinas, estructuras de datos, clases de objetos y variables que otros programas pueden utilizar.
+Una **[API](../conceptos/web/api.md)** (*Application Programming Interface*, interfaz de programación de aplicaciones) es un conjunto de definiciones y protocolos que permiten la comunicación entre componentes de software. Su propósito es facilitar la integración entre sistemas, al especificar rutinas, estructuras de datos, clases de objetos y variables que otros programas pueden utilizar.
 
 Algunas APIs son estándares internacionales, otras son documentadas por un proveedor específico y otras forman parte de las bibliotecas estándar de un lenguaje de programación.
 
@@ -30,7 +30,7 @@ Algunas APIs son estándares internacionales, otras son documentadas por un prov
 
 | Protocolo | Primera versión | Formato | Fortaleza clave |
 | --- | --- | --- | --- |
-| **SOAP** | Finales de los 90 | [XML](../conceptos/xml.md) | Amplia adopción y establecido |
+| **SOAP** | Finales de los 90 | [XML](../conceptos/formatos/xml.md) | Amplia adopción y establecido |
 | **REST** | 2000 | JSON, XML y otros | Formato de datos flexible |
 | **JSON-RPC** | Mediados de los 2000 | JSON | Simplicidad de implementación |
 | **gRPC** | 2015 | Protocol Buffers por defecto; también JSON y otros | Capacidad de definir cualquier tipo de función |
@@ -44,7 +44,7 @@ Algunas APIs son estándares internacionales, otras son documentadas por un prov
 
 ## 3. Estados HTTP
 
-Los [códigos de estado HTTP](../conceptos/codigo-de-estado-http.md) son números de tres dígitos que un servidor web envía al cliente para indicar el resultado de una solicitud.
+Los [códigos de estado HTTP](../conceptos/web/codigo-de-estado-http.md) son números de tres dígitos que un servidor web envía al cliente para indicar el resultado de una solicitud.
 
 Cada vez que se hace clic en un enlace o se ingresa una URL, el navegador envía una solicitud al servidor. El servidor la procesa y devuelve el recurso pertinente junto con un encabezado HTTP, que incluye el código de estado. Aunque el código se envía en cada respuesta, en la mayoría de los casos no es visible para el usuario.
 
@@ -123,7 +123,7 @@ flowchart TD
 
 ## 4. Creación de una petición HTTP
 
-Un [endpoint](../conceptos/endpoint.md) es la combinación de un método HTTP y una ruta que el servidor atiende, por ejemplo `GET /campus`. Se define en Express con un método como `get`, `post`, `put` o `delete`:
+Un [endpoint](../conceptos/web/endpoint.md) es la combinación de un método HTTP y una ruta que el servidor atiende, por ejemplo `GET /campus`. Se define en Express con un método como `get`, `post`, `put` o `delete`:
 
 ```javascript
 import express from 'express';
@@ -151,7 +151,7 @@ app.listen(3000, () => {
 
 ### 5.1 Parámetros de ruta (`req.params`)
 
-Un [parámetro de ruta](../conceptos/parametro-de-ruta.md) es una parte variable de la URL. Se define en la ruta con dos puntos (`:`) seguidos del nombre de la variable. Express extrae el valor real de cada petición y lo entrega en `req.params`, un objeto con pares clave-valor.
+Un [parámetro de ruta](../conceptos/web/parametro-de-ruta.md) es una parte variable de la URL. Se define en la ruta con dos puntos (`:`) seguidos del nombre de la variable. Express extrae el valor real de cada petición y lo entrega en `req.params`, un objeto con pares clave-valor.
 
 ```javascript
 app.get('/campus/:idCamper', (req, res) => {
@@ -169,7 +169,7 @@ El valor siempre llega como texto. Si necesitas un número, conviértelo con `Nu
 
 ### 5.2 Encabezados (`req.headers`)
 
-Los [encabezados HTTP](../conceptos/encabezado-http.md) son metadatos que se envían junto con una petición o una respuesta: el tipo de contenido, la codificación, las cookies, la autenticación y otros detalles. Express almacena los encabezados enviados por el cliente en `req.headers`, donde se pueden consultar para tomar decisiones.
+Los [encabezados HTTP](../conceptos/web/encabezado-http.md) son metadatos que se envían junto con una petición o una respuesta: el tipo de contenido, la codificación, las cookies, la autenticación y otros detalles. Express almacena los encabezados enviados por el cliente en `req.headers`, donde se pueden consultar para tomar decisiones.
 
 ```javascript
 app.get('/perfil', (req, res) => {
@@ -179,13 +179,13 @@ app.get('/perfil', (req, res) => {
 });
 ```
 
-[Node.js](../conceptos/nodejs.md) guarda los nombres de los encabezados en minúsculas, así que `req.headers.role` funciona aunque el cliente lo envíe como `Role`.
+[Node.js](../conceptos/nodejs/nodejs.md) guarda los nombres de los encabezados en minúsculas, así que `req.headers.role` funciona aunque el cliente lo envíe como `Role`.
 
 ---
 
 ## 6. Middlewares
 
-Un [middleware](../conceptos/middleware.md) es una función, o un conjunto de funciones, que procesa la petición o la respuesta antes de que lleguen a su destino final. Actúa como intermediario entre el cliente y el servidor, y se ejecuta en el orden en que se define.
+Un [middleware](../conceptos/web/middleware.md) es una función, o un conjunto de funciones, que procesa la petición o la respuesta antes de que lleguen a su destino final. Actúa como intermediario entre el cliente y el servidor, y se ejecuta en el orden en que se define.
 
 Un middleware puede modificar los objetos de solicitud y respuesta, validar datos, autenticar usuarios, administrar sesiones, registrar información, comprimir o cifrar datos, entre otras tareas.
 
@@ -265,7 +265,7 @@ app.use((req, res, next) => {
 
 ## 7. Enrutadores (`Router`)
 
-Un [router](../conceptos/router.md) organiza las rutas relacionadas en un módulo independiente. Así, cada recurso de la API, como estudiantes, productos o usuarios, puede tener su propio archivo con sus rutas y controladores.
+Un [router](../conceptos/web/router.md) organiza las rutas relacionadas en un módulo independiente. Así, cada recurso de la API, como estudiantes, productos o usuarios, puede tener su propio archivo con sus rutas y controladores.
 
 Un router en Express es un objeto que proporciona métodos para definir rutas y gestionar las solicitudes asociadas. Una aplicación puede usar varios routers, y cada uno se monta en la aplicación principal con un prefijo.
 
@@ -443,7 +443,7 @@ Ejecuta el proyecto en desarrollo con `npm run dev`.
 > El encabezado `role` lo envía el propio cliente, así que cualquiera puede falsificarlo. Este ejemplo sirve para practicar los encabezados. Para autenticar usuarios de forma segura se usan tokens o sesiones.
 
 > [!NOTE]
-> Los estudiantes se guardan en un arreglo en memoria. Al reiniciar el servidor, los datos se pierden. La siguiente etapa es guardarlos en una [base de datos](../conceptos/base-de-datos.md).
+> Los estudiantes se guardan en un arreglo en memoria. Al reiniciar el servidor, los datos se pierden. La siguiente etapa es guardarlos en una [base de datos](../conceptos/bases-de-datos/base-de-datos.md).
 
 > [!TIP]
 > Usa `res.status()` para indicar el código explícitamente. Así, quien lea el código entiende el resultado sin revisar la documentación.
@@ -453,7 +453,7 @@ Ejecuta el proyecto en desarrollo con `npm run dev`.
 ## Conexiones
 
 * [Introducción a Node.js con Express.js](01-introduccion-nodejs-expressjs.md): base del servidor, de la configuración y del primer middleware.
-* [Formato JSON](../conceptos/json.md): formato de los cuerpos de las peticiones y las respuestas de la API.
+* [Formato JSON](../conceptos/formatos/json.md): formato de los cuerpos de las peticiones y las respuestas de la API.
 * [Principios de diseño — SOLID](../nodejs/05-principios-solid.md): separar rutas, validaciones y acceso a datos en módulos con una sola responsabilidad.
 * [Persistencia de datos con MySQL y Node.js](../nodejs/08-persistencia-con-mysql.md): cómo reemplazar el arreglo en memoria por una base de datos.
 
@@ -472,7 +472,5 @@ Ejecuta el proyecto en desarrollo con `npm run dev`.
 <!-- auto:pie -->
 ---
 
-**Navegación:** [← Anterior: Introducción a Node.js con Express.js](01-introduccion-nodejs-expressjs.md) · [Índice de Express](indice.md)
-
-**Conceptos de esta lección:** [Middleware](../conceptos/middleware.md), [Encabezado HTTP](../conceptos/encabezado-http.md), [API (Interfaz de programación de aplicaciones)](../conceptos/api.md), [JSON](../conceptos/json.md), [Router](../conceptos/router.md), [Express.js](../conceptos/express.md), [HTTP](../conceptos/http.md), [Parámetro de ruta](../conceptos/parametro-de-ruta.md), [Código de estado HTTP](../conceptos/codigo-de-estado-http.md), [Endpoint](../conceptos/endpoint.md), [Node.js](../conceptos/nodejs.md), [Información](../conceptos/informacion.md), [XML](../conceptos/xml.md), [Base de Datos](../conceptos/base-de-datos.md), [Principios SOLID](../conceptos/solid.md)
+**Navegación:** [← Anterior: Introducción a Node.js con Express.js](01-introduccion-nodejs-expressjs.md) · [Índice de Express](indice.md) · [Siguiente: Conexión de Node.js y Express con MySQL →](03-conexion-nodejs-express-mysql.md)
 <!-- /auto:pie -->

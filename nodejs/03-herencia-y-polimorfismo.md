@@ -7,7 +7,7 @@ tags: ["nodejs"]
 
 # Herencia y Polimorfismo en JavaScript
 
-La **[herencia](../conceptos/herencia.md)** y el **[polimorfismo](../conceptos/polimorfismo.md)** son dos conceptos fundamentales de la [programación orientada a objetos](../conceptos/poo.md) (POO). En JavaScript se implementan mediante el sistema de **prototipos**, aunque desde ECMAScript 2015 (ES6) existe la sintaxis `class`, `extends` y `super`, que permite expresar estas relaciones de una forma más cercana a los lenguajes orientados a objetos basados en clases.
+La **[herencia](../conceptos/programacion/herencia.md)** y el **[polimorfismo](../conceptos/programacion/polimorfismo.md)** son dos conceptos fundamentales de la [programación orientada a objetos](../conceptos/programacion/poo.md) (POO). En JavaScript se implementan mediante el sistema de **prototipos**, aunque desde ECMAScript 2015 (ES6) existe la sintaxis `class`, `extends` y `super`, que permite expresar estas relaciones de una forma más cercana a los lenguajes orientados a objetos basados en clases.
 
 > [!IMPORTANT]
 > Las clases de JavaScript **no reemplazaron el sistema de prototipos**. La sintaxis `class` es una abstracción sobre la herencia basada en prototipos. Por debajo, JavaScript continúa utilizando su cadena de prototipos.
@@ -21,7 +21,7 @@ Un **diagrama de clases** es una representación visual de la estructura de un s
 Permite representar:
 
 * Clases.
-* [Atributos](../conceptos/atributo.md).
+* [Atributos](../conceptos/bases-de-datos/modelado/atributo.md).
 * Métodos.
 * Visibilidad.
 * Relaciones entre clases.
@@ -1438,6 +1438,4 @@ flowchart TD
 ---
 
 **Navegación:** [← Anterior: Introducción a la Programación Orientada a Objetos (POO) en JavaScript](02-poo-en-javascript.md) · [Índice de Node.js](indice.md) · [Siguiente: Interfaces y Relaciones entre Clases en JavaScript →](04-interfaces-y-relaciones-entre-clases.md)
-
-**Conceptos de esta lección:** [Herencia](../conceptos/herencia.md), [Polimorfismo](../conceptos/polimorfismo.md), [Programación orientada a objetos](../conceptos/poo.md), [Atributo](../conceptos/atributo.md)
 <!-- /auto:pie -->

@@ -7,17 +7,17 @@ tags: ["postgresql"]
 
 # Administración de conjuntos de datos semiestructurados y datos binarios
 
-> Documentación técnica de estudio sobre **[JSON](../conceptos/json.md)/JSONB, [XML](../conceptos/xml.md), subconsultas, consultas correlacionadas, [JOINs](../conceptos/join.md), arrays y datos binarios (`BYTEA`) en [PostgreSQL](../conceptos/postgresql.md)**.
+> Documentación técnica de estudio sobre **[JSON](../conceptos/formatos/json.md)/JSONB, [XML](../conceptos/formatos/xml.md), subconsultas, consultas correlacionadas, [JOINs](../conceptos/sql/join.md), arrays y datos binarios (`BYTEA`) en [PostgreSQL](../conceptos/motores/postgresql.md)**.
 
 ---
 
 ## 1. Introducción
 
-Esta documentación reúne y amplía los contenidos de la Clase 05 de PostgreSQL I. El objetivo no es solamente mostrar sentencias [SQL](../conceptos/sql.md), sino explicar **qué problema resuelve cada técnica, cómo funciona, cuándo utilizarla y cómo verificar que el resultado sea correcto**.
+Esta documentación reúne y amplía los contenidos de la Clase 05 de PostgreSQL I. El objetivo no es solamente mostrar sentencias [SQL](../conceptos/sql/sql.md), sino explicar **qué problema resuelve cada técnica, cómo funciona, cuándo utilizarla y cómo verificar que el resultado sea correcto**.
 
 La clase trabaja con una idea central:
 
-> **Los datos pueden llegar en formatos diferentes al [modelo relacional](../conceptos/base-de-datos-relacional.md), pero PostgreSQL puede transformarlos en [información](../conceptos/informacion.md) consultable y relacionable.**
+> **Los datos pueden llegar en formatos diferentes al [modelo relacional](../conceptos/bases-de-datos/base-de-datos-relacional.md), pero PostgreSQL puede transformarlos en [información](../conceptos/fundamentos/dato.md) consultable y relacionable.**
 
 El flujo general utilizado durante la clase es:
 
@@ -54,7 +54,7 @@ La presentación también establece tres decisiones fundamentales: reconocer cor
 Al finalizar esta documentación deberías poder:
 
 - Conectarte a PostgreSQL mediante `psql`.
-- Crear [tablas](../conceptos/tabla.md) relacionales con [claves primarias](../conceptos/llave-primaria.md) y foráneas.
+- Crear [tablas](../conceptos/bases-de-datos/estructura/tabla.md) relacionales con [claves primarias](../conceptos/bases-de-datos/estructura/llave-primaria.md) y foráneas.
 - Comprender la diferencia entre datos relacionales y semiestructurados.
 - Importar un arreglo JSON/JSONB utilizando una tabla temporal.
 - Expandir elementos JSON en filas mediante `jsonb_array_elements`.
@@ -328,7 +328,7 @@ Dentro de `psql`:
 \c campus
 ```
 
-Esto cambia la conexión hacia la [base de datos](../conceptos/base-de-datos.md) `campus`.
+Esto cambia la conexión hacia la [base de datos](../conceptos/bases-de-datos/base-de-datos.md) `campus`.
 
 ---
 
@@ -371,7 +371,7 @@ DROP TABLE IF EXISTS juegos;
 DROP TABLE IF EXISTS categorias;
 ```
 
-Esto evita problemas derivados de la [clave foránea](../conceptos/llave-foranea.md).
+Esto evita problemas derivados de la [clave foránea](../conceptos/bases-de-datos/estructura/llave-foranea.md).
 
 > [!NOTE]
 > Si una tabla tiene dependencias mediante claves foráneas, el orden de eliminación importa.
@@ -1259,7 +1259,7 @@ La presentación reporta diez juegos que superan el promedio de su propia catego
 La presentación utiliza precisamente esta comparación. fileciteturn2file0L363-L380
 
 > [!IMPORTANT]
-> "Se ejecuta por cada fila" es un [modelo lógico](../conceptos/modelo-logico-relacional.md) útil para comprender una consulta correlacionada, pero no debe interpretarse como una garantía de que PostgreSQL ejecutará físicamente la subconsulta de esa manera. El optimizador puede transformar el plan.
+> "Se ejecuta por cada fila" es un [modelo lógico](../conceptos/bases-de-datos/modelado/modelo-logico-relacional.md) útil para comprender una consulta correlacionada, pero no debe interpretarse como una garantía de que PostgreSQL ejecutará físicamente la subconsulta de esa manera. El optimizador puede transformar el plan.
 
 ---
 
@@ -1359,7 +1359,7 @@ COUNT(*)
 
 contaría la fila producida por el `LEFT JOIN`, incluso cuando no existe un juego relacionado.
 
-Por tanto, para contar [entidades](../conceptos/entidad.md) hijas con `LEFT JOIN`, suele ser apropiado contar una columna de la tabla hija que sea no nula cuando existe la relación, normalmente su clave primaria.
+Por tanto, para contar [entidades](../conceptos/bases-de-datos/modelado/entidad.md) hijas con `LEFT JOIN`, suele ser apropiado contar una columna de la tabla hija que sea no nula cuando existe la relación, normalmente su clave primaria.
 
 ---
 
@@ -1491,7 +1491,7 @@ posición 3 → 97
 ```
 
 > [!IMPORTANT]
-> Los arrays de PostgreSQL utilizan [índices](../conceptos/indice.md) que comienzan normalmente en `1`, no en `0`.
+> Los arrays de PostgreSQL utilizan [índices](../conceptos/bases-de-datos/estructura/indice-bd.md) que comienzan normalmente en `1`, no en `0`.
 
 ---
 
@@ -1643,7 +1643,7 @@ parciales = [90, 95, 97]
 Si cada elemento necesita:
 
 - relaciones propias;
-- [atributos](../conceptos/atributo.md) adicionales;
+- [atributos](../conceptos/bases-de-datos/modelado/atributo.md) adicionales;
 - búsquedas frecuentes;
 - restricciones independientes;
 - referencias a otras entidades;
@@ -1844,7 +1844,7 @@ OID de un Large Object
 | Datos dentro de PostgreSQL | Sí | Sí, mediante LO | No |
 | Integrado con la fila | Sí | No directamente | No |
 | Referencia mediante OID | No | Sí | No |
-| Gestión transaccional | Sí, como [dato](../conceptos/dato.md) de fila | Mediante API de LO | Depende de aplicación |
+| Gestión transaccional | Sí, como [dato](../conceptos/fundamentos/dato.md) de fila | Mediante API de LO | Depende de aplicación |
 | Simplicidad | Alta | Mayor complejidad | Alta para ciertos sistemas |
 | Ejemplo de clase | Imagen | Conceptual | Archivo de entrada |
 
@@ -2976,6 +2976,4 @@ Validación
 ---
 
 **Navegación:** [← Anterior: Operadores de Conjuntos, Vistas, Procedimientos, Funciones y Triggers en PostgreSQL](06-conjuntos-vistas-procedimientos-funciones-y-triggers.md) · [Índice de PostgreSQL](indice.md)
-
-**Conceptos de esta lección:** [PostgreSQL](../conceptos/postgresql.md), [JSON](../conceptos/json.md), [XML](../conceptos/xml.md), [Tabla (Base de Datos)](../conceptos/tabla.md), [JOIN](../conceptos/join.md), [SQL](../conceptos/sql.md), [Información](../conceptos/informacion.md), [Entidad](../conceptos/entidad.md), [Dato](../conceptos/dato.md), [Base de Datos Relacional](../conceptos/base-de-datos-relacional.md), [Llave Primaria (PK)](../conceptos/llave-primaria.md), [Llave Foránea (FK)](../conceptos/llave-foranea.md), [Índice](../conceptos/indice.md), [Atributo](../conceptos/atributo.md), [Base de Datos](../conceptos/base-de-datos.md)
 <!-- /auto:pie -->

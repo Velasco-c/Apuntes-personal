@@ -11,7 +11,7 @@ tags: ["inteligencia-artificial"]
 
 ### Visión para Principiantes
 
-Un **[modelo de lenguaje](../conceptos/llm.md)** es un sistema de inteligencia artificial diseñado para comprender y generar texto utilizando patrones aprendidos del lenguaje humano.
+Un **[modelo de lenguaje](../conceptos/inteligencia-artificial/llm.md)** es un sistema de inteligencia artificial diseñado para comprender y generar texto utilizando patrones aprendidos del lenguaje humano.
 
 Su objetivo es predecir cuál es la siguiente palabra o fragmento de texto más probable según el contexto recibido.
 
@@ -47,7 +47,7 @@ Es decir:
 
 > Dado un conjunto de elementos anteriores, calcula cuál es el siguiente elemento más probable.
 
-Los modelos modernos utilizan principalmente arquitecturas basadas en **[redes neuronales](../conceptos/red-neuronal.md) profundas**, especialmente:
+Los modelos modernos utilizan principalmente arquitecturas basadas en **[redes neuronales](../conceptos/inteligencia-artificial/red-neuronal.md) profundas**, especialmente:
 
 * Transformers.
 * Redes neuronales con mecanismos de atención.
@@ -79,7 +79,7 @@ Una red neuronal artificial es un sistema matemático inspirado en la forma en q
 
 Está formada por pequeños componentes llamados **neuronas artificiales**, conectadas entre sí.
 
-Cada conexión tiene un valor llamado **peso**, que indica qué tan importante es cierta [información](../conceptos/informacion.md).
+Cada conexión tiene un valor llamado **peso**, que indica qué tan importante es cierta [información](../conceptos/fundamentos/dato.md).
 
 Ejemplo:
 
@@ -299,7 +299,7 @@ C --> D[Modelo ligero optimizado]
 
 ### Visión para Principiantes
 
-Una [alucinación](../conceptos/alucinacion.md) ocurre cuando un modelo genera información falsa pero parece correcta.
+Una [alucinación](../conceptos/inteligencia-artificial/alucinacion.md) ocurre cuando un modelo genera información falsa pero parece correcta.
 
 Puede inventar:
 
@@ -327,7 +327,7 @@ Artículo inventado con autor y enlace falso.
 
 ### Profundidad Técnica
 
-Los LLM no poseen una [base de conocimiento](../conceptos/base-de-conocimiento.md) verdadera ni un mecanismo interno de verificación.
+Los LLM no poseen una [base de conocimiento](../conceptos/inteligencia-artificial/base-de-conocimiento.md) verdadera ni un mecanismo interno de verificación.
 
 Generan respuestas mediante probabilidad:
 
@@ -662,6 +662,4 @@ Conceptos como **tokens** y **embeddings** son fundamentales para comprender có
 ---
 
 **Navegación:** [← Anterior: Redes Neuronales y Sistemas Expertos en Inteligencia Artificial](01-redes-neuronales-y-sistemas-expertos.md) · [Índice de Inteligencia artificial](indice.md) · [Siguiente: Diseño Responsable de Prompts y Verificaciones en Modelos de Inteligencia Artificial →](03-prompts-responsables-y-verificaciones.md)
-
-**Conceptos de esta lección:** [Modelo de lenguaje de gran escala (LLM)](../conceptos/llm.md), [Información](../conceptos/informacion.md), [Red neuronal](../conceptos/red-neuronal.md), [Alucinación](../conceptos/alucinacion.md), [Base de conocimiento](../conceptos/base-de-conocimiento.md)
 <!-- /auto:pie -->

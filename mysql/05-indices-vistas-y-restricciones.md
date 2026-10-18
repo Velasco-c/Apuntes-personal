@@ -9,23 +9,23 @@ tags: ["mysql"]
 
 ## Introducción
 
-En el diseño de [bases de datos](../conceptos/base-de-datos.md) es importante definir estructuras que permitan **organizar, consultar, relacionar y proteger los datos** de manera eficiente.
+En el diseño de [bases de datos](../conceptos/bases-de-datos/base-de-datos.md) es importante definir estructuras que permitan **organizar, consultar, relacionar y proteger los datos** de manera eficiente.
 
 Entre los conceptos estudiados se encuentran:
 
-- **[Índices](../conceptos/indice.md)**.
-- **[Vistas](../conceptos/vista.md)**.
+- **[Índices](../conceptos/bases-de-datos/estructura/indice-bd.md)**.
+- **[Vistas](../conceptos/bases-de-datos/estructura/vista.md)**.
 - **Claves**.
 - **Restricciones**.
-- **[Claves primarias](../conceptos/llave-primaria.md) (`PRIMARY KEY`)**.
-- **[Claves foráneas](../conceptos/llave-foranea.md) (`FOREIGN KEY`)**.
+- **[Claves primarias](../conceptos/bases-de-datos/estructura/llave-primaria.md) (`PRIMARY KEY`)**.
+- **[Claves foráneas](../conceptos/bases-de-datos/estructura/llave-foranea.md) (`FOREIGN KEY`)**.
 - **Restricciones de unicidad (`UNIQUE`)**.
 - **Valores predeterminados (`DEFAULT`)**.
 - **Restricciones de validación (`CHECK`)**.
 - **Restricciones de nulidad (`NOT NULL`)**.
 - **Generación automática de identificadores (`AUTO_INCREMENT`)**.
 
-Estos elementos permiten mejorar el **rendimiento**, mantener la **integridad de los datos** y establecer relaciones entre las diferentes [tablas](../conceptos/tabla.md) de una base de datos.
+Estos elementos permiten mejorar el **rendimiento**, mantener la **integridad de los datos** y establecer relaciones entre las diferentes [tablas](../conceptos/bases-de-datos/estructura/tabla.md) de una base de datos.
 
 ---
 
@@ -33,7 +33,7 @@ Estos elementos permiten mejorar el **rendimiento**, mantener la **integridad de
 
 ### ¿Qué es un índice?
 
-Un **índice** es una estructura de datos especial que almacena [información](../conceptos/informacion.md) relacionada con una parte de una tabla, normalmente sobre las columnas que fueron seleccionadas para crear el índice.
+Un **índice** es una estructura de datos especial que almacena [información](../conceptos/fundamentos/dato.md) relacionada con una parte de una tabla, normalmente sobre las columnas que fueron seleccionadas para crear el índice.
 
 El propósito principal de un índice es **acelerar las operaciones de búsqueda y consulta**, mejorando el rendimiento de las consultas que utilizan las columnas indexadas.
 
@@ -65,7 +65,7 @@ Por esta razón, la implementación de índices debe ser **estratégica y equili
 
 ## Creación de índices en MySQL
 
-En [MySQL](../conceptos/mysql.md) se pueden construir diferentes tipos de índices, cada uno adaptado a determinadas necesidades.
+En [MySQL](../conceptos/motores/mysql.md) se pueden construir diferentes tipos de índices, cada uno adaptado a determinadas necesidades.
 
 Entre los tipos estudiados se encuentran:
 
@@ -236,7 +236,7 @@ En este caso se crea un índice espacial llamado `idx_location` sobre la columna
 
 ### ¿Qué es una vista?
 
-Las **vistas** en MySQL son objetos de base de datos que representan una **consulta [SQL](../conceptos/sql.md) guardada**.
+Las **vistas** en MySQL son objetos de base de datos que representan una **consulta [SQL](../conceptos/sql/sql.md) guardada**.
 
 Una vista puede entenderse como una **tabla virtual** que presenta los resultados definidos mediante una consulta SQL.
 
@@ -394,7 +394,7 @@ Una vista puede almacenar la lógica de una consulta compleja que posteriormente
 
 ### Vista para normalización de datos
 
-Los apuntes mencionan el uso de vistas relacionado con la [normalización](../conceptos/normalizacion.md) de datos.
+Los apuntes mencionan el uso de vistas relacionado con la [normalización](../conceptos/bases-de-datos/modelado/normalizacion.md) de datos.
 
 > [!NOTE]
 > En este punto, el apunte original relaciona las vistas con la normalización. La documentación conserva esta idea, pero no desarrolla una explicación adicional porque el material proporcionado no especifica exactamente cómo se está utilizando la vista dentro del proceso de normalización.
@@ -403,7 +403,7 @@ Los apuntes mencionan el uso de vistas relacionado con la [normalización](../co
 
 ## Claves y restricciones
 
-Las **claves** y **restricciones** son elementos fundamentales en el diseño de [bases de datos relacionales](../conceptos/base-de-datos-relacional.md).
+Las **claves** y **restricciones** son elementos fundamentales en el diseño de [bases de datos relacionales](../conceptos/bases-de-datos/base-de-datos-relacional.md).
 
 Permiten:
 
@@ -598,7 +598,7 @@ Los apuntes presentan un modelo académico compuesto inicialmente por tres tabla
 
 ### Tabla `estudiantes`
 
-| Tipo de [dato](../conceptos/dato.md) | Campo |
+| Tipo de [dato](../conceptos/fundamentos/dato.md) | Campo |
 | --- | --- |
 | `INT` | `id` |
 | `VARCHAR` | `codigo` |
@@ -1350,6 +1350,4 @@ El diseño también utiliza índices simples, índices compuestos e índices ún
 ---
 
 **Navegación:** [← Anterior: SQL — Alias, funciones, JOIN, subconsultas y diseño de bases de datos](04-alias-funciones-join-y-subconsultas.md) · [Índice de MySQL](indice.md) · [Siguiente: Modelo Entidad-Relación y consultas avanzadas en MySQL →](06-modelo-er-y-consultas-avanzadas.md)
-
-**Conceptos de esta lección:** [Índice](../conceptos/indice.md), [Tabla (Base de Datos)](../conceptos/tabla.md), [Vista](../conceptos/vista.md), [Base de Datos](../conceptos/base-de-datos.md), [Llave Foránea (FK)](../conceptos/llave-foranea.md), [Información](../conceptos/informacion.md), [MySQL](../conceptos/mysql.md), [SQL](../conceptos/sql.md), [Llave Primaria (PK)](../conceptos/llave-primaria.md), [Normalización](../conceptos/normalizacion.md), [Dato](../conceptos/dato.md), [Base de Datos Relacional](../conceptos/base-de-datos-relacional.md)
 <!-- /auto:pie -->

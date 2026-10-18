@@ -9,7 +9,7 @@ tags: ["nodejs"]
 
 ## 1. ¿Qué es un patrón de software?
 
-Los **[patrones de diseño](../conceptos/patron-de-diseno.md)** son soluciones generales y reutilizables para problemas que aparecen con frecuencia durante el diseño de software.
+Los **[patrones de diseño](../conceptos/ingenieria/patron-de-diseno.md)** son soluciones generales y reutilizables para problemas que aparecen con frecuencia durante el diseño de software.
 
 Pueden entenderse como **planos o guías de diseño** que se pueden adaptar a diferentes proyectos y lenguajes de programación.
 
@@ -189,7 +189,7 @@ Factory Method puede ayudar a:
 * Reducir el acoplamiento con clases concretas.
 * Facilitar la incorporación de nuevos productos.
 * Centralizar reglas de creación.
-* Aplicar [polimorfismo](../conceptos/polimorfismo.md).
+* Aplicar [polimorfismo](../conceptos/programacion/polimorfismo.md).
 * Mejorar la mantenibilidad cuando existen varias implementaciones.
 
 ---
@@ -374,7 +374,7 @@ class Gato extends Animal {}
 class Pato extends Animal {}
 ```
 
-La [herencia](../conceptos/herencia.md) permite reutilizar la estructura y definir comportamientos especializados.
+La [herencia](../conceptos/programacion/herencia.md) permite reutilizar la estructura y definir comportamientos especializados.
 
 ---
 
@@ -1797,7 +1797,7 @@ Se utiliza cuando varios objetos deben reaccionar ante un evento o cambio.
 
 ## 15. Relación con SOLID
 
-Los patrones de diseño y los [principios SOLID](../conceptos/solid.md) son conceptos diferentes, pero pueden complementarse.
+Los patrones de diseño y los [principios SOLID](../conceptos/ingenieria/solid.md) son conceptos diferentes, pero pueden complementarse.
 
 | Concepto               | Propósito                                                      |
 | ---------------------- | -------------------------------------------------------------- |
@@ -1928,6 +1928,4 @@ La solución más simple suele ser preferible cuando no existe un problema de di
 ---
 
 **Navegación:** [← Anterior: Principios de diseño — SOLID](05-principios-solid.md) · [Índice de Node.js](indice.md) · [Siguiente: Introducción a la persistencia de datos →](07-introduccion-a-persistencia.md)
-
-**Conceptos de esta lección:** [Patrón de diseño](../conceptos/patron-de-diseno.md), [Polimorfismo](../conceptos/polimorfismo.md), [Principios SOLID](../conceptos/solid.md), [Herencia](../conceptos/herencia.md), [Normalización](../conceptos/normalizacion.md)
 <!-- /auto:pie -->

@@ -11,7 +11,7 @@ tags: ["inteligencia-artificial"]
 
 ### Visión para Principiantes
 
-Una **[alucinación](../conceptos/alucinacion.md) en inteligencia artificial** ocurre cuando un [modelo de lenguaje](../conceptos/llm.md) genera una respuesta que parece correcta, está bien escrita y tiene sentido, pero contiene [información](../conceptos/informacion.md) falsa o sin evidencia real.
+Una **[alucinación](../conceptos/inteligencia-artificial/alucinacion.md) en inteligencia artificial** ocurre cuando un [modelo de lenguaje](../conceptos/inteligencia-artificial/llm.md) genera una respuesta que parece correcta, está bien escrita y tiene sentido, pero contiene [información](../conceptos/fundamentos/dato.md) falsa o sin evidencia real.
 
 Ejemplo:
 
@@ -33,7 +33,7 @@ El artículo, autor o enlace pueden no existir.
 
 ---
 
-Las alucinaciones ocurren porque los modelos de lenguaje no funcionan como una [base de datos](../conceptos/base-de-datos.md) tradicional.
+Las alucinaciones ocurren porque los modelos de lenguaje no funcionan como una [base de datos](../conceptos/bases-de-datos/base-de-datos.md) tradicional.
 
 No buscan una respuesta almacenada, sino que generan texto prediciendo qué palabras tienen mayor probabilidad de aparecer.
 
@@ -727,7 +727,7 @@ Las alucinaciones son uno de los principales problemas de los modelos de lenguaj
 
 La mitigación requiere combinar:
 
-* [Prompts](../conceptos/prompt.md) bien diseñados.
+* [Prompts](../conceptos/inteligencia-artificial/prompt.md) bien diseñados.
 * Contexto suficiente.
 * Fuentes externas.
 * Técnicas de verificación.
@@ -739,6 +739,4 @@ Los modelos de IA no deben considerarse fuentes absolutas de conocimiento, sino 
 ---
 
 **Navegación:** [← Anterior: Fundamentos Básicos de Ingeniería de Prompts y Evaluación de Prompts](05-fundamentos-de-ingenieria-de-prompts.md) · [Índice de Inteligencia artificial](indice.md) · [Siguiente: Modelos de Lenguaje de Gran Escala (LLM), Redes Neuronales y Model Context Protocol (MCP) →](07-llm-redes-neuronales-y-mcp.md)
-
-**Conceptos de esta lección:** [Información](../conceptos/informacion.md), [Alucinación](../conceptos/alucinacion.md), [Modelo de lenguaje de gran escala (LLM)](../conceptos/llm.md), [Prompt](../conceptos/prompt.md), [Base de Datos](../conceptos/base-de-datos.md)
 <!-- /auto:pie -->

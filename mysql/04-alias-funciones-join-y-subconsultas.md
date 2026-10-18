@@ -9,7 +9,7 @@ tags: ["mysql"]
 
 ## Introducción
 
-Estos apuntes reúnen conceptos y ejercicios relacionados con **[SQL](../conceptos/sql.md) y el diseño de [bases de datos](../conceptos/base-de-datos.md)**, especialmente:
+Estos apuntes reúnen conceptos y ejercicios relacionados con **[SQL](../conceptos/sql/sql.md) y el diseño de [bases de datos](../conceptos/bases-de-datos/base-de-datos.md)**, especialmente:
 
 - Uso de alias.
 - Funciones de texto y numéricas.
@@ -18,9 +18,9 @@ Estos apuntes reúnen conceptos y ejercicios relacionados con **[SQL](../concept
 - Tipos de `JOIN`.
 - Subconsultas o consultas anidadas.
 - Subconsultas utilizadas en `WHERE` y `FROM`.
-- Creación y relación de [tablas](../conceptos/tabla.md).
+- Creación y relación de [tablas](../conceptos/bases-de-datos/estructura/tabla.md).
 - Restricciones como `PRIMARY KEY` y `FOREIGN KEY`.
-- Ejercicios prácticos con [MySQL](../conceptos/mysql.md).
+- Ejercicios prácticos con [MySQL](../conceptos/motores/mysql.md).
 - Progreso personal mediante consultas SQL.
 
 El contenido utiliza principalmente **MySQL** y la base de datos `campuslands_mysql`.
@@ -171,7 +171,7 @@ Los ejemplos muestran diferentes usos de alias:
 > ```sql
 > SELECT employees.name, departments.department_name
 > FROM employees E
-> [JOIN](../conceptos/join.md) departments
+> [JOIN](../conceptos/sql/join.md) departments
 >     ON department_id = D.id;
 > ```
 >
@@ -202,7 +202,7 @@ DESCRIBE products;
 
 `DESCRIBE` permite consultar la estructura de una tabla.
 
-Puede utilizarse para observar [información](../conceptos/informacion.md) como:
+Puede utilizarse para observar [información](../conceptos/fundamentos/dato.md) como:
 
 * Nombre de las columnas.
 * Tipos de datos.
@@ -325,7 +325,7 @@ Sus columnas principales son:
 
 ### Relaciones
 
-Existen dos [claves foráneas](../conceptos/llave-foranea.md):
+Existen dos [claves foráneas](../conceptos/bases-de-datos/estructura/llave-foranea.md):
 
 ```sql
 CONSTRAINT fk_order_items_orders
@@ -597,8 +597,8 @@ El diseño adecuado permite organizar la información y establecer cómo se rela
 Dentro de los conceptos estudiados aparecen:
 
 * `JOIN`.
-* [Índices](../conceptos/indice.md).
-* [Vistas](../conceptos/vista.md).
+* [Índices](../conceptos/bases-de-datos/estructura/indice-bd.md).
+* [Vistas](../conceptos/bases-de-datos/estructura/vista.md).
 * Subconsultas.
 * Relaciones entre tablas.
 
@@ -1384,7 +1384,7 @@ Hace que MySQL genere automáticamente valores para el identificador.
 
 #### `PRIMARY KEY`
 
-Define la [clave primaria](../conceptos/llave-primaria.md) de la tabla.
+Define la [clave primaria](../conceptos/bases-de-datos/estructura/llave-primaria.md) de la tabla.
 
 #### `NOT NULL`
 
@@ -1633,7 +1633,7 @@ Permite generar automáticamente nuevos identificadores numéricos.
 
 ### `DECIMAL`
 
-Es un tipo de [dato](../conceptos/dato.md) apropiado para valores numéricos con precisión decimal, como precios.
+Es un tipo de [dato](../conceptos/fundamentos/dato.md) apropiado para valores numéricos con precisión decimal, como precios.
 
 Ejemplo:
 
@@ -1854,6 +1854,4 @@ Finalmente, los ejercicios muestran cómo combinar estos conceptos para consulta
 ---
 
 **Navegación:** [← Anterior: Consultas básicas con SQL](03-consultas-basicas.md) · [Índice de MySQL](indice.md) · [Siguiente: Diseño de bases de datos: índices, vistas, claves y restricciones →](05-indices-vistas-y-restricciones.md)
-
-**Conceptos de esta lección:** [Tabla (Base de Datos)](../conceptos/tabla.md), [Base de Datos](../conceptos/base-de-datos.md), [MySQL](../conceptos/mysql.md), [SQL](../conceptos/sql.md), [JOIN](../conceptos/join.md), [Información](../conceptos/informacion.md), [Llave Foránea (FK)](../conceptos/llave-foranea.md), [Llave Primaria (PK)](../conceptos/llave-primaria.md), [Dato](../conceptos/dato.md), [Índice](../conceptos/indice.md), [Vista](../conceptos/vista.md)
 <!-- /auto:pie -->

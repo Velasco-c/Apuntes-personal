@@ -7,10 +7,10 @@ tags: ["bases-de-datos"]
 
 # Clase 03: Del Diseño Conceptual al Modelo Físico
 
-## 1. Diseño Conceptual ([MER](../conceptos/mer.md))
+## 1. Diseño Conceptual ([MER](../conceptos/bases-de-datos/modelado/mer.md))
 - **Elementos visuales:**
-    - [Entidad](../conceptos/entidad.md): Representadas con rectángulos.
-    - [Atributo](../conceptos/atributo.md): Representados con óvalos.
+    - [Entidad](../conceptos/bases-de-datos/modelado/entidad.md): Representadas con rectángulos.
+    - [Atributo](../conceptos/bases-de-datos/modelado/atributo.md): Representados con óvalos.
     - **Relaciones:** Rombos que definen el vínculo.
 - **Cardinalidad:**
     - Cliente -> Pedido: **1:N** (Uno a muchos).
@@ -23,13 +23,13 @@ Para mantener la integridad, clasificamos los atributos según su naturaleza:
 - **Multivaluados:** Atributos que admiten más de un valor por registro.
 
 ### 3. Proceso de Conversión (ER a Lógico)
-1. Identificar las [entidades](../conceptos/entidad.md) del negocio.
-2. Definir los [atributos](../conceptos/atributo.md) de cada una.
-3. Establecer [relaciones](../conceptos/cardinalidad.md) y cardinalidad.
-4. Traducir a [tablas](../conceptos/tabla.md) (Modelo Lógico).
+1. Identificar las [entidades](../conceptos/bases-de-datos/modelado/entidad.md) del negocio.
+2. Definir los [atributos](../conceptos/bases-de-datos/modelado/atributo.md) de cada una.
+3. Establecer [relaciones](../conceptos/bases-de-datos/modelado/cardinalidad.md) y cardinalidad.
+4. Traducir a [tablas](../conceptos/bases-de-datos/estructura/tabla.md) (Modelo Lógico).
 
 ### 4. Modelo Físico
-Es la implementación final en el [SGBD](../conceptos/sgbd.md), incluyendo tipos de datos, restricciones ([PK](../conceptos/llave-primaria.md), [FK](../conceptos/llave-foranea.md)) y [Normalización](../conceptos/normalizacion.md).
+Es la implementación final en el [SGBD](../conceptos/bases-de-datos/sgbd.md), incluyendo tipos de datos, restricciones ([PK](../conceptos/bases-de-datos/estructura/llave-primaria.md), [FK](../conceptos/bases-de-datos/estructura/llave-foranea.md)) y [Normalización](../conceptos/bases-de-datos/modelado/normalizacion.md).
 
  
 ## Ejemplo Práctico: Modelo E-commerce (Representación Visual)
@@ -38,7 +38,7 @@ Este diseño implementa una relación N:M entre `Pedido` y `Producto` mediante u
 ### Estructura de Tablas
 
 #### 1. Clientes
-Almacena la [información](../conceptos/informacion.md) de contacto.
+Almacena la [información](../conceptos/fundamentos/dato.md) de contacto.
 - **PK:** `id`
 - **Atributos:** nombre, correo, telefono, direccion.
 
@@ -100,13 +100,13 @@ CREATE TABLE Pedido_x_Producto (
 ```
 
 ## Proceso de Conversión: Del MER al Modelo Lógico
-La transición del diseño conceptual al lógico requiere un enfoque sistemático para garantizar la integridad y la [escalabilidad](../conceptos/escalabilidad.md).
+La transición del diseño conceptual al lógico requiere un enfoque sistemático para garantizar la integridad y la [escalabilidad](../conceptos/ingenieria/escalabilidad.md).
 
 ### Pasos del Algoritmo de Conversión:
-1. **Mapeo de Entidades:** Identificar los objetos/conceptos del negocio que requieren [persistencia](../conceptos/persistencia.md).
-2. **Definición de Atributos:** Extraer las características de cada [Entidad](../conceptos/entidad.md), asegurando siempre la [Atomicidad](../conceptos/atomicidad.md).
-3. **Mapeo de Relaciones:** Determinar cómo interactúan las entidades entre sí mediante [cardinalidades](../conceptos/cardinalidad.md) (1:1, 1:N, N:M).
-4. **Normalización Temprana:** Identificar y separar [atributos multivaluados](../conceptos/atributo-multivaluado.md) en tablas auxiliares.
+1. **Mapeo de Entidades:** Identificar los objetos/conceptos del negocio que requieren [persistencia](../conceptos/fundamentos/persistencia.md).
+2. **Definición de Atributos:** Extraer las características de cada [Entidad](../conceptos/bases-de-datos/modelado/entidad.md), asegurando siempre la [Atomicidad](../conceptos/bases-de-datos/modelado/atributo.md).
+3. **Mapeo de Relaciones:** Determinar cómo interactúan las entidades entre sí mediante [cardinalidades](../conceptos/bases-de-datos/modelado/cardinalidad.md) (1:1, 1:N, N:M).
+4. **Normalización Temprana:** Identificar y separar [atributos multivaluados](../conceptos/bases-de-datos/modelado/atributo.md) en tablas auxiliares.
 5. **Estandarización:** Utilizar notación técnica estándar (como UML o Notación de Crow's Foot) para garantizar la interoperabilidad.
 
 _Versión en Mermaid del ejemplo original. La imagen usaba notación Chen (óvalos y rombos). Mermaid dibuja solo Crow's Foot, así que los atributos van dentro de cada entidad y los atributos de la relación «solicitan» (fecha y cantidad) no pueden mostrarse._
@@ -142,24 +142,22 @@ erDiagram
 ```
 
 ## Modelo Físico
-Es la etapa final del diseño, donde el [Modelo Lógico Relacional](../conceptos/modelo-logico-relacional.md) se materializa en un [SGBD](../conceptos/sgbd.md) específico.
+Es la etapa final del diseño, donde el [Modelo Lógico Relacional](../conceptos/bases-de-datos/modelado/modelo-logico-relacional.md) se materializa en un [SGBD](../conceptos/bases-de-datos/sgbd.md) específico.
 
 ### Objetivos de la implementación física:
-- **Traducción estructural:** Convertir entidades a tablas, atributos a columnas y relaciones a restricciones de [FK](../conceptos/llave-foranea.md).
+- **Traducción estructural:** Convertir entidades a tablas, atributos a columnas y relaciones a restricciones de [FK](../conceptos/bases-de-datos/estructura/llave-foranea.md).
 - **Optimización:** Ajustar tipos de datos y restricciones según las capacidades y limitaciones del SGBD seleccionado.
 - **Normalización:** Aplicar las formas normales para minimizar la redundancia y maximizar la integridad de los datos.
 
 ### Checklist de implementación física:
 - [ ] Analizar requisitos de negocio y restricciones del motor (SGBD).
 - [ ] Definir esquemas de tablas, columnas y tipos de datos.
-- [ ] Establecer restricciones de integridad ([PK](../conceptos/llave-primaria.md), [FK](../conceptos/llave-foranea.md), `NOT NULL`, `UNIQUE`).
-- [ ] Implementar [índices](../conceptos/indice.md) para optimización de consultas.
-- [ ] Ejecutar el proceso de [Normalización](../conceptos/normalizacion.md) final.
+- [ ] Establecer restricciones de integridad ([PK](../conceptos/bases-de-datos/estructura/llave-primaria.md), [FK](../conceptos/bases-de-datos/estructura/llave-foranea.md), `NOT NULL`, `UNIQUE`).
+- [ ] Implementar [índices](../conceptos/bases-de-datos/estructura/indice-bd.md) para optimización de consultas.
+- [ ] Ejecutar el proceso de [Normalización](../conceptos/bases-de-datos/modelado/normalizacion.md) final.
 
 <!-- auto:pie -->
 ---
 
 **Navegación:** [← Anterior: Clase 02: Base de datos](clase-02-base-de-datos.md) · [Índice de Bases de datos](indice.md) · [Siguiente: Clase 04: Normalización de base de datos →](clase-04-normalizacion.md)
-
-**Conceptos de esta lección:** [Atributo](../conceptos/atributo.md), [Tabla (Base de Datos)](../conceptos/tabla.md), [Entidad](../conceptos/entidad.md), [Llave Primaria (PK)](../conceptos/llave-primaria.md), [Sistema Gestor de Base de Datos (SGBD)](../conceptos/sgbd.md), [Llave Foránea (FK)](../conceptos/llave-foranea.md), [Normalización](../conceptos/normalizacion.md), [Cardinalidad](../conceptos/cardinalidad.md), [Modelo Lógico Relacional](../conceptos/modelo-logico-relacional.md), [Modelo Entidad-Relación (MER)](../conceptos/mer.md), [Atributo Multivaluado](../conceptos/atributo-multivaluado.md), [Información](../conceptos/informacion.md), [Escalabilidad](../conceptos/escalabilidad.md), [Persistencia de datos](../conceptos/persistencia.md), [Atomicidad](../conceptos/atomicidad.md)
 <!-- /auto:pie -->

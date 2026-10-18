@@ -9,16 +9,16 @@ tags: ["nodejs"]
 
 ## Introducción
 
-La **[Programación Orientada a Objetos](../conceptos/poo.md) (POO)** es un paradigma de programación que permite organizar un sistema alrededor de **objetos**, agrupando datos y comportamientos relacionados.
+La **[Programación Orientada a Objetos](../conceptos/programacion/poo.md) (POO)** es un paradigma de programación que permite organizar un sistema alrededor de **objetos**, agrupando datos y comportamientos relacionados.
 
-En lugar de mantener una gran cantidad de variables y funciones independientes, la POO permite modelar [entidades](../conceptos/entidad.md) del problema mediante objetos que poseen:
+En lugar de mantener una gran cantidad de variables y funciones independientes, la POO permite modelar [entidades](../conceptos/bases-de-datos/modelado/entidad.md) del problema mediante objetos que poseen:
 
 * **Propiedades:** representan datos o estado.
 * **Métodos:** representan comportamientos.
 * **Encapsulamiento:** controla el acceso al estado interno.
 * **Abstracción:** oculta detalles innecesarios.
-* **[Herencia](../conceptos/herencia.md):** permite reutilizar y especializar comportamientos.
-* **[Polimorfismo](../conceptos/polimorfismo.md):** permite que una misma interfaz pueda tener diferentes implementaciones.
+* **[Herencia](../conceptos/programacion/herencia.md):** permite reutilizar y especializar comportamientos.
+* **[Polimorfismo](../conceptos/programacion/polimorfismo.md):** permite que una misma interfaz pueda tener diferentes implementaciones.
 
 JavaScript es un lenguaje **orientado a objetos y basado en prototipos**. Por tanto, la afirmación de que "JavaScript no es orientado a objetos" es incorrecta. JavaScript soporta múltiples paradigmas, entre ellos el orientado a objetos, pero su modelo fundamental de objetos se basa en **prototipos**, no en un modelo clásico basado exclusivamente en clases.
 
@@ -68,7 +68,7 @@ const producto = {
 };
 ```
 
-El objeto contiene tanto **[información](../conceptos/informacion.md)** como **comportamiento relacionado con esa información**.
+El objeto contiene tanto **[información](../conceptos/fundamentos/dato.md)** como **comportamiento relacionado con esa información**.
 
 ---
 
@@ -1995,7 +1995,7 @@ flowchart TD
 | **Objeto**               | Entidad que contiene propiedades y métodos.                                                                                          |
 | **Clase**                | Estructura utilizada como plantilla para crear y organizar objetos mediante la sintaxis `class`.                                     |
 | **Instancia**            | Objeto concreto creado a partir de una clase.                                                                                        |
-| **Propiedad**            | [Dato](../conceptos/dato.md) o estado asociado a un objeto.                                                                                                  |
+| **Propiedad**            | [Dato](../conceptos/fundamentos/dato.md) o estado asociado a un objeto.                                                                                                  |
 | **Método**               | Función asociada a un objeto o clase que representa comportamiento.                                                                  |
 | **Constructor**          | Método especial ejecutado durante la creación de una instancia mediante `new`.                                                       |
 | **Instanciación**        | Proceso de crear un objeto a partir de una clase.                                                                                    |
@@ -2068,6 +2068,4 @@ flowchart TD
 ---
 
 **Navegación:** [← Anterior: Entornos de Ejecución con Node.js](01-entornos-de-ejecucion.md) · [Índice de Node.js](indice.md) · [Siguiente: Herencia y Polimorfismo en JavaScript →](03-herencia-y-polimorfismo.md)
-
-**Conceptos de esta lección:** [Programación orientada a objetos](../conceptos/poo.md), [Herencia](../conceptos/herencia.md), [Polimorfismo](../conceptos/polimorfismo.md), [Entidad](../conceptos/entidad.md), [Información](../conceptos/informacion.md), [Dato](../conceptos/dato.md)
 <!-- /auto:pie -->

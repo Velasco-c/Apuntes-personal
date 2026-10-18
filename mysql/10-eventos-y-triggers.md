@@ -9,9 +9,9 @@ tags: ["mysql"]
 
 ## Introducción
 
-[MySQL](../conceptos/mysql.md) permite automatizar determinadas tareas mediante **eventos (Events)** y **[triggers](../conceptos/trigger.md) (Triggers)**.
+[MySQL](../conceptos/motores/mysql.md) permite automatizar determinadas tareas mediante **eventos (Events)** y **[triggers](../conceptos/sql/trigger.md) (Triggers)**.
 
-Estas herramientas permiten ejecutar instrucciones [SQL](../conceptos/sql.md) automáticamente como respuesta a:
+Estas herramientas permiten ejecutar instrucciones [SQL](../conceptos/sql/sql.md) automáticamente como respuesta a:
 
 - Un momento específico.
 - Un intervalo de tiempo.
@@ -22,7 +22,7 @@ Estas herramientas permiten ejecutar instrucciones [SQL](../conceptos/sql.md) au
 Aunque ambos mecanismos permiten automatizar tareas, funcionan de manera diferente:
 
 - Los **eventos** se ejecutan según una programación definida.
-- Los **triggers** se ejecutan automáticamente cuando ocurre una operación sobre una [tabla](../conceptos/tabla.md).
+- Los **triggers** se ejecutan automáticamente cuando ocurre una operación sobre una [tabla](../conceptos/bases-de-datos/estructura/tabla.md).
 
 ---
 
@@ -32,14 +32,14 @@ Aunque ambos mecanismos permiten automatizar tareas, funcionan de manera diferen
 
 Un **evento (Event)** en MySQL es una tarea programada que ejecuta automáticamente una o varias instrucciones SQL en un momento específico o de manera recurrente.
 
-Los eventos funcionan internamente dentro del motor de la [base de datos](../conceptos/base-de-datos.md).
+Los eventos funcionan internamente dentro del motor de la [base de datos](../conceptos/bases-de-datos/base-de-datos.md).
 
 Algunos usos comunes son:
 
 - Limpieza automática de registros.
 - Actualización de estadísticas.
 - Generación de reportes periódicos.
-- Archivado de [información](../conceptos/informacion.md).
+- Archivado de [información](../conceptos/fundamentos/dato.md).
 - Actualización programada de datos.
 - Procesos de mantenimiento.
 
@@ -55,7 +55,7 @@ La programación de tareas mediante eventos puede aportar:
 - **Automatización y eficiencia:** evita ejecutar manualmente tareas repetitivas.
 - **Optimización del rendimiento:** permite programar procesos de mantenimiento en horarios adecuados.
 - **Consistencia:** las operaciones programadas se ejecutan de manera uniforme.
-- **[Escalabilidad](../conceptos/escalabilidad.md) y mantenimiento:** facilita la administración de tareas periódicas.
+- **[Escalabilidad](../conceptos/ingenieria/escalabilidad.md) y mantenimiento:** facilita la administración de tareas periódicas.
 - **Adaptabilidad:** permite automatizar procesos que responden a necesidades del negocio.
 - **Reducción de cargas pico:** determinadas tareas pueden programarse en horarios de menor actividad.
 
@@ -65,7 +65,7 @@ La programación de tareas mediante eventos puede aportar:
 
 #### Eventos de una sola ejecución
 
-Son [eventos programados](../conceptos/evento-programado.md) para ejecutarse una sola vez en un momento determinado.
+Son [eventos programados](../conceptos/sql/evento-programado.md) para ejecutarse una sola vez en un momento determinado.
 
 Pueden utilizarse para tareas como:
 
@@ -155,7 +155,7 @@ Al trabajar con eventos es recomendable considerar:
 * Gestión adecuada del tiempo de ejecución.
 * Revisión y mantenimiento periódico.
 * Limitación del alcance del evento.
-* Uso de [transacciones](../conceptos/transaccion.md) cuando sea necesario.
+* Uso de [transacciones](../conceptos/bases-de-datos/transaccion.md) cuando sea necesario.
 * Pruebas rigurosas.
 * Documentación del propósito del evento.
 
@@ -804,6 +804,4 @@ Los **eventos** y los **triggers** son mecanismos de automatización diferentes:
 ---
 
 **Navegación:** [← Anterior: Optimización de Consultas, Transacciones, Particionamiento y Seguridad en MySQL](09-optimizacion-transacciones-y-particionamiento.md) · [Índice de MySQL](indice.md)
-
-**Conceptos de esta lección:** [Trigger](../conceptos/trigger.md), [Tabla (Base de Datos)](../conceptos/tabla.md), [MySQL](../conceptos/mysql.md), [Evento programado](../conceptos/evento-programado.md), [SQL](../conceptos/sql.md), [Base de Datos](../conceptos/base-de-datos.md), [Información](../conceptos/informacion.md), [Escalabilidad](../conceptos/escalabilidad.md), [Transacción](../conceptos/transaccion.md)
 <!-- /auto:pie -->

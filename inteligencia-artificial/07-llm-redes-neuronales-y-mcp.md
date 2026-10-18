@@ -11,13 +11,13 @@ tags: ["inteligencia-artificial"]
 
 ### Visión para Principiantes
 
-Un **Large Language Model ([LLM](../conceptos/llm.md))** o **Modelo de Lenguaje Grande** es un tipo de inteligencia artificial entrenada utilizando enormes cantidades de texto para aprender cómo funciona el lenguaje humano.
+Un **Large Language Model ([LLM](../conceptos/inteligencia-artificial/llm.md))** o **Modelo de Lenguaje Grande** es un tipo de inteligencia artificial entrenada utilizando enormes cantidades de texto para aprender cómo funciona el lenguaje humano.
 
 Un LLM puede:
 
 * Comprender texto.
 * Generar respuestas.
-* Resumir [información](../conceptos/informacion.md).
+* Resumir [información](../conceptos/fundamentos/dato.md).
 * Traducir idiomas.
 * Crear código.
 * Transformar contenido.
@@ -107,7 +107,7 @@ Sus componentes principales son:
 
 ## Profundidad Técnica
 
-La arquitectura Transformer está basada en [redes neuronales](../conceptos/red-neuronal.md) profundas que procesan secuencias mediante mecanismos de atención.
+La arquitectura Transformer está basada en [redes neuronales](../conceptos/inteligencia-artificial/red-neuronal.md) profundas que procesan secuencias mediante mecanismos de atención.
 
 Componentes principales:
 
@@ -302,7 +302,7 @@ Permitieron:
 
 ### Visión para Principiantes
 
-GPT-3 demostró que un modelo podía aprender nuevas tareas solamente observando ejemplos dentro del [prompt](../conceptos/prompt.md).
+GPT-3 demostró que un modelo podía aprender nuevas tareas solamente observando ejemplos dentro del [prompt](../conceptos/inteligencia-artificial/prompt.md).
 
 ---
 
@@ -527,7 +527,7 @@ E --> F[Clasificación final]
 
 ### Visión para Principiantes
 
-**[Model Context Protocol](../conceptos/mcp.md) (MCP)** es un estándar abierto creado para permitir que los modelos de inteligencia artificial puedan conectarse fácilmente con herramientas y datos externos.
+**[Model Context Protocol](../conceptos/inteligencia-artificial/mcp.md) (MCP)** es un estándar abierto creado para permitir que los modelos de inteligencia artificial puedan conectarse fácilmente con herramientas y datos externos.
 
 Ejemplos:
 
@@ -535,7 +535,7 @@ Una IA puede conectarse con:
 
 * Google Drive.
 * GitHub.
-* [Bases de datos](../conceptos/base-de-datos.md).
+* [Bases de datos](../conceptos/bases-de-datos/base-de-datos.md).
 * Sistemas empresariales.
 
 ---
@@ -610,7 +610,7 @@ Problema:
 
 * Muchas conexiones.
 * Alto mantenimiento.
-* Poco [escalable](../conceptos/escalabilidad.md).
+* Poco [escalable](../conceptos/ingenieria/escalabilidad.md).
 
 ---
 
@@ -729,7 +729,7 @@ MCP no reemplaza las integraciones existentes.
 
 Las organiza y estandariza utilizando conceptos como:
 
-**[Function Calling](../conceptos/function-calling.md)**
+**[Function Calling](../conceptos/inteligencia-artificial/function-calling.md)**
 
 La IA puede solicitar ejecutar una función externa.
 
@@ -785,6 +785,4 @@ Por esta razón, tecnologías como **RAG, evaluación de prompts y MCP** permite
 ---
 
 **Navegación:** [← Anterior: Mitigación de Alucinaciones en Modelos de Lenguaje mediante Ajustes de Instrucciones](06-mitigacion-de-alucinaciones.md) · [Índice de Inteligencia artificial](indice.md) · [Siguiente: Refactorización Asistida por Inteligencia Artificial y Generación de Funciones mediante LLM →](08-refactorizacion-asistida-por-ia.md)
-
-**Conceptos de esta lección:** [Model Context Protocol (MCP)](../conceptos/mcp.md), [Modelo de lenguaje de gran escala (LLM)](../conceptos/llm.md), [Red neuronal](../conceptos/red-neuronal.md), [Información](../conceptos/informacion.md), [Prompt](../conceptos/prompt.md), [Function calling](../conceptos/function-calling.md), [Escalabilidad](../conceptos/escalabilidad.md), [Base de Datos](../conceptos/base-de-datos.md)
 <!-- /auto:pie -->

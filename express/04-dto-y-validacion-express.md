@@ -9,7 +9,7 @@ tags: ["express"]
 
 ## Introducción
 
-Cuando una [API](../conceptos/api.md) recibe datos del cliente, esos datos no siempre llegan completos ni con el formato esperado. Esta lección muestra cómo usar un [DTO](../conceptos/dto.md) para definir la forma de los datos, [validarlos](../conceptos/validacion-de-datos.md) y [sanearlos](../conceptos/sanitizacion-de-datos.md) con [express-validator](../conceptos/express-validator.md), y cómo responder a los errores de forma uniforme con un [manejo centralizado de errores](../conceptos/manejo-centralizado-de-errores.md).
+Cuando una [API](../conceptos/web/api.md) recibe datos del cliente, esos datos no siempre llegan completos ni con el formato esperado. Esta lección muestra cómo usar un [DTO](../conceptos/ingenieria/dto.md) para definir la forma de los datos, [validarlos](../conceptos/ingenieria/validacion-de-datos.md) y [sanearlos](../conceptos/ingenieria/sanitizacion-de-datos.md) con [express-validator](../conceptos/web/express-validator.md), y cómo responder a los errores de forma uniforme con un [manejo centralizado de errores](../conceptos/ingenieria/manejo-centralizado-de-errores.md).
 
 ---
 
@@ -36,7 +36,7 @@ Un DTO tiene estas características:
 
 ### 1.1 Implementación básica
 
-El siguiente ejemplo no usa [Express](../conceptos/express.md). Muestra la idea del DTO y una validación manual, que después se reemplazará por express-validator:
+El siguiente ejemplo no usa [Express](../conceptos/web/express.md). Muestra la idea del DTO y una validación manual, que después se reemplazará por express-validator:
 
 ```javascript
 // DTO: define la forma de los datos del usuario
@@ -180,7 +180,7 @@ app.listen(3000, () => {
 | `notEmpty()` | Exige que el campo tenga un valor |
 | `isString()`, `isEmail()`, `isInt()` | Validan el tipo o el formato |
 | `withMessage()` | Define el mensaje que se devuelve si la regla falla |
-| `trim()`, `normalizeEmail()`, `toInt()` | Sanean el [dato](../conceptos/dato.md): limpian o convierten el valor |
+| `trim()`, `normalizeEmail()`, `toInt()` | Sanean el [dato](../conceptos/fundamentos/dato.md): limpian o convierten el valor |
 | `validationResult(req)` | Reúne los errores de todas las reglas de la petición |
 
 Las reglas se ejecutan antes del controlador. Si hay errores, la respuesta es `400` y el controlador no se ejecuta. Si no los hay, el controlador crea el DTO y responde.
@@ -230,7 +230,7 @@ body('email')
     .withMessage('Ingrese un correo electrónico válido');
 ```
 
-En la segunda versión, la comprobación de errores se mueve a un [middleware](../conceptos/middleware.md) reutilizable, y la ruta se define una sola vez con `app.route()`:
+En la segunda versión, la comprobación de errores se mueve a un [middleware](../conceptos/web/middleware.md) reutilizable, y la ruta se define una sola vez con `app.route()`:
 
 ```javascript
 import express from 'express';
@@ -307,7 +307,7 @@ Los cambios de esta versión son:
 
 ## 5. Manejo centralizado de errores
 
-En la tercera versión, `handleValidationErrors` no responde directamente. Crea un error con su [código de estado](../conceptos/codigo-de-estado-http.md) y lo pasa con `next(err)` a un manejador global. Así, todas las respuestas de error tienen el mismo formato:
+En la tercera versión, `handleValidationErrors` no responde directamente. Crea un error con su [código de estado](../conceptos/web/codigo-de-estado-http.md) y lo pasa con `next(err)` a un manejador global. Así, todas las respuestas de error tienen el mismo formato:
 
 ```javascript
 import express from 'express';
@@ -487,11 +487,11 @@ Respuesta del caso `403`:
 
 ## Conexiones
 
-* [API, estados HTTP, parámetros, middlewares y routers en Express.js](02-api-http-middlewares-routers.md): códigos de estado, middlewares y [routers](../conceptos/router.md).
-* [Persistencia de datos con MySQL y Node.js](../nodejs/08-persistencia-con-mysql.md) y [Conexión de Node.js y Express con MySQL](03-conexion-nodejs-express-mysql.md): el DTO de entrada se usaría para insertar datos en la [tabla](../conceptos/tabla.md) `productos` o `usuarios`.
+* [API, estados HTTP, parámetros, middlewares y routers en Express.js](02-api-http-middlewares-routers.md): códigos de estado, middlewares y [routers](../conceptos/web/router.md).
+* [Persistencia de datos con MySQL y Node.js](../nodejs/08-persistencia-con-mysql.md) y [Conexión de Node.js y Express con MySQL](03-conexion-nodejs-express-mysql.md): el DTO de entrada se usaría para insertar datos en la [tabla](../conceptos/bases-de-datos/estructura/tabla.md) `productos` o `usuarios`.
 * [Principios de diseño — SOLID](../nodejs/05-principios-solid.md): separar la validación, la lógica de negocio y la respuesta en componentes distintos.
-* [Patrón de diseño](../conceptos/patron-de-diseno.md): el DTO es uno de los patrones que facilitan la separación de capas.
-* [JSON](../conceptos/json.md): formato de los datos que llegan en la petición y que la API devuelve.
+* [Patrón de diseño](../conceptos/ingenieria/patron-de-diseno.md): el DTO es uno de los patrones que facilitan la separación de capas.
+* [JSON](../conceptos/formatos/json.md): formato de los datos que llegan en la petición y que la API devuelve.
 
 ---
 
@@ -507,6 +507,4 @@ Respuesta del caso `403`:
 ---
 
 **Navegación:** [← Anterior: Conexión de Node.js y Express con MySQL](03-conexion-nodejs-express-mysql.md) · [Índice de Express](indice.md)
-
-**Conceptos de esta lección:** [DTO (Data Transfer Object)](../conceptos/dto.md), [Middleware](../conceptos/middleware.md), [express-validator](../conceptos/express-validator.md), [Express.js](../conceptos/express.md), [API (Interfaz de programación de aplicaciones)](../conceptos/api.md), [Node.js](../conceptos/nodejs.md), [Código de estado HTTP](../conceptos/codigo-de-estado-http.md), [Router](../conceptos/router.md), [Manejo centralizado de errores](../conceptos/manejo-centralizado-de-errores.md), [Patrón de diseño](../conceptos/patron-de-diseno.md), [HTTP](../conceptos/http.md), [MySQL](../conceptos/mysql.md), [Validación de datos](../conceptos/validacion-de-datos.md), [Dato](../conceptos/dato.md), [Persistencia de datos](../conceptos/persistencia.md)
 <!-- /auto:pie -->

@@ -9,20 +9,20 @@ tags: ["bases-de-datos"]
 
 ## Diseño, Implementación y Gestión de Bases de Datos Relacionales
 
-El ciclo de vida de una [base de datos relacional](../conceptos/base-de-datos-relacional.md) transita desde una concepción abstracta hasta su materialización en un sistema físico. Comprender este flujo es esencial para cualquier desarrollador que busque construir sistemas robustos y eficientes.
+El ciclo de vida de una [base de datos relacional](../conceptos/bases-de-datos/base-de-datos-relacional.md) transita desde una concepción abstracta hasta su materialización en un sistema físico. Comprender este flujo es esencial para cualquier desarrollador que busque construir sistemas robustos y eficientes.
 
 ## I. Flujo del Diseño de Bases de Datos
 
-1. **Modelo Conceptual:** Identificación de las [entidades](../conceptos/entidad.md), [atributos](../conceptos/atributo.md) y relaciones del negocio, independiente de cualquier tecnología.
+1. **Modelo Conceptual:** Identificación de las [entidades](../conceptos/bases-de-datos/modelado/entidad.md), [atributos](../conceptos/bases-de-datos/modelado/atributo.md) y relaciones del negocio, independiente de cualquier tecnología.
     
-2. **Esquema Lógico:** Traducción del modelo conceptual a estructuras de [tablas](../conceptos/tabla.md), definiendo [claves primarias](../conceptos/llave-primaria.md), foráneas y [normalización](../conceptos/normalizacion.md) de los datos.
+2. **Esquema Lógico:** Traducción del modelo conceptual a estructuras de [tablas](../conceptos/bases-de-datos/estructura/tabla.md), definiendo [claves primarias](../conceptos/bases-de-datos/estructura/llave-primaria.md), foráneas y [normalización](../conceptos/bases-de-datos/modelado/normalizacion.md) de los datos.
     
-3. **Diseño Físico:** Implementación técnica en un [Sistema de Gestión de Bases de Datos](../conceptos/sgbd.md) (SGBD). Aquí se definen los tipos de datos, estructuras de almacenamiento en memoria secundaria, [índices](../conceptos/indice.md) para optimización y restricciones de integridad.
+3. **Diseño Físico:** Implementación técnica en un [Sistema de Gestión de Bases de Datos](../conceptos/bases-de-datos/sgbd.md) (SGBD). Aquí se definen los tipos de datos, estructuras de almacenamiento en memoria secundaria, [índices](../conceptos/bases-de-datos/estructura/indice-bd.md) para optimización y restricciones de integridad.
     
 
 ## II. Gestión y Restricciones (DDL)
 
-Las **restricciones (_constraints_)** son reglas aplicadas a las columnas para asegurar la integridad y calidad de la [información](../conceptos/informacion.md):
+Las **restricciones (_constraints_)** son reglas aplicadas a las columnas para asegurar la integridad y calidad de la [información](../conceptos/fundamentos/dato.md):
 
 - **NOT NULL:** Garantiza que un campo contenga obligatoriamente un valor.
     
@@ -32,16 +32,16 @@ Las **restricciones (_constraints_)** son reglas aplicadas a las columnas para a
     
 - **PRIMARY KEY (PK):** Identificador único del registro; implica implícitamente `NOT NULL`.
     
-- **FOREIGN KEY ([FK](../conceptos/llave-foranea.md)):** Establece la relación entre tablas, manteniendo la integridad referencial.
+- **FOREIGN KEY ([FK](../conceptos/bases-de-datos/estructura/llave-foranea.md)):** Establece la relación entre tablas, manteniendo la integridad referencial.
     
 - **DEFAULT:** Asigna un valor predeterminado si no se especifica ninguno.
     
-- **[Triggers](../conceptos/trigger.md) (Desencadenadores):** Procedimientos automáticos que se ejecutan ante eventos como `INSERT`, `UPDATE` o `DELETE`.
+- **[Triggers](../conceptos/sql/trigger.md) (Desencadenadores):** Procedimientos automáticos que se ejecutan ante eventos como `INSERT`, `UPDATE` o `DELETE`.
     
 
 ## III. Lenguaje SQL: Definición, Manipulación y Consulta
 
-[SQL](../conceptos/sql.md) se divide en categorías funcionales que permiten gestionar el ciclo de vida de los datos:
+[SQL](../conceptos/sql/sql.md) se divide en categorías funcionales que permiten gestionar el ciclo de vida de los datos:
 
 - **DDL (Data Definition Language):** Define la estructura (`CREATE`, `ALTER`, `DROP`).
     
@@ -93,7 +93,7 @@ Para interactuar con la información, empleamos consultas que permiten filtrar, 
     INSERT INTO estudiante (nombre, correo, edad) VALUES ("Carlos Velasco", "carlos.velasco@gmail.com", 20);
     ```
     
-- **Consultas Avanzadas y [Joins](../conceptos/join.md):**
+- **Consultas Avanzadas y [Joins](../conceptos/sql/join.md):**
     
     Para obtener información integrada de múltiples tablas, utilizamos `INNER JOIN`:
     
@@ -121,7 +121,7 @@ Para interactuar con la información, empleamos consultas que permiten filtrar, 
 
 ## V. Consideraciones del SGBD
 
-La elección del motor ([MySQL](../conceptos/mysql.md), [PostgreSQL](../conceptos/postgresql.md), Oracle, SQL Server, SQLite) debe basarse en las necesidades del proyecto. Por ejemplo, **SQLite** es ideal para aplicaciones locales o prototipado rápido debido a su arquitectura basada en archivos, mientras que **PostgreSQL** o **Oracle** son preferibles para entornos empresariales que requieren concurrencia masiva y alta disponibilidad.
+La elección del motor ([MySQL](../conceptos/motores/mysql.md), [PostgreSQL](../conceptos/motores/postgresql.md), Oracle, SQL Server, SQLite) debe basarse en las necesidades del proyecto. Por ejemplo, **SQLite** es ideal para aplicaciones locales o prototipado rápido debido a su arquitectura basada en archivos, mientras que **PostgreSQL** o **Oracle** son preferibles para entornos empresariales que requieren concurrencia masiva y alta disponibilidad.
 
 **Nota técnica:** Siempre asegúrese de activar las restricciones de llaves foráneas en SQLite al iniciar la sesión: `PRAGMA foreign_keys = ON;`.
 
@@ -129,6 +129,4 @@ La elección del motor ([MySQL](../conceptos/mysql.md), [PostgreSQL](../concepto
 ---
 
 **Navegación:** [← Anterior: Clase 05: Esquemas de diseño de bases de datos relacionales](clase-05-esquemas-de-diseno.md) · [Índice de Bases de datos](indice.md)
-
-**Conceptos de esta lección:** [SQL](../conceptos/sql.md), [Tabla (Base de Datos)](../conceptos/tabla.md), [Información](../conceptos/informacion.md), [Sistema Gestor de Base de Datos (SGBD)](../conceptos/sgbd.md), [Base de Datos](../conceptos/base-de-datos.md), [Base de Datos Relacional](../conceptos/base-de-datos-relacional.md), [Llave Primaria (PK)](../conceptos/llave-primaria.md), [Llave Foránea (FK)](../conceptos/llave-foranea.md), [PostgreSQL](../conceptos/postgresql.md), [Entidad](../conceptos/entidad.md), [Atributo](../conceptos/atributo.md), [Normalización](../conceptos/normalizacion.md), [Índice](../conceptos/indice.md), [Trigger](../conceptos/trigger.md), [JOIN](../conceptos/join.md)
 <!-- /auto:pie -->

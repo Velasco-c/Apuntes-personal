@@ -9,9 +9,9 @@ tags: ["express"]
 
 ## Introducción
 
-[Node.js](../conceptos/nodejs.md) es un entorno de ejecución de código abierto y multiplataforma que permite ejecutar JavaScript fuera del navegador. Está orientado a operaciones asíncronas y basadas en eventos: una tarea que espera una respuesta, como una consulta a una [base de datos](../conceptos/base-de-datos.md), no detiene el resto del programa. Esto permite construir aplicaciones en red [escalables](../conceptos/escalabilidad.md).
+[Node.js](../conceptos/nodejs/nodejs.md) es un entorno de ejecución de código abierto y multiplataforma que permite ejecutar JavaScript fuera del navegador. Está orientado a operaciones asíncronas y basadas en eventos: una tarea que espera una respuesta, como una consulta a una [base de datos](../conceptos/bases-de-datos/base-de-datos.md), no detiene el resto del programa. Esto permite construir aplicaciones en red [escalables](../conceptos/ingenieria/escalabilidad.md).
 
-Sobre Node.js se construye [Express.js](../conceptos/express.md), un marco de trabajo que simplifica el desarrollo de aplicaciones web y APIs. Esta lección presenta las herramientas básicas del área: [npm](../conceptos/npm.md), [nvm](../conceptos/nvm.md), Express.js, el [modelo cliente-servidor](../conceptos/modelo-cliente-servidor.md), los [middlewares](../conceptos/middleware.md), [nodemon](../conceptos/nodemon.md) y [dotenv](../conceptos/dotenv.md).
+Sobre Node.js se construye [Express.js](../conceptos/web/express.md), un marco de trabajo que simplifica el desarrollo de aplicaciones web y APIs. Esta lección presenta las herramientas básicas del área: [npm](../conceptos/nodejs/npm.md), [nvm](../conceptos/nodejs/nvm.md), Express.js, el [modelo cliente-servidor](../conceptos/web/modelo-cliente-servidor.md), los [middlewares](../conceptos/web/middleware.md), [nodemon](../conceptos/nodejs/nodemon.md) y [dotenv](../conceptos/nodejs/dotenv.md).
 
 ---
 
@@ -32,7 +32,7 @@ Node.js es:
 
 ## 2. npm (Node Package Manager)
 
-[npm](../conceptos/npm.md) es el gestor de paquetes de Node.js y una parte esencial del ecosistema. Se alimenta del registro en línea donde se publican los paquetes reutilizables y permite instalar, actualizar, configurar y eliminar programas y librerías de JavaScript.
+[npm](../conceptos/nodejs/npm.md) es el gestor de paquetes de Node.js y una parte esencial del ecosistema. Se alimenta del registro en línea donde se publican los paquetes reutilizables y permite instalar, actualizar, configurar y eliminar programas y librerías de JavaScript.
 
 ```bash
 npm init -y                      # crea el archivo package.json
@@ -46,7 +46,7 @@ npm update                       # actualiza las dependencias según su rango de
 
 ## 3. nvm (Node Version Manager)
 
-[nvm](../conceptos/nvm.md) administra las versiones de Node.js instaladas en el equipo. Permite tener varias versiones, cambiar entre ellas e instalar o desinstalar una versión específica. Es útil cuando se quiere actualizar Node.js o cuando un proyecto necesita una versión concreta.
+[nvm](../conceptos/nodejs/nvm.md) administra las versiones de Node.js instaladas en el equipo. Permite tener varias versiones, cambiar entre ellas e instalar o desinstalar una versión específica. Es útil cuando se quiere actualizar Node.js o cuando un proyecto necesita una versión concreta.
 
 ```bash
 nvm ls-remote        # lista las versiones disponibles
@@ -62,7 +62,7 @@ nvm ls               # muestra las versiones instaladas
 
 ## 4. Express.js
 
-[Express.js](../conceptos/express.md) es un marco de trabajo minimalista y flexible para Node.js. Proporciona solo las herramientas esenciales: definición de rutas, middlewares, manejo de peticiones y respuestas HTTP, y configuración del servidor. El resto se agrega según las necesidades del proyecto.
+[Express.js](../conceptos/web/express.md) es un marco de trabajo minimalista y flexible para Node.js. Proporciona solo las herramientas esenciales: definición de rutas, middlewares, manejo de peticiones y respuestas HTTP, y configuración del servidor. El resto se agrega según las necesidades del proyecto.
 
 Se instala como cualquier dependencia:
 
@@ -74,7 +74,7 @@ npm install express
 
 ## 5. Modelo cliente-servidor
 
-En el [modelo cliente-servidor](../conceptos/modelo-cliente-servidor.md):
+En el [modelo cliente-servidor](../conceptos/web/modelo-cliente-servidor.md):
 
 * El **servidor**, construido con Express, actúa como proveedor de recursos y servicios.
 * El **cliente**, como un navegador web, consume esos recursos y servicios mediante peticiones HTTP.
@@ -94,7 +94,7 @@ Con Express se pueden definir rutas para manejar distintos métodos HTTP, usar m
 
 ## 6. Middleware
 
-Un [middleware](../conceptos/middleware.md) es una función que recibe el objeto de solicitud (`req`), el objeto de respuesta (`res`) y la función `next`. Los middlewares forman una pila que se ejecuta en secuencia cuando llega una petición HTTP.
+Un [middleware](../conceptos/web/middleware.md) es una función que recibe el objeto de solicitud (`req`), el objeto de respuesta (`res`) y la función `next`. Los middlewares forman una pila que se ejecuta en secuencia cuando llega una petición HTTP.
 
 Un middleware puede procesar datos de la petición, modificar la respuesta, autenticar usuarios, gestionar errores u otras tareas. Cuando termina su trabajo, pasa el control al siguiente middleware con `next()`.
 
@@ -181,9 +181,9 @@ Express 5 pasa los argumentos de `app.listen` a `server.listen` de Node.js. Por 
 
 ### 8.1 ¿Qué hace nodemon?
 
-[nodemon](../conceptos/nodemon.md) (*node monitor*) es una herramienta de desarrollo que observa los archivos del proyecto y reinicia el servidor automáticamente cuando detecta cambios.
+[nodemon](../conceptos/nodejs/nodemon.md) (*node monitor*) es una herramienta de desarrollo que observa los archivos del proyecto y reinicia el servidor automáticamente cuando detecta cambios.
 
-* **Monitoreo automático:** observa archivos como JavaScript, [JSON](../conceptos/json.md), HTML y CSS.
+* **Monitoreo automático:** observa archivos como JavaScript, [JSON](../conceptos/formatos/json.md), HTML y CSS.
 * **Reinicio automático:** al guardar un cambio, reinicia el servidor sin que haya que detenerlo y ejecutarlo de nuevo.
 * **Configuración:** permite ignorar archivos o carpetas, como `node_modules`.
 * **Integración:** se ejecuta desde los scripts de npm y funciona con frameworks como Express.
@@ -226,7 +226,7 @@ Para personalizar el comportamiento, crea un archivo `nodemon.json` en la raíz 
 
 ## 9. dotenv
 
-[dotenv](../conceptos/dotenv.md) es una biblioteca que carga las variables definidas en un archivo `.env` dentro de `process.env` cuando arranca la aplicación.
+[dotenv](../conceptos/nodejs/dotenv.md) es una biblioteca que carga las variables definidas en un archivo `.env` dentro de `process.env` cuando arranca la aplicación.
 
 El archivo `.env` es de texto plano y contiene pares clave-valor, sin espacios alrededor del signo `=`:
 
@@ -285,7 +285,7 @@ console.log(process.env.API_KEY);
 > Usa `npm run dev` durante el desarrollo y `npm start` para ejecutar la aplicación de forma normal. Para que `npm start` funcione, el script debe estar definido en `package.json`, por ejemplo `"start": "node app.js"`.
 
 > [!NOTE]
-> Express no es una base de datos. Los datos se conservan en almacenes externos, como MySQL, que se estudian en las lecciones de [persistencia](../conceptos/persistencia.md).
+> Express no es una base de datos. Los datos se conservan en almacenes externos, como MySQL, que se estudian en las lecciones de [persistencia](../conceptos/fundamentos/persistencia.md).
 
 ---
 
@@ -293,9 +293,9 @@ console.log(process.env.API_KEY);
 
 * [Entornos de ejecución con Node.js](../nodejs/01-entornos-de-ejecucion.md): arquitectura de Node.js, `package.json` y registros de npm en profundidad.
 * [Principios de diseño — SOLID](../nodejs/05-principios-solid.md): base para separar rutas, controladores y servicios en un proyecto Express.
-* [Introducción a la persistencia de datos](../nodejs/07-introduccion-a-persistencia.md): por qué una aplicación necesita guardar [información](../conceptos/informacion.md).
+* [Introducción a la persistencia de datos](../nodejs/07-introduccion-a-persistencia.md): por qué una aplicación necesita guardar [información](../conceptos/fundamentos/dato.md).
 * [Persistencia de datos con MySQL y Node.js](../nodejs/08-persistencia-con-mysql.md): el siguiente paso, conectar una aplicación Node.js con una base de datos.
-* [MySQL](../conceptos/mysql.md): [sistema gestor de bases de datos](../conceptos/sgbd.md) que se usará en los ejemplos de persistencia.
+* [MySQL](../conceptos/motores/mysql.md): [sistema gestor de bases de datos](../conceptos/bases-de-datos/sgbd.md) que se usará en los ejemplos de persistencia.
 
 ---
 
@@ -312,7 +312,5 @@ console.log(process.env.API_KEY);
 <!-- auto:pie -->
 ---
 
-**Navegación:** [Índice de Express](indice.md)
-
-**Conceptos de esta lección:** [Node.js](../conceptos/nodejs.md), [Express.js](../conceptos/express.md), [Middleware](../conceptos/middleware.md), [nodemon](../conceptos/nodemon.md), [npm (Node Package Manager)](../conceptos/npm.md), [nvm (Node Version Manager)](../conceptos/nvm.md), [dotenv](../conceptos/dotenv.md), [Modelo cliente-servidor](../conceptos/modelo-cliente-servidor.md), [Persistencia de datos](../conceptos/persistencia.md), [Base de Datos](../conceptos/base-de-datos.md), [MySQL](../conceptos/mysql.md), [Escalabilidad](../conceptos/escalabilidad.md), [JSON](../conceptos/json.md), [Principios SOLID](../conceptos/solid.md), [Información](../conceptos/informacion.md)
+**Navegación:** [Índice de Express](indice.md) · [Siguiente: API, estados HTTP, parámetros, middlewares y routers en Express.js →](02-api-http-middlewares-routers.md)
 <!-- /auto:pie -->

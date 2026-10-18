@@ -5,7 +5,7 @@ tags: ["mapa"]
 
 # Mapa de contenidos
 
-Esta página reúne todas las lecciones en orden de estudio y todos los conceptos de la red. Las listas se generan solas con `herramientas/mantenimiento.py`.
+Esta página reúne todas las lecciones en orden de estudio y todos los conceptos, agrupados por categoría. Las listas se generan solas con `herramientas/mantenimiento.py`.
 
 <!-- auto:mapa -->
 ## Bases de datos
@@ -62,62 +62,125 @@ Esta página reúne todas las lecciones en orden de estudio y todos los concepto
 8. [Refactorización Asistida por Inteligencia Artificial y Generación de Funciones mediante LLM](inteligencia-artificial/08-refactorizacion-asistida-por-ia.md)
 9. [Testeo Automatizado con Sugerencias de IA, PocketFlow y Automatización con n8n](inteligencia-artificial/09-testeo-automatizado-con-ia-y-pocketflow.md)
 
+## Express
+
+1. [Introducción a Node.js con Express.js](express/01-introduccion-nodejs-expressjs.md)
+2. [API, estados HTTP, parámetros, middlewares y routers en Express.js](express/02-api-http-middlewares-routers.md)
+3. [Conexión de Node.js y Express con MySQL](express/03-conexion-nodejs-express-mysql.md)
+4. [DTO y validación de datos en Node.js con Express](express/04-dto-y-validacion-express.md)
+
 ## Conceptos
 
-- [Alucinación](conceptos/alucinacion.md)
-- [Atomicidad](conceptos/atomicidad.md)
-- [Atributo](conceptos/atributo.md)
-- [Atributo Compuesto](conceptos/atributo-compuesto.md)
-- [Atributo Multivaluado](conceptos/atributo-multivaluado.md)
-- [Base de conocimiento](conceptos/base-de-conocimiento.md)
-- [Base de Datos](conceptos/base-de-datos.md)
-- [Base de Datos Relacional](conceptos/base-de-datos-relacional.md)
-- [Cardinalidad](conceptos/cardinalidad.md)
-- [CRUD](conceptos/crud.md)
-- [CTE](conceptos/cte.md)
-- [Dato](conceptos/dato.md)
-- [DOM](conceptos/dom.md)
-- [Entidad](conceptos/entidad.md)
-- [Escalabilidad](conceptos/escalabilidad.md)
-- [Evento programado](conceptos/evento-programado.md)
-- [Función de ventana](conceptos/funcion-de-ventana.md)
-- [Function calling](conceptos/function-calling.md)
-- [Herencia](conceptos/herencia.md)
-- [Información](conceptos/informacion.md)
-- [JOIN](conceptos/join.md)
-- [JSON](conceptos/json.md)
-- [Llave Foránea (FK)](conceptos/llave-foranea.md)
-- [Llave Primaria (PK)](conceptos/llave-primaria.md)
-- [Llaves (Base de Datos)](conceptos/llaves.md)
-- [Model Context Protocol (MCP)](conceptos/mcp.md)
-- [Modelo de lenguaje de gran escala (LLM)](conceptos/llm.md)
-- [Modelo Entidad-Relación (MER)](conceptos/mer.md)
-- [Modelo Lógico Relacional](conceptos/modelo-logico-relacional.md)
-- [Motor de inferencia](conceptos/motor-de-inferencia.md)
-- [MySQL](conceptos/mysql.md)
-- [Node.js](conceptos/nodejs.md)
-- [Normalización](conceptos/normalizacion.md)
-- [Patrón de diseño](conceptos/patron-de-diseno.md)
-- [Persistencia de datos](conceptos/persistencia.md)
-- [Polimorfismo](conceptos/polimorfismo.md)
-- [Pool de conexiones](conceptos/pool-de-conexiones.md)
-- [PostgreSQL](conceptos/postgresql.md)
-- [Prepared statement](conceptos/prepared-statement.md)
-- [Principios SOLID](conceptos/solid.md)
-- [Procedimiento almacenado](conceptos/procedimiento-almacenado.md)
-- [Programación orientada a objetos](conceptos/poo.md)
-- [Prompt](conceptos/prompt.md)
-- [Red neuronal](conceptos/red-neuronal.md)
-- [Relación entre entidades](conceptos/relacion.md)
-- [Sistema experto](conceptos/sistema-experto.md)
-- [Sistema Gestor de Base de Datos (SGBD)](conceptos/sgbd.md)
-- [SQL](conceptos/sql.md)
-- [Tabla (Base de Datos)](conceptos/tabla.md)
-- [Testing automatizado](conceptos/testing.md)
-- [Transacción](conceptos/transaccion.md)
-- [Trigger](conceptos/trigger.md)
-- [Tupla](conceptos/tupla.md)
-- [Vista](conceptos/vista.md)
-- [XML](conceptos/xml.md)
-- [Índice](conceptos/indice.md)
+### Fundamentos
+
+- [Dato](conceptos/fundamentos/dato.md)
+- [Persistencia de datos](conceptos/fundamentos/persistencia.md)
+- [Variable de entorno](conceptos/fundamentos/variable-de-entorno.md)
+
+### Bases de datos
+
+- [Base de datos](conceptos/bases-de-datos/base-de-datos.md)
+- [Base de datos relacional](conceptos/bases-de-datos/base-de-datos-relacional.md)
+- [Sistema gestor de bases de datos (SGBD)](conceptos/bases-de-datos/sgbd.md)
+- [Transacción](conceptos/bases-de-datos/transaccion.md)
+
+#### Modelado de datos
+
+- [Atributo](conceptos/bases-de-datos/modelado/atributo.md)
+- [Cardinalidad](conceptos/bases-de-datos/modelado/cardinalidad.md)
+- [Entidad](conceptos/bases-de-datos/modelado/entidad.md)
+- [Modelo entidad-relación (MER)](conceptos/bases-de-datos/modelado/mer.md)
+- [Modelo lógico relacional](conceptos/bases-de-datos/modelado/modelo-logico-relacional.md)
+- [Normalización](conceptos/bases-de-datos/modelado/normalizacion.md)
+- [Relación entre entidades](conceptos/bases-de-datos/modelado/relacion.md)
+
+#### Estructura y claves
+
+- [Llave (clave)](conceptos/bases-de-datos/estructura/llave.md)
+- [Llave foránea (FK)](conceptos/bases-de-datos/estructura/llave-foranea.md)
+- [Llave primaria (PK)](conceptos/bases-de-datos/estructura/llave-primaria.md)
+- [Tabla](conceptos/bases-de-datos/estructura/tabla.md)
+- [Tupla](conceptos/bases-de-datos/estructura/tupla.md)
+- [Vista](conceptos/bases-de-datos/estructura/vista.md)
+- [Índice de base de datos](conceptos/bases-de-datos/estructura/indice-bd.md)
+
+### SQL
+
+- [CRUD](conceptos/sql/crud.md)
+- [CTE](conceptos/sql/cte.md)
+- [Evento programado](conceptos/sql/evento-programado.md)
+- [Función de ventana](conceptos/sql/funcion-de-ventana.md)
+- [JOIN](conceptos/sql/join.md)
+- [Procedimiento almacenado](conceptos/sql/procedimiento-almacenado.md)
+- [SQL](conceptos/sql/sql.md)
+- [Trigger](conceptos/sql/trigger.md)
+
+### Motores de base de datos
+
+- [MySQL](conceptos/motores/mysql.md)
+- [PostgreSQL](conceptos/motores/postgresql.md)
+
+### Acceso a datos desde una aplicación
+
+- [Controlador de base de datos](conceptos/acceso-a-datos/controlador-de-base-de-datos.md)
+- [Inyección SQL](conceptos/acceso-a-datos/inyeccion-sql.md)
+- [Pool de conexiones](conceptos/acceso-a-datos/pool-de-conexiones.md)
+- [Prepared statement](conceptos/acceso-a-datos/prepared-statement.md)
+
+### Programación orientada a objetos
+
+- [Herencia](conceptos/programacion/herencia.md)
+- [Polimorfismo](conceptos/programacion/polimorfismo.md)
+- [Programación orientada a objetos](conceptos/programacion/poo.md)
+
+### Ingeniería de software
+
+- [DTO (Data Transfer Object)](conceptos/ingenieria/dto.md)
+- [Escalabilidad](conceptos/ingenieria/escalabilidad.md)
+- [Manejo centralizado de errores](conceptos/ingenieria/manejo-centralizado-de-errores.md)
+- [Patrón de diseño](conceptos/ingenieria/patron-de-diseno.md)
+- [Principios SOLID](conceptos/ingenieria/solid.md)
+- [Sanitización de datos](conceptos/ingenieria/sanitizacion-de-datos.md)
+- [Testing automatizado](conceptos/ingenieria/testing.md)
+- [Validación de datos](conceptos/ingenieria/validacion-de-datos.md)
+
+### Node.js y herramientas
+
+- [dotenv](conceptos/nodejs/dotenv.md)
+- [Node.js](conceptos/nodejs/nodejs.md)
+- [nodemon](conceptos/nodejs/nodemon.md)
+- [npm (Node Package Manager)](conceptos/nodejs/npm.md)
+- [nvm (Node Version Manager)](conceptos/nodejs/nvm.md)
+
+### Web y APIs
+
+- [API](conceptos/web/api.md)
+- [Código de estado HTTP](conceptos/web/codigo-de-estado-http.md)
+- [DOM (Document Object Model)](conceptos/web/dom.md)
+- [Encabezado HTTP](conceptos/web/encabezado-http.md)
+- [Endpoint](conceptos/web/endpoint.md)
+- [Express](conceptos/web/express.md)
+- [express-validator](conceptos/web/express-validator.md)
+- [HTTP](conceptos/web/http.md)
+- [Middleware](conceptos/web/middleware.md)
+- [Modelo cliente-servidor](conceptos/web/modelo-cliente-servidor.md)
+- [Parámetro de ruta](conceptos/web/parametro-de-ruta.md)
+- [Router](conceptos/web/router.md)
+
+### Formatos de datos
+
+- [JSON](conceptos/formatos/json.md)
+- [XML](conceptos/formatos/xml.md)
+
+### Inteligencia artificial
+
+- [Alucinación](conceptos/inteligencia-artificial/alucinacion.md)
+- [Base de conocimiento](conceptos/inteligencia-artificial/base-de-conocimiento.md)
+- [Function calling](conceptos/inteligencia-artificial/function-calling.md)
+- [Model Context Protocol (MCP)](conceptos/inteligencia-artificial/mcp.md)
+- [Modelo de lenguaje de gran escala (LLM)](conceptos/inteligencia-artificial/llm.md)
+- [Motor de inferencia](conceptos/inteligencia-artificial/motor-de-inferencia.md)
+- [Prompt](conceptos/inteligencia-artificial/prompt.md)
+- [Red neuronal](conceptos/inteligencia-artificial/red-neuronal.md)
+- [Sistema experto](conceptos/inteligencia-artificial/sistema-experto.md)
 <!-- /auto:mapa -->
